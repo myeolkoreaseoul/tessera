@@ -1,0 +1,1518 @@
+[
+  {
+    "rowNum": 1,
+    "type": "여비",
+    "amount": 130100,
+    "vendor": "안재용",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 2,
+    "type": "여비",
+    "amount": 137000,
+    "vendor": "우영재",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 3,
+    "type": "인건비",
+    "amount": 3634580,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 4,
+    "type": "여비",
+    "amount": 509143,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 5,
+    "type": "여비",
+    "amount": 324983,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 6,
+    "type": "여비",
+    "amount": 245014,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 7,
+    "type": "운영비",
+    "amount": 1500000,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 8,
+    "type": "여비",
+    "amount": 99600,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 9,
+    "type": "운영비",
+    "amount": 45050,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 10,
+    "type": "운영비",
+    "amount": 626550,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "확인",
+    "issues": [
+      "전문가활용비가 1일 지급한도(600,000원)를 초과하였습니다. 초과지급 사유서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 11,
+    "type": "운영비",
+    "amount": 2022933,
+    "vendor": "엠엠피아이 주식회사",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 12,
+    "type": "운영비",
+    "amount": 280000,
+    "vendor": "부자집",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 13,
+    "type": "운영비",
+    "amount": 36100,
+    "vendor": "스타벅스 코리아",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 14,
+    "type": "운영비",
+    "amount": 166900,
+    "vendor": "소담오리 대구혁신점",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 15,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 16,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "고동범",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 17,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 18,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "정성택",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 19,
+    "type": "인건비",
+    "amount": 5299500,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 20,
+    "type": "인건비",
+    "amount": 3720470,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 21,
+    "type": "여비",
+    "amount": 130100,
+    "vendor": "안재용",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 22,
+    "type": "여비",
+    "amount": 137000,
+    "vendor": "우영재",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 23,
+    "type": "인건비",
+    "amount": 3634580,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 24,
+    "type": "여비",
+    "amount": 509143,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 25,
+    "type": "여비",
+    "amount": 324983,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 26,
+    "type": "여비",
+    "amount": 245014,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 27,
+    "type": "운영비",
+    "amount": 1500000,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 28,
+    "type": "여비",
+    "amount": 99600,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 29,
+    "type": "운영비",
+    "amount": 45050,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 30,
+    "type": "운영비",
+    "amount": 626550,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "확인",
+    "issues": [
+      "전문가활용비가 1일 지급한도(600,000원)를 초과하였습니다. 초과지급 사유서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 31,
+    "type": "운영비",
+    "amount": 2022933,
+    "vendor": "엠엠피아이 주식회사",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 32,
+    "type": "운영비",
+    "amount": 280000,
+    "vendor": "부자집",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 33,
+    "type": "운영비",
+    "amount": 36100,
+    "vendor": "스타벅스 코리아",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 34,
+    "type": "운영비",
+    "amount": 166900,
+    "vendor": "소담오리 대구혁신점",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 35,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 36,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "고동범",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 37,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 38,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "정성택",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 39,
+    "type": "인건비",
+    "amount": 5299500,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 40,
+    "type": "인건비",
+    "amount": 3720470,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 41,
+    "type": "인건비",
+    "amount": 6881080,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 42,
+    "type": "인건비",
+    "amount": 9588730,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 43,
+    "type": "인건비",
+    "amount": 10171580,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 44,
+    "type": "인건비",
+    "amount": 10147460,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 45,
+    "type": "인건비",
+    "amount": 10147460,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 46,
+    "type": "인건비",
+    "amount": 10583860,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 47,
+    "type": "인건비",
+    "amount": 10087070,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 48,
+    "type": "인건비",
+    "amount": 10087070,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 49,
+    "type": "인건비",
+    "amount": 10099670,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 50,
+    "type": "운영비",
+    "amount": 295120,
+    "vendor": "(주)이마트반야월점",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 51,
+    "type": "운영비",
+    "amount": 300000,
+    "vendor": "으뜸한우 숯불식육식당(각산본점)",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 52,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 53,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "심미선",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 54,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 55,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "이호성",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 56,
+    "type": "운영비",
+    "amount": 3000000,
+    "vendor": "정동회계법인",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 57,
+    "type": "운영비",
+    "amount": 17000000,
+    "vendor": "삼우인쇄공사",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 58,
+    "type": "인건비",
+    "amount": 16180600,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 59,
+    "type": "인건비",
+    "amount": 18637700,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 60,
+    "type": "인건비",
+    "amount": 18637700,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 61,
+    "type": "인건비",
+    "amount": 18637700,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 62,
+    "type": "인건비",
+    "amount": 17212300,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 63,
+    "type": "인건비",
+    "amount": 17270000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 64,
+    "type": "인건비",
+    "amount": 17270000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 65,
+    "type": "인건비",
+    "amount": 17270000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 66,
+    "type": "인건비",
+    "amount": 13496000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 67,
+    "type": "인건비",
+    "amount": 13496000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 68,
+    "type": "인건비",
+    "amount": 13496000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 69,
+    "type": "인건비",
+    "amount": 13496000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 70,
+    "type": "운영비",
+    "amount": 28000000,
+    "vendor": "(사）대한의료정보학회",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 71,
+    "type": "운영비",
+    "amount": 8952000,
+    "vendor": "대구 메리어트호텔",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 72,
+    "type": "운영비",
+    "amount": 391600,
+    "vendor": "주식회사 케이티",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 73,
+    "type": "운영비",
+    "amount": 22100,
+    "vendor": "스타벅스 코리아",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 74,
+    "type": "운영비",
+    "amount": 110000,
+    "vendor": "그옛날소국밥기와집식당",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 75,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "신서화",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 76,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "맹수훈",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 77,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "이성준",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 78,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "안재용",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 79,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "우영재",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 80,
+    "type": "운영비",
+    "amount": 176000,
+    "vendor": "(사）대한의료정보학회",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 81,
+    "type": "인건비",
+    "amount": 18637700,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 82,
+    "type": "인건비",
+    "amount": 17212300,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 83,
+    "type": "인건비",
+    "amount": 17270000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 84,
+    "type": "인건비",
+    "amount": 17270000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 85,
+    "type": "인건비",
+    "amount": 17270000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 86,
+    "type": "인건비",
+    "amount": 13496000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 87,
+    "type": "인건비",
+    "amount": 13496000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 88,
+    "type": "인건비",
+    "amount": 13496000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 89,
+    "type": "인건비",
+    "amount": 13496000,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 90,
+    "type": "운영비",
+    "amount": 28000000,
+    "vendor": "(사）대한의료정보학회",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 91,
+    "type": "운영비",
+    "amount": 8952000,
+    "vendor": "대구 메리어트호텔",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 92,
+    "type": "운영비",
+    "amount": 391600,
+    "vendor": "주식회사 케이티",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 93,
+    "type": "운영비",
+    "amount": 22100,
+    "vendor": "스타벅스 코리아",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 94,
+    "type": "운영비",
+    "amount": 110000,
+    "vendor": "그옛날소국밥기와집식당",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 95,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "신서화",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 96,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "맹수훈",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 97,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "이성준",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 98,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "안재용",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 99,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "우영재",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 100,
+    "type": "운영비",
+    "amount": 176000,
+    "vendor": "(사）대한의료정보학회",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 101,
+    "type": "운영비",
+    "amount": 737000,
+    "vendor": "주식회사 플렉",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 102,
+    "type": "운영비",
+    "amount": 57970,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 103,
+    "type": "운영비",
+    "amount": 600830,
+    "vendor": "서지원",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 104,
+    "type": "운영비",
+    "amount": 60450,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 105,
+    "type": "운영비",
+    "amount": 626550,
+    "vendor": "박지현",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 106,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 107,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "나승대",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 108,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 109,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "이종하",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 110,
+    "type": "운영비",
+    "amount": 17600,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 111,
+    "type": "운영비",
+    "amount": 182400,
+    "vendor": "송승호",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 112,
+    "type": "운영비",
+    "amount": 368000,
+    "vendor": "(주)부자되세요 창고43 송도점",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 113,
+    "type": "여비",
+    "amount": 0,
+    "vendor": "신서화",
+    "status": "SKIP",
+    "issues": []
+  },
+  {
+    "rowNum": 114,
+    "type": "여비",
+    "amount": 0,
+    "vendor": "안재용",
+    "status": "SKIP",
+    "issues": []
+  },
+  {
+    "rowNum": 115,
+    "type": "여비",
+    "amount": 0,
+    "vendor": "맹수훈",
+    "status": "SKIP",
+    "issues": []
+  },
+  {
+    "rowNum": 116,
+    "type": "운영비",
+    "amount": 1000000,
+    "vendor": "주식회사 레이아웃",
+    "status": "확인",
+    "issues": [
+      "증빙서류 금액과 집행금액이 불일치합니다. 확인 후 관련 증빙을 보완하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 117,
+    "type": "운영비",
+    "amount": 1050000,
+    "vendor": "신드롬협동조합",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 118,
+    "type": "운영비",
+    "amount": 391600,
+    "vendor": "주식회사 케이티",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 119,
+    "type": "여비",
+    "amount": 0,
+    "vendor": "안재용",
+    "status": "SKIP",
+    "issues": []
+  },
+  {
+    "rowNum": 120,
+    "type": "운영비",
+    "amount": 300000,
+    "vendor": "맛객",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 121,
+    "type": "여비",
+    "amount": 91300,
+    "vendor": "안재용",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 122,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "확인",
+    "issues": [
+      "전문가활용비가 1일 지급한도(600,000원)를 초과하였습니다. 초과지급 사유서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 123,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "이정승",
+    "status": "확인",
+    "issues": [
+      "전문가활용비가 1일 지급한도(600,000원)를 초과하였습니다. 초과지급 사유서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 124,
+    "type": "운영비",
+    "amount": 32700,
+    "vendor": "마고플레인 비스타",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 125,
+    "type": "운영비",
+    "amount": 109000,
+    "vendor": "스시유가",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 126,
+    "type": "운영비",
+    "amount": 188800,
+    "vendor": "(주)이마트반야월점",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 127,
+    "type": "운영비",
+    "amount": 391600,
+    "vendor": "주식회사 케이티",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 128,
+    "type": "여비",
+    "amount": 357952,
+    "vendor": "우영재",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 129,
+    "type": "여비",
+    "amount": 115160,
+    "vendor": "우영재",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 130,
+    "type": "여비",
+    "amount": 135800,
+    "vendor": "신서화",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 131,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "성주연",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 132,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "성주연",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 133,
+    "type": "여비",
+    "amount": 137000,
+    "vendor": "안재용",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 134,
+    "type": "여비",
+    "amount": 136600,
+    "vendor": "안재용",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 135,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "성주연",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 136,
+    "type": "여비",
+    "amount": 136900,
+    "vendor": "우영재",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 137,
+    "type": "여비",
+    "amount": 133000,
+    "vendor": "안재용",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 138,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "우영재",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 139,
+    "type": "운영비",
+    "amount": 391600,
+    "vendor": "주식회사 케이티",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 140,
+    "type": "여비",
+    "amount": 137000,
+    "vendor": "이명환",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 141,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "재단법인 대구경북첨단의료산업진흥재단",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 142,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "윤경식",
+    "status": "확인",
+    "issues": [
+      "증빙서류(자문확인서 등)가 첨부되지 않았습니다. 관련 증빙서류를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 143,
+    "type": "여비",
+    "amount": 134400,
+    "vendor": "이명환",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 144,
+    "type": "여비",
+    "amount": 287000,
+    "vendor": "이명환",
+    "status": "PENDING",
+    "issues": [
+      "미확정-유저직접확인"
+    ]
+  },
+  {
+    "rowNum": 145,
+    "type": "여비",
+    "amount": 134800,
+    "vendor": "권종구",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 146,
+    "type": "여비",
+    "amount": 30000,
+    "vendor": "성주연",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 147,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "신서화",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 148,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "성주연",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 149,
+    "type": "여비",
+    "amount": 99600,
+    "vendor": "우영재",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 150,
+    "type": "여비",
+    "amount": 137000,
+    "vendor": "우영재",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 151,
+    "type": "여비",
+    "amount": 276660,
+    "vendor": "심은비",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 152,
+    "type": "여비",
+    "amount": 20000,
+    "vendor": "심은비",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 153,
+    "type": "운영비",
+    "amount": 391600,
+    "vendor": "주식회사 케이티",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 154,
+    "type": "운영비",
+    "amount": 1182071,
+    "vendor": "엠엠피아이 주식회사",
+    "status": "PENDING",
+    "issues": [
+      "미확정-유저직접확인"
+    ]
+  },
+  {
+    "rowNum": 155,
+    "type": "운영비",
+    "amount": 104800,
+    "vendor": "주식회사 비앤디파트너스",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 156,
+    "type": "운영비",
+    "amount": 208000,
+    "vendor": "진1926 서울역 트윈시티점",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 157,
+    "type": "여비",
+    "amount": 40000,
+    "vendor": "우영재",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 158,
+    "type": "여비",
+    "amount": 128660,
+    "vendor": "안재용",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 159,
+    "type": "운영비",
+    "amount": 915000,
+    "vendor": "섹타나인_코페이_비인증_일반",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 160,
+    "type": "운영비",
+    "amount": 2156000,
+    "vendor": "주식회사 비앤디파트너스",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 161,
+    "type": "여비",
+    "amount": 126760,
+    "vendor": "서수원",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 162,
+    "type": "여비",
+    "amount": 128660,
+    "vendor": "성주연",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 163,
+    "type": "여비",
+    "amount": 89400,
+    "vendor": "우영재",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 164,
+    "type": "여비",
+    "amount": 276660,
+    "vendor": "신서화",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 165,
+    "type": "여비",
+    "amount": 137000,
+    "vendor": "권종구",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 166,
+    "type": "운영비",
+    "amount": 391600,
+    "vendor": "주식회사 케이티",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 167,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 168,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "신동완",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 169,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 170,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "정희경",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 171,
+    "type": "운영비",
+    "amount": 52800,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 172,
+    "type": "운영비",
+    "amount": 547200,
+    "vendor": "윤경식",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 173,
+    "type": "운영비",
+    "amount": 15400,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 174,
+    "type": "운영비",
+    "amount": 0,
+    "vendor": "김용진",
+    "status": "SKIP",
+    "issues": []
+  },
+  {
+    "rowNum": 175,
+    "type": "운영비",
+    "amount": 60230,
+    "vendor": "대구경북첨단의료산업진흥재단",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 176,
+    "type": "운영비",
+    "amount": 624370,
+    "vendor": "이종하",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 177,
+    "type": "여비",
+    "amount": 134800,
+    "vendor": "서수원",
+    "status": "확인",
+    "issues": [
+      "출장복명서가 첨부되지 않았습니다. 출장복명서를 첨부하여 주시기 바랍니다."
+    ]
+  },
+  {
+    "rowNum": 178,
+    "type": "여비",
+    "amount": 137000,
+    "vendor": "성주연",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 179,
+    "type": "여비",
+    "amount": 137000,
+    "vendor": "권종구",
+    "status": "적정",
+    "issues": []
+  },
+  {
+    "rowNum": 180,
+    "type": "운영비",
+    "amount": 162000,
+    "vendor": "엑스코푸드코트/(주)지에프아이 엑스코점",
+    "status": "PENDING",
+    "issues": [
+      "미확정-유저직접확인"
+    ]
+  }
+]

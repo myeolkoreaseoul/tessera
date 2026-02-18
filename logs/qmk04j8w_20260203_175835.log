@@ -1,0 +1,12 @@
+{"timestamp":"2026-02-03T08:58:35.604Z","level":"info","message":"[SUCCESS] 지침 파일 확인됨: guideline.pdf"}
+{"timestamp":"2026-02-03T08:58:35.606Z","level":"info","message":"[Step 1/7] 지침 PDF 분석"}
+{"timestamp":"2026-02-03T08:58:35.606Z","level":"info","message":"지침 파일 분석 중: guideline.pdf"}
+{"timestamp":"2026-02-03T08:58:35.607Z","level":"info","message":"PDF 텍스트 추출 중..."}
+{"timestamp":"2026-02-03T08:58:38.235Z","level":"debug","message":"PDF 정보: 440페이지"}
+{"timestamp":"2026-02-03T08:58:38.249Z","level":"info","message":"[SUCCESS] 텍스트 추출 완료 (273,545자)"}
+{"timestamp":"2026-02-03T08:58:38.250Z","level":"info","message":"핵심 규정 추출 중 (Gemini 분석)..."}
+{"timestamp":"2026-02-03T08:58:44.746Z","level":"info","message":"[SUCCESS] 규정 추출 완료"}
+{"timestamp":"2026-02-03T08:58:44.747Z","level":"info","message":"사업 유형: 책임의료기관 통합 사업"}
+{"timestamp":"2026-02-03T08:58:44.748Z","level":"info","message":"비목별 규정:"}
+{"timestamp":"2026-02-03T08:58:44.749Z","level":"info","message":"제한/금지 사항:"}
+{"timestamp":"2026-02-03T08:58:44.749Z","level":"info","message":"증빙 규정:"}

@@ -1,0 +1,1632 @@
+[
+  {
+    "rowNum": 1,
+    "executionDate": "2025-12-30",
+    "registDate": "2025-12-30",
+    "writeDate": "2025-12-29",
+    "evidenceType": "전자세금계산서",
+    "evidenceSub": "",
+    "purpose": "FDA Pre-submission(50%) ",
+    "budgetCategory": "운영비",
+    "subCategory": "일반용역비",
+    "itemName": "",
+    "vendorName": "주식회사 지엠에스컨설팅",
+    "depositorName": "주식회사 지엠에",
+    "bizType": "기타 엔지니어링 서비스업",
+    "supplyAmount": 5000000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 5000000,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "001_Pre-submission Cover Letter_251113.pdf",
+        "text": "FDA Pre-submission Cover Letter \n  \n\n- 1 - \n \nContents \n1 Contact Information ......................................................................................................................... - 2 - \n2 Q-Sub Type .............................................................................................................................................. - 2 - \n3 Purpose ...................................................................................................................................................... - 2 - \n4 Device Description ............................................................................................................................. - 3 - \n5 Indications for use ............................................................................................................................. - 3 - \n6 Regulatory History ............................................................................................................................. - 3 - \n7 Predicate device .................................................................................................................................. - 4 - \n8 Specific Question ................................................................................................................................. - 8 - \n \n  \n\n- 2 - \n \n1 Contact Information  \n \n 1) Submitter \nCompany name: BIOLINK Co., Ltd. \nAddress: Room 404, Keimyung University Center for Advanced Industry Support, 1053, Dalgubeol-\ndaero, Dalseo-gu, Daegu, 42637, Republic of Korea \nContact person/title: Jeong-Ho Hong / CEO \nContact phone number: +82-53-258-5912 \nEmail: biolink@biolinkinc.co.kr \n \n2) Correspondent  \nCompany name: GMS Consulting \nAddress: B612, 66, Cheongcho-ro, Deogyang-gu, Goyang-si, Gyeonggi-do, Republic of Korea \nContact person/title: Jonghyun Kim/CEO \nContact phone number: +82-2-2135-9540 \nFax number: +82-2-2135-9541 \nEmail: fda@gmsc.kr \n \n2 Q-Sub Type \nPre-Submission \n \n3 Purpose  \nThe purpose of this Pre-Submission is to seek FDA feedback on the predicate device selection, and \nperformance evaluation designs for BL-LucaCast, ensuring alignment with FDA requirements for a \nsuccessful 510(k) submission.  \n\n- 3 - \n \n4 Device Description \n4.1 Device Name: BL-LucaCast \n4.2 Common Name: Computer-Assisted Diagnostic Software For Lesions Suspicious For \nCancer \n4.3 Classification: Class 2 (Special Controls) \n4.4 Product Code: POK \n4.5 Device Description \nThis product is software that analyzes chest CT images and epidemiological information with \nartificial intelligence, and provides a quantified probability of lung cancer occurrence within five \nyears for the subject. \nThis product complies with the medical Digital Imaging and Communications in Medicine \n(DICOM) standard and can be linked with medical image storage information systems such as \nthe Picture Archiving and Communication System (PACS). This software consists of two artificial \nintelligence models. The first is a Convolutional Neural Network (CNN)-based automatic lung \nregion segmentation model, which accurately segments the lung parenchyma area and its \nboundaries in chest CT images. The second is a prediction model that uses the segmented lung \nregions and epidemiological information (age and sex) to calculate the probability of lung cancer \noccurrence within five years. This model is composed of multiple CNN-based classification \nmodels that have been pre-trained on the characteristics of chest CT images and epidemiological \ninformation of both lung cancer and non-lung cancer groups. By combining the classification \nresults of each model, the final lung cancer probability is derived, and through this, regions with \na high probability of lung cancer occurrence and characteristic density patterns are automatically \nanalyzed, segmented, visualized, and quantified probability of lung cancer occurrence is \nprovided. \nFor detail, Please refer to Attachment 002_ Device description. \n \n5 Indications for use \nThis so"
+      },
+      {
+        "name": "002_Device Description_251113.pdf",
+        "text": "Device Description \n \nBL-LucaCast \n  \n\nDevice Description  1 / 15  BL-LucaCast \n \n \nDevice Description \nComprehensive Device Description and Principles of Operation Documentation \n \n \n1. Product information \n1.1. Overview \nThis  product  is  software  that  analyzes  chest  CT  images  and  epidemiological  information  with \nartificial intelligence, and provides a quantified probability of lung cancer occurrence within  five \nyears for the subject. \nThis product complies with the medical Digital Imaging and Communications in Medicine (DICOM) \nstandard and can be linked with medical image storage information systems such as the Picture \nArchiving and Communication System (PACS). This software consists of two artificial intelligence \nmodels.  The first  is  a  Convolutional  Neural  Network  (CNN)-based  automatic  lung  region \nsegmentation model, which accurately segments the lung parenchyma area and its boundaries in \nchest  CT  images.  The  second  is  a  prediction  model  that  uses  the  segmented  lung  regions  and \nepidemiological information (age and sex) to calculate the probability of lung cancer occurrence \nwithin five years. This model is composed of multiple CNN-based classification models that have \nbeen pre-trained on the characteristics of chest CT images and epidemiological information of both \nlung cancer and non-lung cancer groups. By combining the classification results of each model, \nthe final lung cancer probability is derived, and through this, regions with a high probability of lung \ncancer  occurrence and  characteristic  density  patterns  are  automatically  analyzed,  segmented, \nvisualized, and quantified probability of lung cancer occurrence is provided.  \n\nDevice Description  2 / 15  BL-LucaCast \n1.2. Indication for use \nThis software quantitatively presents the probability of lung cancer occurrence within five years \nafter chest CT imaging, aiming to assist medical professionals in identifying individuals with a high \nrisk of developing lung cancer. \n1.3. Indications \n \nLucaCast is a softwared device used in assessment probability lung cancer within 5 years. \n \nLucaCast includes a computer-aided diagnosis (CADx) function, available only to radiologists and \npulmonologists. This automatically segments lung parenchyma region and its boundary from chest \nCT images. Using only imaging features extracted from the CT image data, an artificial intelligence \nalgorithm calculates single value, the Risk for Lung Cancer within 5 years, which is displayed to \nthe  users.  The  Risk  for  Lung  Cancer  within  5  years  is  analyzed  relative  to ‘a multi-CNN-based- \nprediction model’ generated on a database of cases with known ground-truth using a histogram \ndisplay format. A multi-CNN-based-prediction model may be useful in the assessment of chest CT \nimage and may be used as one input to clinical decision making when following published clinical \nguidelines. \n \nA multi-CNN-based-prediction model is indicated for the evaluation of incidentally assessed lung \ncancer  risk  factor  in  patients.  In  cases  where  multiple  abnormalities  are  present,  a  multi-CNN-\nbased-prediction model can be used to assess each abnormality independently. \n \nNote  the  multi-CNN  model  is  not  indicated  for  use  in  cases  with  severe  structural  or  imaging \nabnormalities in chest CT images. In addition, it is not intended for patients with diagnosed lung \ncancer or for individuals at elevated lung cancer risk, such as those with pulmonary nodules larger \nthan 6 mm on chest CT images. Finally, the device should not be used in conditions outside the \nvalidated clinical population, as this may result in inaccurate predictions. \nUsers  other  than  radiologist  and  pulmonologists,  e.g.  clinicians,  nurses,  nurse  practitioners  and \nnavigators,  may  use  LucaCast  to  view  probability  of  Lung  cancer  risk  and  assist  in identifying \nindividuals at high risk for developing lung cancer.  \n \n1.4. Contrain"
+      },
+      {
+        "name": "003_Performance Test Protocol.pdf",
+        "text": "Performance Test Protocol \n \n \n \n \nDevice Description \nProduct Name BioLink-LucaCast \nModel Name BL-LucaCast \nDocument Number BL-PTP-001 \n \n \n \nPreparation, Review and Approval of the document \n Prepared by Reviewed by Approved by \nName Kim, Min-Woo Kim, Hae-W on Hong, Jeong-Ho \nPosition staff Quality Manager CEO \nDate 2025.09.26 \n2025.09.  26   2025.09.  26   \nSignature \n \n \n \n      \n \n \n \n \n  \n\n \n \n Performance Test Protocol \nDoc. No: BL-PTP-001(Rev.0) \n \nRevision History \nRev. No. Description of changes Date \n0 Initial Release  \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n  \n \n \n \n  \n\n \n \n Performance Test Protocol \nDoc. No: BL-PTP-001(Rev.0) \n \nContents \n1 Test performed .............................................................................................................................................................................. 4 \n2 Device description ........................................................................................................................................................................ 4 \n2.1 Algorithm Description ........................................................ 오류! 책갈피가 정의되어 있지 않습니다. \n3 Objective of the test ..................................................................................................................................................................... 6 \n4 Test Item ........................................................................................................................................................................................... 6 \n5 Description of test methods ..................................................................................................................................................... 7 \n5.1 Training procedure for algorithm ......................................................................................................................... 7 \n5.1.1 Overview of deep learning algorithm.................................................................................................................. 7 \n5.1.2 Data Processing for Training ................................................................................................................................... 7 \n5.1.3 Internal Validation ....................................................................................................................................................... 8 \n5.2 Participants for performance testing .................................................................................................................. 9 \n5.2.1 Test Details ...................................................................................................................................................................... 9 \n5.2.2 Datasets detailed information ............................................................................................................................. 10 \n5.2.3 Ground Truth Procedure........................................................................................................................................ 11 \n5.2.4 Data Processing for Performance Testing ...................................................................................................... 12 \n5.3 Evaluation Methods .................................................................................................................................................. 12 \n6 Pass/Fail criteria ........................................................................................................................................................................ 12 \n7 Data analysis plan ...................................................................................................................................................................... 12 \n8 Participants in the Test ......................................................................................................................"
+      },
+      {
+        "name": "FDA Pre-Sub 접수 완료 서류.pdf",
+        "text": "U.S.Food & Drug Administration\n10903 New Hampshire Ave.\nSilver Spring, MD 20993\nwww.fda.gov\nAcknowledgement Letter\n11/14/2025\nJonghyeon Kim, CEO\nGMSC Co., Ltd.\nB 612, 66, Cheongcho-ro, Deokyang-gu\nGoyang-si,\nGyeonggi-do 10543 REPUBLIC OF KOREA\nDear Jonghyeon Kim:\nThe Center for Devices and Radiological Health (CDRH) of the Food and Drug Administration\n(FDA) has received your submission. This submission has been assigned the unique document\ncontrol number below. All future correspondence regarding this submission should be identified\nprominently with the number assigned. Failure to do so may result in processing delays. Please send\nany future correspondence through the CDRH Portal. For more information on the CDRH Portal,\nplease visit CDRH Portal. If you believe the information identified below is incorrect, please contact\nthe Office of Product Evaluation and Quality (OPEQ) submission support at (301) 796-5640 or\nOPEQSubmissionSupport@fda.hhs.gov.\nSubmission Number: Q253229\nReceived: 11/14/2025\nApplicant: BIOLINK Co., Ltd.\nDevice: BL-LucaCast\nWe will notify you when the review of this document has been completed or if any additional\ninformation is required. As a reminder, submissions should include the minimum (i.e., least\nburdensome) amount of information necessary to adequately address its specific regulatory purpose.\nIn accordance with FDA's \"The Least Burdensome Provisions: Concept and Principles\", FDA will\nassess submitted information for relevance to the submission's purpose, but if information is deemed\nnot relevant, it will not be reviewed further and will not be part of the decision-making process. If\nyou are submitting new information about a submission for which we have already made a final\ndecision, please note that your submission will not be re-opened. For information about CDRH\nreview regulations and policies, please visit Device Advice: Comprehensive Regulatory Assistance.\nSincerely yours,\nCenter for Devices and Radiological Health"
+      },
+      {
+        "name": "PreSTAR_2-0_BIOLINK.pdf",
+        "text": "Please wait... \n  \nIf this message is not eventually replaced by the proper contents of the document, your PDF \nviewer may not be able to display this type of document. \n  \nYou can upgrade to the latest version of Adobe Reader for Windows®, Mac, or Linux® by \nvisiting  http://www.adobe.com/go/reader_download. \n  \nFor more assistance with Adobe Reader visit  http://www.adobe.com/go/acrreader. \n  \nWindows is either a registered trademark or a trademark of Microsoft Corporation in the United States and/or other countries. Mac is a trademark \nof Apple Inc., registered in the United States and other countries. Linux is the registered trademark of Linus Torvalds in the U.S. and other \ncountries."
+      },
+      {
+        "name": "사업자등록증_GMSC.pdf",
+        "text": "2023년07월04일\n동고양세무서장\n사업자등록증\n(법인사업자)\n등록번호:151-87-00686\n법인명(단체명):주식회사지엠에스컨설팅\n대표자:\n김종현\n개업연월일:2017년03월21일법인등록번호:110111-6352704\n사업장소재지:\n경기도고양시덕양구청초로66,B동612호(덕은동,덕은리버워크)\n본점소재지:\n경기도고양시덕양구청초로66,B동612호(덕은동,덕은리버워크)\n사업의종류\n:\n:\n:\n:\n:\n:\n:\n업태\n기술서비스업\n출판,영상,방송통신및정보서비스\n업\n도매\n도매및소매업\n서비스\n서비스\n서비스\n종목\n규격인증서비스.엔지니어링서비스업\n교과서및학습서적출판업,만화출판업,\n기타서적출판업\n무역\n전자상거래업\n소프트웨어개발및공급업\n학술연구개발\n규격인증서비스\n발급사유:\n:\n사업자단위과세적용사업자여부:\n여()부(∨)\n전자세금계산서전용전자우편주소:"
+      },
+      {
+        "name": "세금계산서.pdf",
+        "text": "전자세금계산서\n승인번호\n20251229-41000096-16806745\n공\n급\n자\n등록\n번호\n151-87-00686\n종사업장\n번호\n공\n급\n받\n는\n자\n등록\n번호\n848-87-02662\n종사업장\n번호\n상호\n(법인명)\n주식회사지엠에스컨설팅성명김종현\n상호\n(법인명)\n바이오링크주식회사성명홍정호\n사업장\n주소\n경기고양시덕양구청초로66B동612호(덕은동,덕은리\n버워크)\n사업장\n주소\n대구달서구달구벌대로1053404호계명대학교첨단산업\n지원센터(호산동)\n업태\n전문,과학및\n기술서비스업\n종목기타엔지니어링서비스업업태정보통신업종목\n응용소프트웨어개발및공\n급업\n이메일gmsc@gmsc.kr\n이메일mwkim@biolinkinc.co.kr\n이메일\n작성일자공급가액세액수정사유비고\n2025-12-295,000,000500,000해당없음\n월일품목규격수량단가공급가액세액비고\n1229\nFDAPre-submission컨설팅잔금_흉부CT\n영상기반폐암발생예측인공지능소프트\n웨\n5,000,000500,000\n합계금액현금수표어음외상미수금\n이금액을(청구)함\n5,500,0005,500,000\n본인쇄물은국세청홈택스(www.hometax.go.kr)에서발급,또는홈택스로전송된전자(세금)계산서입니다.\n발급사실확인은상기홈페이지의\"전자(세금)계산서조회>제3자발급사실조회및수정발급사실알림>\n발급사실조회및수정발급사실알림신청\"을이용하시기바랍니다.QR코드를통해손택스에서쉽게확인할수있습니다."
+      },
+      {
+        "name": "통장사본(KB 0683)_GMSC.pdf",
+        "text": "차\n\n례\n\n[< 콕민은행\n\n주식회사 지엠에스컨설팅 님               | 일 과 에엘 |\n사업 카-우대동장-ㅋㄱ1염자-유         으\n\n자보 9241357-00-00068즈\n예금종류 기업자유예금\n\n대한민국정부 인 지 세  100원\n조산민  3,6,9,12월 제2금요일                 =-.21<8콕민은영: :\n입하신날 2017년 03월 29일              이  를\n곡권리검상암미디어        ㅎ 1508-999 34국민은맹 |.\n통장발행회차 회차           『6% 02)304-6087        실명확인월\n^600-001 (14×%17.5) 엠보싱지1809/, 00ㅁ10597 (이 통장은 표지를 합하여 12장 입니다. (07\n자동이체 연결계좌 내역\n등록일자 | 예 금 종류 |. .계좌번호 | 이체금액 |이체일| 등록점\n\n 연"
+      }
+    ]
+  },
+  {
+    "rowNum": 2,
+    "executionDate": "2025-12-31",
+    "registDate": "2025-12-26",
+    "writeDate": "2025-12-26",
+    "evidenceType": "기타",
+    "evidenceSub": "기타(첨부파일필수확인)",
+    "purpose": "인건비(12월)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 5052367,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 5052367,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "바이오링크_12월 급여대장-복사.pdf",
+        "text": "2025년12월분급여대장\n[귀속:2025년12월][지급:2025년12월28일]\npage:\n바이오링크주식회사정렬:코드순\n1/2\n인적사항기본급여및제수당공제및차인지급액\n영수인\n사원번호성명기본급식대차량유지비국민연금건강보험고용보험장기요양보험료소득세지방소득세\n입사일직급\n기지급\n건\n강보\n험정\n산\n장기\n요\n양\n정산학\n자\n금\n상환공제합계\n퇴사일부서지급합계차\n인지\n급\n액\n1홍정호3,000,000141,80018,36074,3507,430\n2025-04-01241,940\n3,000,0002,758,060\n2정희성3,300,000200,000150,160120,29029,70015,57010,270\n1\n,\n020\n2023-01-10\n32\n7\n,01\n0\n3,500,0003,\n172\n,9\n90\n3박강현3,000,000200,000142,\n7\n40114,32027\n,0\n0\n014,8007,4\n3\n0\n7\n4\n0\n2023-05-01\n11\n4,580\n421,610\n3,\n20\n0,\n0002,77\n8\n,3\n9\n0\n5이학림2,600,000200,00\n0\n126,\n1\n30\n1\n0\n1,\n03\n0\n23,40\n0\n13,0\n8\n03\n,\n9\n6\n03\n9\n0\n2024-01-01\n2\n67\n,\n9\n9\n0\n2\n,8\n0\n0,\n000\n2\n,\n53\n2,01\n0\n6이혜진2,500,000200,0\n0\n01\n1\n9,83\n0\n96,\n01\n02\n2\n,5\n0\n0\n12,\n4\n3\n0\n9\n6,\n6\n1\n0\n9\n,\n66\n0\n2024-\n0\n1-013\n5\n7\n,\n0\n4\n0\n2\n,\n7\n00\n,\n000\n2\n,3\n4\n2,\n9\n60\n8\n최민지\n2,\n500\n,\n000\n2\n0\n0,\n0\n0\n0\n1\n1\n9\n,\n1\n1095\n,41\n0\n2\n2\n,5\n0\n0\n1\n2,\n3\n50\n3,\n5\n60\n3\n5\n0\n2024-01-01\n2\n5\n3,2\n8\n0\n2\n,\n7\n0\n0,0\n0\n0\n2\n,\n4\n4\n6\n,\n7\n2\n0\n9\n황\n보\n성준\n2\n,\n600,\n0\n0\n0\n2\n00\n,\n0\n0\n0\n12\n2\n,\n4\n4\n0\n9\n8,\n0\n7\n0\n2\n3\n,\n4\n0\n01\n2\n,\n700\n3\n,9\n6\n0\n3\n9\n0\n202\n4\n-\n0\n1\n-\n01\n26\n0\n,\n96\n0\n2\n,\n8\n0\n0\n,\n0\n0\n0\n2,\n5\n3\n9\n,\n0\n4\n0\n12김동혁2\n,\n400,\n0\n0\n0\n2\n0\n0\n,\n0\n0\n01\n0\n9\n,\n5\n3\n0\n87\n,7\n302\n1\n,6\n0\n0\n1\n1\n,\n3\n6\n0\n3\n,23\n0\n3\n2\n0\n2\n0\n2\n4-01\n-\n0\n12\n3\n3\n,\n7\n7\n0\n2,\n6\n0\n0\n,0\n0\n0\n2\n,\n3\n6\n6\n,\n2\n30\n1\n3\n형유\n정2\n,\n2\n50,\n0\n0\n0\n2\n0\n0\n,0\n0\n0\n10\n9\n,\n1\n7\n08\n6,\n30\n0\n2\n0\n,2\n5\n0\n1\n1\n,\n1\n7\n0\n2\n,\n7\n5\n0\n2\n70\n202\n4\n-03-06\n2\n2\n9\n,\n91\n0\n2\n,\n45\n0\n,\n0\n0\n0\n2\n,\n22\n0\n,0\n9\n0\n14이영준\n2\n,\n7\n0\n0\n,\n0\n00\n20\n0,\n0\n0\n0\n1\n23\n,9\n3\n0\n9\n9\n,\n2\n6\n0\n2\n4\n,\n3\n0\n01\n2\n,\n8\n5\n0\n4\n,\n8\n20\n4\n80\n2\n024-09\n-0\n1\n2\n6\n5\n,\n6\n40\n2,\n9\n0\n0\n,\n00\n0\n2,63\n4,\n3\n6\n0\n1\n5\n이\n서\n린\n2\n,\n1\n0\n0\n,\n0\n0010\n0\n,0\n0\n0\n9\n2\n,\n9\n2\n0\n7\n4\n,4\n4\n0\n1\n8\n,9\n0\n0\n9,6\n4\n0\n2\n,2\n7\n0\n2\n2\n0\n2\n024\n-\n09\n-\n01\n1\n9\n8\n,\n3\n9\n0\n2,2\n0\n0\n,\n0\n0\n0\n2\n,\n00\n1\n,\n6\n1\n0\n\n2025년12월분급여대장\n[귀속:2025년12월][지급:2025년12월28일]\npage:\n바이오링크주식회사정렬:코드순\n2/2\n인적사항기본급여및제수당공제및차인지급액\n영수인\n사원번호성명기본급식대차량유지비국민연금건강보험고용보험장기요양보험료소득세지방소득세\n입사일직급\n기지급\n건\n강보\n험정\n산\n장기\n요\n양\n정산학\n자\n금\n상환공제합계\n퇴사일부서지급합계차\n인지\n급\n액\n18박병준2,800,000200,000127,71078,81025,20010,20028,4002,840\n2024-11-15273,160\n3,000,0002,726,840\n20GOPINATH3,041,93674,193184,500145,34027,37018,82077,770\n7\n,\n770\n2025-01-01\n46\n1\n,57\n0\n3,116,1292,\n654\n,5\n59\n21김민우2,600,000200,000117,\n0\n0092,17023\n,4\n0\n011,93039,6\n9\n03\n,9\n6\n0\n2025-02-01\n288,150\n2,\n80\n0,\n0002,51\n1\n,8\n5\n0\n22김신범2,200,000200,00\n0\n99,\n0\n00\n7\n7,\n99\n0\n19,80\n0\n10,1\n0\n0\n2\n5\n,\n9\n5\n02\n,\n5\n90\n2025-02-10\n2\n35\n,\n4\n3\n0\n2\n,4\n0\n0,\n000\n2\n,\n16\n4,57\n0\n23윤영인2,700,000200,0\n0\n020\n0\n,0001\n2\n1,\n5\n0\n0\n95,\n71\n02\n4\n,3\n0\n0\n12,\n3\n9\n0\n4,\n8\n2048\n0\n2025-\n0\n6\n-0\n12\n5\n9\n,\n2\n0\n0\n3\n,\n1\n00\n,\n000\n2\n,8\n4\n0,\n8\n00\n2\n4길예은\n2,\n700\n,\n000\n2\n0\n0,\n0\n0\n0\n1\n2\n1\n,\n5\n0095\n,71\n0\n2\n4\n,\n3\n00\n1\n2,\n3\n9\n0\n4,\n8\n20\n4\n8\n0\n2025-06-23\n2\n5\n9,2\n0\n0\n2\n,\n9\n0\n0,0\n0\n0\n2\n,\n6\n4\n0\n,\n8\n0\n0\n2\n5김혜영\n6\n,\n910,\n0\n0\n0\n2\n0\n0\n,\n0\n0\n0\n23\n9\n,\n6\n7\n02\n4\n4,\n9\n5\n06\n2\n,\n1\n903\n1\n,\n720\n7\n1\n0\n,0\n2\n0\n7\n1\n,\n0\n0\n0\n202\n5\n-\n0\n8\n-\n01\n1\n,\n35\n9\n,\n55\n0\n7\n,\n1\n1\n0\n,\n0\n0\n0\n5,\n7\n5\n0\n,\n4\n5\n0\n합계\n51,901,9363,174,193200,0002,226,8401,945,340440,110251,8601,104,680110,390\n114,5806,193,800\n55,276,12949,082,329"
+      },
+      {
+        "name": "이체확인증_20251231-2_황보성준.pdf",
+        "text": "“= 하나은행\n\n0400040[\n0ㅁㅁㅁ : 2025-12- 31\n\n0000        2025- 12- 31 10:00:19     0000        00000\n00400     00000 0)      매태      0ㅁ001\n0ㅁ00000      142-910028-17104      0ㅁ00000      3333210248869\n배배0                      01   0040                2,539,040 []\n00000000   120 ㅁㅁ          000000ㅁ00   120 ㅁㅁ\n00                   00450\n\n[100000000000000000000.\n20250 120 310 00ㅁ0\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n“= 하나은행\n\n2025- 12- 31 10:07:54                                      7/9                                     “= 하나은행"
+      },
+      {
+        "name": "이체확인증_20251231_윤영인.pdf",
+        "text": "“= 하나은행\n\n0400040[\n0ㅁㅁㅁ : 2025-12- 31\n\n0000        2025-12- 31 10:01:17     0000        0000\n00400     00000 0)      매태      0ㅁ00\n0ㅁ00000      142-910028-17104      0ㅁ00000      803-910374-85707\n배배0                      01   0040                2,.840,800 [|\n00000000   120 ㅁㅁ          000000ㅁ00   120 ㅁㅁ\n00                   00450\n\n[100000000000000000000.\n20250 120 310 00ㅁ0\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n“= 하나은행\n\n2025- 12- 31 10:07:39                                      7/9                                     “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 3,
+    "executionDate": "2025-12-26",
+    "registDate": "2025-12-19",
+    "writeDate": "2025-12-19",
+    "evidenceType": "기타",
+    "evidenceSub": "그 외 영수증",
+    "purpose": "전문가활용비(백병현)6",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 500000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 500000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "doc02726420251211152847.pdf",
+        "text": "개인정보 수집 및 이용 동의서\n\n바이오렁크 주식회사는 연구과제 관리 및 연구과제와 관련된 연구비 관리를 위해 아래와 같?] 개인정보를\n수집, 이용하는 내용을 관계 법령에 따라 고지하오니, 동의해 주시기 바랍니다.\n\n1. 개인정보의 수집 목적 : 연구과제 관리 및 연구비 관리\n2. 수집하는 개인정보 항목 : 성명, 주민등록번호, 주소, 휴대폰번호, 소속, 계좌번호, 전자우편주소\n8. 수집된 개인정보 이용(해당하는 곳에 0 체크)\n\n늬 기타 소득 지급[전문가 활용비, 시간제(일용)인건비 지\n4. 개인정보 보유 및 이용기간\n\n피\n이\n\n수집된 개인정보는 5년간, 문서의 경우 지정된 보관 장소, 전산 데이터의 경우 암호화시켜 안전하게 보관\n됩니다. 0 영과한 개인정보는 파쇄 및 소각됩니다. 단, 5년 이상 진행되는 연구과제의 경우 해당\n연구과제 종료시까지 연장ㆍ보관될 수 있습니다\n\n5. 미동의시 참여제한\n퀴하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만, 동의서를\n\n제출하지 않을 경우에\n\n8\n-\n빈\n고\n빼\n요\n원\n0\n08\n로\n었의\n미0\n때\n도 3\n고\n10\n\n내\n레다!\n그\n\n나 포함)은 위의 동의서 내용을 충분히 숙지하였으며, 개인정보 수집 및 이용에 동의\n\n2025년  12월 _ 11일\n\n성명 : 백병현   …” 인)\n\n바이오링크 주식회사 대표이사 귀하"
+      },
+      {
+        "name": "신분증 백병현.pdf",
+        "text": "그                     자동자운전면허중 (04140\n\n18-01-018694-70\n~. 노             개\n\n0"
+      },
+      {
+        "name": "전문가 자문확인서 1223.pdf",
+        "text": "자 문 확 인 서\n자\n문\n제\n공\n자\n성 명/\n소속\n백병현/전남대학교병원\n주소광주광역시 남구 효사랑길 14, 107동 406호\n일자 및 \n소요시간\n2025.12.23. 13:00 ~ 2025.12.23. 18:00\n해당과제명/\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 \n임상시험 및 근거창출\n자문내용\n다기관에서 수집되는 임상 및 영상 데이터의 품질을 일관되게 \n유지하고, 기관 간 편차를 최소화하기 위한 표준화 전략을 마련하기 \n위해 진행되었다. 실제 실증 환경에서는 병원별 장비 차이, 기록 \n방식, 평가자 숙련도 및 업무 흐름 차이 등 다양한 요인이 데이터의 \n균질성에 영향을 줄 수 있으므로, 이러한 요소를 체계적으로 관리할 \n수 있는 품질 기준과 검증 절차가 필요하다는 데 의견이 모아졌다.\n또한 영상 데이터의 경우 절편 두께, 촬영 범위, 촬영 모드 등 기술적 \n변수가 실증 데이터의 일관성에 큰 영향을 미치므로, 기관별로 허용 \n가능한 범위와 권장 프로토콜을 명시하는 것이 바람직하다는 조언이 \n이루어졌다. 품질이 낮은 영상이 분석 과정에 포함될 경우 오판독 \n위험과 모델 학습 오류가 발생할 수 있어, 일정 기준 이하의 영상은 \n사용 제한 또는 보정 절차를 적용하는 방식도 함께 검토되었다.\n데이터 전달 과정의 관리 체계도 중요 요소로 논의되었다. 다기관에서 \n주기적으로 수집되는 자료에 대해 품질 점검 체크리스트를 운영하고, \n이상값(outlier)이나 누락 여부를 자동으로 감지할 수 있는 검증 \n절차를 마련하면 반복적인 오류를 줄일 수 있다고 조언했다. 필요할 \n경우 기관별 담당자에게 피드백을 제공하는 정기 모니터링 체계도 \n실증 품질 관리에 도움이 될 수 있다는 의견이 제시되었다.\n아울러 장비·인력·업무 프로세스 차이로 인해 완전한 통일이 어려운 \n항목에 대해서는 ‘기준값 중심의 허용 범위’를 설정해 분석 시 가중치 \n또는 보정값을 적용하는 방식도 검토되었다. 이를 통해 기관별 차이가 \n분석 결과에 미치는 영향을 최소화하면서도 실제 현장의 다양성을 \n반영할 수 있다는 점이 강조되었다.\n본 자문에서 논의된 사항들은 실증 데이터의 신뢰도 향상과 분석의 \n안정성을 확보하는 근거로 반영될 것이다.\n 위 자문제공자는 상기의 내용과 같이 자문을 제공하였음을 확인합니다.\n  2025  년    12월  23일\n자문제공자 :     백 병 현     (인)"
+      },
+      {
+        "name": "통장사본 백병현.pdf",
+        "text": "|금종목 온라인보통예탁금\n\n3\n[바\n쇠민호\n\n그그17--09-00036ㅠ-4 극 고즈\n\n(》 6 새마을금고\n\n\\\\\\.1<100.00.1\n전남대학교병원\n:- 전남대학교병원\n\n068 )220 -5067 삼성 더 자\n2015-02-17                      후납증   나모 호\n\n특기사항                 6@-뱅킹서비스\n\n통장발행횟수 02\n\n계좌캐설일자 2007-03-07\n\n인터넷뱅킹\n\\\\\\.사00.00.1\n\n텔레뱅킹\n\n「   0 :/1599-9000 /1588-8801\n\n스마트뱅킹\n인터넷뱅킹 가입 =: 어플리케이션 설치\n더          ㆍ 1     그      빠   고\n이 예금은 새마을금고법에 따라 본 새마을금고에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의\n이자를 합하여 1인당 “최고 5천만원까지\" 새마을금고중앙회 예금자보호준비금에 의해 보호되며, 5천만원 초과\n금액에 대해서는 보호되지 않습니다.\n며. 자세한 내용\n\n\\용은 해당 새마을금고 또는 새마을금고\n45914  칭할 |:  00."
+      }
+    ]
+  },
+  {
+    "rowNum": 4,
+    "executionDate": "2025-12-26",
+    "registDate": "2025-12-19",
+    "writeDate": "2025-12-19",
+    "evidenceType": "기타",
+    "evidenceSub": "그 외 영수증",
+    "purpose": "전문가활용비(백병현)5",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 500000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 500000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "doc02726420251211152847.pdf",
+        "text": "개인정보 수집 및 이용 동의서\n\n바이오렁크 주식회사는 연구과제 관리 및 연구과제와 관련된 연구비 관리를 위해 아래와 같?] 개인정보를\n수집, 이용하는 내용을 관계 법령에 따라 고지하오니, 동의해 주시기 바랍니다.\n\n1. 개인정보의 수집 목적 : 연구과제 관리 및 연구비 관리\n2. 수집하는 개인정보 항목 : 성명, 주민등록번호, 주소, 휴대폰번호, 소속, 계좌번호, 전자우편주소\n8. 수집된 개인정보 이용(해당하는 곳에 0 체크)\n\n늬 기타 소득 지급[전문가 활용비, 시간제(일용)인건비 지\n4. 개인정보 보유 및 이용기간\n\n피\n이\n\n수집된 개인정보는 5년간, 문서의 경우 지정된 보관 장소, 전산 데이터의 경우 암호화시켜 안전하게 보관\n됩니다. 0 영과한 개인정보는 파쇄 및 소각됩니다. 단, 5년 이상 진행되는 연구과제의 경우 해당\n연구과제 종료시까지 연장ㆍ보관될 수 있습니다\n\n5. 미동의시 참여제한\n퀴하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만, 동의서를\n\n제출하지 않을 경우에\n\n8\n-\n빈\n고\n빼\n요\n원\n0\n08\n로\n었의\n미0\n때\n도 3\n고\n10\n\n내\n레다!\n그\n\n나 포함)은 위의 동의서 내용을 충분히 숙지하였으며, 개인정보 수집 및 이용에 동의\n\n2025년  12월 _ 11일\n\n성명 : 백병현   …” 인)\n\n바이오링크 주식회사 대표이사 귀하"
+      },
+      {
+        "name": "신분증 백병현.pdf",
+        "text": "그                     자동자운전면허중 (04140\n\n18-01-018694-70\n~. 노             개\n\n0"
+      },
+      {
+        "name": "전문가 자문확인서 1222.pdf",
+        "text": "자 문 확 인 서\n자\n문\n제\n공\n자\n성 명/\n소속\n백병현/전남대학교병원\n주소광주광역시 남구 효사랑길 14, 107동 406호\n일자 및 \n소요시간\n2025.12.22. 13:00 ~ 2025.12.22. 18:00\n해당과제명/\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 \n임상시험 및 근거창출\n자문내용\n본 과제에서 수집·활용 중인 임상 및 영상 데이터를 기반으로 \n환자군을 어떻게 분류할 것인지, 또한 주요 임상 이벤트(상태 악화, \n기능 저하 등)의 위험도를 어떤 방식으로 예측할 것인지에 대해 \n논의하기 위해 진행되었다. 특히 다기관 실증 환경에서 수집되는 \n비정형·이질적 데이터의 특성을 감안해, 임상적으로 의미 있고 재현성 \n있는 분류 체계를 마련하는 데 초점을 두었다.\n실증 과정에서 확보되는 영상데이터의 활용 방향도 함께 검토되었다.  \n병변의 모양·분포·미세 변화가 환자의 예후와 연관되는 경우가 \n많으므로, 정량적 지표(부피, 밀도 변화 등)와 정성적 소견(주요 구조 \n침범 여부, 경계 불명확성 등)을 결합한 형태의 분석 체계를 구축하면 \n리스크 예측의 정밀도가 높아질 수 있다고 조언했다. 특히 다기관 \n자료는 장비, 촬영 조건, 판독 습관의 차이로 인해 변동성이 크기 \n때문에, 전처리 기준과 판독 프로토콜 표준화가 필수적이라는 의견이 \n강조되었다.\n또한 환자의 임상 경과를 시계열 기반으로 분석하는 방법도 \n논의되었다. 환자가 일정 기간 동안 보이는 신경학적 변화 패턴, 치료 \n반응, 영상 소견의 추세를 함께 고려할 경우, 특정 이벤트가 발생하기 \n전 나타나는 전조 신호(pre-warning pattern)를 탐색할 수 있어 실증 \n연구에서도 중요한 분석 방향이 될 수 있다고 보았다. 이를 통해 단순 \n예측 모델을 넘어 환자 개별 맞춤형 위험도 평가가 가능해질 수 \n있다는 의견이 제시되었다.\n마지막으로, 환자군 분류와 리스크 예측 결과가 실제 임상 서비스 \n개선으로 이어지기 위해서는, 예측 결과를 임상의가 쉽게 이해하고 \n활용할 수 있는 형태로 제시하는 것이 중요하다는 의견도 논의되었다. \n복잡한 수치보다 변화 추세, 위험도 단계, 주요 근거 등을 직관적으로 \n제시할 경우 실무 활용도가 크게 높아질 수 있다는 조언이 있었다.\n 위 자문제공자는 상기의 내용과 같이 자문을 제공하였음을 확인합니다.\n  2025  년    12월  22일\n자문제공자 :     백 병 현     (인)"
+      },
+      {
+        "name": "통장사본 백병현.pdf",
+        "text": "|금종목 온라인보통예탁금\n\n3\n[바\n쇠민호\n\n그그17--09-00036ㅠ-4 극 고즈\n\n(》 6 새마을금고\n\n\\\\\\.1<100.00.1\n전남대학교병원\n:- 전남대학교병원\n\n068 )220 -5067 삼성 더 자\n2015-02-17                      후납증   나모 호\n\n특기사항                 6@-뱅킹서비스\n\n통장발행횟수 02\n\n계좌캐설일자 2007-03-07\n\n인터넷뱅킹\n\\\\\\.사00.00.1\n\n텔레뱅킹\n\n「   0 :/1599-9000 /1588-8801\n\n스마트뱅킹\n인터넷뱅킹 가입 =: 어플리케이션 설치\n더          ㆍ 1     그      빠   고\n이 예금은 새마을금고법에 따라 본 새마을금고에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의\n이자를 합하여 1인당 “최고 5천만원까지\" 새마을금고중앙회 예금자보호준비금에 의해 보호되며, 5천만원 초과\n금액에 대해서는 보호되지 않습니다.\n며. 자세한 내용\n\n\\용은 해당 새마을금고 또는 새마을금고\n45914  칭할 |:  00."
+      }
+    ]
+  },
+  {
+    "rowNum": 5,
+    "executionDate": "2025-12-19",
+    "registDate": "2025-12-19",
+    "writeDate": "2025-12-19",
+    "evidenceType": "기타",
+    "evidenceSub": "그 외 영수증",
+    "purpose": "전문가활용비(백병현)4 ",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 500000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 500000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "doc02726420251211152847.pdf",
+        "text": "개인정보 수집 및 이용 동의서\n\n바이오렁크 주식회사는 연구과제 관리 및 연구과제와 관련된 연구비 관리를 위해 아래와 같?] 개인정보를\n수집, 이용하는 내용을 관계 법령에 따라 고지하오니, 동의해 주시기 바랍니다.\n\n1. 개인정보의 수집 목적 : 연구과제 관리 및 연구비 관리\n2. 수집하는 개인정보 항목 : 성명, 주민등록번호, 주소, 휴대폰번호, 소속, 계좌번호, 전자우편주소\n8. 수집된 개인정보 이용(해당하는 곳에 0 체크)\n\n늬 기타 소득 지급[전문가 활용비, 시간제(일용)인건비 지\n4. 개인정보 보유 및 이용기간\n\n피\n이\n\n수집된 개인정보는 5년간, 문서의 경우 지정된 보관 장소, 전산 데이터의 경우 암호화시켜 안전하게 보관\n됩니다. 0 영과한 개인정보는 파쇄 및 소각됩니다. 단, 5년 이상 진행되는 연구과제의 경우 해당\n연구과제 종료시까지 연장ㆍ보관될 수 있습니다\n\n5. 미동의시 참여제한\n퀴하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만, 동의서를\n\n제출하지 않을 경우에\n\n8\n-\n빈\n고\n빼\n요\n원\n0\n08\n로\n었의\n미0\n때\n도 3\n고\n10\n\n내\n레다!\n그\n\n나 포함)은 위의 동의서 내용을 충분히 숙지하였으며, 개인정보 수집 및 이용에 동의\n\n2025년  12월 _ 11일\n\n성명 : 백병현   …” 인)\n\n바이오링크 주식회사 대표이사 귀하"
+      },
+      {
+        "name": "신분증 백병현.pdf",
+        "text": "그                     자동자운전면허중 (04140\n\n18-01-018694-70\n~. 노             개\n\n0"
+      },
+      {
+        "name": "전문가 자문확인서 1219.pdf",
+        "text": "자 문 확 인 서\n자\n문\n제\n공\n자\n성 명/\n소속\n백병현/전남대학교병원\n주소광주광역시 남구 효사랑길 14, 107동 406호\n일자 및 \n소요시간\n2025.12.19. 13:00 ~ 2025.12.19. 18:00\n해당과제명/\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 \n임상시험 및 근거창출\n자문내용\n본 과제에서 개발 중인 알고리즘이 실제 임상 현장에서 어떤 형태로 \n활용될 수 있으며, 적용 과정에서 고려해야 할 임상적·운영적 요소가 \n무엇인지 검토하기 위해 진행되었다. 특히 응급상황에서의 신속한 \n판단 지원, 회복기 환자의 추적 모니터링, 다기관 환경에서의 일관적 \n활용 가능성 등 다양한 임상 시나리오를 중심으로 알고리즘의 \n실효성과 적용 한계가 논의되었다.\n또한 응급·급성기 환경에서는 시간 지연이 최소화되어야 하므로, \n알고리즘의 처리 속도와 결과 전달 방식이 실증 과정의 중요한 품질 \n요소로 검토되었다. 영상 및 신경학적 정보가 동시에 입력되는 \n상황에서 알고리즘이 어느 단계에서 정보를 우선 처리해야 하는지, \n그리고 임상의에게 결과값이 언제·어떤 형태로 전달되어야 하는지에 \n대한 구체적 프로세스도 논의되었다. 이 과정에서 기관별 장비·시설 \n차이에 따른 성능 편차를 어떻게 줄일 것인지에 대한 기술적 보완 \n필요성도 언급되었다.\n회복기 또는 외래 추적 환자를 대상으로 할 경우에는, 알고리즘이 \n장기간의 추세를 파악하는 데 유용하게 활용될 수 있다는 의견이 \n있었다. 동일 환자의 신경학적 변화 패턴을 시계열 기반으로 \n시각화하거나, 미세한 기능 변화 신호를 사전에 탐지할 수 있다면, \n재발 위험을 조기에 인지하거나 치료 계획을 조정하는 데 도움이 될 \n수 있기 때문이다. 이를 위해서는 연속 데이터 관리 구조와 환자 \n단위별 누적 데이터 정합성 확보가 필수적이라는 점이 제시되었다.\n알고리즘 적용 시 주의해야 할 해석 한계도 함께 지적하였다. \n본 자문을 통해 알고리즘의 임상적 활용 가능성과 고려해야 할 운영적 \n요소들이 명확해졌으며, 실증 기반 알고리즘 고도화와 임상 현장 \n적용을 위한 실질적인 방향성을 확보하였다. \n 위 자문제공자는 상기의 내용과 같이 자문을 제공하였음을 확인합니다.\n  2025  년    12월  19일\n자문제공자 :     백 병 현     (인)"
+      },
+      {
+        "name": "통장사본 백병현.pdf",
+        "text": "|금종목 온라인보통예탁금\n\n3\n[바\n쇠민호\n\n그그17--09-00036ㅠ-4 극 고즈\n\n(》 6 새마을금고\n\n\\\\\\.1<100.00.1\n전남대학교병원\n:- 전남대학교병원\n\n068 )220 -5067 삼성 더 자\n2015-02-17                      후납증   나모 호\n\n특기사항                 6@-뱅킹서비스\n\n통장발행횟수 02\n\n계좌캐설일자 2007-03-07\n\n인터넷뱅킹\n\\\\\\.사00.00.1\n\n텔레뱅킹\n\n「   0 :/1599-9000 /1588-8801\n\n스마트뱅킹\n인터넷뱅킹 가입 =: 어플리케이션 설치\n더          ㆍ 1     그      빠   고\n이 예금은 새마을금고법에 따라 본 새마을금고에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의\n이자를 합하여 1인당 “최고 5천만원까지\" 새마을금고중앙회 예금자보호준비금에 의해 보호되며, 5천만원 초과\n금액에 대해서는 보호되지 않습니다.\n며. 자세한 내용\n\n\\용은 해당 새마을금고 또는 새마을금고\n45914  칭할 |:  00."
+      }
+    ]
+  },
+  {
+    "rowNum": 6,
+    "executionDate": "2025-12-19",
+    "registDate": "2025-12-19",
+    "writeDate": "2025-12-19",
+    "evidenceType": "기타",
+    "evidenceSub": "그 외 영수증",
+    "purpose": "전문가활용비(백병현)3",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 500000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 500000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "doc02726420251211152847.pdf",
+        "text": "개인정보 수집 및 이용 동의서\n\n바이오렁크 주식회사는 연구과제 관리 및 연구과제와 관련된 연구비 관리를 위해 아래와 같?] 개인정보를\n수집, 이용하는 내용을 관계 법령에 따라 고지하오니, 동의해 주시기 바랍니다.\n\n1. 개인정보의 수집 목적 : 연구과제 관리 및 연구비 관리\n2. 수집하는 개인정보 항목 : 성명, 주민등록번호, 주소, 휴대폰번호, 소속, 계좌번호, 전자우편주소\n8. 수집된 개인정보 이용(해당하는 곳에 0 체크)\n\n늬 기타 소득 지급[전문가 활용비, 시간제(일용)인건비 지\n4. 개인정보 보유 및 이용기간\n\n피\n이\n\n수집된 개인정보는 5년간, 문서의 경우 지정된 보관 장소, 전산 데이터의 경우 암호화시켜 안전하게 보관\n됩니다. 0 영과한 개인정보는 파쇄 및 소각됩니다. 단, 5년 이상 진행되는 연구과제의 경우 해당\n연구과제 종료시까지 연장ㆍ보관될 수 있습니다\n\n5. 미동의시 참여제한\n퀴하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만, 동의서를\n\n제출하지 않을 경우에\n\n8\n-\n빈\n고\n빼\n요\n원\n0\n08\n로\n었의\n미0\n때\n도 3\n고\n10\n\n내\n레다!\n그\n\n나 포함)은 위의 동의서 내용을 충분히 숙지하였으며, 개인정보 수집 및 이용에 동의\n\n2025년  12월 _ 11일\n\n성명 : 백병현   …” 인)\n\n바이오링크 주식회사 대표이사 귀하"
+      },
+      {
+        "name": "신분증 백병현.pdf",
+        "text": "그                     자동자운전면허중 (04140\n\n18-01-018694-70\n~. 노             개\n\n0"
+      },
+      {
+        "name": "전문가 자문확인서 1217.pdf",
+        "text": "자 문 확 인 서\n자\n문\n제\n공\n자\n성 명/\n소속\n백병현/전남대학교병원\n주소광주광역시 남구 효사랑길 14, 107동 406호\n일자 및 \n소요시간\n2025.12.17. 13:00 ~ 2025.12.17. 18:00\n해당과제명/\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 \n임상시험 및 근거창출\n자문내용\n본 과제의 실증 연구가 여러 기관에서 동시에 수행되는 특성을 \n고려하여, 임상 운영의 일관성을 확보하고 데이터 품질을 체계적으로 \n관리하기 위한 절차적 기준을 마련하고자 진행되었다. 실제 임상 \n현장에서 수집되는 데이터는 환자 상태, 촬영 환경, 담당 인력의 \n숙련도 등 다양한 변수를 포함하고 있어, 이를 일정 수준 이상으로 \n정렬하고 관리할 수 있는 체계가 사전에 준비되어야 과제 전체의 \n신뢰도를 확보할 수 있기 때문이다.\n자문 과정에서는 우선 현재 연구팀이 구축한 데이터 수집 흐름을 \n검토하고, 핵심 변수의 정의, 기록 방식, 누락 방지 체계, 연구자 교육 \n범위 등 운영 전반의 표준화 필요성이 논의되었다. 특히 본 과제의 \n주요 지표인 신경학적 점수, 영상 기반 지표, 주요 바이탈 등은 \n평가자 간 편차가 발생하기 쉬워, 평가자 교육 및 정기적 점검을 통한 \nInter-rater reliability(평가자 간 신뢰도) 확보 전략이 필요하다는 \n의견이 제시되었다. 각 의료기관에서 동일한 기준으로 자료가 \n수집되어야 알고리즘 학습 및 임상 분석에서도 의미 있는 결과를 얻을 \n수 있기 때문이다.특정 시점 또는 특정 기관에서 반복적으로 발생하는 \n문제를 조기에 파악해 대응할 수 있는 QA 대시보드 구축 필요성이 \n논의되었다. 이를 통해 실증 기간 동안 데이터 품질 저하로 인한 분석 \n왜곡을 예방할 수 있으며, 향후 대규모 확장 연구에서도 안정적으로 \n활용할 수 있는 운영 모델을 확보할 수 있다.\n본 자문을 통해 연구팀은 임상 운영 과정의 표준화와 데이터 품질관리 \n전략을 명확히 정립할 수 있었으며, 실증 과정에서 발생할 수 있는 \n편차와 오류를 최소화하기 위한 체계적 관리 기준을 확보하였다. 이를 \n기반으로 본 과제의 임상 실증이 보다 신뢰성 있고 재현성 높은 \n방식으로 진행될 수 있을 것으로 기대된다.\n 위 자문제공자는 상기의 내용과 같이 자문을 제공하였음을 확인합니다.\n  2025  년    12월  17일\n자문제공자 :     백 병 현     (인)"
+      },
+      {
+        "name": "통장사본 백병현.pdf",
+        "text": "|금종목 온라인보통예탁금\n\n3\n[바\n쇠민호\n\n그그17--09-00036ㅠ-4 극 고즈\n\n(》 6 새마을금고\n\n\\\\\\.1<100.00.1\n전남대학교병원\n:- 전남대학교병원\n\n068 )220 -5067 삼성 더 자\n2015-02-17                      후납증   나모 호\n\n특기사항                 6@-뱅킹서비스\n\n통장발행횟수 02\n\n계좌캐설일자 2007-03-07\n\n인터넷뱅킹\n\\\\\\.사00.00.1\n\n텔레뱅킹\n\n「   0 :/1599-9000 /1588-8801\n\n스마트뱅킹\n인터넷뱅킹 가입 =: 어플리케이션 설치\n더          ㆍ 1     그      빠   고\n이 예금은 새마을금고법에 따라 본 새마을금고에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의\n이자를 합하여 1인당 “최고 5천만원까지\" 새마을금고중앙회 예금자보호준비금에 의해 보호되며, 5천만원 초과\n금액에 대해서는 보호되지 않습니다.\n며. 자세한 내용\n\n\\용은 해당 새마을금고 또는 새마을금고\n45914  칭할 |:  00."
+      }
+    ]
+  },
+  {
+    "rowNum": 7,
+    "executionDate": "2025-12-19",
+    "registDate": "2025-12-19",
+    "writeDate": "2025-12-19",
+    "evidenceType": "기타",
+    "evidenceSub": "그 외 영수증",
+    "purpose": "전문가활용비(김현수)3",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 500000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 500000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "5 개인정보 수집 및 이용 동의서.pdf",
+        "text": "개인정보 수집 및 이용 동의서\n  바이오링크 주식회사는 연구과제 관리 및 연구과제와 관련된 연구비 관리를 위해 아래와 같이 개인정보를 \n수집, 이용하는 내용을 관계 법령에 따라 고지하오니, 동의해 주시기 바랍니다. \n  본인(참여인력 포함)은 위의 동의서 내용을 충분히 숙지하였으며, 개인정보 수집 및 이용에 동의\n합니다.\n2025년   12월   10일      \n 성명 :  김 현 수    (서명 또는 인)\n바이오링크 주식회사 대표이사 귀하\n1. 개인정보의 수집 목적 : 연구과제 관리 및 연구비 관리\n2. 수집하는 개인정보 항목 : 성명, 주민등록번호, 주소, 휴대폰번호, 소속, 계좌번호, 전자우편주소 \n3. 수집된 개인정보 이용(해당하는 곳에 ☑ 체크)\n   ☑ 기타 소득 지급[전문가 활용비, 시간제(일용)인건비 지급 등]\n4. 개인정보 보유 및 이용기간\n 수집된 개인정보는 5년간, 문서의 경우 지정된 보관 장소, 전산 데이터의 경우 암호화시켜 안전하게 보관\n됩니다. 보관기간을 경과한 개인정보는 파쇄 및 소각됩니다. 단, 5년 이상 진행되는 연구과제의 경우 해당\n연구과제 종료시까지 연장·보관될 수 있습니다.\n5. 미동의시 참여제한\n 귀하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만, 동의서를 \n제출하지 않을 경우에는 연구 과제 참여 제한이 될 수 있음을 알려드립니다."
+      },
+      {
+        "name": "신분증사본.PNG",
+        "text": "1종보통\n\n자동 차운    전면허 증 (02006056 1400090)    |\n\n16-12-0289806-11"
+      },
+      {
+        "name": "전문가 자문확인서3.pdf",
+        "text": "자 문 확 인 서\n자\n문\n제\n공\n자\n성 명/\n소속\n김현수/전남대학교병원\n주소광주광역시 남구 봉선로175번길 6, 201동 1502호\n일자 및 \n소요시간\n2025.12.16. 09:00 ~ 2025.12.16. 14:00\n해당과제명/\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 \n임상시험 및 근거창출\n자문내용\n신경과 환자의 실제 진료 흐름과 본 과제의 실증 프로토콜이 \n임상현장에서 무리 없이 적용될 수 있는지를 검토하기 위해 \n진행되었습니다. 실증 과정에서는 평가 시점, 기록 방식, 추적 관찰 \n간격 등이 진료 흐름과 자연스럽게 맞아떨어져야 자료 품질을 유지할 \n수 있으므로, 프로토콜 구성 요소가 임상 운영 방식과 충돌하지 \n않는지 세부적으로 논의하였습니다.\n신경과 환자의 상태는 발병 시점과 치료 여부에 따라 빠르게 변화할 \n수 있어, 초기 평가에서 반드시 포함되어야 하는 항목과 추적 관찰 \n시점의 적절성을 점검하는 것이 중요합니다. 논의 과정에서는 의식 \n수준, 운동 기능, 언어 기능 등 급성기에 우선적으로 확인해야 하는 \n지표가 실증 프로토콜에 충분히 반영되어 있는지 검토하였으며, 평가 \n간격이 임상 판단에 필요한 정보를 놓치지 않도록 구성되어야 한다는 \n의견도 제시되었습니다.\n또한 환자의 상태 변화가 비교적 완만한 회복기 단계에서는 지나치게 \n잦은 평가가 실효성이 떨어질 수 있어, 실증 자료 수집의 효율성을 \n고려해 지표별 평가 빈도 조정의 필요성도 논의되었습니다. 이와 함께 \n실무적으로 의료진이 실제 진료 과정에서 중요하게 판단하는 요소들과 \n프로토콜상의 평가 항목이 일치하는지 확인해, 불필요한 부담을 \n줄이면서도 실증에 필요한 핵심 정보를 확보할 수 있는 방향으로 \n의견을 조율하였습니다.\n본 자문을 통해 정리된 의견은 실증 프로토콜의 적용 가능성을 높이고 \n기관 간 운영 편차를 최소화하는 데 활용될 예정이며, 실제 임상 \n흐름을 반영한 실증 체계 구축에 도움이 될 것으로 판단됩니다.\n 위 자문제공자는 상기의 내용과 같이 자문을 제공하였음을 확인합니다.\n  2025  년    12월  16일\n자문제공자 :     김 현 수     (인)"
+      },
+      {
+        "name": "통장사본.PNG",
+        "text": "더 나은 내일을 위한 동행, 5\n신한은행이 고객님의 성공을 위해 함께 하겼습니다.\n\n김현수                            님\n\n계좌번호. 1 0ㅠ- 5 1 6 ㅡ128 07 0\n예금중류수기래 우대동장(거축예금)\n\n교객번호 734657153\n-04-24 발행 일020-04-24\n\n00464000000000000 동장, 친누로 타인이기\n수수료 절약은 기본, 빠르고 편리하게 은행업무를!          덜\n순간의 잘못된 선택으로 범법자가 되시겠습니까?\n\n타인에게 통장을 매매ㆍ양도하면\n법적 처벌을 받게 됩니다\n\n.(3년 이하의 징역 또는 2천만원 이하의 벌금)\n\n.찬가디 00도하는 3? 동장9인은 인현싱의 | |\n\n전화 한통화로 은행일 01!\n1577-8000/1599-8000/1544-8000\n10-8000\n\n'99 에 645 0 898도 다르기 동등\n1따므드지시외\n.264190메시:\n\n':3전668 00로인 소유 8자되008 28빈는건우\n엽 다운로드 > 인저로교인                           -00.4529의이키 수로임2 모우\n=                       -취012바이타등 미로 등대 -영도릉요천\n\n은생거래시 불편, 예로사항 | 080-023-0182       개\n'008시간00700~17700 (9인, 토원오인제의! ㅣ ) | | 40250 24 7009 449 906.4000\n\n10132                                                                     11404879.001비0810\n\nㅡ계\n\n 스마트폰으로 조회, 이체, 펀드 외환, 카드까제!\n인터넷 병질 가일 + 07.5100000.6007절속 >"
+      }
+    ]
+  },
+  {
+    "rowNum": 8,
+    "executionDate": "2025-12-15",
+    "registDate": "2025-12-15",
+    "writeDate": "2025-12-15",
+    "evidenceType": "기타",
+    "evidenceSub": "그 외 영수증",
+    "purpose": "전문가활용비(백병헌)2",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 500000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 500000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "doc02726420251211152847.pdf",
+        "text": "개인정보 수집 및 이용 동의서\n\n바이오렁크 주식회사는 연구과제 관리 및 연구과제와 관련된 연구비 관리를 위해 아래와 같?] 개인정보를\n수집, 이용하는 내용을 관계 법령에 따라 고지하오니, 동의해 주시기 바랍니다.\n\n1. 개인정보의 수집 목적 : 연구과제 관리 및 연구비 관리\n2. 수집하는 개인정보 항목 : 성명, 주민등록번호, 주소, 휴대폰번호, 소속, 계좌번호, 전자우편주소\n8. 수집된 개인정보 이용(해당하는 곳에 0 체크)\n\n늬 기타 소득 지급[전문가 활용비, 시간제(일용)인건비 지\n4. 개인정보 보유 및 이용기간\n\n피\n이\n\n수집된 개인정보는 5년간, 문서의 경우 지정된 보관 장소, 전산 데이터의 경우 암호화시켜 안전하게 보관\n됩니다. 0 영과한 개인정보는 파쇄 및 소각됩니다. 단, 5년 이상 진행되는 연구과제의 경우 해당\n연구과제 종료시까지 연장ㆍ보관될 수 있습니다\n\n5. 미동의시 참여제한\n퀴하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만, 동의서를\n\n제출하지 않을 경우에\n\n8\n-\n빈\n고\n빼\n요\n원\n0\n08\n로\n었의\n미0\n때\n도 3\n고\n10\n\n내\n레다!\n그\n\n나 포함)은 위의 동의서 내용을 충분히 숙지하였으며, 개인정보 수집 및 이용에 동의\n\n2025년  12월 _ 11일\n\n성명 : 백병현   …” 인)\n\n바이오링크 주식회사 대표이사 귀하"
+      },
+      {
+        "name": "신분증 백병현.pdf",
+        "text": "그                     자동자운전면허중 (04140\n\n18-01-018694-70\n~. 노             개\n\n0"
+      },
+      {
+        "name": "전문가 자문확인서 1215.pdf",
+        "text": "자 문 확 인 서\n자\n문\n제\n공\n자\n성 명/\n소속\n백병현/전남대학교병원\n주소광주광역시 남구 효사랑길 14, 107동 406호\n일자 및 \n소요시간\n2025.12.15. 09:00 ~ 2025.12.15. 14:00\n해당과제명/\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 \n임상시험 및 근거창출\n자문내용\n본 과제의 실증에 활용될 영상 데이터의 품질이 분석 과정과 임상적 \n해석에 적합한 수준인지 평가하기 위해 진행되었습니다. 기관별 \n영상획득 프로토콜의 차이로 인해 발생할 수 있는 해상도, 노이즈, \n절편 두께, 아티팩트 등의 편차가 실증 자료의 신뢰도에 영향을 줄 수 \n있어, 이러한 요소를 사전에 점검하고 최소 기준을 설정하는 것이 \n중요하다는 데 의견이 모아졌습니다.\n영상 데이터 품질은 단순한 기술적 요소를 넘어 판독 결과와 임상적 \n판단에 직접적인 영향을 미치기 때문에, 어떤 수준 이하의 영상은 \n실증에서 제외하는 것이 타당한지, 그리고 경계 품질의 영상은 보정 \n과정을 통해 사용 가능하도록 할 수 있는지 등이 논의되었습니다. \n예를 들어 과도한 노이즈가 포함된 영상이나 절편 두께가 일정하지 \n않은 영상은 병변의 경계가 명확하게 보이지 않아 정확한 판독이 \n어려울 수 있어, 이러한 경우 실증 분석에서 제외하거나 재획득을 \n고려해야 한다는 의견이 제시되었습니다.\n또한 기관마다 사용하는 장비와 촬영 설정이 달라 동일 환자라도 영상 \n표현이 다르게 나타날 수 있다는 점이 지적되었습니다. 이를 보완하기 \n위해 기본적으로 확인해야 할 품질 요소를 체크리스트 형태로 \n정리하고, 전처리 과정에서 적용할 보정 범위를 정의하는 것이 \n필요하다는 의견이 있었습니다. 특히 다기관 자료를 비교·통합하여 \n분석하는 실증의 특성상, 영상 품질 기준을 명확히 하는 것은 결과 \n해석의 일관성을 확보하는 데 매우 중요한 요소입니다.\n본 자문을 통해 논의된 사항들은 실증 과정에서 활용 가능한 영상의 \n품질 기준을 정립하는 데 반영될 예정이며, 기관 간 데이터 편차를 \n줄여 실증 결과의 신뢰도와 균질성을 높이는 데 중요한 근거가 될 \n것으로 기대됩니다.\n 위 자문제공자는 상기의 내용과 같이 자문을 제공하였음을 확인합니다.\n  2025  년    12월  15일\n자문제공자 :     백 병 현     (인)"
+      },
+      {
+        "name": "통장사본 백병현.pdf",
+        "text": "|금종목 온라인보통예탁금\n\n3\n[바\n쇠민호\n\n그그17--09-00036ㅠ-4 극 고즈\n\n(》 6 새마을금고\n\n\\\\\\.1<100.00.1\n전남대학교병원\n:- 전남대학교병원\n\n068 )220 -5067 삼성 더 자\n2015-02-17                      후납증   나모 호\n\n특기사항                 6@-뱅킹서비스\n\n통장발행횟수 02\n\n계좌캐설일자 2007-03-07\n\n인터넷뱅킹\n\\\\\\.사00.00.1\n\n텔레뱅킹\n\n「   0 :/1599-9000 /1588-8801\n\n스마트뱅킹\n인터넷뱅킹 가입 =: 어플리케이션 설치\n더          ㆍ 1     그      빠   고\n이 예금은 새마을금고법에 따라 본 새마을금고에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의\n이자를 합하여 1인당 “최고 5천만원까지\" 새마을금고중앙회 예금자보호준비금에 의해 보호되며, 5천만원 초과\n금액에 대해서는 보호되지 않습니다.\n며. 자세한 내용\n\n\\용은 해당 새마을금고 또는 새마을금고\n45914  칭할 |:  00."
+      }
+    ]
+  },
+  {
+    "rowNum": 9,
+    "executionDate": "2025-12-15",
+    "registDate": "2025-12-15",
+    "writeDate": "2025-12-15",
+    "evidenceType": "기타",
+    "evidenceSub": "그 외 영수증",
+    "purpose": "전문가활용비(백병헌)1",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 500000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 500000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "doc02726420251211152847.pdf",
+        "text": "개인정보 수집 및 이용 동의서\n\n바이오렁크 주식회사는 연구과제 관리 및 연구과제와 관련된 연구비 관리를 위해 아래와 같?] 개인정보를\n수집, 이용하는 내용을 관계 법령에 따라 고지하오니, 동의해 주시기 바랍니다.\n\n1. 개인정보의 수집 목적 : 연구과제 관리 및 연구비 관리\n2. 수집하는 개인정보 항목 : 성명, 주민등록번호, 주소, 휴대폰번호, 소속, 계좌번호, 전자우편주소\n8. 수집된 개인정보 이용(해당하는 곳에 0 체크)\n\n늬 기타 소득 지급[전문가 활용비, 시간제(일용)인건비 지\n4. 개인정보 보유 및 이용기간\n\n피\n이\n\n수집된 개인정보는 5년간, 문서의 경우 지정된 보관 장소, 전산 데이터의 경우 암호화시켜 안전하게 보관\n됩니다. 0 영과한 개인정보는 파쇄 및 소각됩니다. 단, 5년 이상 진행되는 연구과제의 경우 해당\n연구과제 종료시까지 연장ㆍ보관될 수 있습니다\n\n5. 미동의시 참여제한\n퀴하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만, 동의서를\n\n제출하지 않을 경우에\n\n8\n-\n빈\n고\n빼\n요\n원\n0\n08\n로\n었의\n미0\n때\n도 3\n고\n10\n\n내\n레다!\n그\n\n나 포함)은 위의 동의서 내용을 충분히 숙지하였으며, 개인정보 수집 및 이용에 동의\n\n2025년  12월 _ 11일\n\n성명 : 백병현   …” 인)\n\n바이오링크 주식회사 대표이사 귀하"
+      },
+      {
+        "name": "신분증 백병현.pdf",
+        "text": "그                     자동자운전면허중 (04140\n\n18-01-018694-70\n~. 노             개\n\n0"
+      },
+      {
+        "name": "전문가 자문확인서 1211.pdf",
+        "text": "자 문 확 인 서\n자\n문\n제\n공\n자\n성 명/\n소속\n백병현/전남대학교병원\n주소광주광역시 남구 효사랑길 14, 107동 406호\n일자 및 \n소요시간\n2025.12.11. 13:00 ~ 2025.12.11. 18:00\n해당과제명/\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 \n임상시험 및 근거창출\n자문내용\n본 과제의 실증 과정에서 활용될 영상 판독 기준이 참여기관 간 \n일관되게 적용될 수 있는지를 확인하기 위해 진행되었습니다. 영상 \n판독은 장비 성능, 촬영 환경, 판독자의 경험 등 다양한 요인에 의해 \n차이가 발생할 수 있어, 병변 정의와 판독 기준을 명확히 설정하지 \n않으면 실증 데이터의 신뢰도가 크게 흔들릴 가능성이 있습니다. 이번 \n논의에서는 병변의 크기, 위치, 신호 특성 등 핵심 요소를 공통 \n기준으로 정리할 수 있는지에 중점을 두고 검토하였습니다.\n영상 판독 과정에서 가장 문제가 되는 부분은 병변을 ‘어디까지, \n어떻게’ 정의할 것인가에 대한 해석 차이입니다. 예를 들어 경미한 \n신호 변화가 병변으로 간주될지 여부, 병변 경계가 불분명할 때 기록 \n방식, 다발성 병변이 존재할 경우 우선순위 판단 등은 기관마다 \n차이가 발생할 수 있어 표준화가 필수적입니다. 이에 따라 병변을 \n정량적으로 평가할 수 있는 기준, 판독 시 필수 확인 항목, 기록 \n형식의 통일 필요성이 논의되었습니다.\n또한 영상 유형(DWI, FLAIR, T2 등)에 따라 병변이 다르게 보일 수 \n있기 때문에, 각 영상에서 반드시 확인해야 하는 지표와 주의해야 할 \n왜곡 요인에 대한 의견도 공유되었습니다. 예를 들어 DWI에서 보이는 \n고신호가 실제 급성 병변인지 혹은 인공적 노이즈인지 판단하기 위한 \n보조 기준, FLAIR에서 경미한 백질 변화와 병적 신호를 구분하는 \n방식 등이 검토되었습니다. 이러한 기준 설정은 실증 데이터의 질을 \n균등하게 유지하는 데 중요한 역할을 합니다.\n이번 자문을 통해 정리된 의견들은 실증 자료의 판독 품질을 균일하게 \n유지하고, 기관 간 자료 해석 차이를 줄이는 데 활용될 예정입니다. \n특히 병변 정의의 표준화는 실증 데이터의 신뢰도를 높이고 결과 \n해석의 정확성을 확보하는 데 중요한 기반이 될 것으로 예상됩니다.\n 위 자문제공자는 상기의 내용과 같이 자문을 제공하였음을 확인합니다.\n  2025  년    12월  11일\n자문제공자 :     백 병 현     (인)"
+      },
+      {
+        "name": "통장사본 백병현.pdf",
+        "text": "|금종목 온라인보통예탁금\n\n3\n[바\n쇠민호\n\n그그17--09-00036ㅠ-4 극 고즈\n\n(》 6 새마을금고\n\n\\\\\\.1<100.00.1\n전남대학교병원\n:- 전남대학교병원\n\n068 )220 -5067 삼성 더 자\n2015-02-17                      후납증   나모 호\n\n특기사항                 6@-뱅킹서비스\n\n통장발행횟수 02\n\n계좌캐설일자 2007-03-07\n\n인터넷뱅킹\n\\\\\\.사00.00.1\n\n텔레뱅킹\n\n「   0 :/1599-9000 /1588-8801\n\n스마트뱅킹\n인터넷뱅킹 가입 =: 어플리케이션 설치\n더          ㆍ 1     그      빠   고\n이 예금은 새마을금고법에 따라 본 새마을금고에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의\n이자를 합하여 1인당 “최고 5천만원까지\" 새마을금고중앙회 예금자보호준비금에 의해 보호되며, 5천만원 초과\n금액에 대해서는 보호되지 않습니다.\n며. 자세한 내용\n\n\\용은 해당 새마을금고 또는 새마을금고\n45914  칭할 |:  00."
+      }
+    ]
+  },
+  {
+    "rowNum": 10,
+    "executionDate": "2025-12-15",
+    "registDate": "2025-12-15",
+    "writeDate": "2025-12-15",
+    "evidenceType": "기타",
+    "evidenceSub": "그 외 영수증",
+    "purpose": "전문가활용비(김현수)2",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 500000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 500000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "5 개인정보 수집 및 이용 동의서.pdf",
+        "text": "개인정보 수집 및 이용 동의서\n  바이오링크 주식회사는 연구과제 관리 및 연구과제와 관련된 연구비 관리를 위해 아래와 같이 개인정보를 \n수집, 이용하는 내용을 관계 법령에 따라 고지하오니, 동의해 주시기 바랍니다. \n  본인(참여인력 포함)은 위의 동의서 내용을 충분히 숙지하였으며, 개인정보 수집 및 이용에 동의\n합니다.\n2025년   12월   10일      \n 성명 :  김 현 수    (서명 또는 인)\n바이오링크 주식회사 대표이사 귀하\n1. 개인정보의 수집 목적 : 연구과제 관리 및 연구비 관리\n2. 수집하는 개인정보 항목 : 성명, 주민등록번호, 주소, 휴대폰번호, 소속, 계좌번호, 전자우편주소 \n3. 수집된 개인정보 이용(해당하는 곳에 ☑ 체크)\n   ☑ 기타 소득 지급[전문가 활용비, 시간제(일용)인건비 지급 등]\n4. 개인정보 보유 및 이용기간\n 수집된 개인정보는 5년간, 문서의 경우 지정된 보관 장소, 전산 데이터의 경우 암호화시켜 안전하게 보관\n됩니다. 보관기간을 경과한 개인정보는 파쇄 및 소각됩니다. 단, 5년 이상 진행되는 연구과제의 경우 해당\n연구과제 종료시까지 연장·보관될 수 있습니다.\n5. 미동의시 참여제한\n 귀하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만, 동의서를 \n제출하지 않을 경우에는 연구 과제 참여 제한이 될 수 있음을 알려드립니다."
+      },
+      {
+        "name": "신분증사본.PNG",
+        "text": "1종보통\n\n자동 차운    전면허 증 (02006056 1400090)    |\n\n16-12-0289806-11"
+      },
+      {
+        "name": "전문가 자문확인서2.pdf",
+        "text": "자 문 확 인 서\n자\n문\n제\n공\n자\n성 명/\n소속\n김현수/전남대학교병원\n주소광주광역시 남구 봉선로175번길 6, 201동 1502호\n일자 및 \n소요시간\n2025.12.12. 09:00 ~ 2025.12.12. 14:00\n해당과제명/\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 \n임상시험 및 근거창출\n자문내용\n본 과제의 실증 단계에서 포함될 신경과 환자군의 분류 기준이 실제 \n임상현장에서 사용하는 판단 기준과 일관되게 적용될 수 있는지를 \n검토하기 위해 진행되었습니다. 실증 과정에서는 참여기관마다 환자 \n특성과 모집 여건이 다를 수 있어, 분류 기준이 명확하지 않으면 자료 \n해석에 혼선이 발생할 가능성이 있습니다. 이에 따라 급성기·아급성기 \n환자를 구분하는 기준, 위험군 설정 방식, 동반 질환 등을 포함한 \n다양한 요소가 기관 간 동일하게 적용될 수 있는지를 중심으로 \n논의하였습니다.\n신경과 환자의 위험군 분류는 예후 판단과 경과 관찰의 방향을 \n결정하는 데 중요한 요소이므로, 분류 기준이 임상적 판단과 괴리 \n없이 적용되는 것이 필요합니다. 논의 과정에서는 발병 시점, 초기 \n신경학적 중증도, 치료 여부 등 환자의 상태 변화 가능성에 \n직접적으로 영향을 미치는 요소들이 어떠한 방식으로 반영되어야 \n하는지 검토하였습니다. 특히 발병 초기에는 상태 변동이 빠를 수 \n있어 고위험군으로 분류하는 것이 적절하며, 안정기에 접어든 환자는 \n추적 관찰 중심의 환자군으로 판단될 수 있다는 의견이 오갔습니다.\n또한 고혈압, 당뇨, 심장질환 등 기저 질환을 가진 환자군은 증상 \n악화 가능성이 높아 분류 시 별도 고려가 필요하다는 의견도 \n제시되었습니다. 이는 실증 자료 해석에서 개인별 특성을 반영할 수 \n있도록 보완 기준을 마련해야 한다는 필요성과도 연결됩니다.\n본 자문을 통해 정리된 의견은 실증 과정에서 참여 대상자 선정의 \n명확성을 높이고, 기관 간 판단 기준의 편차를 줄이는 데 활용될 \n예정입니다. 또한 환자군 구성의 일관성을 확보함으로써 실증 결과의 \n신뢰도를 높이는 데 기여할 것으로 예상됩니다.\n 위 자문제공자는 상기의 내용과 같이 자문을 제공하였음을 확인합니다.\n  2025  년    12월  12일\n자문제공자 :     김 현 수     (인)"
+      },
+      {
+        "name": "통장사본.PNG",
+        "text": "더 나은 내일을 위한 동행, 5\n신한은행이 고객님의 성공을 위해 함께 하겼습니다.\n\n김현수                            님\n\n계좌번호. 1 0ㅠ- 5 1 6 ㅡ128 07 0\n예금중류수기래 우대동장(거축예금)\n\n교객번호 734657153\n-04-24 발행 일020-04-24\n\n00464000000000000 동장, 친누로 타인이기\n수수료 절약은 기본, 빠르고 편리하게 은행업무를!          덜\n순간의 잘못된 선택으로 범법자가 되시겠습니까?\n\n타인에게 통장을 매매ㆍ양도하면\n법적 처벌을 받게 됩니다\n\n.(3년 이하의 징역 또는 2천만원 이하의 벌금)\n\n.찬가디 00도하는 3? 동장9인은 인현싱의 | |\n\n전화 한통화로 은행일 01!\n1577-8000/1599-8000/1544-8000\n10-8000\n\n'99 에 645 0 898도 다르기 동등\n1따므드지시외\n.264190메시:\n\n':3전668 00로인 소유 8자되008 28빈는건우\n엽 다운로드 > 인저로교인                           -00.4529의이키 수로임2 모우\n=                       -취012바이타등 미로 등대 -영도릉요천\n\n은생거래시 불편, 예로사항 | 080-023-0182       개\n'008시간00700~17700 (9인, 토원오인제의! ㅣ ) | | 40250 24 7009 449 906.4000\n\n10132                                                                     11404879.001비0810\n\nㅡ계\n\n 스마트폰으로 조회, 이체, 펀드 외환, 카드까제!\n인터넷 병질 가일 + 07.5100000.6007절속 >"
+      }
+    ]
+  },
+  {
+    "rowNum": 11,
+    "executionDate": "2025-12-15",
+    "registDate": "2025-12-11",
+    "writeDate": "2025-12-11",
+    "evidenceType": "기타",
+    "evidenceSub": "그 외 영수증",
+    "purpose": "전문가활용비(김현수)1",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 500000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 500000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "5 개인정보 수집 및 이용 동의서.pdf",
+        "text": "개인정보 수집 및 이용 동의서\n  바이오링크 주식회사는 연구과제 관리 및 연구과제와 관련된 연구비 관리를 위해 아래와 같이 개인정보를 \n수집, 이용하는 내용을 관계 법령에 따라 고지하오니, 동의해 주시기 바랍니다. \n  본인(참여인력 포함)은 위의 동의서 내용을 충분히 숙지하였으며, 개인정보 수집 및 이용에 동의\n합니다.\n2025년   12월   10일      \n 성명 :  김 현 수    (서명 또는 인)\n바이오링크 주식회사 대표이사 귀하\n1. 개인정보의 수집 목적 : 연구과제 관리 및 연구비 관리\n2. 수집하는 개인정보 항목 : 성명, 주민등록번호, 주소, 휴대폰번호, 소속, 계좌번호, 전자우편주소 \n3. 수집된 개인정보 이용(해당하는 곳에 ☑ 체크)\n   ☑ 기타 소득 지급[전문가 활용비, 시간제(일용)인건비 지급 등]\n4. 개인정보 보유 및 이용기간\n 수집된 개인정보는 5년간, 문서의 경우 지정된 보관 장소, 전산 데이터의 경우 암호화시켜 안전하게 보관\n됩니다. 보관기간을 경과한 개인정보는 파쇄 및 소각됩니다. 단, 5년 이상 진행되는 연구과제의 경우 해당\n연구과제 종료시까지 연장·보관될 수 있습니다.\n5. 미동의시 참여제한\n 귀하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만, 동의서를 \n제출하지 않을 경우에는 연구 과제 참여 제한이 될 수 있음을 알려드립니다."
+      },
+      {
+        "name": "신분증사본.PNG",
+        "text": "1종보통\n\n자동 차운    전면허 증 (02006056 1400090)    |\n\n16-12-0289806-11"
+      },
+      {
+        "name": "통장사본.PNG",
+        "text": "더 나은 내일을 위한 동행, 5\n신한은행이 고객님의 성공을 위해 함께 하겼습니다.\n\n김현수                            님\n\n계좌번호. 1 0ㅠ- 5 1 6 ㅡ128 07 0\n예금중류수기래 우대동장(거축예금)\n\n교객번호 734657153\n-04-24 발행 일020-04-24\n\n00464000000000000 동장, 친누로 타인이기\n수수료 절약은 기본, 빠르고 편리하게 은행업무를!          덜\n순간의 잘못된 선택으로 범법자가 되시겠습니까?\n\n타인에게 통장을 매매ㆍ양도하면\n법적 처벌을 받게 됩니다\n\n.(3년 이하의 징역 또는 2천만원 이하의 벌금)\n\n.찬가디 00도하는 3? 동장9인은 인현싱의 | |\n\n전화 한통화로 은행일 01!\n1577-8000/1599-8000/1544-8000\n10-8000\n\n'99 에 645 0 898도 다르기 동등\n1따므드지시외\n.264190메시:\n\n':3전668 00로인 소유 8자되008 28빈는건우\n엽 다운로드 > 인저로교인                           -00.4529의이키 수로임2 모우\n=                       -취012바이타등 미로 등대 -영도릉요천\n\n은생거래시 불편, 예로사항 | 080-023-0182       개\n'008시간00700~17700 (9인, 토원오인제의! ㅣ ) | | 40250 24 7009 449 906.4000\n\n10132                                                                     11404879.001비0810\n\nㅡ계\n\n 스마트폰으로 조회, 이체, 펀드 외환, 카드까제!\n인터넷 병질 가일 + 07.5100000.6007절속 >"
+      }
+    ]
+  },
+  {
+    "rowNum": 12,
+    "executionDate": "2025-12-15",
+    "registDate": "2025-12-08",
+    "writeDate": "2025-11-26",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(11.26)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "녹양구이",
+    "depositorName": "바이오링크(주)",
+    "bizType": "일반음식점",
+    "supplyAmount": 309091,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 309091,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "251126 녹양구이 최종.pdf",
+        "text": "〈서식 제4호〉\n회  의  록\n연구책임자김해원소  속바이오링크\n사업명  디지털헬스케어 의료기기 실증지원 사업\n과 제 명\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거\n창출\n금    액 309,091원\n회의일시 2025년 11월 26일 17시 00분 ~ 18시 00분회의장소 계명대학교 동산병원\n회의안건 연구 관련 회의\n참 석 자\n성명소속성명소속\n구혜현 (인)\n계명대학교 \n동산의료원\n김민우 (인)\n바이오링크\n정혜영 (인)\n계명대학교 \n동산의료원\n길예은 (인)\n바이오링크\n허승빈 (인)\n계명대학교 \n동산의료원\n김신범 (인)\n바이오링크\n윤영인 (인)\n바이오링크\n박강현  (인)\n바이오링크\n회의내용 최종 보고서 작성을 위한 회의\n  \n\n2025.11.26 17:12완료 문서\n\n2025_CUS00006_000127\n\n회의록 내부결재\n연구 개발을 위한 회의\n정미지행정팀 / 사원\n결재\n결재\n승인\n김종홍\n날짜(단일)\n장소\n회의 내용\n2025.11.26\n바이오링크 회의실\n참석인원\n10\n목적\n연구 개발을 위한 회의\n연구 개발을 위한 회의\n25. 12. 5. 오후 4:18회의록 내부결재 :: 경영지원\nhttps://flow.worksmobile.com/user/print/doc/14277753?at=NM&companyId=d7af0157-f2bb-4df8-ac9b-e48334cc4e4b1/1"
+      }
+    ]
+  },
+  {
+    "rowNum": 13,
+    "executionDate": "2025-12-05",
+    "registDate": "2025-12-05",
+    "writeDate": "2025-11-26",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(11.26)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "녹양구이",
+    "depositorName": "바이오링크(주)",
+    "bizType": "일반음식점",
+    "supplyAmount": 309091,
+    "vat": 0,
+    "cancelAmount": 309091,
+    "totalAmount": 0,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": []
+  },
+  {
+    "rowNum": 14,
+    "executionDate": "2025-12-05",
+    "registDate": "2025-12-05",
+    "writeDate": "2025-12-02",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "사무용품비(12.02)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "오피스디포대구본점(주)",
+    "depositorName": "바이오링크(주)",
+    "bizType": "문구,사무용품",
+    "supplyAmount": 382545,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 382545,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "251202 사무용품비 최종.pdf",
+        "text": "(인)\n합 계 금 액\n금 사십이만팔백원 정  ( ￦420,800 )\n(공급가액 + 세액)\n220-88-99783\n업     태\n상    호\n10060002728681\n사업장\n소재지\n공\n\n급\n\n자\n등록 번호\n성명\n계명대학교동산의료원 귀하\n053-582-7350053-582-7300\n종목\n문구 복사 인쇄\n대구 달서구 달구벌대로 1164 (신당동)\nNo.\n오피스디포 대구본점(주)\n전화번호\n견적일로 부터 10일\n도매 제조\nFAX\n송주헌\n견적서\n아래와 같이 견적합니다.\n단위수량품 목 / 규 격No단가합계비고코드\n판교)파로크립(중)50개/갑215,80031,600개\n1\n396109\n제트스트림 3색볼펜(0.5/SXE3-400-05/\n검정바디/1자루/MITSUBISHI)\n285,400151,200자루\n2\n504936\n오피스멀티세트(34-SB4/STAEDTLER)39,00027,000세트\n3\n590030\n풀테이프(8.4*12M/BGT-0180/바르네)102,50025,000갑\n4\n313911\n점보크립(JCC/오피스디포)36,40019,200개\n5\n302400\n제트스트림(흑/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n216,00032,000갑\n6\n516995\n제트스트림(적/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n216,00032,000갑\n7\n516997\n제트스트림(청/0.7/SXN-150-07/10자루\n/MITSUBISHI)\n216,00032,000갑\n8\n515995\n체스형 ND자석(28mm/10개입/niceday)235,40070,800개\n9\n323664\n참조사항\nPage 1of 1\n54420,800\n영업담당\n계좌정보\n\n\n\n\n송주헌\n501-82-03466\n(공급자보관용)\n(공급받는자보관용)\n등록\n번호\n상호\n주소\n업태\n220-88-99783\n공\n급\n받\n는\n자\n등록\n번호\n상호\n주소\n오피스디포 대구본점(주)\n대구 달서구 달구벌대로 1164 (신당동)\n문구 복사 인쇄\n종\n목\n도매 제조업태\n성\n명\n성\n명\n조치흠\n종합병원 임대 외\n종\n목\n부동산 서비스 의료\n거래명세서\n2025-12-02\n대구 달서구 달구벌대로 1035 계명대학교동산병원\n일자\n공\n\n급\n\n자\n10060002728681\n계명대학교동산의료원\n053 -\n10060002728681\nT053-582-7300T\nF053-582-7350F\n1\n코드품 목 / 규 격단위수량단가합계비고No\n396109231,600개15,8001판교)파로크립(중)50개/갑\n50493628151,200자루5,4002\n제트스트림 3색볼펜(0.5/SXE3-400-05/\n검정바디/1자루/MITSUBISHI)\n590030327,000세트9,0003\n오피스멀티세트(34-SB4/STAEDTLER)\n- [규격] : 34SB4\n3139111025,000갑2,5004풀테이프(8.4*12M/BGT-0180/바르네)\n302400319,200개6,4005점보크립(JCC/오피스디포)\n516995232,000갑16,0006\n제트스트림(흑/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n516997232,000갑16,0007\n제트스트림(적/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n515995232,000갑16,0008\n제트스트림(청/0.7/SXN-150-07/10자루\n/MITSUBISHI)\n323664270,800개35,4009체스형 ND자석(28mm/10개입/niceday)\n( 인 / 서명 )\n계좌번호\n인 수 자\n월결카드\n참조사항\n배송주소\n은행\n대구 달서구 달구벌대로 1035 계명대학교동산병원 /\n고객배송\n현금기타\n /\n420,80054\n계명대학교 동산의료원\n작업담당\n수 령 자\nPage 1 of 1\n\n물 품 인 수 확 인 서\n《재료비  등 직접구매  시작성하시기  바랍니다.》\n물품 사진\n(※거래명세서순서대로 사진을 첨부)\n1. 품명\n파로크립 외 8종\n위와 같이 신청 물품(수량 포함)을 수령하였음을 확인합니다.\n2025년   12월   02일\n인수자:  이 혜 진   (인)   /    연구 책임자:   김 해 원   (인)"
+      }
+    ]
+  },
+  {
+    "rowNum": 15,
+    "executionDate": "2025-12-05",
+    "registDate": "2025-12-04",
+    "writeDate": "2025-12-03",
+    "evidenceType": "전자세금계산서",
+    "evidenceSub": "",
+    "purpose": "회계정산수수료",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "정동회계법인",
+    "depositorName": "정동회계법인",
+    "bizType": "회계법인",
+    "supplyAmount": 723000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 723000,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "정동회계법인 회계정산수수료.pdf",
+        "text": "전자세금계산서\n(공급받는자보관용)\n책번호\n0권0호\n일련번호\nCG140225120300027\n공\n급\n자\n등록번호\n공\n급\n받\n는\n자\n등록번호\n상호\n(법인명)\n정동회계법인성명김지환\n상호\n(법인명)\n바이오링크주식회사성명홍정호\n사업장\n주소\n서울특별시강남구언주로651(논현동,삼원빌딩)\n사업장\n주소\n대구광역시달서구달구벌대로1053(호산동)\n7층404호계명대학교첨단산업지원센터\n업태서비스종사업장번호업태정보통신업종사업장번호\n종목회계법인종목응용소프트웨어개발및공급업\n부서명담당자정동회계법인부서명담당자\n연락처휴대폰연락처휴대폰\nE-Mailjdactax@jdac.co.kr\nE-Mailmjjeong@biolinkinc.co.kr\nE-Mail\nE-Mail\n20251203-41000096-13861212승인번호:관리번호:TX2025128672059\n작성일자공급가액세액\n20251203723,00072,300\n가상계좌:하나은행393-900067-65037\n비고\n월일품목명규격수량단가공급가액세액비고\n1203국산의료기기정산용역료1723,000723,00072,300\n합계금액현금수표어음외상미수금\n이금액을함\n※본계산서는속득세법시행령(제211조7항,8항)에의하여발행된계산서이며,전자인증서명으로인감날인이없어도법적효력을갖습니다.\n※교부업무대행사업자:(주)더존비즈온[134-81-08473]\n\n2022년05월23일\n강남세무서장\n사업자등록증\n(법인사업자)\n등록번호:211-87-41408\n법인명(단체명):정동회계법인\n대표자:\n김지환\n개업연월일:2003년11월01일법인등록번호:114634-0031625\n사업장소재지:\n서울특별시강남구언주로651,7층(논현동,삼원빌딩)\n본점소재지:\n서울특별시강남구언주로651,7층(논현동,삼원빌딩)\n사업의종류\n:\n업태\n서비스\n종목\n회계법인\n발급사유:발급일자갱신\n:\n사업자단위과세적용사업자여부:\n여()부(∨)\n전자세금계산서전용전자우편주소:jdac27@hometax.go.kr\n\n가상계좌\n조회이체B2B전자결제외환/수출입공과금\n\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001c\u001f !\n\"#$\u001a% \u001c&'\n&(\u0018\u001c)*+\u001c,-.\u001c\u001a\u001b/\u001c012\u001c&(345\u001c\u001d\u001e+\u001c\u0018\u0019\u001a\u001b67\u001c\u001f 89:;\n<\u001c,-\u001c<\n\u0018\u0019\u001a\u001b=>?@?<@AAABC<BDA?C\n\u0018\u0019\u001a\u001bE/F\"#$\u001a% \nGAH@;\u001cHH;\u001cHH\nI\u001c\u001f !/\u001c01J!\u001c&(J\u001c\u001d\u001e+\u001c\u0018\u0019\u001a\u001b67\u001c\u001f K/\u001cL45\u001c%M \u001cNOP\u001cQR7\u001cSTUV9:;"
+      }
+    ]
+  },
+  {
+    "rowNum": 16,
+    "executionDate": "2025-12-01",
+    "registDate": "2025-12-01",
+    "writeDate": "2025-12-01",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비(11월)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 5052367,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 5052367,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": []
+  },
+  {
+    "rowNum": 17,
+    "executionDate": "2025-12-01",
+    "registDate": "2025-11-25",
+    "writeDate": "2025-11-24",
+    "evidenceType": "전자세금계산서",
+    "evidenceSub": "",
+    "purpose": "사무용품비(11.24)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "주식회사애니텍",
+    "depositorName": "바이오링크(주)",
+    "bizType": "컴퓨터및주변기기",
+    "supplyAmount": 1177000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 1177000,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "사무용품비 최종.pdf",
+        "text": "■ 주      소 : 대구시 달서구 파도고개로 75\n■ 등록번호 :             5 0 2 - 8 1 - 3 8 8 9 8\n■ 상      호 :(주)애니텍\n■ 대표이사 :\n홍종환\n■ 전화번호 :     053 - 759 - 7800\n■ 팩스번호 :     053 - 759 - 7801\n■ 홈페이지 :\n₩1,294,700\nNO.규    격수량단 가금   액비 고\n1☞ W2040A(HP)2116,000       232,000        \n☞ W2041A(HP)2150,000       300,000        \n☞ W2042A(HP)2150,000       300,000        \n☞ W2043A(HP)2150,000       300,000        \n2☞ A4용지/box222,500         45,000          \n기업부설 연구전담부서 인정서 제 2017155084\n복사용지\n취\n급\n품\n목\n *삼성전자 B2B 전문점(IT,가전,LED)                        * 삼성전자 G2B 전문점(관공서,기관,학교 조달)\n *삼성전자 모바일 전문점(H/W,S/W)                        * 전산 유지보수,전산 관련 소모품 판매\n *서버(HP,IBM,DELL) 및 S/W 판매                         * 삼성 스마트 복합기(렌탈포함)\n *기계설비공사(공조,시스템에어컨)\n ■ 설치 장소 : 대구시 달서구 달구벌대로 1053. 첨단산업센터 406호\n 본 견적서는 발주서(계약서)로  사용 가능합니다.        구매담당자                          (인)\n합      계       금      액 (VAT포함)₩1,294,700\n ■ 영업 담당 : 전유찬 팀장 (010-3746-7676)\n인\n증\n및\n면\n허\n기계설비공사업 수성-18-10-01\n ■ 결제 조건 : 현금 또는 카드정보통신공사업 제 530413호\n ■ 참고 사항 :소프트웨어사업자 B20-202879-001\n정품 토너\n소     계₩1,177,000\n부 가 세₩117,700\n  ■ E-mail  :\nmjjeong@biolinkinc.co.krhttp://anytec.co.kr/\n견적금액(VAT포함):\n一金 일백이십구만사천칠백원\n품   명\n  ■ 수      신 : 바이오링크(주)\n  ■ 참      조 : 정미지 선생님\n  ■ 전화번호 : 010-3049-6632\n  ■ 견적일자 : 2025-11-24\n  ■ 견적번호 :25-1124-102\n  ■ 유효기간 : 견적후   15 일 이내\n견적서\n주식회사애니텍\n\n등록번호\n상호\n 주소\n업태\n연락처\n원정( )\n순번수량단위\n1 > HP W2040A2\n > HP W2041A2\n > HP W2042A2\n > HP W2043A2\n2 > A4용지/박스1\n당사납품일자\n결제방법정기결제납품장소\n빠른시일 내\n특이사항: \n연락처\n010-8855-6422 / fullback@hanmail.net\n합 계\n발주담당자이창동 / 팀장\n1,309,000       \n견  적  서\n대표자\n종목\n팩스\n25,000      \n발 주 금 액 (VAT 포함)일금  일백삼십만구천\n복사용지\n2025년 11월 24일\n단가규격품명\n토너132,000     264,000         \n견적번호\n견적일자\n담당자\n이창동위즈 ICT\n도매 및 소매업\n070-8826-6025\n팩스번호\n 귀하\n연락처\n컴퓨터 및 주변기기\n053-472-6025\n1,309,000₩\n발\n주\n자\n정\n보\n503-24-53375\n바이오링크 귀중\n대구광역시 달서구 성서공단북로18길 6 (호산동)\n340,000         \n340,000         \n340,000         \n25,000          \n공급가액\n170,000     \n170,000     \n170,000     \n\n\n\n물 품 인 수 확 인 서\n《재료비  등 직접구매  시작성하시기  바랍니다.》\n물품 사진\n(※거래명세서순서대로 사진을 첨부)\n1. 품명\n토너, A4용지\n위와 같이 신청 물품(수량 포함)을 수령하였음을 확인합니다.\n2025년   11월   24일\n인수자:  이 혜 진   (인)   /    연구 책임자:   김 해 원   (인)"
+      }
+    ]
+  },
+  {
+    "rowNum": 18,
+    "executionDate": "2025-12-01",
+    "registDate": "2025-11-24",
+    "writeDate": "2025-11-18",
+    "evidenceType": "전자세금계산서",
+    "evidenceSub": "",
+    "purpose": "IRB심의비",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "계명대학교 동산의료원",
+    "depositorName": "바이오링크(주)",
+    "bizType": "임대, 유료주차장, 종합병원",
+    "supplyAmount": 1100000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 1100000,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "IRB 심의비 최종.pdf",
+        "text": "전자세금계산서\n공급받는자\n보 관 용\n일련번호 \n승인번호20251118-41000007-13936883\n공\n급\n자\n등록번호\n501-82-03466\n공\n급\n받\n는\n자\n등록번호\n848-87-02662\n상     호\n(법인명)\n 계명대학교 동산의료원\n상     호\n(법인명)\n 바이오링크 주식회사\n성     명 조치흠\n종사업장\n번     호\n 성     명 홍정호\n종사업장\n번     호\n \n사 업 장\n주     소\n 대구광역시 달서구 달구벌대로 1035(신당동)\n사 업 장\n주     소\n 대구광역시 달서구 달구벌대로 1053, 404호 계명\n대학교첨단산업지원센터(호산동)\n업     태 부동산, 서비스종     목\n 임대, 유료주차장,\n종합병원\n업     태 정보통신업종     목\n 응용 소프트웨어\n개발 및 공급업\n작성일자공급가액세액수정사유당초승인번호\n2025/11/18 1,100,000  110,000   \n비고 \n월일품목규격수량단가공급가액세액비고\n1118 김태훈 초기심의비(2025-11-050)   1,100,000110,000 \n         \n         \n         \n합계 금액현금수표어음외상미수금\n위 금액을 영수함.\n 1,210,000    \n \n구분공급자공급받는자\n담당자명 서현승 이혜진\n전화번호 053-258-6693 0532585912\n이 메 일 parkhn@dsmc.or.kr mjjeong@biolinkinc.co.kr\n본 인쇄물은 국세청 고시 기준에 따라 트러스빌(www.trusbill.or.kr)에서 발행된 전자세금계산서입니다.\n*위 문서는 국세청 전송전에 출력되었습니다. 이 문구는 국세청 전송완료시 표기되지 않습니다.\n25. 11. 19. 오후 2:46\nTrusBill print\nhttps://www.trusbill.or.kr/documents/bill/Main.jsp1/1\n\n \nIRB 심의비 안내 \n \n1. 심의비 및 입금계좌 안내 \n \n \n※ 계좌번호 : iM(아이엠)뱅크 505-10-174303-6 (예금주: 계명대학교 동산의료원) \n연구비와 심의비 통장이 다르므로 계좌번호 확인후 입금하여 주시기 바랍니다. \n \n2. 심의비 입금 절차 \n금액 확인 후 IRB File No. 기재 하여 입금 → 세금계산서 발급요청서, 사업자등록증 메일 전송 \n→ 입금증 첨부하여 IRB 신청(심의비 입금 순으로 심의 예정) \n \n가. 세금계산서 발급은 익월 10일까지 발행 가능하며 그 이후로는 발급 불가합니다. \n나. 심의비 입금이 부득이하게 지연되는 경우 공문(IRB File No, 입금일자, 지연사유, 직인 및  \n연구책임자 서명 등 간략하게 기술) 첨부하여 주시기 바랍니다. \n \n3. 심의비 환불 안내 \nIRB 오입금 환급 신청서, 통장사본, 사업자등록증, 발급된 세금계산서 첨부 후 메일로 신청하여 \n주시기 바랍니다. 심의비 환불은 국세청 세금계산서 발급 기간에 따라 익월 10일까지 환불 가능합니다. \n \n4. 기타사항 \n\n가. 세금계산서는 입금 후 영수용 세금계산서가 원칙입니다. \n나. 오직 청구용 세금계산서만 발급 가능한 경우(산학협력단, 학교 등)에는 매달 10일까지  \n발급해드리고 그 달 말까지 입금되어야 합니다. 말일까지 입금되지 않는 경우 자동 발급 취소되는  \n점을 안내드립니다. \n \n다. 부가세 면제는 연구자 입금 후 원내영수증 요청 시 적용됩니다. \n라. 세금계산서 발급요청서는 건별로 작성하시고 부족분 입금시 세금계산서는 마지막 입금날짜로  \n발급됩니다. \n  마. 세금계산서 발급요청서는 본원 서식(pdf 변환 금지)으로 작성 후 보내주시기 바랍니다. \n바. 지원(의뢰)기관은 연구비(현물)지원하는 기관으로 명확히 기술해주시기 바랍니다. \n사. 신용카드 결제는 불가하며, 계좌이체만 가능합니다. \n \n※ 심의비 담당자 : 임상연구보호센터 T.053-258-6692(irbdsmc@naver.com) \n※ IRB 주소 : 대구광역시 달서구 달구벌대로 1035 계명대학교 동산병원 본관 8층 IRB 사무실 \n※ 자세한 사항은 IRB 홈페이지(http://www.e-irb.com, 계명대학교 동산병원) 게시판내 공지사항을 \n참고하시기 바랍니다."
+      }
+    ]
+  },
+  {
+    "rowNum": 19,
+    "executionDate": "2025-12-01",
+    "registDate": "2025-11-24",
+    "writeDate": "2025-11-19",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(11.19)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "경대병원  새마을금고",
+    "depositorName": "바이오링크(주)",
+    "bizType": "슈퍼마켓.마트",
+    "supplyAmount": 272727,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 272727,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "251119._300,000원_베네푸드.pdf",
+        "text": "2025.11.18 17:46완료 문서\n\n2025_CUS00006_000123\n\n회의록 내부결재\n연구 개발을 위한 회의(11.19)\n정미지행정팀 / 사원\n날짜(단일)\n장소\n회의 내용\n2025.11.19\n바이오링크 회의실\n참석인원\n7\n목적\n연구 개발을 위한 회의\n연구 개발을 위한 회의\n\n\n\n〈서식 제4호〉\n회  의  록\n연구책임자김해원소  속바이오링크\n사업명  디지털헬스케어 의료기기 실증지원 사업\n과 제 명\n흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거\n창출\n금    액 300,000원\n회의일시 2025년 11월 19일 11시 00분 ~ 13시 00분회의장소 계명대학교 동산병원\n회의안건 동산병원, 경북대병원 데이터 추출 관련 회의\n참 석 자\n성명소속성명소속\n구혜현 (인)\n계명대학교 \n동산의료원\n김민우 (인)\n바이오링크\n김종홍 (인)\n계명대학교 \n동산의료원\n길예은 (인)\n바이오링크\n허승빈 (인)\n계명대학교 \n동산의료원\n김신범 (인)\n바이오링크\n윤영인 (인)\n바이오링크\n회의내용 동산병원, 경북대병원 데이터 추출 관련 회의"
+      }
+    ]
+  },
+  {
+    "rowNum": 20,
+    "executionDate": "2025-12-01",
+    "registDate": "2025-11-24",
+    "writeDate": "2025-11-18",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "사무용품비(11.18)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "오피스디포대구본점(주)",
+    "depositorName": "바이오링크(주)",
+    "bizType": "문구,사무용품",
+    "supplyAmount": 681818,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 681818,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "★사무용품비_2025.11.18._750,000원_바이오링크★.pdf",
+        "text": "(인)\n합 계 금 액\n금 칠십오만원 정  ( ￦750,000 )\n(공급가액 + 세액)\n220-88-99783\n업     태\n상    호\n10060002704734\n사업장\n소재지\n공\n\n급\n\n자\n등록 번호\n성명\n바이오링크 주식회사 귀하\n053-582-7350053-582-7300\n종목\n문구 복사 인쇄\n대구 달서구 달구벌대로 1164 (신당동)\nNo.\n오피스디포 대구본점(주)\n전화번호\n견적일로 부터 10일\n도매 제조\nFAX\n송주헌\n견적서\n아래와 같이 견적합니다.\n단위수량품 목 / 규 격No단가합계코드\n형광라이너(5색세트/동아연필)71,60011,200세트\n1\n502100\n포스트-잇 플래그(683-9KN-10 알뜰팩/\n3M)\n529,500147,500개\n2\n314071\n그라프기어샤프(0.5/PG1015/1자루/PEN\nTEL)\n519,80099,000자루\n3\n505682\n제트스트림(흑/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n216,00032,000갑\n4\n516995\n제트스트림(적/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n216,00032,000갑\n5\n516997\n제트스트림(청/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n216,00032,000갑\n6\n517754\n제트스트림 3색볼펜(0.7/SXE3-400-07/\n투명바디/1자루/MITSUBISHI)\n105,40054,000자루\n7\n517782\n네임펜M(흑/2.0/1자루/모나미)29001,800자루\n8\n501141\nPLUS수정테이프(WH-605/5*6)52,40012,000개\n9\n300160\n스카치 풀테이프(017D/8.4mm*8M/3M)63,40020,400개\n10\n312760\n네임펜F(흑/1.0/12자루/모나미)28,70017,400타\n11\n501134\n네임펜F(적/1.0/12자루/모나미)18,7008,700타\n12\n501136\n고주파클립보드(A4/상철/F612-7/문화\n산업)\n63,00018,000개\n13\n400961\n반투명홀더(10개팩/투명/오피스디포)202,80056,000팩\n14\n403011\n둥근쫄대화일10P(대용량/좌철/투명/오\n피스디포)\n68,00048,000팩\n15\n402151\n판교)파로크립(중)50개/갑215,45030,900개\n16\n396109\n참조사항\nPage 1of 2\n90750,000\n영업담당\n계좌정보\n\n\n(인)\n합 계 금 액\n금 칠십오만원 정  ( ￦750,000 )\n(공급가액 + 세액)\n220-88-99783\n업     태\n상    호\n10060002704734\n사업장\n소재지\n공\n\n급\n\n자\n등록 번호\n성명\n바이오링크 주식회사 귀하\n053-582-7350053-582-7300\n종목\n문구 복사 인쇄\n대구 달서구 달구벌대로 1164 (신당동)\nNo.\n오피스디포 대구본점(주)\n전화번호\n견적일로 부터 10일\n도매 제조\nFAX\n송주헌\n견적서\n아래와 같이 견적합니다.\n단위수량품 목 / 규 격No단가합계코드\n리포트화일 고급형(A4/검정/메카라인)317,50052,500개\n17\n436860\n묶음할인-노트패드(A4/노랑/10개입/오\n피스디포)\n215,80031,600팩\n18\n316972\n물류관리용라벨(V3110/100매/1칸/프린\n텍)\n222,50045,000팩\n19\n223010\n참조사항\nPage 2of 2\n90750,000\n영업담당\n계좌정보\n\n\n\n\n송주헌\n848-87-02662\n(공급자보관용)\n(공급받는자보관용)\n등록\n번호\n상호\n주소\n업태\n220-88-99783\n공\n급\n받\n는\n자\n등록\n번호\n상호\n주소\n오피스디포 대구본점(주)\n대구 달서구 달구벌대로 1164 (신당동)\n문구 복사 인쇄\n종\n목\n도매 제조업태\n성\n명\n성\n명\n홍정호\n응용 소프트웨어 개발 및 공\n급업\n종\n목\n정보통신업\n거래명세서\n2025-11-18\n대구 달서구 달구벌대로 1053 , 404호 계명대학교첨단산업지원\n센터(호산동)\n일자\n공\n\n급\n\n자\n10060002704734\n바이오링크 주식회사\n258-5912\n10060002704734\nT053-582-7300T\nF053-582-7350F\n1\n코드품 목 / 규 격단위수량단가합계No\n502100711,200세트1,6001형광라이너(5색세트/동아연필)\n3140715147,500개29,5002\n포스트-잇 플래그(683-9KN-10 알뜰팩/\n3M)\n505682599,000자루19,8003\n그라프기어샤프(0.5/PG1015/1자루/PEN\nTEL)\n516995232,000갑16,0004\n제트스트림(흑/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n516997232,000갑16,0005\n제트스트림(적/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n517754232,000갑16,0006\n제트스트림(청/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n5177821054,000자루5,4007\n제트스트림 3색볼펜(0.7/SXE3-400-07/\n투명바디/1자루/MITSUBISHI)\n50114121,800자루9008네임펜M(흑/2.0/1자루/모나미)\n300160512,000개2,4009PLUS수정테이프(WH-605/5*6)\n312760620,400개3,40010스카치 풀테이프(017D/8.4mm*8M/3M)\n501134217,400타8,70011네임펜F(흑/1.0/12자루/모나미)\n50113618,700타8,70012네임펜F(적/1.0/12자루/모나미)\n400961618,000개3,00013\n고주파클립보드(A4/상철/F612-7/문화\n산업)\n4030112056,000팩2,80014반투명홀더(10개팩/투명/오피스디포)\n402151648,000팩8,00015\n둥근쫄대화일10P(대용량/좌철/투명/오\n피스디포)\n396109230,900개15,45016판교)파로크립(중)50개/갑\n436860352,500개17,50017리포트화일 고급형(A4/검정/메카라인)\n316972231,600팩15,80018\n묶음할인-노트패드(A4/노랑/10개입/오\n피스디포)\n223010245,000팩22,50019\n물류관리용라벨(V3110/100매/1칸/프린\n텍)\n( 인 / 서명 )\n계좌번호\n인 수 자\n월결카드\n참조사항\n배송주소\n은행\n대구 달서구 달구벌대로 1053 , 404호 계명대학교첨단산업지원센터(호산동) /\n010-9724-5958\n현금기타\n /\n750,00090\n바이오링크 주식회사\n작업담당\n수 령 자\nPage 1 of 1\n\n\n\n〈연구서식 53호〉\n물 품 인 수 확 인 서\n 물품 사진\n(※ 거래명세서 순서대로 사진을 첨부)\n품명\n형광라이너(5색세트/동아연필) 외\n위와 같이 신청 물품(수량 포함)을 수령하였음을 확인합니다.\n2025년  11월   18일\n            물품 인수자:     김동혁     (인)  /  연구 책임자:   홍정호     (인)"
+      }
+    ]
+  },
+  {
+    "rowNum": 21,
+    "executionDate": "2025-11-14",
+    "registDate": "2025-11-14",
+    "writeDate": "2025-11-10",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(11.10)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "우복금 생갈비",
+    "depositorName": "바이오링크(주)",
+    "bizType": "일반음식점",
+    "supplyAmount": 409091,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 409091,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": []
+  },
+  {
+    "rowNum": 22,
+    "executionDate": "2025-11-14",
+    "registDate": "2025-11-14",
+    "writeDate": "2025-10-28",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(10.28)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "파르코",
+    "depositorName": "바이오링크(주)",
+    "bizType": "서양식전문점",
+    "supplyAmount": 409091,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 409091,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": []
+  },
+  {
+    "rowNum": 23,
+    "executionDate": "2025-11-14",
+    "registDate": "2025-11-14",
+    "writeDate": "2025-10-27",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(10.27)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "(주)우리는에프엔비",
+    "depositorName": "바이오링크(주)",
+    "bizType": "일반음식점",
+    "supplyAmount": 636364,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 636364,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": []
+  },
+  {
+    "rowNum": 24,
+    "executionDate": "2025-11-14",
+    "registDate": "2025-11-14",
+    "writeDate": "2025-10-20",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(10.20)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "(주)우리는에프엔비",
+    "depositorName": "바이오링크(주)",
+    "bizType": "일반음식점",
+    "supplyAmount": 636364,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 636364,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": []
+  },
+  {
+    "rowNum": 25,
+    "executionDate": "2025-11-14",
+    "registDate": "2025-11-14",
+    "writeDate": "2025-10-15",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(10.15)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "파워마트",
+    "depositorName": "바이오링크(주)",
+    "bizType": "슈퍼마켓.마트",
+    "supplyAmount": 25455,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 25455,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": []
+  },
+  {
+    "rowNum": 26,
+    "executionDate": "2025-11-14",
+    "registDate": "2025-11-13",
+    "writeDate": "2025-11-05",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "사무용품비(11.05)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "오피스디포대구본점(주)",
+    "depositorName": "바이오링크(주)",
+    "bizType": "문구,사무용품",
+    "supplyAmount": 636364,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 636364,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": []
+  },
+  {
+    "rowNum": 27,
+    "executionDate": "2025-10-31",
+    "registDate": "2025-10-31",
+    "writeDate": "2025-10-31",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비(10월)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 3400840,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 3400840,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "급여명세서(근로기준1)_23_윤영인_202510.pdf",
+        "text": "2025년10월분급여명세서\n회사명:바이오링크주식회사지급일:2025.10.28\n사원코드:23사원명:윤영인생년월일:1995.11.20\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n2,777.78\n기본급2,700,000국민연금121,500\n식대200,000건강보험95,710\n차량유지비200,000고용보험24,300\n장기요양보험료1\n2\n,390\n소득세4,820\n지방소득세480\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계259,200\n지급액계3,100,000차인지급액2,840,800\n(단위,원)\n계산방법\n구분산출식또는산출방법지급액\n귀하의노고에감사드립니다."
+      },
+      {
+        "name": "윤영인-이체확인증_20251031_파트7.pdf",
+        "text": "“= 하나은행\n\n0400040[\n0ㅁㅁㅁ : 2025-10- 31\n\n0000        2025- 10- 31 09:00:45     0000        0000\n00400     00000 0)      매태      0ㅁ00\n0ㅁ00000      142-910028-17104      0ㅁ00000      803-910374-85707\n배배0                      01   0040                2,.840,800 [|\n00000000   1004 ㅁㅁ          000000ㅁ00   100 0 ㅁ\n00                   00450\n\n[100000000000000000000.\n20250 100 310 00ㅁ0\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n“= 하나은행\n\n2025- 10- 31 09:38:10                                      7/9                                     “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 28,
+    "executionDate": "2025-11-14",
+    "registDate": "2025-10-28",
+    "writeDate": "2025-10-24",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "사무용품비(10.24)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "오피스디포대구본점(주)",
+    "depositorName": "바이오링크(주)",
+    "bizType": "문구,사무용품",
+    "supplyAmount": 602673,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 602673,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "251013 우리는 최종.pdf",
+        "text": "회  의  록\n연구책임자김해원\n지원기관 보건복지부 / 대구광역시\n과 제 명 흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거창출\n금    액 636,364원\n회의일시 2025년 10월 13일 17시 00분 ~ 18시 00분회의장소 바이오링크 회의실\n회의안건 연구 진행 상황 보고\n참 석 자\n성명소속성명소속\n김혜영  (인)\n바이오링크\n홍정호 (인)\n계명대학교 \n동산의료원\n최민지 (인)\n바이오링크\n고피나스 (인)\n바이오링크\n김동혁 (인)\n바이오링크\n이혜진  (인)\n바이오링크\n이서린 (인)\n바이오링크\n정미지  (인)\n계명대학교 \n동산의료원\n형유정  (인)\n바이오링크\n허승빈  (인)\n계명대학교 \n동산의료원\n이영준 (인)\n바이오링크\n이지윤  (인)\n계명대학교 \n동산의료원\n길예은  (인)\n바이오링크\n전수정  (인)\n계명대학교 \n동산의료원\n이학림  (인)\n바이오링크\n김종홍  (인)\n계명대학교 \n동산의료원\n김신범(인)\n바이오링크\n이자트  (인)\n계명대학교 \n동산의료원\n박병준 (인)\n바이오링크\n현나리  (인)\n계명대학교 \n동산의료원\n윤영인  (인)\n바이오링크\n송승민  (인)\n계명대학교 \n동산의료원\n임유진  (인)\n계명대학교\n산학협력단\n박재석  (인)\n계명대학교 \n동산의료원\n김민우(인)\n바이오링크\n회의내용폐암 확률 예측 모델 데이터 변경에 관한 회의\n\n2025.10.13 10:14완료 문서\n\n2025_CUS00006_000110\n\n회의록 내부결재\n연구 개발을 위한 회의(10.13)\n정미지행정팀 / 사원\n결재\n결재\n승인\n김종홍\n날짜(단일)\n장소\n회의 내용\n2025.10.13\n바이오링크 회의실\n참석인원\n25\n목적\n연구 개발을 위한 회의\n연구 개발을 위한 회의\n25. 10. 15. 오후 4:12회의록 내부결재 :: 경영지원\nhttps://biolink.ncpworkplace.com/print/doc/13596518?at=NM&companyId=d7af0157-f2bb-4df8-ac9b-e48334cc4e4b1/1"
+      }
+    ]
+  },
+  {
+    "rowNum": 29,
+    "executionDate": "2025-11-14",
+    "registDate": "2025-10-15",
+    "writeDate": "2025-10-13",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "사무용품비(10.13)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "오피스디포대구본점(주)",
+    "depositorName": "바이오링크(주)",
+    "bizType": "문구,사무용품",
+    "supplyAmount": 454545,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 454545,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "사무용품비 최종.pdf",
+        "text": "(인)\n합 계 금 액\n금 오십만원 정  ( ￦500,000 )\n(공급가액 + 세액)\n220-88-99783\n업     태\n상    호\n10060002630920\n사업장\n소재지\n공\n\n급\n\n자\n등록 번호\n성명\n바이오링크 주식회사 귀하\n053-582-7350053-582-7300\n종목\n문구 복사 인쇄\n대구 달서구 달구벌대로 1164 (신당동)\nNo.\n오피스디포 대구본점(주)\n전화번호\n견적일로 부터 10일\n도매 제조\nFAX\n송주헌\n견적서\n아래와 같이 견적합니다.\n단위수량품 목 / 규 격No단가합계비고코드\n[업체별도배송]북앤드(색상임의배송/M\nB-104/T형/대/2입)\n67,40044,400개\n1\n371930\n[업체별도배송]북앤드(MB-102/중/2입/\n오피스디포)\n65,00030,000개\n2\n328101\n제트스트림 3색볼펜(0.5/SXE3-400-05/\n검정바디/1자루/MITSUBISHI)\n205,400108,000자루\n3\n504936\n판교)파로크립(소)80개/갑215,50031,000개\n4\n396124\n금학인주(500/매표)212,00024,000개\n5\n310060\n포스트-잇 플래그(683-9KN-10 알뜰팩/\n3M)\n232,20064,400개\n6\n314071\n판교)파로크립(대)25개/갑215,50031,000개\n7\n396102\n포스트-잇(KR330-20A 대용량팩/3M)132,00032,000개\n8\n314049\n묶음할인-노트패드(A4/노랑/10개입/오\n피스디포)\n115,80015,800팩\n9\n316972\n제트스트림(흑/0.7/SXN-150-07/10자루\n/MITSUBISHI)\n116,00016,000갑\n10\n515994\n점보크립(JCC/오피스디포)46,40025,600개\n11\n302400\n고투명 클리어홀더(투명/10개팩/오피\n스디포)\n62,90017,400팩\n12\n400291\n스프링노트(대/5호/오피스디포)35,30015,900개\n13\n316090\n스라리2색+샤프(분홍/0.7/1자루/ZEBRA\n)\n38,50025,500개\n14\n593328\n스카치 풀테이프(017D/8.4mm*8M/3M)53,40017,000개\n15\n312760\n톰보지우개(중/TOMBOW/모노)21,0002,000개\n16\n301488\n참조사항\nPage 1of 1\n66500,000\n영업담당\n계좌정보\n\n\n\n\n송주헌\n848-87-02662\n(공급자보관용)\n(공급받는자보관용)\n등록\n번호\n상호\n주소\n업태\n220-88-99783\n공\n급\n받\n는\n자\n등록\n번호\n상호\n주소\n오피스디포 대구본점(주)\n대구 달서구 달구벌대로 1164 (신당동)\n문구 복사 인쇄\n종\n목\n도매 제조업태\n성\n명\n성\n명\n홍정호\n응용 소프트웨어 개발 및 공\n급업\n종\n목\n정보통신업\n거래명세서\n2025-10-13\n대구 달서구 달구벌대로 1053 , 404호 계명대학교첨단산업지원\n센터(호산동)\n일자\n공\n\n급\n\n자\n10060002630920\n바이오링크 주식회사\n258-5912\n10060002630920\nT053-582-7300T\nF053-582-7350F\n1\n코드품 목 / 규 격단위수량단가합계비고No\n371930644,400개7,4001\n[업체별도배송]북앤드(색상임의배송/M\nB-104/T형/대/2입)\n328101630,000개5,0002\n[업체별도배송]북앤드(MB-102/중/2입/\n오피스디포)\n50493620108,000자루5,4003\n제트스트림 3색볼펜(0.5/SXE3-400-05/\n검정바디/1자루/MITSUBISHI)\n396124231,000개15,5004판교)파로크립(소)80개/갑\n310060224,000개12,0005금학인주(500/매표)\n314071264,400개32,2006\n포스트-잇 플래그(683-9KN-10 알뜰팩/\n3M)\n396102231,000개15,5007판교)파로크립(대)25개/갑\n314049132,000개32,0008포스트-잇(KR330-20A 대용량팩/3M)\n316972115,800팩15,8009\n묶음할인-노트패드(A4/노랑/10개입/오\n피스디포)\n515994116,000갑16,00010\n제트스트림(흑/0.7/SXN-150-07/10자루\n/MITSUBISHI)\n302400425,600개6,40011점보크립(JCC/오피스디포)\n400291617,400팩2,90012\n고투명 클리어홀더(투명/10개팩/오피\n스디포)\n316090315,900개5,30013스프링노트(대/5호/오피스디포)\n593328325,500개8,50014\n스라리2색+샤프(분홍/0.7/1자루/ZEBRA\n)\n312760517,000개3,40015스카치 풀테이프(017D/8.4mm*8M/3M)\n30148822,000개1,00016톰보지우개(중/TOMBOW/모노)\n( 인 / 서명 )\n계좌번호\n인 수 자\n월결카드\n참조사항\n배송주소\n은행\n대구 달서구 달구벌대로 1053 , 404호 계명대학교첨단산업지원센터(호산동) / .\n고객배송\n현금기타\n /\n500,00066\n바이오링크 주식회사\n작업담당\n수 령 자\nPage 1 of 1\n\n물 품 인 수 확 인 서\n《재료비  등 직접구매  시작성하시기  바랍니다.》\n물품 사진\n(※거래명세서순서대로 사진을 첨부)\n1. 품명\n북앤드 외 15종\n위와 같이 신청 물품(수량 포함)을 수령하였음을 확인합니다.\n2025년   10월   13일\n인수자:  이 혜 진   (인)   /    연구 책임자:   김 해 원   (인)"
+      }
+    ]
+  },
+  {
+    "rowNum": 30,
+    "executionDate": "2025-11-14",
+    "registDate": "2025-10-15",
+    "writeDate": "2025-10-13",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(10.15)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "(주)우리는에프엔비",
+    "depositorName": "바이오링크(주)",
+    "bizType": "일반음식점",
+    "supplyAmount": 636364,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 636364,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "251015 우리는 최종.pdf",
+        "text": "회  의  록\n연구책임자김해원\n지원기관 보건복지부 / 대구광역시\n과 제 명 흉부CT영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거창출\n금    액 636,364원\n회의일시 2025년 10월 13일 17시 00분 ~ 18시 00분회의장소 바이오링크 회의실\n회의안건 연구 진행 상황 보고\n참 석 자\n성명소속성명소속\n김혜영  (인)\n바이오링크\n홍정호 (인)\n계명대학교 \n동산의료원\n최민지 (인)\n바이오링크\n고피나스 (인)\n바이오링크\n김동혁 (인)\n바이오링크\n이혜진  (인)\n바이오링크\n이서린 (인)\n바이오링크\n정미지  (인)\n계명대학교 \n동산의료원\n형유정  (인)\n바이오링크\n허승빈  (인)\n계명대학교 \n동산의료원\n이영준 (인)\n바이오링크\n이지윤  (인)\n계명대학교 \n동산의료원\n길예은  (인)\n바이오링크\n전수정  (인)\n계명대학교 \n동산의료원\n이학림  (인)\n바이오링크\n김종홍  (인)\n계명대학교 \n동산의료원\n김신범(인)\n바이오링크\n이자트  (인)\n계명대학교 \n동산의료원\n박병준 (인)\n바이오링크\n현나리  (인)\n계명대학교 \n동산의료원\n윤영인  (인)\n바이오링크\n송승민  (인)\n계명대학교 \n동산의료원\n임유진  (인)\n계명대학교\n산학협력단\n박재석  (인)\n계명대학교 \n동산의료원\n김민우(인)\n바이오링크\n회의내용폐암 확률 예측 모델 데이터 변경에 관한 회의\n\n2025.10.13 10:14완료 문서\n\n2025_CUS00006_000110\n\n회의록 내부결재\n연구 개발을 위한 회의(10.13)\n정미지행정팀 / 사원\n결재\n결재\n승인\n김종홍\n날짜(단일)\n장소\n회의 내용\n2025.10.13\n바이오링크 회의실\n참석인원\n25\n목적\n연구 개발을 위한 회의\n연구 개발을 위한 회의\n25. 10. 15. 오후 4:12회의록 내부결재 :: 경영지원\nhttps://biolink.ncpworkplace.com/print/doc/13596518?at=NM&companyId=d7af0157-f2bb-4df8-ac9b-e48334cc4e4b1/1"
+      }
+    ]
+  },
+  {
+    "rowNum": 31,
+    "executionDate": "2025-10-13",
+    "registDate": "2025-10-13",
+    "writeDate": "2025-09-30",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "사무용품비(09.30)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "오피스디포대구본점(주)",
+    "depositorName": "바이오링크(주)",
+    "bizType": "문구,사무용품",
+    "supplyAmount": 545455,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 545455,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "최종 250930사무용품비.pdf",
+        "text": "(인)\n합 계 금 액\n금 육십만원 정  ( ￦600,000 )\n(공급가액 + 세액)\n220-88-99783\n업     태\n상    호\n10060002621651\n사업장\n소재지\n공\n\n급\n\n자\n등록 번호\n성명\n바이오링크 주식회사 귀하\n053-582-7350053-582-7300\n종목\n문구 복사 인쇄\n대구 달서구 달구벌대로 1164 (신당동)\nNo.\n오피스디포 대구본점(주)\n전화번호\n견적일로 부터 10일\n도매 제조\nFAX\n송주헌\n견적서\n아래와 같이 견적합니다.\n단위수량품 목 / 규 격No단가합계비고코드\n날크립(대/점보/JA/바이하츠)38,00024,000개\n1\n302253\n날크립(중/점보/JB/바이하츠)38,00024,000개\n2\n302252\n날크립(소/점보/JM/바이하츠)38,00024,000개\n3\n302251\nOPP테이프(5개/투명/48mm*50M/niceday\n)\n310,50031,500개\n4\n312891\n3M 스카치 매직테이프 810D-12 (18*30\nM) 세이빙 팩 30%\n138,90038,900개\n5\n321819\n포스트잇강한점착용노트(654-24NH/발\n리/원더러스트파스텔즈/3M)\n231,00062,000개\n6\n322263\n스테플러(HD-50F/청색)237,00074,000개\n7\n306583\n둥근쫄대화일10P(대용량/좌철/투명/오\n피스디포)\n108,00080,000팩\n8\n402151\n고투명 두꺼운 클리어홀더(A4/10개팩/\n투명/F4496-7/문화산업)\n205,500110,000팩\n9\n450040\n묶음할인-노트패드(A4/백색/10개입/오\n피스디포)\n415,80063,200팩\n10\n316982\n컬러정부화일(10개팩/노랑/F194-7/문\n화산업)\n183,80068,400팩\n11\n491110\n참조사항\nPage 1of 1\n69600,000\n영업담당\n계좌정보\n\n\n송주헌\n848-87-02662\n(공급자보관용)\n(공급받는자보관용)\n등록\n번호\n상호\n주소\n업태\n220-88-99783\n공\n급\n받\n는\n자\n등록\n번호\n상호\n주소\n오피스디포 대구본점(주)\n대구 달서구 달구벌대로 1164 (신당동)\n문구 복사 인쇄\n종\n목\n도매 제조업태\n성\n명\n성\n명\n홍정호\n응용 소프트웨어 개발 및\n공급업\n종\n목\n정보통신업\n거래명세서\n2025-09-30\n대구 달서구 달구벌대로 1053 , 404호 계명대학교첨단산업지\n원센터(호산동)\n일자\n공\n\n급\n\n자\n10060002621651\n바이오링크 주식회사\n258-5912\n10060002621651\nT053-582-7300T\nF053-582-7350F\n1\n코드품 목 / 규 격단위수량단가합계비고No\n302253324,000개8,0001날크립(대/점보/JA/바이하츠)\n302252324,000개8,0002날크립(중/점보/JB/바이하츠)\n302251324,000개8,0003날크립(소/점보/JM/바이하츠)\n312891331,500개10,5004\nOPP테이프(5개/투명/48mm*50M/niceday\n)\n321819138,900개38,9005\n3M 스카치 매직테이프 810D-12 (18*30\nM) 세이빙 팩 30%\n322263262,000개31,0006\n포스트잇강한점착용노트(654-24NH/발\n리/원더러스트파스텔즈/3M)\n306583274,000개37,0007스테플러(HD-50F/청색)\n4021511080,000팩8,0008\n둥근쫄대화일10P(대용량/좌철/투명/오\n피스디포)\n45004020110,000팩5,5009\n고투명 두꺼운 클리어홀더(A4/10개팩/\n투명/F4496-7/문화산업)\n316982463,200팩15,80010\n묶음할인-노트패드(A4/백색/10개입/오\n피스디포)\n4911101868,400팩3,80011\n컬러정부화일(10개팩/노랑/F194-7/문\n화산업)\n( 인 / 서명 )\n계좌번호\n인 수 자\n월결카드\n참조사항\n배송주소\n은행\n대구 달서구 달구벌대로 1053 , 404호 계명대학교첨단산업지원센터(호산동) / 010-\n9724-5958\n고객배송\n현금기타\n /\n600,00069\n바이오링크 주식회사\n작업담당\n수 령 자\nPage 1 of 1\n\n물 품 인 수 확 인 서\n《재료비  등 직접구매  시작성하시기  바랍니다.》\n물품 사진\n(※거래명세서순서대로 사진을 첨부)\n1. 품명\n날크립 외 10종\n\n위와 같이 신청 물품(수량 포함)을 수령하였음을 확인합니다.\n2025년   9월   30일\n인수자:  이 혜 진   (인)   /    연구 책임자:   김 해 원   (인)"
+      }
+    ]
+  },
+  {
+    "rowNum": 32,
+    "executionDate": "2025-10-13",
+    "registDate": "2025-10-13",
+    "writeDate": "2025-10-10",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "인쇄비(10.10)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "인쇄복사마을",
+    "depositorName": "바이오링크(주)",
+    "bizType": "판촉물.인쇄.복사",
+    "supplyAmount": 181818,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 181818,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "251010 인쇄복사마을 최종.pdf",
+        "text": "No.         \n견          적          서 \n2025년 10월 02일\n공\n급\n자\n등 록 번 호\n503-24-76932\n상호(법인명)\n인쇄복사마을\n성\n명\n최 정 순\n아래와 같이 견적합니다.\n사업장주소\n대구시 달서구 호산동로 35북길 82\n업   태제조업\n종\n목\n인쇄 복사업\n바이오링크 貴下\n전 화 번 호\n053) 591-6339\n합 계 금 액\n(공급가액+세액)\n이십만원整(￦200,000)\n품명규  격수  량단   가공 급 가 액세   액비고\n자료인쇄 A41200,000200,000포함 칼라/흑백\n아래여백\n계200,0000200,000\n\n상호상호\n대표등록번호\n등록번호대표\n주소주소\n업태제조업인쇄,복사,출판업태\n연락처메일\n발행일연락처\nNO.수량단가세액\n11200,000포함\n2\n3\n4\n5\n6\n7\n8\n9\ntotal0\n입금액\n인쇄복사마을 / iM뱅크(구.대구은행) 504-10-177877-2 / TEL 053)591-6339  FAX 053)289-5134 / E-mail: cp6339@hanmail.net\n200,000\n비\n고\n검수\n및\n인수\n200,000\n합계전잔액+출고액현잔액\n2025년 10월 10일 금요일\nT.053-258-5914\n자료인쇄200,000\n품 목공급가비고\n거        래        명        세        서\n공\n급\n하\n는\n자\n인   쇄   복   사   마   을\n공\n급\n받\n는\n자\n바이오링크\n최            정             순\n503-24-76932\n대구 달서구 호산동로35 북길 82(호산동 352)대구 달서구 달구벌대로 1053 첨단산업센터 404호\nTEL. 053)591-6339  FAX. 053)289-5134\nmjjeong@biolinkinc.co.kr"
+      }
+    ]
+  },
+  {
+    "rowNum": 33,
+    "executionDate": "2025-10-13",
+    "registDate": "2025-10-13",
+    "writeDate": "2025-09-29",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "인쇄비(09.29)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "인쇄복사마을",
+    "depositorName": "바이오링크(주)",
+    "bizType": "판촉물.인쇄.복사",
+    "supplyAmount": 272727,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 272727,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "250929 인쇄복사마을 최종.pdf",
+        "text": "No.         \n견          적          서 \n2025년 9월 26일\n공\n급\n자\n등 록 번 호\n503-24-76932\n상호(법인명)\n인쇄복사마을\n성\n명\n최 정 순\n아래와 같이 견적합니다.\n사업장주소\n대구시 달서구 호산동로 35북길 82\n업   태제조업\n종\n목\n인쇄 복사업\n바이오링크 貴下\n전 화 번 호\n053) 591-6339\n합 계 금 액\n(공급가액+세액)\n삼십만원整(￦300,000)\n품명규  격수  량단   가공 급 가 액세   액비고\n자료인쇄 A41300,000300,000포함 칼라/흑백\n아래여백\n계300,0000300,000\n\n상호상호\n대표등록번호\n등록번호대표\n주소주소\n업태제조업인쇄,복사,출판업태\n연락처메일\n발행일연락처\nNO.수량단가세액\n11300,000포함\n2\n3\n4\n5\n6\n7\n8\n9\ntotal0\n입금액\n비\n고\n검수\n및\n인수\n인쇄복사마을 / iM뱅크(구.대구은행) 504-10-177877-2 / TEL 053)591-6339  FAX 053)289-5134 / E-mail: cp6339@hanmail.net\n합계전잔액+출고액현잔액\n300,000\n300,000\n자료인쇄300,000\n대구 달서구 달구벌대로 1053 첨단산업센터 404호\nTEL. 053)591-6339  FAX. 053)289-5134\nbjpark@biolinkinc.co.kr\n2025년 9월 29일 월요일\n박병준 대리 010-9825-7000 T.053-258-5914\n품 목공급가비고\n거        래        명        세        서\n공\n급\n하\n는\n자\n인   쇄   복   사   마   을\n공\n급\n받\n는\n자\n바이오링크\n최            정             순\n503-24-76932\n대구 달서구 호산동로35 북길 82(호산동 352)"
+      }
+    ]
+  },
+  {
+    "rowNum": 34,
+    "executionDate": "2025-09-30",
+    "registDate": "2025-09-30",
+    "writeDate": "2025-09-30",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비(9월)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 3400840,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 3400840,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "급여명세서(근로기준1)_23_윤영인_202509.pdf",
+        "text": "2025년09월분급여명세서\n회사명:바이오링크주식회사지급일:2025.09.28\n사원코드:23사원명:윤영인생년월일:1995.11.20\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n2,272.73\n기본급2,700,000국민연금121,500\n식대200,000건강보험95,710\n차량유지비200,000고용보험24,300\n장기요양보험료1\n2\n,390\n소득세4,820\n지방소득세480\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계259,200\n지급액계3,100,000차인지급액2,840,800\n(단위,원)\n계산방법\n구분산출식또는산출방법지급액\n귀하의노고에감사드립니다."
+      },
+      {
+        "name": "윤영인 이체증.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁㅁ : 2025-09-30\n0000       2025- 09- 30 09:03:09    0000       0000\n00400     00000 0)      매태      배배미\n0ㅁ00000     142-910028-17104      0ㅁ00000     803-910374-85707\n배배0                   01   0040              2,.840,800 [|\n00000000   90 ㅁㅁ           00000000   00ㅁ\n00                 00450\n0000000400400040004004040010. 하나은행\n\n20250 090 3004 00ㅁ0\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n2025- 09- 30 15:28:36                                       6/9                                      “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 35,
+    "executionDate": "2025-09-30",
+    "registDate": "2025-09-29",
+    "writeDate": "2025-09-26",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(09.27)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "만리장성2",
+    "depositorName": "바이오링크(주)",
+    "bizType": "중식전문점",
+    "supplyAmount": 272728,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 272728,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "250926 만리장성 최종.pdf",
+        "text": "회  의  록\n연구책임자김해원\n지원기관 보건복지부  대구광역시/ \n과 제 명\n흉부 영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거CT\n창출\n금    액원272,728\n회의일시년  월  일  시  분   시  분2025 09  26  17 00 ~ 18 00회의장소 바이오링크 회의실\n회의안건 연구 진행 상황 보고\n참 석 자\n성명소속성명소속\n황보성준  인( )\n바이오링크\n이서린  인( )\n바이오링크\n박병준 인 ( )\n바이오링크\n최민지   인( )\n바이오링크\n김동혁  인 ( )\n바이오링크\n형유정 인  ( )\n바이오링크\n윤영인  인 ( )\n바이오링크\n이정원  인 ( )\n계명대학교 \n동산의료원\n이학림  인( )\n바이오링크\n정미지  인( )\n계명대학교 \n동산의료원\n정희성   인( )\n바이오링크\n구혜현  인( )\n계명대학교 \n동산의료원\n회의내용재학습을 위한 회의 인종별 분리 데이터 분석 결과(, )\n\n\n\n2025.09.26 17:51완료 문서\n\n2025_CUS00006_000106\n\n회의록 내부결재\n연구 개발을 위한 회의(09.26)\n정미지행정팀 / 사원\n결재\n결재\n승인\n김종홍\n날짜(단일)\n장소\n회의 내용\n2025.09.26\n바이오링크 회의실\n참석인원\n12\n목적\n연구 개발을 위한 회의\n연구 개발을 위한 회의\n25. 9. 29. 오전 11:47회의록 내부결재 :: 경영지원\nhttps://biolink.ncpworkplace.com/print/doc/13446938?at=NM&companyId=d7af0157-f2bb-4df8-ac9b-e48334cc4e4b1/1"
+      }
+    ]
+  },
+  {
+    "rowNum": 36,
+    "executionDate": "2025-09-30",
+    "registDate": "2025-09-29",
+    "writeDate": "2025-09-23",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(09.23)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "(주)우리는에프엔비",
+    "depositorName": "바이오링크(주)",
+    "bizType": "일반음식점",
+    "supplyAmount": 636364,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 636364,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "250923 우리는 최종.pdf",
+        "text": "회  의  록\n연구책임자김해원\n지원기관 보건복지부  대구광역시/ \n과 제 명 흉부 영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거창출CT\n금    액원636,364\n회의일시년  월  일  시  분   시  분2025 09 23 17  00  ~ 18  30회의장소 바이오링크 회의실\n회의안건 연구 진행 상황 보고\n참 석 자\n성명소속성명소속\n김혜영  인 ( )\n바이오링크\n이영준 인 ( )\n바이오링크\n최민지 인 ( )\n바이오링크\n고피나스  인( )\n바이오링크\n김동혁 인 ( )\n바이오링크\n이혜진   인( )\n바이오링크\n이서린  인( )\n바이오링크\n정미지   인( )\n계명대학교 \n동산의료원\n형유정   인( )\n바이오링크\n구혜현   인( )\n계명대학교 \n동산의료원\n박강현 인 ( )\n바이오링크\n이지윤 인  ( )\n계명대학교 \n동산의료원\n황보성준 인  ( )\n바이오링크\n이정원 인  ( )\n계명대학교 \n동산의료원\n정희성  인 ( )\n바이오링크\n이자트 인  ( )\n계명대학교 \n동산의료원\n이학림 인  ( )\n바이오링크\n길예은   인( )\n바이오링크\n박병준  인( )\n바이오링크\n김신범인 ( )\n바이오링크\n윤영인   인( )\n바이오링크\n김민우인 ( )\n바이오링크\n임유진  인 ( )\n계명대학교\n산학협력단\n회의내용일반화 성능 확보를 위한 데이터 분석에 관한 회의\n\n\n\n2025.09.23 10:19완료 문서\n\n2025_CUS00006_000105\n\n회의록 내부결재\n연구 개발을 위한 회의(09.23)\n정미지행정팀 / 사원\n결재\n결재\n승인\n김종홍\n날짜(단일)\n장소\n회의 내용\n2025.09.23\n바이오링크 회의실\n참석인원\n25\n목적\n연구 개발을 위한 회의\n연구 개발을 위한 회의\n25. 9. 24. 오후 3:51회의록 내부결재 :: 경영지원\nhttps://biolink.ncpworkplace.com/print/doc/13375151?at=NM&companyId=d7af0157-f2bb-4df8-ac9b-e48334cc4e4b1/1"
+      }
+    ]
+  },
+  {
+    "rowNum": 37,
+    "executionDate": "2025-09-30",
+    "registDate": "2025-09-23",
+    "writeDate": "2025-09-19",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(09.19)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "하바네로",
+    "depositorName": "바이오링크(주)",
+    "bizType": "일반음식점",
+    "supplyAmount": 264361,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 264361,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "250919 하바네로 최종.pdf",
+        "text": "회  의  록\n연구책임자김해원\n지원기관 보건복지부  대구광역시/ \n과 제 명\n흉부 영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거CT\n창출\n금    액원264,361\n회의일시년  월  일  시  분   시  분2025 09  19  17 00 ~ 18 00회의장소 바이오링크 회의실\n회의안건 연구 진행 상황 보고\n참 석 자\n성명소속성명소속\n황보성준  인( )\n바이오링크\n이서린  인( )\n바이오링크\n박병준 인 ( )\n바이오링크\n최민지   인( )\n바이오링크\n김동혁  인 ( )\n바이오링크\n형유정 인  ( )\n바이오링크\n박강현  (인)\n바이오링크\nEzat 인  ( )\n계명대학교 \n동산의료원\n이학림  인( )\n바이오링크\n정미지  인( )\n계명대학교 \n동산의료원\n정희성   인( )\n바이오링크\n구혜현  인( )\n계명대학교 \n동산의료원\n회의내용외부 검증 성능 평가 후 보완을 위한 회의\n\n\n\n\u0000\u0001\u0000\u0002\u0003\u0001\u0004\u0003\u0005\u0004\u0006\u0005\u0007\b\u0005\u0005\t\n\u000b\f\r\n\u000e\n\u0000\u0001\u0000\u0002\u000f\u0010\u0011\u0012\u0001\u0001\u0001\u0001\u0013\u000f\u0001\u0001\u0001\u0005\u0001\u0014\n\u000e\n\u0015\u0016\u0017\u0006\u0018\u0019\u001a\u001b\n\u001c\u001d\u001e\u001f\u000b !\n\"#$                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  %&'\u0006(\u0006)*\u0006(\u0006'*\n+,\n+,\n-.\n/01\n234567\n89\n !\u000b:;\n<=>?\u000b@AB\u000bC\u000bDEFGH\n\u0000\u0001\u0000\u0002\u0003\u0001\u0004\u0003\u0005\u0004\nIJKL\u0006MNOPQ\u0006\u0015\u0016R\nSTUV\n\u0005\u0000W\nXY\nZ[\\]^\u0006_`\u0006\u0015\u0016\nZ[\\]^\u0006_`\u0006\u0015\u0016\n=>a\nbc\u0006(\u0006\u0000\u0001\u0000\u0002\u0003\u0001\u0004\u0003\u0005\u0004\u0006\u0005\u0007\b\u0005\u0000"
+      }
+    ]
+  },
+  {
+    "rowNum": 38,
+    "executionDate": "2025-09-30",
+    "registDate": "2025-09-23",
+    "writeDate": "2025-09-19",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(09.19)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "뚜레쥬르 계명대동산병원점",
+    "depositorName": "바이오링크(주)",
+    "bizType": "제과.제빵",
+    "supplyAmount": 181818,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 181818,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "250919 뚜레쥬르 최종.pdf",
+        "text": "회  의  록\n연구책임자김해원\n지원기관 보건복지부  대구광역시/ \n과 제 명\n흉부 영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거CT\n창출\n금    액원181,818\n회의일시년  월  일  시  분   시  분2025 09 11  15  00 ~ 16  00회의장소 바이오링크 회의실\n회의안건 연구 진행 상황 보고\n참 석 자\n성명소속성명소속\n윤영인   인( )\n바이오링크\n김신범   인( )\n바이오링크\n길예은 인  ( )\n바이오링크\n이지윤  인 ( )\n계명대학교 \n동산의료원\n김민우   인( )\n바이오링크\n이정원 인 ( )\n계명대학교 \n동산의료원\n이영준   인( )\n바이오링크\n김종홍  인 ( )\n계명대학교 \n동산의료원\n회의내용폐암 확률 예측 모델 데이터 분석을 위한 회의\n\n\n\n2025.09.19 13:53완료 문서\n\n2025_CUS00006_000103\n\n회의록 내부결재\n연구 개발을 위한 회의(09.19)\n정미지행정팀 / 사원\n결재\n결재\n승인\n김종홍\n날짜(단일)\n장소\n회의 내용\n2025.09.19\n바이오링크 회의실\n참석인원\n8\n목적\n연구 개발을 위한 회의\n연구 개발을 위한 회의\n25. 9. 23. 오후 3:57회의록 내부결재 :: 경영지원\nhttps://biolink.ncpworkplace.com/print/doc/13337890?at=NM&companyId=d7af0157-f2bb-4df8-ac9b-e48334cc4e4b1/1"
+      }
+    ]
+  },
+  {
+    "rowNum": 39,
+    "executionDate": "2025-09-18",
+    "registDate": "2025-09-18",
+    "writeDate": "2025-09-16",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "인지세",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "전자문서용전자수입인지",
+    "depositorName": "바이오링크(주)",
+    "bizType": "국/관세",
+    "supplyAmount": 69300,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 69300,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "20250916171924168216_receipt.pdf",
+        "text": "전자문서용\n \n전자수입인지\n \n납부확인증\n \n납부확인증\n납부정보\n \n용도 고유번호 \n납부금액 발급일자 \n계약번호 사업자번호 \n결제확인정보\n \n구매(결제)자명 \n은행(카드사)명 \n결제금액 \n결제구분 \n전화번호 \n위와 같이 전자문서용 전자수입인지를 구매하였음을 확인합니다. \n전자문서용\n \n전자수입인지\n \n업무대행기관\n \n한국무역정보통신\n \n계약금액계약일자 \n계약명\n2509969-112908944\n2025년 09월 16일\n848-87-02662\nB0080828001077\n하나SK카드\n인지세 납부\n70,000 원\n신용카드 (사업자)\n70,000 원\n2025.01.01\n100,000,000 원\n010-3522-5***\n디지털헬스케어 의료기기 실증지원 사업(임상계획 분야)\n2025.09.16\n바이오링크 주식회사"
+      },
+      {
+        "name": "[K-MEDI] 디지털헬스케어 의료기기 실증지원 사업 협약서_2차년도 25.01.01.-25.12.31. 최종-2509969112908944.pdf",
+        "text": "2025.09.16\n17:20155\n고유번호\n509969-112908944\n수입인지금액\n70,000원\n\n“디지털헬스케어 의료기기 실증지원 사업 협\n\nㅇ 과 제 명 :디지털헬스케어 의료기기 실증지원 사업 (임상실증 분야)\nㅇ 사업 기 간 : 2025년 01월 01일 ^ 2025년 12월 31일까지\n\nㅇ 사 업 비 : 금100,000,000원정 (금일억원정)\n\nㅇ 연구책임자 :바이오링크 주식회사 김해원\n\nㅇ 협약당사자\n\n(갑) | 관리기관 (기관명) 대구\n\n경북첨단의료산입진흥재단            (대표자) 박구선\n(을) | 주관기업 (기업명) 바이오링크 주식회사                  (대표자) ： 홍정호\n참여기관 (기관명) 계명때학교 동산의료원                 (대표자) 조치흠\n위 과제의 수행에 관하여 '감'과 '을\"은 다음과 같이 협약을 체결한다\n제1조(목적 및 내용)\n본 협약은 더지털헨스케어 의료기기 실증지원 사업(이하 “사업\"이라 한다)의 효율적인 운영을 위해\n\n세부사항을 정하며, 목적 및 내용은 [붙임11의 사업계획서와 같다.\n\n제2조(용어의 정의)\n본 협약에서 사용하는 용어는 달리 정의하지 아니하는 한 「디지털헬스케어 의료기기 실증지원 사업 운\n영지침」(이하 “운영지침\"이라 한다)이 정하는 바에 따른다.\n\n제3조(사업의 신의성실 및 청렴의무 준수\n0) 본 협약에 의한 사엽에 참여하는 당사자들은 신의를 가지고 본 협약, 운영지친 등이 정하는 바이\n\n따라 총괄책임자의 조정과 감독으로 제1조의 협약 내용을 성실히 수행하여야 한다.\n\n69\n0\n79\n을\n오\n0 애\n[원\n[에\n트\n2?\n트여\n마\n요\n의\n다\n0\n오\n허\n기\n00\n[|ㅇ\n빈\n제\n노\n6@오\n개\n\n 평가관리 과정에서 청렴의무를 준수\n하여야 한다.\n제4조(당사자들의 권한과 책임)\n\n@ (갑)은 다음 각 호의 권한과 책임을 갖는다.\n\n가. (갑)과의 협약체결 및 과제 수행에 대한 종합관리\n\n다. 사업 목표에 해당하는 국가표준의 개받-정비\n\n라. 과제 수행에 필요한 참여인력\n\n2\n[뽀\n0\n뿌\nㅁ\n\n므\n0\n0쪼\n.저\n40\n\n마. 사업비의 관리 및 사용실적의 보고\n\n바. 결과보고서의 제출\n\n사. 과제의 브안관리\n\n아. 연구윤리 준수\n\n자. 과제의 부정행위 등 문제 발생 시 (갑)에 통보\n\n차. 그밖에 요령 및 지침에서 협력기관의 권한 또는 책임으로 정한 사항\n\n8) (을)은 과제 수행에 따른 연구실 등의 안전조치를 이행하여야 하고, 표준화 활용 어력을 작성 ㆍ관\n\n리 하여야 한다.\n제5조(사업비의 지급, 사용 및 관리 등)\n0) (갑)은 해당 사업비 중 정부지원금을 국고보조금통합관리시스템(6나라도움)을 통하여 지급하고 지\n리\n\n방비를 (을)이 협약체결 시 제출한 입금계좌(이하 “관\n\n@) (을)은 해당 사업비 중\n관리하며, 지방비는 국고보조금통합관\n가\n\n@) (갑)은 다음 각 호의 경우에 정부지원금의 지급시기ㆍ지급방법 및 지급금액을 조정할 수 있다.\n\n시스템(6나라도움)의 자기부담금으로 등록하여 관리한\n\n가. 사업비의 절감 또는 사업기간 단축 등에 따라 협약이 변경되는 경우\n\n사용 및 관리하여야 한다.\n\n6 그 밖에 사업비의 산정, 지급, 관리 및 사용에 관하여는 요령 및 지침\n\n이\n\n이 정하는 바에 따른다.\n제6조(사업비 사용실적의 보고 및 평가)\n\n02 (을)은 사업비 사용실적 및 변경 내역을 요령 및 지침에서 정하는 기간 내에 별도로 정하는 서\n식에 따라 (갑) 또는 (갑)이 지정한 위탁정산기관의 장에게 제출하여야 한다.\n\n(9) (갑) 또는 (갑)이 지정한 위탁정산기관은 사업비의 투명하고 공정한 집행을 확인하기 위하여\n\n)에게 사업비의 집행 내역에 관한 자료를 요구하거나 현장실태조사를 실시할 수 있으며, (을)\n은 (갑) 또는 (갑)이 지정한 위탁정산기관의    에 성실히 응하여야 한다.\n\n8) (을)은 정산금을 요령 및 지침이 정하는 기간 내에 (갑)이 지정한 계좌에 입금하여야 한다.\n0) 사업비의 사용 실적 보고, 평가 및 정산에 관한 세부 사항은 요령 및 지침 등에 정하는 바에 따른다.\n제7조(사업결과 보고 및 평가)\n07) (을)은 요령 및 지침에서 정하는 바에 따라 결과보고서 등을 정하는 기한 내에 (갑)에게 제출하\n여야 한다.\n(9) 제1항에 따라 제출된 보고서의 검토, 평가 절차 및 기준,\n요령 및 지침에서 정하는 바에 따른다.\n제8조(관계자료의 제출 및 통지의무)\n0) (을)은 (갑)이 지정하는 자의 현장실태조사, 관계서류의 열람, 관계자료의 제출요청에 성실히 응\n하여야 한다.\n\n0) 본 협약상 당사자에 대한 일체의 통지, 통고 등은 협약서에 기재된 상대방의 주소로 내용증명\n\n0 그 밖에 과제의 수행과 관련한 일체의 제출, 통지 및 보고와 관련한 세부 사항은 요령 및 지침에서\n정하는 바에 따른다.\n제9조(협약의 변경)\n0) (갑)과 (을)은 요령 및 지침에서 정하는 바에 따라 본 협약의 내용 및 사업계획서의 내용을 변경\n\n(9) (갑)은 (을)의 요청이 있는 경우 또는 다음 각 호의 하나에 해당하는 사유가 인정되는 경우에\n\n|\n\n가. 정부의 예산 사정, 연차별 실적 또는 계획서의 평가결과에 따라 협약의 변경이 필요한 경우\n\n나. (을)이 과제의 참여를 포기하거나 성실하게 이행하지 아니하는 경우"
+      }
+    ]
+  },
+  {
+    "rowNum": 40,
+    "executionDate": "2025-09-18",
+    "registDate": "2025-09-18",
+    "writeDate": "2025-09-16",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "계약이행보증보험 ",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "서울보증보험_역삼지점(온라인)",
+    "depositorName": "바이오링크(주)",
+    "bizType": "기타보험",
+    "supplyAmount": 45300,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 45300,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "보험증권_20250916170747446349.pdf",
+        "text": "계약보증보험증권\n증권번호제\n100-000-202506511167\n호\n(인터넷발급용)\n보험계약자\n848-87-02662\n피보험자\n502-82-19772\n바이오링크(주)\n(재단)대구경북첨단의료산업진흥재단\n홍정호\n보험가입금액\n금일천만원정\n보험료\n￦45,300-\n￦10,000,000-■일시납□분납\n보험기간2025년01월01일부터2025년12월31일까지(365일간)\n기본사항\n보증내용계약보증금\n특별약관\n1.보험금지급특별약관2.신용카드이용보험료납입특별약관\n본증권에첨부되어있는보통약관및이보험계약에적용되는특별약관의내용을반드시확인하여주시기\n바랍니다.\n특기사항※해당사항없음\n보증하는사항\n주계약내용\n[주계약내용]\n주계약명디지털헬스케어의료기기실증지원사업(임상실증분야)\n계약기간2025년01월01일부터2025년12월31일까지\n계약체결일자\n계약금액￦100,000,000-\n보증금율10%\n1.'보증보험증권으로보증하는내용'이'주계약상보증이필요한내용'과일치하는지여부를반드시확인하시기바랍니다.\n2.증권발급사실및보험약관,보상심사진행사항은회사홈페이지(www.sgic.co.kr)에서확인하실수있습니다.\n우리회사는계약보증보험보통약관,특별약관및이증권에기재된내용에따라계약보증보험계약을체결하였음이확실하므로그증으로이증권\n을발행합니다.\n본증권은「금융소비자보호에관한법률」등관련법령및내부통제기준에따라제공됩니다.\n알아두셔야할사항\n2025년09월16일\n증권\n발급\n대리점\n대리점명새물대리점\n모집자고유번호\n이혜진19971172050022(070-7827-2708)\n지점\n역삼지점주병윤02-569-0041\n서울강남구테헤란로20312층(역삼동,서울인터내셔널타워)\n서울종로구김상옥로29(연지동,보증보험빌딩)\n-00000-\n\n(10-02-243,2025.06.02)[증권번호:100-000-202506511167][보증보험용(공통)]\n보험약관주요내용\n※세부사항은보험약관의적용을받으므로,보험약관을반드시확인하시기바랍니다.\n[보상하는손해]서울보증보험주식회사(이하\"회사\"라합니다)는채무자가보험증권에기재된계약에서정한채무를이행하지아니하여채\n권자인피보험자가입은손해를보험증권에기재된내용과보험약관에따라보상합니다.\n[보상하지아니하는손해]①회사는피보험자의책임있는사유로인하여생긴손해나전쟁·내란·홍수등과같은천재지변으로인하여보험\n계약자가채무를이행하지못하여생긴손해등은보상하지아니합니다.\n②「하도급거래공정화에관한법률」에서정한바에따라피보험자가계약자에게주계약상공사대금지급을보증하지않아이보험계약에\n대한보험금청구권을행사할수없는경우에는보상하는손해에도불구하고보상하지않습니다.\n[계약후알릴의무]①보험계약을체결한후아래와같은사실이생긴경우계약자또는피보험자는지체없이서면으로회사에알리고보험\n증권(보험가입증서)에확인을받아야합니다.\n1.청약서의기재사항을변경하고자할때또는변경이생겼음을알았을때\n2.계약자의변경\n3.피보험자의변경\n4.보험증권에기재된주계약또는법령상의무의금액,기간등회사의보험금지급의무발생에중대한영향을미치는사항\n②회사는제1항에따라계약자또는피보험자가변경사실을통보한경우에는1개월이내에승인여부를결정하여보험료를더받거나,돌\n려드릴수있습니다.\n③계약자또는피보험자가제1항에따라변경사실을알리지아니하거나회사의승인을받지못한경우에회사는주계약또는법령상의의\n무를변경시킴으로써증가된손해는보상하지않습니다.\n④계약자는주소또는연락처가변경된경우에는지체없이이를회사에알려야합니다.계약자가이를알리지않은경우회사가알고있는\n최종의주소또는연락처로등기우편방법에의해계약자에게알린사항은일반적으로도달에필요한시일이지난때에는계약자에게도달\n한것으로봅니다.\n[양도]보험의목적의양도는회사의서면동의없이는회사에대하여효력이없으며,회사가서면동의한경우계약으로인하여생긴권리와\n의무를함께양도한것으로합니다.\n[손해의방지와경감의무]①보험사고가생긴때에는계약자또는피보험자는손해의방지와경감에힘써야합니다.\n②피보험자가고의또는중대한과실로제1항의의무를게을리한경우,그렇지않았다면방지또는경감할수있었을손해액을보상액에\n서뺍니다.\n③피보험자가제1항에따라손해의방지또는경감을위하여회사의동의를얻어지출한필요하고도유익한비용은보험가입금액을초과\n한경우라도회사가보상하여드립니다.\n[소멸시효]보험금청구권또는보험료반환청구권은3년간행사하지아니하면소멸시효가완성됩니다.\n[준거법]별도의약정이없는한,약관에서정하지아니한사항은대한민국법령을따릅니다.\n보상서비스\nᆞ보험사고가발생한경우,홈페이지(www.sgic.co.kr)또는보험금청구접수부서를통해보험금청구관련필요서류를\n제출(우편접수가능)하시면보상심사가진행됩니다.\n보상심사부서(담당부서는변경될수있습니다.)서울보상1센터02-3671-8115\n※'보험금청구및지급절차'는이렇게진행됩니다(신속하고정확한보상심사를위해심사자료추가제출이필요할수있습니다).\nᆞ'SMS'·'e-Mail'발송에동의하시면,담당부서및연락처,보상심사진행사항등필요한정보를받아보실수있습니다.\n'보험금청구'부터'자료제출','담당부서조회'및'진행사항확인'까지인터넷을이용하시면편리합니다!\n-경로:홈페이지(www.sgic.co.kr)>보상서비스>보상안내/보험금청구/보상자료제출(우측QR코드로연결)"
+      }
+    ]
+  },
+  {
+    "rowNum": 41,
+    "executionDate": "2025-09-18",
+    "registDate": "2025-09-17",
+    "writeDate": "2025-09-11",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(09.11)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "(주)아워홈동산의료원점손수헌동",
+    "depositorName": "바이오링크(주)",
+    "bizType": "기타종합소매점",
+    "supplyAmount": 189000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 189000,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "250911 손수헌 최종.pdf",
+        "text": "회  의  록\n연구책임자김해원\n지원기관 보건복지부  대구광역시/ \n과 제 명\n흉부 영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거CT\n창출\n금    액원189,000\n회의일시년  월  일  시  분   시  분2025 09 11  09  00 ~ 10  00회의장소 바이오링크 회의실\n회의안건 연구 진행 상황 보고\n참 석 자\n성명소속성명소속\n윤영인   인( )\n바이오링크\n이서린 인 ( )\n바이오링크\n정희성 인 ( )\n바이오링크\n구혜현  인( )\n계명대학교 \n동산의료원\n형유정 인 ( )\n바이오링크\n이정원 인 ( )\n계명대학교 \n동산의료원\n이학림 인 ( )\n바이오링크\n김종홍  인 ( )계명대학교 \n동산의료원\n길예은 인  ( )\n바이오링크\n김동혁   인( )\n바이오링크\n회의내용을  위한 전처리를  위한  회의External validation(DSMC)\n\n\n\n2025.09.11 09:21완료 문서\n\n2025_CUS00006_000102\n\n회의록 내부결재\n연구 개발을 위한 회의(09.11)\n정미지행정팀 / 사원\n결재\n결재\n승인\n김종홍\n날짜(단일)\n장소\n회의 내용\n2025.09.11\n바이오링크 회의실\n참석인원\n10\n목적\n연구 개발을 위한 회의\n연구 개발을 위한 회의\n25. 9. 11. 오후 4:27회의록 내부결재 :: 경영지원\nhttps://biolink.ncpworkplace.com/print/doc/13221485?at=NM&companyId=d7af0157-f2bb-4df8-ac9b-e48334cc4e4b1/1"
+      }
+    ]
+  },
+  {
+    "rowNum": 42,
+    "executionDate": "2025-09-18",
+    "registDate": "2025-09-11",
+    "writeDate": "2025-09-08",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "회의비(09.08)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "아메리칸트레일러동산병원점(주)",
+    "depositorName": "바이오링크(주)",
+    "bizType": "커피전문점",
+    "supplyAmount": 181819,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 181819,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "250908 아메리칸 트레일러 최종.pdf",
+        "text": "회  의  록\n연구책임자김해원\n지원기관 보건복지부  대구광역시/ \n과 제 명\n흉부 영상 기반 폐암 발생 예측 인공지능 소프트웨어 의료기기 임상시험 및 근거CT\n창출\n금    액원181,819\n회의일시년  월  일  시  분   시  분2025 09 08  10  00 ~ 11  00회의장소 바이오링크 회의실\n회의안건 연구 진행 상황 보고\n참 석 자\n성명소속성명소속\n이영준 인  ( )\n바이오링크\n이서린 인 ( )\n바이오링크\n박병준 인 ( )\n바이오링크\n구혜현  인( )\n계명대학교 \n동산의료원\n형유정 인 ( )\n바이오링크\n박재석 인 ( )\n계명대학교 \n동산의료원\n이학림 인 ( )\n바이오링크\n김종홍  인 ( )\n계명대학교 \n동산의료원\n최민지   인( )\n바이오링크\n김동혁   인( )\n바이오링크\n회의내용미국 관련 과 관련한 회의FDA Pre-Submission    Performance Test\n\n\n\n2025.09.08 11:26완료 문서\n\n2025_CUS00006_000099\n\n회의록 내부결재\n연구 개발을 위한 회의(09.08)\n정미지행정팀 / 사원\n결재\n결재\n승인\n김종홍\n날짜(단일)\n장소\n회의 내용\n2025.09.08\n바이오링크 회의실\n참석인원\n10\n목적\n연구 개발을 위한 회의\n연구 개발을 위한 회의\n25. 9. 11. 오후 4:26회의록 내부결재 :: 경영지원\nhttps://biolink.ncpworkplace.com/print/doc/13168365?at=NM&companyId=d7af0157-f2bb-4df8-ac9b-e48334cc4e4b1/1"
+      }
+    ]
+  },
+  {
+    "rowNum": 43,
+    "executionDate": "2025-09-18",
+    "registDate": "2025-09-11",
+    "writeDate": "2025-09-08",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "purpose": "사무용품비(09.08)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "",
+    "vendorName": "오피스디포대구본점(주)",
+    "depositorName": "바이오링크(주)",
+    "bizType": "문구,사무용품",
+    "supplyAmount": 545455,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 545455,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "최종 사무용품비.pdf",
+        "text": "(인)\n합 계 금 액\n금 육십만원 정  ( ￦600,000 )\n(공급가액 + 세액)\n220-88-99783\n업     태\n상    호\n10060002584348\n사업장\n소재지\n공\n\n급\n\n자\n등록 번호\n성명\n바이오링크 주식회사 귀하\n053-582-7350053-582-7300\n종목\n문구 복사 인쇄\n대구 달서구 달구벌대로 1164 (신당동)\nNo.\n오피스디포 대구본점(주)\n전화번호\n견적일로 부터 10일\n도매 제조\nFAX\n송주헌\n견적서\n아래와 같이 견적합니다.\n단위수량품 목 / 규 격No단가합계비고코드\n판교)파로크립(중)50개/갑215,50031,000개\n1\n396109\n묶음할인-노트패드(A4/노랑/10개입/오\n피스디포)\n215,80031,600팩\n2\n316972\n물류관리용라벨(V3110/100매/1칸/프린\n텍)\n222,50045,000팩\n3\n223010\n리포트화일 고급형(A4/검정/메카라인)317,50052,500개\n4\n436860\n장구형초강력자석(NH-03/중/15mm/5개/\n오피스디포)\n15,2005,200개\n5\n323170\n투명D링바인더(5cm/오피스디포)106,00060,000개\n6\n410100\n체스형 ND자석(21mm/10개입/niceday)219,40038,800개\n7\n323663\n체스형 ND자석(28mm/10개입/niceday)135,40035,400개\n8\n323664\n삼각볼펜 437M(4색세트/1세트/STAEDTL\nER)\n16,0006,000개\n9\n518065\n제트스트림 3색볼펜(0.5/SXE3-400-05/\n검정바디/1자루/MITSUBISHI)\n205,400108,000자루\n10\n504936\n제트스트림(흑/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n216,00032,000갑\n11\n516995\n제트스트림(적/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n216,00032,000갑\n12\n516997\n제트스트림(청/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n216,00032,000갑\n13\n517754\n스카치 매직테이프(SM3-Deal/기획제품\n/3M)\n220,70041,400개\n14\n312490\n네임펜M(흑/2.0/12자루/모나미)19,6009,600타\n15\n501144\n택배칼 겸용 가위(평화)14,5004,500개\n16\n368580\n참조사항\nPage 1of 2\n59600,000\n영업담당\n계좌정보\n\n\n(인)\n합 계 금 액\n금 육십만원 정  ( ￦600,000 )\n(공급가액 + 세액)\n220-88-99783\n업     태\n상    호\n10060002584348\n사업장\n소재지\n공\n\n급\n\n자\n등록 번호\n성명\n바이오링크 주식회사 귀하\n053-582-7350053-582-7300\n종목\n문구 복사 인쇄\n대구 달서구 달구벌대로 1164 (신당동)\nNo.\n오피스디포 대구본점(주)\n전화번호\n견적일로 부터 10일\n도매 제조\nFAX\n송주헌\n견적서\n아래와 같이 견적합니다.\n단위수량품 목 / 규 격No단가합계비고코드\n스라리2색+샤프(분홍/0.7/1자루/ZEBRA\n)\n57,00035,000개\n17\n593328\n참조사항\nPage 2of 2\n59600,000\n영업담당\n계좌정보\n\n\n송주헌\n848-87-02662\n(공급자보관용)\n(공급받는자보관용)\n등록\n번호\n상호\n주소\n업태\n220-88-99783\n공\n급\n받\n는\n자\n등록\n번호\n상호\n주소\n오피스디포 대구본점(주)\n대구 달서구 달구벌대로 1164 (신당동)\n문구 복사 인쇄\n종\n목\n도매 제조업태\n성\n명\n성\n명\n홍정호\n응용 소프트웨어 개발 및\n공급업\n종\n목\n정보통신업\n거래명세서\n2025-09-08\n대구 달서구 달구벌대로 1053 , 404호 계명대학교첨단산업지\n원센터(호산동)\n일자\n공\n\n급\n\n자\n10060002584348\n바이오링크 주식회사\n258-5912\n10060002584348\nT053-582-7300T\nF053-582-7350F\n1\n코드품 목 / 규 격단위수량단가합계비고No\n396109231,000개15,5001판교)파로크립(중)50개/갑\n316972231,600팩15,8002\n묶음할인-노트패드(A4/노랑/10개입/오\n피스디포)\n223010245,000팩22,5003\n물류관리용라벨(V3110/100매/1칸/프린\n텍)\n436860352,500개17,5004리포트화일 고급형(A4/검정/메카라인)\n32317015,200개5,2005\n장구형초강력자석(NH-03/중/15mm/5개/\n오피스디포)\n4101001060,000개6,0006\n투명D링바인더(5cm/오피스디포)\n- [규격] : 두께 5cm\n323663238,800개19,4007체스형 ND자석(21mm/10개입/niceday)\n323664135,400개35,4008체스형 ND자석(28mm/10개입/niceday)\n51806516,000개6,0009\n삼각볼펜 437M(4색세트/1세트/STAEDTL\nER)\n50493620108,000자루5,40010\n제트스트림 3색볼펜(0.5/SXE3-400-05/\n검정바디/1자루/MITSUBISHI)\n516995232,000갑16,00011\n제트스트림(흑/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n516997232,000갑16,00012\n제트스트림(적/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n517754232,000갑16,00013\n제트스트림(청/0.5/SXN-150-05/10자루\n/MITSUBISHI)\n312490241,400개20,70014\n스카치 매직테이프(SM3-Deal/기획제품\n/3M)\n50114419,600타9,60015네임펜M(흑/2.0/12자루/모나미)\n36858014,500개4,50016택배칼 겸용 가위(평화)\n593328535,000개7,00017\n스라리2색+샤프(분홍/0.7/1자루/ZEBRA\n)\n( 인 / 서명 )\n계좌번호\n인 수 자\n월결카드\n참조사항\n배송주소\n은행\n대구 달서구 달구벌대로 1053 , 404호 계명대학교첨단산업지원센터(호산동) / 010-\n9724-5958\n고객배송\n현금기타\n /\n600,00059\n바이오링크 주식회사\n작업담당\n수 령 자\nPage 1 of 1\n\n\n\n물 품 인 수 확 인 서\n재료비  등 《직접구매  시 작성하시기  바랍니다 .》\n물품 사진\n(※거래명세서순서대로 사진을 첨부)\n품명1. \n파로크립 외  종16\n위와 같이 신청 물품 수량 포함 을 수령하였음을 확인합니다().\n\n년    월    일2025   9   11\n인수자  이 혜 진    인연구 책임자  김 해 원    인:  ( )   /    :   ( )"
+      }
+    ]
+  },
+  {
+    "rowNum": 44,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 3월(국비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 1700420,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 1700420,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "19_이지수_202503.PDF",
+        "text": "2025년3월분급여명세서\n회사명:바이오링크주식회사지급일:2025.03.28\n사원코드:19사원명:이지수생년월일:1991.04.10\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n기본급2,900,000국민연금135,000\n식대200,000건강보험106,350\n고용보험26,100\n장기요양보험료1\n3\n,770\n소득세23,930\n지방소득세2,390\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계\n3\n07\n,540\n지급액계\n3,\n100\n,0\n0\n0\n차인지급액2,792,460\n(단위,원)\n계산방법\n구분산출식또는\n\n산출방법지급액\n귀하의노고에감사드립니다\n."
+      },
+      {
+        "name": "3월급여이지수이체증.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁ : 2025-03- 31\n0000       2025- 03- 31 10:09:36    0000       0000\n00400     00000 0)      매태      배배미\n0ㅁ00000     142-910028-17104      0ㅁ00000     83980101526119\n배배0                   01   0040              2,792,460 []\n00000000   30 ㅁㅁ           00000000   00ㅁ\n00                 00450\n0000000400400040004004040010. 하나은행\n\n20250 030 310 00ㅁ0ㅁ0\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n2025-03- 31 10:10:01                                           3/6                                          “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 45,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 4월(시비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 1305656,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 1305656,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "4월급여 이체증 2_4.jpg",
+        "text": "\" 아나은행\n\n이체확인증\n\n출력일자 :2025-04-30\n\n이체일시            2025-04-30 10148       입금은행            벌크 대구 )\n보내는분           바이오링크 뚜 )             받는분             박병준\n출금계좌번호\"        142-910028-17104         입금계좌번호\"        508138340644\n수수료                              0원 . 이체금액                      2.755.220원\n술금동장표시내용 4왼급여                      입급동장표시내용 급여\n메모                                       애 8코드\n상기 내용과 같이 이체가 완료되었음을 확인합니다                                  가 아나은행\n\n2028년 04일 30밀 하나은행\n\n본 명세는 고객의 편의를 위해 제공!\n\n으로 ,거래의 참고응으로만 사용하실 수 있습니다\n\n2025-04-30 10ㅋ349\n\n479"
+      },
+      {
+        "name": "급여명세서(근로기준1)_18_박병준_202504.pdf",
+        "text": "2025년04월분급여명세서\n회사명:바이오링크주식회사지급일:2025.04.28\n사원코드:18사원명:박병준생년월일:1990.04.16\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n1,136.37\n기본급2,800,000국민연금130,500\n식대200,000건강보험78,810\n고용보험25,200\n장기요양보험료1\n0\n,200\n소득세28,400\n지방소득세2,840\n건강보험정산-27,600\n장기요양정산\n-\n3,5\n7\n0\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계244,780\n지급액계3,000,000차인지급액2,755,220\n(단위,원)\n계산방법\n구분산출식또는산출방법지급액\n귀하의노고에감사드립니다."
+      }
+    ]
+  },
+  {
+    "rowNum": 46,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 3월(시비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 1305656,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 1305656,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "18_박병준_202503.PDF",
+        "text": "2025년3월분급여명세서\n회사명:바이오링크주식회사지급일:2025.03.28\n사원코드:18사원명:박병준생년월일:1990.04.16\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n기본급2,800,000국민연금130,500\n식대200,000건강보험106,350\n고용보험25,200\n장기요양보험료1\n3\n,770\n소득세28,400\n지방소득세2,840\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계\n3\n07\n,060\n지급액계\n3,\n000\n,0\n0\n0\n차인지급액2,692,940\n(단위,원)\n계산방법\n구분산출식또는\n\n산출방법지급액\n귀하의노고에감사드립니다\n."
+      },
+      {
+        "name": "3월급여박병준이체증.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁ : 2025-03- 31\n0000       2025- 03- 31 10:09:36    0000       140 0 (00 0 )\n00400     00000 0)      매태      0ㅁ00\n0ㅁ00000     142-910028-17104      0ㅁ00000     508138340644\n배배0                   01   0040              2,692,940 []\n00000000   30 ㅁㅁ           000000ㅁ00   00\n00                 00450\n0000000400400040004004040010. 하나은행\n\n20250 030 310 00ㅁ0ㅁ0\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n2025- 03- 31 10:10:01                                           276                                          “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 47,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 1월(시비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 1305656,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 1305656,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "급여명세서(근로기준1)_18_박병준_202501.PDF",
+        "text": "2025년1월분급여명세서\n회사명:바이오링크주식회사지급일:2025.01.29\n사원코드:18사원명:박병준생년월일:1990.04.16\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n기본급2,800,000국민연금126,000\n식대200,000건강보험106,350\n고용보험25,200\n장기요양보험료1\n3\n,770\n소득세56,800\n지방소득세5,680\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계\n3\n33\n,800\n지급액계\n3,\n000\n,0\n0\n0\n차인지급액2,666,200\n(단위,원)\n계산방법\n구분산출식또는\n\n산출방법지급액\n귀하의노고에감사드립니다\n."
+      },
+      {
+        "name": "이체확인증_20250210_박병준.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁ : 2025-02-10\n0000       2025-01-31 12:31:40    0000       140 0 (00 0 )\n00400     00000 0)      매태      0ㅁ00\n0ㅁ00000     142-910028-17104      0ㅁ00000     508138340644\n배배0                   01   0040              2,.666,200\n00000000   100[ㅁ           000000ㅁ00   00\n00                 00450\n0000000400400040004004040010. 하나은행\n\n20250 020 10] 00ㅁ0\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n2025- 02- 10 10:48:54                                          14/16                                         “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 48,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 2월(시비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 1305656,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 1305656,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "18_박병준_202502.PDF",
+        "text": "2025년2월분급여명세서\n회사명:바이오링크주식회사지급일:2025.02.28\n사원코드:18사원명:박병준생년월일:1990.04.16\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n기본급2,800,000국민연금130,500\n식대200,000건강보험106,350\n고용보험25,200\n장기요양보험료1\n3\n,770\n소득세28,400\n지방소득세2,840\n연말정산소득세-345,560\n연말정산지방소득세\n-3\n4,5\n4\n0\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계-73,040\n지급액계3,000,000차인지급액3,073,040\n(단위,원)\n계산방법\n구분산출식또는산출방법지급액\n귀하의노고에감사드립니다."
+      },
+      {
+        "name": "이체확인증_20250402_박병준.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁㅁ : 2025-04-02\n0000       2025- 02- 28 10:52:40    0000       140 0 (00 0 )\n00400     00000 0)      매태      0ㅁ00\n0ㅁ00000     142-910028-17104      0ㅁ00000     508138340644\n배배0                   01   0040              3,073,040 []\n00000000   2000           000000ㅁ00   00\n00                 00450\n0000000400400040004004040010. 하나은행\n\n2025[] 04[] 02] 0 ㅁ0[\n040040000040044090440440400404700044404000040040404040ㆍ\n\n2025-04- 02 15:20:54                                           5/9                                          “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 49,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-08-11",
+    "evidenceType": "전자세금계산서",
+    "evidenceSub": "",
+    "purpose": "FDA Pre-submission(50%)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반용역비",
+    "itemName": "",
+    "vendorName": "주식회사 지엠에스컨설팅",
+    "depositorName": "바이오링크(주)",
+    "bizType": "기타 엔지니어링 서비스업",
+    "supplyAmount": 5000000,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 5000000,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "내부결재 513G 의료기기인증컨설팅.pdf",
+        "text": "2025.04.23 17:31완료 문서\n\n2025_CUS00001_000038\n\n일반 기안지\nLucaCast 의료기기 FDA 513(g)\n진행을 위한 GMSC 계약 체결 신청 건\n이지수임상연구팀 / 대리\n결재\n결재\n승인\n병렬 결재\n승인\n병렬 결재\n승인\n권노원김해원홍정호\n합의\n합의\n승인\n김민우\n기안 내용\n파일첨부\n1. 개요\n[BL-LucaCast] 인공지능 의료기기 LucaCast의 FDA 513(g) 진행을 위해, 주식회사 지엠에스컨설팅(GMSC)과의 계약 체결을 검토\n요청드립니다.\n2. 계약업체\n업체명: 주식회사 지엠에스컨설팅 ((주) GMSC)\n3. 계약 주요 내용\nFDA 513(g) Consulting Process: 흉부 CT 영상 기반 폐암 발생 예측 인공지능 소프트웨어(LucaCast)의 FDA 등급 분류 및\nSubmission Type 확인   \n4. 체결 금액 \n계약금 (선지급, 50%): 금오백만원 (₩5,000,000)\n잔금 (FDA 513(g) 완료 시, 50%): 금오백만원 (₩5,000,000)\n5. 첨부자료\n의료기기인증컨설팅용역계약서 1부\n끝. \n의료기기인증컨설팅용역계약서_바이오링크_FDA513(g)_최종.docx\n25. 4. 29. 오전 10:06일반 기안지 :: 경영지원\nhttps://biolink.ncpworkplace.com/print/doc/11387853?at=NM&companyId=d7af0157-f2bb-4df8-ac9b-e48334cc4e4b1/1"
+      },
+      {
+        "name": "사업자등록증_GMSC.pdf",
+        "text": "2023년07월04일\n동고양세무서장\n사업자등록증\n(법인사업자)\n등록번호:151-87-00686\n법인명(단체명):주식회사지엠에스컨설팅\n대표자:\n김종현\n개업연월일:2017년03월21일법인등록번호:110111-6352704\n사업장소재지:\n경기도고양시덕양구청초로66,B동612호(덕은동,덕은리버워크)\n본점소재지:\n경기도고양시덕양구청초로66,B동612호(덕은동,덕은리버워크)\n사업의종류\n:\n:\n:\n:\n:\n:\n:\n업태\n기술서비스업\n출판,영상,방송통신및정보서비스\n업\n도매\n도매및소매업\n서비스\n서비스\n서비스\n종목\n규격인증서비스.엔지니어링서비스업\n교과서및학습서적출판업,만화출판업,\n기타서적출판업\n무역\n전자상거래업\n소프트웨어개발및공급업\n학술연구개발\n규격인증서비스\n발급사유:\n:\n사업자단위과세적용사업자여부:\n여()부(∨)\n전자세금계산서전용전자우편주소:"
+      },
+      {
+        "name": "의료기기인증컨설팅용역계약서_바이오링크_FDA513(g)_최종 직인.pdf",
+        "text": "<의료기기 인증을 위한 컨설팅 용역 계약서>\n\n계약번호: 60-) -25/31\n\n[계약일 2025 년 05월 29 일]\n\n[매]                                     [01\n5 바이오링크                              5 지엠에스컨설팅\n대구광역시 달서구 달구벌대로 1053 404호 계명대 경기도 고양시 덕양구 청초로 66\n\n학교첨단산업지원센터                     덕은리버워크 8동 612호\n\n대표이사 홍 정                    대표이사 김 종 현 (인)\n\n\n용역계약서\n\n컨설팅 |흉부 (ㅣ 영상 기반 폐암 발생 예측 인공지능 소프트웨어 (0406&6451)에\n범위    대해 『0& 『6-546007015900을 통해 51000 준비방향에 대한 질의 및 답변을\n\n취득하는 컨설팅임.\n상세내용 | 0『6-541607159101 0011541009 『『00055\n\n(1) 0ㅠ6-546010015591010 질의 항목 및 내용 설정\n\n(2) 질의 관련 시험 및 ㅁ70[060| 준비\n\n(3) 바6-54[000159100 문서 준비 65148(0「(6 51408)\n\n(4) 0ㅠ6-546000155101 제출 및 (6164 대응\n\n(5) 바6-541010159100 답변 Ｌ6나라\n\n소요기간 : [04 제출 후 70일\n상기 인증을 추진함에 있어 주식회사 바이오링크(이하 “갑“이라 함)와 주식회사\n지엠에스컨설팅(이하 \"을\"이라함) 간에 다음과 같이 컨설팅용역계약(이하 \"본 계약'이라\n함)을 체결한다\n\n제1조 (용역목적)\n본 계약은 \"”갑“의 의료기기 인증에 관한 컨설팅 업무를 “을\"이 수행함에 있어 필요한 사항을\n정함을 목적으로 한다\n제2조 (용역의 내용)\n(6) “을“이 “갑“의 의뢰에 따라 수행하는 업무(이하 \"용역\"이라 함)의 구체적인 범위는 다음과\n같다\n1) 컨설팅을 제공함에 있어 다음의 컨설팅을 제공하기로 한다\n니6                      컨설팅 항목\n，        흉부 영상 기반 폐암 발생 예측 인공지능 소프트웨어\n[0 0[6-9416007159101 컨설팅\n2) 본 계약에 명시되지 않은 용역업무의 상세 내용은 첨부 1-1 컨설팅 제안서(30-)|1-\n\n[고 제출이\n\n그\n\n이 제공을 요구한\n\n-』\n콘\n\n『다.\n\n18\n\n고\n오\n\n[여 \"“\n\n로 가\nㅇ\n\n를 해야\n\n\"이 인정\n\n”가\n터\n\n|'와 협의\n\n2\n너\n\n요하다고\n\n피\n1\n\n데\n\n|여 사전에\n\n=\n\n느\n\n는\n오\n\n를 처리하\n\n다.\n\n즐\n\n| 서류의 내용에 대\n\n다\n\n25/31)에 따\n\n요\n\n06\n[자\n\n제3소 (\n제4조 (\n\n그\n~\n\n따\n\n에\n\n이지\n다!\n\n그 계열회사,\n\n릴\n된\n7\n\n대하여\n\n알게\n\n로 30일 이내 현금 지급)에 의거하여 지\n감\"에게 비용의 지\n\n113넥\n\n으\n\n72079\n|정에서\n\n큰\n\n=\n7\n\n대하여\n날 기\n단계의 완료 여부에\n\n박해도\n남고\n\n서비스에\n\n00        0!\n70        내\n80        벼         ㄷㄷ\n터는      이         펴\n카브       제          94\n의       때 이        등\n로을     07      더\n피즈      바       는\n매 끔     1 !던      을\n20       트 00        시\n수 ㅁ      0\n8 ㅠ         |        노\n0!       마 ㅠㅠ        6\n0 기\n7\n360 으     00\n2 12      자오\n마 니      1 ㅁㅁ\n제 |      을 때     보기 아케\n르 ㅁ      이 고   | 으|\nㅁ0 비     인 히  응 응 응\n가     이가 |을드|흥\n0      _ 퍼  즈|응|용\n때      오 ㅣ응|6ㅁ10\n_ 히     0 … |도후추\n에 느      그 100   규 베비\n다 본       로 」여리리\n0      010 」머|퀘|회\n 휘      를 |\n~       10\n티비 이 주     +\n도   1  0\n에 귀   00 개 2\n~ 자   대   1 00   = | 수\n이\n10      군 ㅜ  | | | 중\n고 0 노    따 | 으| 중\n핀 페 도  메고 0 으\n머가  개  에 고 1 10\n때  이 조     본 | 0\n인 4 을 14010\n0 주 플     눅\n4 5ㅁ  개  퍼\n\n[다.\n\n제\n\n지급규정(세금계산서\n하여야\n\n제7조 (비밀유지 의무)\n\n제6조 (비"
+      },
+      {
+        "name": "이체확인증_20250811 공급가액.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁ00ㅁ00ㅁ0 : 2025-08-22\n0000       2025- 08- 11 15:00:24    0000       0000\n00400     00000 0)      매태      04000004040401\n0ㅁ00000     142-910028-17104      0ㅁ00000     92413700000683\n배배0                   01   0040              5,000,000 []\n00000000   0ㅁㅁㅁ4600ㅁ0ㅁ06050  0ㅁㅁ0ㅁㅁ0ㅁㅁ00ㅁ   0ㅁㅁ00ㅁㅁㅁ 0)\n00                 00450\n0000000400400040004004040010. 아나은행\n\n20250 080 110 0000\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n2025- 08- 11 15:00:32\n\n1/1\n\n“= 하나은행"
+      },
+      {
+        "name": "이체확인증_20250811 부가세.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁ00ㅁ00ㅁ0 : 2025-08-22\n0000       2025- 08- 11 15:01:42    0000       0000\n00400     00000 0)      매태      04000004040401\n0ㅁ00000     142-910029-27604      0ㅁ00000     92413700000683\n배배0                   01   0040               500,000 []\n00000000   0ㅁㅁㅁ4600ㅁ0ㅁ06050  0ㅁㅁ0ㅁㅁ0ㅁㅁ00ㅁ   0ㅁㅁㅁㅁㅁ(0)00\n00                 00450\n0000000400400040004004040010. 하나은행\n\n20250 080 110 0000\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n2025- 08- 11 151:01:54\n\n1/1\n\n“= 하나은행"
+      },
+      {
+        "name": "통장사본(KB 0683)_GMSC.pdf",
+        "text": "차\n\n례\n\n[< 콕민은행\n\n주식회사 지엠에스컨설팅 님               | 일 과 에엘 |\n사업 카-우대동장-ㅋㄱ1염자-유         으\n\n자보 9241357-00-00068즈\n예금종류 기업자유예금\n\n대한민국정부 인 지 세  100원\n조산민  3,6,9,12월 제2금요일                 =-.21<8콕민은영: :\n입하신날 2017년 03월 29일              이  를\n곡권리검상암미디어        ㅎ 1508-999 34국민은맹 |.\n통장발행회차 회차           『6% 02)304-6087        실명확인월\n^600-001 (14×%17.5) 엠보싱지1809/, 00ㅁ10597 (이 통장은 표지를 합하여 12장 입니다. (07\n자동이체 연결계좌 내역\n등록일자 | 예 금 종류 |. .계좌번호 | 이체금액 |이체일| 등록점\n\n 연"
+      }
+    ]
+  },
+  {
+    "rowNum": 50,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 8월(국비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 2720674,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 2720674,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "급여명세서(근로기준1)_23_윤영인_202508.pdf",
+        "text": "2025년08월분급여명세서\n회사명:바이오링크주식회사지급일:2025.08.28\n사원코드:23사원명:윤영인생년월일:1995.11.20\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n2,000\n기본급2,160,000국민연금121,500\n식대160,000건강보험95,710\n차량유지비160,000고용보험19,440\n장기요양보험료1\n2\n,390\n소득세2,460\n지방소득세240\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계251,740\n지급액계2,480,000차인지급액2,228,260\n(단위,원)\n계산방법\n구분산출식또는산출방법지급액\n귀하의노고에감사드립니다."
+      },
+      {
+        "name": "이체확인증_20250829_윤영인.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁㅁ : 2025-08- 29\n0000       2025- 08- 29 09:01:43    0000       0000\n00400     00000 0)      매태      배배미\n0ㅁ00000     142-910028-17104      0ㅁ00000     803-910374-85707\n배배0                   01   0040              2,228,260\n00000000   80 ㅁㅁ           00000000   00ㅁ\n00                 00450\n0000000400400040004004040010. 하나은행\n\n20250 080 299 0000\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n2025- 08- 29 11:13:52                                   7/9                                  “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 51,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 5월(국비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 326414,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 326414,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "5월이체증-박병준.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁ : 2025-05-30\n0000       2025- 05- 30 10:10:29    0000       140 0 (00 0 )\n00400     00000 0)      매태      0ㅁ00\n0ㅁ00000     142-910028-17104      0ㅁ00000     508138340644\n배배0                   01   0040              2,724,050 []\n00000000   50 ㅁㅁ           000000ㅁ00   00\n00                 00450\n0000000400400040004004040010. 하나은행\n\n20250 050 3004 00ㅁ0\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n2025- 05- 30 10:17:29                                           4/9                                          “= 하나은행"
+      },
+      {
+        "name": "급여명세서(근로기준1)_18_박병준_202505.pdf",
+        "text": "2025년05월분급여명세서\n회사명:바이오링크주식회사지급일:2025.05.28\n사원코드:18사원명:박병준생년월일:1990.04.16\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n1,250\n기본급2,800,000국민연금130,500\n식대200,000건강보험78,810\n고용보험25,200\n장기요양보험료1\n0\n,200\n소득세28,400\n지방소득세2,840\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계\n2\n75\n,950\n지급액계\n3,\n000\n,0\n0\n0\n차인지급액2,724,050\n(단위,원)\n계산방법\n구분산출식또는\n\n산출방법지급액\n귀하의\n\n노고에\n감\n사드립니다."
+      }
+    ]
+  },
+  {
+    "rowNum": 52,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 3월(국비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 1700420,
+    "vat": 0,
+    "cancelAmount": 1700420,
+    "totalAmount": 0,
+    "disallowedAmount": 0,
+    "reviewStatus": "미처리",
+    "files": [
+      {
+        "name": "19_이지수_202503.PDF",
+        "text": "2025년3월분급여명세서\n회사명:바이오링크주식회사지급일:2025.03.28\n사원코드:19사원명:이지수생년월일:1991.04.10\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n기본급2,900,000국민연금135,000\n식대200,000건강보험106,350\n고용보험26,100\n장기요양보험료1\n3\n,770\n소득세23,930\n지방소득세2,390\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계\n3\n07\n,540\n지급액계\n3,\n100\n,0\n0\n0\n차인지급액2,792,460\n(단위,원)\n계산방법\n구분산출식또는\n\n산출방법지급액\n귀하의노고에감사드립니다\n."
+      },
+      {
+        "name": "3월급여이지수이체증.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁ : 2025-03- 31\n0000       2025- 03- 31 10:09:36    0000       0000\n00400     00000 0)      매태      배배미\n0ㅁ00000     142-910028-17104      0ㅁ00000     83980101526119\n배배0                   01   0040              2,792,460 []\n00000000   30 ㅁㅁ           00000000   00ㅁ\n00                 00450\n0000000400400040004004040010. 하나은행\n\n20250 030 310 00ㅁ0ㅁ0\n400904040400440040944040404000404047004044444040400044040444040.ㆍ\n\n2025-03- 31 10:10:01                                           3/6                                          “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 53,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 2월(국비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 1700420,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 1700420,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "19_이지수_202502.PDF",
+        "text": "2025년2월분급여명세서\n회사명:바이오링크주식회사지급일:2025.02.28\n사원코드:19사원명:이지수생년월일:1991.04.10\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n기본급2,900,000국민연금135,000\n식대200,000건강보험106,350\n고용보험26,100\n장기요양보험료1\n3\n,770\n소득세23,930\n지방소득세2,390\n연말정산소득세-5,240\n연말정산지방소득세\n-\n5\n2\n0\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계301,780\n지급액계3,100,000차인지급액2,798,220\n(단위,\n\n원)\n계산방법\n구분산출식또는산출방법지급액\n귀하의노고에감사드립니다."
+      },
+      {
+        "name": "이체확인증_20250402_이지수.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁㅁ : 2025-04-02\n0000       2025- 02- 28 10:52:40    0000       0000\n00400     00000 0)      매태      배배미\n0ㅁ00000     142-910028-17104      0ㅁ00000     83980101526119\n배배0                   01   0040              2,798,220 [ㅣ]\n00000000   2000           00000000   00ㅁ\n00                 00450\n0000000400400040004004040010. 하나은행\n\n2025[] 04[] 02] 0 ㅁ0[\n040040000040044090440440400404700044404000040040404040ㆍ\n\n2025-04- 02 15:20:54                                           6/9                                          “= 하나은행"
+      }
+    ]
+  },
+  {
+    "rowNum": 54,
+    "executionDate": "2025-09-08",
+    "registDate": "2025-09-08",
+    "writeDate": "2025-09-08",
+    "evidenceType": "기타",
+    "evidenceSub": "소득 지급명세서",
+    "purpose": "인건비 1월(국비)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "itemName": "",
+    "vendorName": "바이오링크 주식회사",
+    "depositorName": "바이오링크(주)",
+    "bizType": "응용 소프트웨어 개발 및 공급업",
+    "supplyAmount": 1700420,
+    "vat": 0,
+    "cancelAmount": 0,
+    "totalAmount": 1700420,
+    "disallowedAmount": 0,
+    "reviewStatus": "보완요청",
+    "files": [
+      {
+        "name": "급여명세서(근로기준1)_19_이지수_202501.PDF",
+        "text": "2025년1월분급여명세서\n회사명:바이오링크주식회사지급일:2025.01.29\n사원코드:19사원명:이지수생년월일:1991.04.10\n부서:직급:호봉:\n연장근로시간야간근로시간휴일근로시간통상시급(원)\n기본급2,900,000국민연금135,000\n식대200,000건강보험106,350\n고용보험26,100\n장기요양보험료1\n3\n,770\n소득세47,860\n지방소득세4,780\n(단위,원)\n지급내역지급액공제내역공제액\n공제액계\n3\n33\n,860\n지급액계\n3,\n100\n,0\n0\n0\n차인지급액2,766,140\n(단위,원)\n계산방법\n구분산출식또는\n\n산출방법지급액\n귀하의노고에감사드립니다\n."
+      },
+      {
+        "name": "이체확인증_20250210_이지수.pdf",
+        "text": "“= 하나은행\n\n0400040[\n\n0ㅁㅁㅁ : 2025-02-10\n0000       2025-01- 31 12:31:41    0000       0000\n00400     00000 0)      매태      배배미\n0ㅁ00000     142-910028-17104      0ㅁ00000     83980101526119\n배배0                   01   0040              2,766,140\n00000000   100[ㅁ           00000000   00ㅁ\n00                 00450\n0000000400400040004004040010. 하나은행\n\n20250 020 10] 00ㅁ0\n\n040040000040044090440440400404700044404000040040404040ㆍ\n\n2025- 02- 10 10:48:54                                   15/16\n\n“= 하나은행"
+      }
+    ]
+  }
+]

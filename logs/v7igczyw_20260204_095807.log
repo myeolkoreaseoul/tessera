@@ -1,0 +1,249 @@
+{"timestamp":"2026-02-04T00:58:07.188Z","level":"info","message":"[SUCCESS] 지침 파일 확인됨: guideline.pdf"}
+{"timestamp":"2026-02-04T00:58:07.190Z","level":"info","message":"[Step 1/7] 지침 PDF 분석"}
+{"timestamp":"2026-02-04T00:58:07.191Z","level":"info","message":"지침 파일 분석 중: guideline.pdf"}
+{"timestamp":"2026-02-04T00:58:07.191Z","level":"info","message":"PDF 텍스트 추출 중..."}
+{"timestamp":"2026-02-04T00:58:10.495Z","level":"debug","message":"PDF 정보: 440페이지"}
+{"timestamp":"2026-02-04T00:58:10.511Z","level":"info","message":"[SUCCESS] 텍스트 추출 완료 (273,545자)"}
+{"timestamp":"2026-02-04T00:58:10.511Z","level":"info","message":"핵심 규정 추출 중 (Gemini 분석)..."}
+{"timestamp":"2026-02-04T00:58:15.229Z","level":"info","message":"[SUCCESS] 규정 추출 완료"}
+{"timestamp":"2026-02-04T00:58:15.230Z","level":"info","message":"사업 유형: 책임의료기관 통합 사업"}
+{"timestamp":"2026-02-04T00:58:15.230Z","level":"info","message":"비목별 규정:"}
+{"timestamp":"2026-02-04T00:58:15.231Z","level":"info","message":"제한/금지 사항:"}
+{"timestamp":"2026-02-04T00:58:15.232Z","level":"info","message":"증빙 규정:"}
+{"timestamp":"2026-02-04T00:58:15.232Z","level":"info","message":"자동 승인 모드: 계속 진행"}
+{"timestamp":"2026-02-04T00:58:15.233Z","level":"info","message":"[Step 2/7] 브라우저 연결"}
+{"timestamp":"2026-02-04T00:58:15.236Z","level":"info","message":"Chrome 브라우저에 연결 시도 중..."}
+{"timestamp":"2026-02-04T00:58:15.237Z","level":"debug","message":"CDP URL 시도: http://localhost:9222"}
+{"timestamp":"2026-02-04T00:58:15.315Z","level":"info","message":"[SUCCESS] Chrome에 연결됨 (http://localhost:9222)"}
+{"timestamp":"2026-02-04T00:58:15.316Z","level":"debug","message":"컨텍스트 수: 1"}
+{"timestamp":"2026-02-04T00:58:15.316Z","level":"info","message":"열린 탭 수: 2"}
+{"timestamp":"2026-02-04T00:58:15.317Z","level":"info","message":"[SUCCESS] e나라도움 페이지 발견"}
+{"timestamp":"2026-02-04T00:58:15.333Z","level":"info","message":"현재 페이지: 점검대상사업조회(검증기관) < 정산관리 < 정산관리 < 집행정산 < e나라도움"}
+{"timestamp":"2026-02-04T00:58:15.334Z","level":"debug","message":"URL: https://gvs.gosims.go.kr/exe/dd/dd001/getDD001002QView.do?PJTCD=EXE&OSCRIN=/exe/dd/dd001/getDD001005QView.do#"}
+{"timestamp":"2026-02-04T00:58:15.457Z","level":"info","message":"[SUCCESS] 집행내역조회 페이지 확인됨"}
+{"timestamp":"2026-02-04T00:58:15.476Z","level":"info","message":"[Step 3/7] 집행내역 데이터 수집"}
+{"timestamp":"2026-02-04T00:58:15.476Z","level":"info","message":"집행내역 목록 수집 중..."}
+{"timestamp":"2026-02-04T00:58:15.500Z","level":"info","message":"총 152건 발견"}
+{"timestamp":"2026-02-04T00:58:16.028Z","level":"debug","message":"스크롤 맨 위로 리셋"}
+{"timestamp":"2026-02-04T00:58:16.058Z","level":"debug","message":"스크롤 높이: 3400, 클라이언트 높이: 309, 스크롤 단위: 150"}
+{"timestamp":"2026-02-04T00:58:19.876Z","level":"info","message":"[SUCCESS] 100건 수집 완료"}
+{"timestamp":"2026-02-04T00:58:19.876Z","level":"info","message":"[SUCCESS] 100건 수집 완료"}
+{"timestamp":"2026-02-04T00:58:19.877Z","level":"info","message":"자동 승인 모드: 계속 진행"}
+{"timestamp":"2026-02-04T00:58:19.877Z","level":"info","message":"[Step 4/7] 첨부파일 다운로드"}
+{"timestamp":"2026-02-04T00:58:19.878Z","level":"info","message":"첨부파일 일괄 다운로드 시도..."}
+{"timestamp":"2026-02-04T00:58:19.935Z","level":"warn","message":"전체 선택 체크박스를 찾을 수 없습니다."}
+{"timestamp":"2026-02-04T00:58:19.942Z","level":"debug","message":"다운로드 버튼 발견: button:has-text(\"첨부파일다운로드\")"}
+{"timestamp":"2026-02-04T01:00:19.958Z","level":"error","message":"첨부파일 일괄 다운로드 실패","data":{"message":"page.waitForEvent: Timeout 120000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================","stack":"page.waitForEvent: Timeout 120000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n    at AttachmentDownloader.downloadAllAttachments (C:\\projects\\e-naradomum-rpa\\src\\downloader\\attachment.ts:95:41)\n    at async main (C:\\projects\\e-naradomum-rpa\\src\\index.ts:242:25)"}}
+{"timestamp":"2026-02-04T01:00:19.958Z","level":"info","message":"일괄 다운로드 불가, 개별 다운로드 진행..."}
+{"timestamp":"2026-02-04T01:00:19.959Z","level":"info","message":"개별 첨부파일 다운로드 시작 (100건)..."}
+{"timestamp":"2026-02-04T01:00:19.973Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:19.984Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:19.998Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.020Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.032Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.043Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.054Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.064Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.074Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.084Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.094Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.102Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.113Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.122Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.131Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.140Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.149Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.158Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.168Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.177Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.188Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.197Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.206Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.215Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.225Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.249Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.260Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.270Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.279Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.289Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.298Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.307Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.315Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.326Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.336Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.345Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.355Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.363Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.373Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.381Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.389Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.399Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.408Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.417Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.426Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.435Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.445Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.454Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.462Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.472Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.482Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.492Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.501Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.509Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.519Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.530Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.540Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.550Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.577Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.591Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.602Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.613Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.624Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.636Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.648Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.662Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.675Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.687Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.698Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.709Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.719Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.729Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.738Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.748Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.757Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.770Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.785Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.795Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.807Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.818Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.827Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.837Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.846Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.856Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.866Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.875Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.886Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.895Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.904Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.914Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.924Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.935Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.948Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.957Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.967Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.977Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.988Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:20.998Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:21.008Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:21.018Z","level":"debug","message":"보기 버튼을 찾을 수 없음"}
+{"timestamp":"2026-02-04T01:00:21.019Z","level":"info","message":"[Step 5/7] 문서 분석"}
+{"timestamp":"2026-02-04T01:00:21.019Z","level":"info","message":"[SUCCESS] 문서 분석 완료"}
+{"timestamp":"2026-02-04T01:00:21.019Z","level":"info","message":"[Step 6/7] 지침 기반 판단"}
+{"timestamp":"2026-02-04T01:00:21.020Z","level":"info","message":"100건 판단 시작..."}
+{"timestamp":"2026-02-04T01:00:21.020Z","level":"debug","message":"판단 중: row-1"}
+{"timestamp":"2026-02-04T01:00:22.023Z","level":"debug","message":"판단 중: row-2"}
+{"timestamp":"2026-02-04T01:00:23.035Z","level":"debug","message":"판단 중: row-3"}
+{"timestamp":"2026-02-04T01:00:24.041Z","level":"debug","message":"판단 중: row-4"}
+{"timestamp":"2026-02-04T01:00:25.045Z","level":"debug","message":"판단 중: row-5"}
+{"timestamp":"2026-02-04T01:00:26.050Z","level":"debug","message":"판단 중: row-6"}
+{"timestamp":"2026-02-04T01:00:27.057Z","level":"debug","message":"판단 중: row-7"}
+{"timestamp":"2026-02-04T01:00:28.068Z","level":"debug","message":"판단 중: row-8"}
+{"timestamp":"2026-02-04T01:00:29.073Z","level":"debug","message":"판단 중: row-9"}
+{"timestamp":"2026-02-04T01:00:30.079Z","level":"debug","message":"판단 중: row-10"}
+{"timestamp":"2026-02-04T01:00:31.085Z","level":"debug","message":"판단 중: row-11"}
+{"timestamp":"2026-02-04T01:00:32.097Z","level":"debug","message":"판단 중: row-12"}
+{"timestamp":"2026-02-04T01:00:33.113Z","level":"debug","message":"판단 중: row-13"}
+{"timestamp":"2026-02-04T01:00:34.118Z","level":"debug","message":"판단 중: row-14"}
+{"timestamp":"2026-02-04T01:00:35.131Z","level":"debug","message":"판단 중: row-15"}
+{"timestamp":"2026-02-04T01:00:36.143Z","level":"debug","message":"판단 중: row-16"}
+{"timestamp":"2026-02-04T01:00:37.158Z","level":"debug","message":"판단 중: row-17"}
+{"timestamp":"2026-02-04T01:00:38.165Z","level":"debug","message":"판단 중: row-18"}
+{"timestamp":"2026-02-04T01:00:39.175Z","level":"debug","message":"판단 중: row-19"}
+{"timestamp":"2026-02-04T01:00:40.181Z","level":"debug","message":"판단 중: row-20"}
+{"timestamp":"2026-02-04T01:00:41.186Z","level":"debug","message":"판단 중: row-21"}
+{"timestamp":"2026-02-04T01:00:42.195Z","level":"debug","message":"판단 중: row-22"}
+{"timestamp":"2026-02-04T01:00:43.206Z","level":"debug","message":"판단 중: row-23"}
+{"timestamp":"2026-02-04T01:00:44.209Z","level":"debug","message":"판단 중: row-24"}
+{"timestamp":"2026-02-04T01:00:45.210Z","level":"debug","message":"판단 중: row-25"}
+{"timestamp":"2026-02-04T01:00:46.220Z","level":"debug","message":"판단 중: row-26"}
+{"timestamp":"2026-02-04T01:00:47.226Z","level":"debug","message":"판단 중: row-27"}
+{"timestamp":"2026-02-04T01:00:48.249Z","level":"debug","message":"판단 중: row-28"}
+{"timestamp":"2026-02-04T01:00:49.257Z","level":"debug","message":"판단 중: row-29"}
+{"timestamp":"2026-02-04T01:00:50.261Z","level":"debug","message":"판단 중: row-30"}
+{"timestamp":"2026-02-04T01:00:51.265Z","level":"debug","message":"판단 중: row-31"}
+{"timestamp":"2026-02-04T01:00:52.277Z","level":"debug","message":"판단 중: row-32"}
+{"timestamp":"2026-02-04T01:00:53.286Z","level":"debug","message":"판단 중: row-33"}
+{"timestamp":"2026-02-04T01:00:54.292Z","level":"debug","message":"판단 중: row-34"}
+{"timestamp":"2026-02-04T01:00:55.305Z","level":"debug","message":"판단 중: row-35"}
+{"timestamp":"2026-02-04T01:00:56.313Z","level":"debug","message":"판단 중: row-36"}
+{"timestamp":"2026-02-04T01:00:57.318Z","level":"debug","message":"판단 중: row-37"}
+{"timestamp":"2026-02-04T01:00:58.323Z","level":"debug","message":"판단 중: row-38"}
+{"timestamp":"2026-02-04T01:00:59.329Z","level":"debug","message":"판단 중: row-39"}
+{"timestamp":"2026-02-04T01:01:00.339Z","level":"debug","message":"판단 중: row-40"}
+{"timestamp":"2026-02-04T01:01:01.346Z","level":"debug","message":"판단 중: row-41"}
+{"timestamp":"2026-02-04T01:01:02.353Z","level":"debug","message":"판단 중: row-42"}
+{"timestamp":"2026-02-04T01:01:03.357Z","level":"debug","message":"판단 중: row-43"}
+{"timestamp":"2026-02-04T01:01:04.361Z","level":"debug","message":"판단 중: row-44"}
+{"timestamp":"2026-02-04T01:01:05.365Z","level":"debug","message":"판단 중: row-45"}
+{"timestamp":"2026-02-04T01:01:06.378Z","level":"debug","message":"판단 중: row-46"}
+{"timestamp":"2026-02-04T01:01:07.384Z","level":"debug","message":"판단 중: row-47"}
+{"timestamp":"2026-02-04T01:01:08.388Z","level":"debug","message":"판단 중: row-48"}
+{"timestamp":"2026-02-04T01:01:09.392Z","level":"debug","message":"판단 중: row-49"}
+{"timestamp":"2026-02-04T01:01:10.400Z","level":"debug","message":"판단 중: row-50"}
+{"timestamp":"2026-02-04T01:01:11.409Z","level":"debug","message":"판단 중: row-51"}
+{"timestamp":"2026-02-04T01:01:12.416Z","level":"debug","message":"판단 중: row-52"}
+{"timestamp":"2026-02-04T01:01:13.423Z","level":"debug","message":"판단 중: row-53"}
+{"timestamp":"2026-02-04T01:01:14.434Z","level":"debug","message":"판단 중: row-54"}
+{"timestamp":"2026-02-04T01:01:15.442Z","level":"debug","message":"판단 중: row-55"}
+{"timestamp":"2026-02-04T01:01:16.455Z","level":"debug","message":"판단 중: row-56"}
+{"timestamp":"2026-02-04T01:01:17.459Z","level":"debug","message":"판단 중: row-57"}
+{"timestamp":"2026-02-04T01:01:18.463Z","level":"debug","message":"판단 중: row-58"}
+{"timestamp":"2026-02-04T01:01:19.475Z","level":"debug","message":"판단 중: row-59"}
+{"timestamp":"2026-02-04T01:01:20.482Z","level":"debug","message":"판단 중: row-60"}
+{"timestamp":"2026-02-04T01:01:21.489Z","level":"debug","message":"판단 중: row-61"}
+{"timestamp":"2026-02-04T01:01:22.499Z","level":"debug","message":"판단 중: row-62"}
+{"timestamp":"2026-02-04T01:01:23.507Z","level":"debug","message":"판단 중: row-63"}
+{"timestamp":"2026-02-04T01:01:24.513Z","level":"debug","message":"판단 중: row-64"}
+{"timestamp":"2026-02-04T01:01:25.520Z","level":"debug","message":"판단 중: row-65"}
+{"timestamp":"2026-02-04T01:01:26.525Z","level":"debug","message":"판단 중: row-66"}
+{"timestamp":"2026-02-04T01:01:27.533Z","level":"debug","message":"판단 중: row-67"}
+{"timestamp":"2026-02-04T01:01:28.544Z","level":"debug","message":"판단 중: row-68"}
+{"timestamp":"2026-02-04T01:01:29.554Z","level":"debug","message":"판단 중: row-69"}
+{"timestamp":"2026-02-04T01:01:30.561Z","level":"debug","message":"판단 중: row-70"}
+{"timestamp":"2026-02-04T01:01:31.569Z","level":"debug","message":"판단 중: row-71"}
+{"timestamp":"2026-02-04T01:01:32.581Z","level":"debug","message":"판단 중: row-72"}
+{"timestamp":"2026-02-04T01:01:33.593Z","level":"debug","message":"판단 중: row-73"}
+{"timestamp":"2026-02-04T01:01:34.598Z","level":"debug","message":"판단 중: row-74"}
+{"timestamp":"2026-02-04T01:01:35.613Z","level":"debug","message":"판단 중: row-75"}
+{"timestamp":"2026-02-04T01:01:36.617Z","level":"debug","message":"판단 중: row-76"}
+{"timestamp":"2026-02-04T01:01:37.630Z","level":"debug","message":"판단 중: row-77"}
+{"timestamp":"2026-02-04T01:01:38.637Z","level":"debug","message":"판단 중: row-78"}
+{"timestamp":"2026-02-04T01:01:39.645Z","level":"debug","message":"판단 중: row-79"}
+{"timestamp":"2026-02-04T01:01:40.651Z","level":"debug","message":"판단 중: row-80"}
+{"timestamp":"2026-02-04T01:01:41.661Z","level":"debug","message":"판단 중: row-81"}
+{"timestamp":"2026-02-04T01:01:42.661Z","level":"debug","message":"판단 중: row-82"}
+{"timestamp":"2026-02-04T01:01:43.665Z","level":"debug","message":"판단 중: row-83"}
+{"timestamp":"2026-02-04T01:01:44.667Z","level":"debug","message":"판단 중: row-84"}
+{"timestamp":"2026-02-04T01:01:45.676Z","level":"debug","message":"판단 중: row-85"}
+{"timestamp":"2026-02-04T01:01:46.682Z","level":"debug","message":"판단 중: row-86"}
+{"timestamp":"2026-02-04T01:01:47.684Z","level":"debug","message":"판단 중: row-87"}
+{"timestamp":"2026-02-04T01:01:48.695Z","level":"debug","message":"판단 중: row-88"}
+{"timestamp":"2026-02-04T01:01:49.709Z","level":"debug","message":"판단 중: row-89"}
+{"timestamp":"2026-02-04T01:01:50.715Z","level":"debug","message":"판단 중: row-90"}
+{"timestamp":"2026-02-04T01:01:51.725Z","level":"debug","message":"판단 중: row-91"}
+{"timestamp":"2026-02-04T01:01:52.735Z","level":"debug","message":"판단 중: row-92"}
+{"timestamp":"2026-02-04T01:01:53.737Z","level":"debug","message":"판단 중: row-93"}
+{"timestamp":"2026-02-04T01:01:54.745Z","level":"debug","message":"판단 중: row-94"}
+{"timestamp":"2026-02-04T01:01:55.757Z","level":"debug","message":"판단 중: row-95"}
+{"timestamp":"2026-02-04T01:01:56.763Z","level":"debug","message":"판단 중: row-96"}
+{"timestamp":"2026-02-04T01:01:57.771Z","level":"debug","message":"판단 중: row-97"}
+{"timestamp":"2026-02-04T01:01:58.786Z","level":"debug","message":"판단 중: row-98"}
+{"timestamp":"2026-02-04T01:01:59.798Z","level":"debug","message":"판단 중: row-99"}
+{"timestamp":"2026-02-04T01:02:00.812Z","level":"debug","message":"판단 중: row-100"}
+{"timestamp":"2026-02-04T01:02:01.814Z","level":"info","message":"판단 결과:"}
+{"timestamp":"2026-02-04T01:02:01.815Z","level":"info","message":"[Step 7/7] 결과 엑셀 생성"}
+{"timestamp":"2026-02-04T01:02:01.815Z","level":"info","message":"결과 엑셀 생성 중..."}
+{"timestamp":"2026-02-04T01:02:01.873Z","level":"info","message":"[SUCCESS] 결과 파일 생성: 알수없는사업_20260204_100201_점검결과.xlsx"}
+{"timestamp":"2026-02-04T01:02:01.874Z","level":"info","message":"[SUCCESS] 처리 완료!"}
+{"timestamp":"2026-02-04T01:02:01.874Z","level":"info","message":"결과 파일: results\\알수없는사업_20260204_100201_점검결과.xlsx"}
+{"timestamp":"2026-02-04T01:02:01.885Z","level":"info","message":"브라우저 연결 해제됨"}

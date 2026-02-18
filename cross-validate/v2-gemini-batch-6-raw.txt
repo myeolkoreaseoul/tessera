@@ -1,0 +1,201 @@
+```json
+[
+  {
+    "rowNum": 151,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 152,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 153,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 154,
+    "status": "확인",
+    "issues": [
+      "범용성 물품(마우스, 키보드) 포함"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 155,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 156,
+    "status": "확인",
+    "issues": [
+      "회의록 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 157,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 158,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 159,
+    "status": "확인",
+    "issues": [
+      "지출결의서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 160,
+    "status": "확인",
+    "issues": [
+      "지출결의서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 161,
+    "status": "확인",
+    "issues": [
+      "출장신청서 출장자 불일치"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 162,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 163,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 164,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 165,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 166,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 167,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 168,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 169,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 170,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 171,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 172,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 173,
+    "status": "SKIP",
+    "issues": [
+      "0원 취소전표"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 174,
+    "status": "SKIP",
+    "issues": [
+      "0원 취소전표"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 175,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 176,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 177,
+    "status": "확인",
+    "issues": [
+      "지출결의서 미첨부",
+      "출장신청서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 178,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 179,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 180,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  }
+]
+```

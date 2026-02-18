@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"scp \\\"정동회계법인\\\"@100.87.3.123:\\\"C:/Users/정동회계법인/Documents/이지바로_과제리스트_이정승_20260218.xlsx\\\" /home/john/e-naradomum-rpa/projects/\",\"timeout\":30000,\"description\":\"SCP with properly quoted usernam...",
+  "error": "Exit code 1\n정동회계법인: invalid user name\n\n정동회계법인: invalid user name",
+  "timestamp": "2026-02-18T12:36:40.335Z",
+  "retry_count": 3
+}

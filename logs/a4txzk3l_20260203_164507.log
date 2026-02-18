@@ -1,0 +1,12 @@
+{"timestamp":"2026-02-03T07:45:07.073Z","level":"info","message":"[SUCCESS] 지침 파일 확인됨: [최종본]+2025년+책임의료기관+통합+사업+안내(발간등록번호+추가★).pdf"}
+{"timestamp":"2026-02-03T07:45:07.073Z","level":"info","message":"[Step 1/7] 지침 PDF 분석"}
+{"timestamp":"2026-02-03T07:45:07.074Z","level":"info","message":"지침 파일 분석 중: [최종본]+2025년+책임의료기관+통합+사업+안내(발간등록번호+추가★).pdf"}
+{"timestamp":"2026-02-03T07:45:07.075Z","level":"info","message":"PDF 텍스트 추출 중..."}
+{"timestamp":"2026-02-03T07:45:10.455Z","level":"debug","message":"PDF 정보: 440페이지"}
+{"timestamp":"2026-02-03T07:45:10.493Z","level":"info","message":"[SUCCESS] 텍스트 추출 완료 (273,545자)"}
+{"timestamp":"2026-02-03T07:45:10.493Z","level":"info","message":"핵심 규정 추출 중 (Gemini 분석)..."}
+{"timestamp":"2026-02-03T07:45:15.293Z","level":"info","message":"[SUCCESS] 규정 추출 완료"}
+{"timestamp":"2026-02-03T07:45:15.293Z","level":"info","message":"사업 유형: 책임의료기관 통합 사업"}
+{"timestamp":"2026-02-03T07:45:15.294Z","level":"info","message":"비목별 규정:"}
+{"timestamp":"2026-02-03T07:45:15.294Z","level":"info","message":"제한/금지 사항:"}
+{"timestamp":"2026-02-03T07:45:15.295Z","level":"info","message":"증빙 규정:"}

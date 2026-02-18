@@ -1,0 +1,11 @@
+{"timestamp":"2026-02-03T08:59:55.422Z","level":"info","message":"[SUCCESS] 지침 파일 확인됨: guideline.pdf"}
+{"timestamp":"2026-02-03T08:59:55.423Z","level":"info","message":"[Step 1/7] 지침 PDF 분석"}
+{"timestamp":"2026-02-03T08:59:55.423Z","level":"info","message":"지침 파일 분석 중: guideline.pdf"}
+{"timestamp":"2026-02-03T08:59:55.424Z","level":"info","message":"PDF 텍스트 추출 중..."}
+{"timestamp":"2026-02-03T08:59:57.993Z","level":"debug","message":"PDF 정보: 440페이지"}
+{"timestamp":"2026-02-03T08:59:58.006Z","level":"info","message":"[SUCCESS] 텍스트 추출 완료 (273,545자)"}
+{"timestamp":"2026-02-03T08:59:58.006Z","level":"info","message":"핵심 규정 추출 중 (Gemini 분석)..."}
+{"timestamp":"2026-02-03T09:00:02.931Z","level":"info","message":"[SUCCESS] 규정 추출 완료"}
+{"timestamp":"2026-02-03T09:00:02.932Z","level":"info","message":"사업 유형: 책임의료기관 통합 사업"}
+{"timestamp":"2026-02-03T09:00:02.933Z","level":"info","message":"비목별 규정:"}
+{"timestamp":"2026-02-03T09:00:02.935Z","level":"error","message":"실행 중 오류 발생","data":{"message":"Cannot read properties of undefined (reading 'length')","stack":"TypeError: Cannot read properties of undefined (reading 'length')\n    at GuidelineAnalyzer.printExtractedRules (C:\\projects\\e-naradomum-rpa\\src\\analyzer\\guideline.ts:199:25)\n    at GuidelineAnalyzer.analyze (C:\\projects\\e-naradomum-rpa\\src\\analyzer\\guideline.ts:108:10)\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async main (C:\\projects\\e-naradomum-rpa\\src\\index.ts:127:23)"}}

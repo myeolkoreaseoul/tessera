@@ -1,0 +1,195 @@
+Loaded cached credentials.
+Hook registry initialized with 0 hook entries
+```json
+[
+  {
+    "rowNum": 31,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 32,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 33,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 34,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 35,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 36,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 37,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 38,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 39,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 40,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 41,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 42,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 43,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 44,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 45,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 46,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 47,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 48,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 49,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 50,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 51,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 52,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 53,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 54,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 55,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 56,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 57,
+    "status": "확인",
+    "issues": [
+      "결과보고서 미첨부",
+      "견적서(2개 이상) 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 58,
+    "status": "확인",
+    "issues": [
+      "내부인건비: 참여율 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 59,
+    "status": "확인",
+    "issues": [
+      "내부인건비: 참여율 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 60,
+    "status": "확인",
+    "issues": [
+      "내부인건비: 참여율 확인 필요"
+    ],
+    "confidence": "medium"
+  }
+]
+```

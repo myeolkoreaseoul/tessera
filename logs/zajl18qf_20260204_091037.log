@@ -1,0 +1,116 @@
+{"timestamp":"2026-02-04T00:10:37.792Z","level":"info","message":"[SUCCESS] 지침 파일 확인됨: guideline.pdf"}
+{"timestamp":"2026-02-04T00:10:37.797Z","level":"info","message":"[Step 1/7] 지침 PDF 분석"}
+{"timestamp":"2026-02-04T00:10:37.797Z","level":"info","message":"지침 파일 분석 중: guideline.pdf"}
+{"timestamp":"2026-02-04T00:10:37.798Z","level":"info","message":"PDF 텍스트 추출 중..."}
+{"timestamp":"2026-02-04T00:10:40.959Z","level":"debug","message":"PDF 정보: 440페이지"}
+{"timestamp":"2026-02-04T00:10:40.973Z","level":"info","message":"[SUCCESS] 텍스트 추출 완료 (273,545자)"}
+{"timestamp":"2026-02-04T00:10:41.012Z","level":"info","message":"핵심 규정 추출 중 (Gemini 분석)..."}
+{"timestamp":"2026-02-04T00:10:47.367Z","level":"info","message":"[SUCCESS] 규정 추출 완료"}
+{"timestamp":"2026-02-04T00:10:47.368Z","level":"info","message":"사업 유형: 책임의료기관 통합 사업"}
+{"timestamp":"2026-02-04T00:10:47.369Z","level":"info","message":"비목별 규정:"}
+{"timestamp":"2026-02-04T00:10:47.369Z","level":"info","message":"제한/금지 사항:"}
+{"timestamp":"2026-02-04T00:10:47.370Z","level":"info","message":"증빙 규정:"}
+{"timestamp":"2026-02-04T00:10:47.370Z","level":"info","message":"자동 승인 모드: 계속 진행"}
+{"timestamp":"2026-02-04T00:10:47.370Z","level":"info","message":"[Step 2/7] 브라우저 연결"}
+{"timestamp":"2026-02-04T00:10:47.373Z","level":"info","message":"Chrome 브라우저에 연결 시도 중..."}
+{"timestamp":"2026-02-04T00:10:47.373Z","level":"debug","message":"CDP URL 시도: http://localhost:9222"}
+{"timestamp":"2026-02-04T00:10:47.466Z","level":"info","message":"[SUCCESS] Chrome에 연결됨 (http://localhost:9222)"}
+{"timestamp":"2026-02-04T00:10:47.467Z","level":"debug","message":"컨텍스트 수: 1"}
+{"timestamp":"2026-02-04T00:10:47.468Z","level":"info","message":"열린 탭 수: 1"}
+{"timestamp":"2026-02-04T00:10:47.468Z","level":"info","message":"[SUCCESS] e나라도움 페이지 발견"}
+{"timestamp":"2026-02-04T00:10:47.505Z","level":"info","message":"현재 페이지: 점검대상사업조회(검증기관) < 정산관리 < 정산관리 < 집행정산 < e나라도움"}
+{"timestamp":"2026-02-04T00:10:47.505Z","level":"debug","message":"URL: https://gvs.gosims.go.kr/exe/dd/dd001/getDD001002QView.do?PJTCD=EXE&OSCRIN=/exe/dd/dd001/getDD001005QView.do#"}
+{"timestamp":"2026-02-04T00:10:47.697Z","level":"info","message":"[SUCCESS] 집행내역조회 페이지 확인됨"}
+{"timestamp":"2026-02-04T00:10:47.745Z","level":"info","message":"[Step 3/7] 집행내역 데이터 수집"}
+{"timestamp":"2026-02-04T00:10:47.746Z","level":"info","message":"집행내역 목록 수집 중..."}
+{"timestamp":"2026-02-04T00:10:47.760Z","level":"info","message":"총 152건 발견"}
+{"timestamp":"2026-02-04T00:10:48.283Z","level":"debug","message":"스크롤 맨 위로 리셋"}
+{"timestamp":"2026-02-04T00:10:48.287Z","level":"debug","message":"스크롤 높이: 3400, 클라이언트 높이: 307, 스크롤 단위: 90"}
+{"timestamp":"2026-02-04T00:10:53.649Z","level":"info","message":"[SUCCESS] 69건 수집 완료"}
+{"timestamp":"2026-02-04T00:10:53.650Z","level":"info","message":"[SUCCESS] 69건 수집 완료"}
+{"timestamp":"2026-02-04T00:10:53.651Z","level":"info","message":"자동 승인 모드: 계속 진행"}
+{"timestamp":"2026-02-04T00:10:53.651Z","level":"info","message":"[Step 4/7] 첨부파일 다운로드"}
+{"timestamp":"2026-02-04T00:10:53.693Z","level":"info","message":"첨부파일 일괄 다운로드 시도..."}
+{"timestamp":"2026-02-04T00:12:53.713Z","level":"error","message":"첨부파일 일괄 다운로드 실패","data":{"message":"page.waitForEvent: Timeout 120000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================","stack":"page.waitForEvent: Timeout 120000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n    at AttachmentDownloader.downloadAllAttachments (C:\\projects\\e-naradomum-rpa\\src\\downloader\\attachment.ts:56:41)\n    at async main (C:\\projects\\e-naradomum-rpa\\src\\index.ts:242:25)"}}
+{"timestamp":"2026-02-04T00:12:53.714Z","level":"info","message":"일괄 다운로드 불가, 개별 다운로드 진행..."}
+{"timestamp":"2026-02-04T00:12:53.714Z","level":"info","message":"개별 첨부파일 다운로드 시작 (69건)..."}
+{"timestamp":"2026-02-04T00:12:53.715Z","level":"info","message":"[Step 5/7] 문서 분석"}
+{"timestamp":"2026-02-04T00:12:53.715Z","level":"info","message":"[SUCCESS] 문서 분석 완료"}
+{"timestamp":"2026-02-04T00:12:53.716Z","level":"info","message":"[Step 6/7] 지침 기반 판단"}
+{"timestamp":"2026-02-04T00:12:53.716Z","level":"info","message":"69건 판단 시작..."}
+{"timestamp":"2026-02-04T00:12:53.716Z","level":"debug","message":"판단 중: row-1"}
+{"timestamp":"2026-02-04T00:12:54.729Z","level":"debug","message":"판단 중: row-2"}
+{"timestamp":"2026-02-04T00:12:55.743Z","level":"debug","message":"판단 중: row-3"}
+{"timestamp":"2026-02-04T00:12:56.744Z","level":"debug","message":"판단 중: row-4"}
+{"timestamp":"2026-02-04T00:12:57.749Z","level":"debug","message":"판단 중: row-5"}
+{"timestamp":"2026-02-04T00:12:58.751Z","level":"debug","message":"판단 중: row-6"}
+{"timestamp":"2026-02-04T00:12:59.755Z","level":"debug","message":"판단 중: row-7"}
+{"timestamp":"2026-02-04T00:13:00.761Z","level":"debug","message":"판단 중: row-8"}
+{"timestamp":"2026-02-04T00:13:01.769Z","level":"debug","message":"판단 중: row-9"}
+{"timestamp":"2026-02-04T00:13:02.776Z","level":"debug","message":"판단 중: row-10"}
+{"timestamp":"2026-02-04T00:13:03.828Z","level":"debug","message":"판단 중: row-11"}
+{"timestamp":"2026-02-04T00:13:04.844Z","level":"debug","message":"판단 중: row-12"}
+{"timestamp":"2026-02-04T00:13:05.848Z","level":"debug","message":"판단 중: row-13"}
+{"timestamp":"2026-02-04T00:13:06.863Z","level":"debug","message":"판단 중: row-14"}
+{"timestamp":"2026-02-04T00:13:07.863Z","level":"debug","message":"판단 중: row-15"}
+{"timestamp":"2026-02-04T00:13:08.875Z","level":"debug","message":"판단 중: row-16"}
+{"timestamp":"2026-02-04T00:13:09.887Z","level":"debug","message":"판단 중: row-17"}
+{"timestamp":"2026-02-04T00:13:10.889Z","level":"debug","message":"판단 중: row-18"}
+{"timestamp":"2026-02-04T00:13:11.901Z","level":"debug","message":"판단 중: row-19"}
+{"timestamp":"2026-02-04T00:13:12.914Z","level":"debug","message":"판단 중: row-20"}
+{"timestamp":"2026-02-04T00:13:13.916Z","level":"debug","message":"판단 중: row-21"}
+{"timestamp":"2026-02-04T00:13:14.919Z","level":"debug","message":"판단 중: row-22"}
+{"timestamp":"2026-02-04T00:13:15.931Z","level":"debug","message":"판단 중: row-23"}
+{"timestamp":"2026-02-04T00:13:16.934Z","level":"debug","message":"판단 중: row-24"}
+{"timestamp":"2026-02-04T00:13:17.944Z","level":"debug","message":"판단 중: row-25"}
+{"timestamp":"2026-02-04T00:13:18.958Z","level":"debug","message":"판단 중: row-26"}
+{"timestamp":"2026-02-04T00:13:19.966Z","level":"debug","message":"판단 중: row-27"}
+{"timestamp":"2026-02-04T00:13:20.975Z","level":"debug","message":"판단 중: row-28"}
+{"timestamp":"2026-02-04T00:13:21.983Z","level":"debug","message":"판단 중: row-29"}
+{"timestamp":"2026-02-04T00:13:22.992Z","level":"debug","message":"판단 중: row-30"}
+{"timestamp":"2026-02-04T00:13:23.994Z","level":"debug","message":"판단 중: row-31"}
+{"timestamp":"2026-02-04T00:13:24.996Z","level":"debug","message":"판단 중: row-32"}
+{"timestamp":"2026-02-04T00:13:25.997Z","level":"debug","message":"판단 중: row-33"}
+{"timestamp":"2026-02-04T00:13:27.011Z","level":"debug","message":"판단 중: row-34"}
+{"timestamp":"2026-02-04T00:13:28.012Z","level":"debug","message":"판단 중: row-35"}
+{"timestamp":"2026-02-04T00:13:29.013Z","level":"debug","message":"판단 중: row-36"}
+{"timestamp":"2026-02-04T00:13:30.022Z","level":"debug","message":"판단 중: row-37"}
+{"timestamp":"2026-02-04T00:13:31.031Z","level":"debug","message":"판단 중: row-38"}
+{"timestamp":"2026-02-04T00:13:32.042Z","level":"debug","message":"판단 중: row-39"}
+{"timestamp":"2026-02-04T00:13:33.055Z","level":"debug","message":"판단 중: row-40"}
+{"timestamp":"2026-02-04T00:13:34.066Z","level":"debug","message":"판단 중: row-41"}
+{"timestamp":"2026-02-04T00:13:35.077Z","level":"debug","message":"판단 중: row-42"}
+{"timestamp":"2026-02-04T00:13:36.086Z","level":"debug","message":"판단 중: row-43"}
+{"timestamp":"2026-02-04T00:13:37.096Z","level":"debug","message":"판단 중: row-44"}
+{"timestamp":"2026-02-04T00:13:38.112Z","level":"debug","message":"판단 중: row-45"}
+{"timestamp":"2026-02-04T00:13:39.116Z","level":"debug","message":"판단 중: row-46"}
+{"timestamp":"2026-02-04T00:13:40.118Z","level":"debug","message":"판단 중: row-47"}
+{"timestamp":"2026-02-04T00:13:41.121Z","level":"debug","message":"판단 중: row-48"}
+{"timestamp":"2026-02-04T00:13:42.132Z","level":"debug","message":"판단 중: row-49"}
+{"timestamp":"2026-02-04T00:13:43.146Z","level":"debug","message":"판단 중: row-50"}
+{"timestamp":"2026-02-04T00:13:44.157Z","level":"debug","message":"판단 중: row-51"}
+{"timestamp":"2026-02-04T00:13:45.162Z","level":"debug","message":"판단 중: row-52"}
+{"timestamp":"2026-02-04T00:13:46.176Z","level":"debug","message":"판단 중: row-53"}
+{"timestamp":"2026-02-04T00:13:47.179Z","level":"debug","message":"판단 중: row-54"}
+{"timestamp":"2026-02-04T00:13:48.186Z","level":"debug","message":"판단 중: row-55"}
+{"timestamp":"2026-02-04T00:13:49.190Z","level":"debug","message":"판단 중: row-56"}
+{"timestamp":"2026-02-04T00:13:50.195Z","level":"debug","message":"판단 중: row-57"}
+{"timestamp":"2026-02-04T00:13:51.208Z","level":"debug","message":"판단 중: row-58"}
+{"timestamp":"2026-02-04T00:13:52.211Z","level":"debug","message":"판단 중: row-59"}
+{"timestamp":"2026-02-04T00:13:53.219Z","level":"debug","message":"판단 중: row-60"}
+{"timestamp":"2026-02-04T00:13:54.220Z","level":"debug","message":"판단 중: row-61"}
+{"timestamp":"2026-02-04T00:13:55.224Z","level":"debug","message":"판단 중: row-62"}
+{"timestamp":"2026-02-04T00:13:56.235Z","level":"debug","message":"판단 중: row-63"}
+{"timestamp":"2026-02-04T00:13:57.244Z","level":"debug","message":"판단 중: row-64"}
+{"timestamp":"2026-02-04T00:13:58.255Z","level":"debug","message":"판단 중: row-65"}
+{"timestamp":"2026-02-04T00:13:59.258Z","level":"debug","message":"판단 중: row-66"}
+{"timestamp":"2026-02-04T00:14:00.271Z","level":"debug","message":"판단 중: row-67"}
+{"timestamp":"2026-02-04T00:14:01.282Z","level":"debug","message":"판단 중: row-68"}
+{"timestamp":"2026-02-04T00:14:02.286Z","level":"debug","message":"판단 중: row-69"}
+{"timestamp":"2026-02-04T00:14:03.301Z","level":"info","message":"판단 결과:"}
+{"timestamp":"2026-02-04T00:14:03.301Z","level":"info","message":"[Step 7/7] 결과 엑셀 생성"}
+{"timestamp":"2026-02-04T00:14:03.302Z","level":"info","message":"결과 엑셀 생성 중..."}
+{"timestamp":"2026-02-04T00:14:03.361Z","level":"info","message":"[SUCCESS] 결과 파일 생성: 알수없는사업_20260204_091403_점검결과.xlsx"}
+{"timestamp":"2026-02-04T00:14:03.362Z","level":"info","message":"[SUCCESS] 처리 완료!"}
+{"timestamp":"2026-02-04T00:14:03.362Z","level":"info","message":"결과 파일: results\\알수없는사업_20260204_091403_점검결과.xlsx"}
+{"timestamp":"2026-02-04T00:14:03.372Z","level":"info","message":"브라우저 연결 해제됨"}

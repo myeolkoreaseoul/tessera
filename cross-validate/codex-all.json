@@ -1,0 +1,1292 @@
+[
+  {
+    "rowNum": 1,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 2,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 3,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 4,
+    "status": "확인",
+    "issues": [
+      "출장자 이름 불일치",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 5,
+    "status": "확인",
+    "issues": [
+      "출장자 이름 불일치",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 6,
+    "status": "확인",
+    "issues": [
+      "출장자 이름 불일치",
+      "교통비 영수증 확인 필요",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "low"
+  },
+  {
+    "rowNum": 7,
+    "status": "확인",
+    "issues": [
+      "세금계산서(또는 보조금전용카드) 증빙 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 8,
+    "status": "확인",
+    "issues": [
+      "출장자 이름 불일치",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 9,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 10,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 11,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 12,
+    "status": "확인",
+    "issues": [
+      "회의비 1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 13,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 14,
+    "status": "확인",
+    "issues": [
+      "회의비 1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 15,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 16,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 17,
+    "status": "확인",
+    "issues": [
+      "자문대상자 성명 불일치 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 18,
+    "status": "확인",
+    "issues": [
+      "자문대상자 성명 불일치 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 19,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 20,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 21,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 22,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 23,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 24,
+    "status": "확인",
+    "issues": [
+      "출장자 이름 불일치",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 25,
+    "status": "확인",
+    "issues": [
+      "출장자 이름 불일치",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 26,
+    "status": "확인",
+    "issues": [
+      "출장자 이름 불일치",
+      "교통비 영수증 확인 필요",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "low"
+  },
+  {
+    "rowNum": 27,
+    "status": "확인",
+    "issues": [
+      "세금계산서(또는 보조금전용카드) 증빙 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 28,
+    "status": "확인",
+    "issues": [
+      "출장자 이름 불일치",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 29,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 30,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 31,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 32,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 33,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 34,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 35,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 36,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 37,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 38,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 39,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 40,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 41,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 42,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 43,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 44,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 45,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 46,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 47,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 48,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 49,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 50,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 51,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 52,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 53,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 54,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 55,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 56,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 57,
+    "status": "확인",
+    "issues": [
+      "견적서(2개 이상) 확인 필요",
+      "결과보고서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 58,
+    "status": "확인",
+    "issues": [
+      "내부인건비 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 59,
+    "status": "확인",
+    "issues": [
+      "내부인건비 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 60,
+    "status": "확인",
+    "issues": [
+      "내부인건비 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 61,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 62,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 63,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 64,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 65,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 66,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 67,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 68,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 69,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 70,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 71,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 72,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 73,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 74,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 75,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 76,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 77,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 78,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 79,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 80,
+    "status": "확인",
+    "issues": [
+      "세금계산서 또는 보조금전용카드 증빙 미확인"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 81,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 82,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 83,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 84,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 85,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 86,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 87,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 88,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 89,
+    "status": "확인",
+    "issues": [
+      "내부인건비 흡수 건 참여율 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 90,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 91,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 92,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 93,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 94,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 95,
+    "status": "적정",
+    "issues": [],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 96,
+    "status": "적정",
+    "issues": [],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 97,
+    "status": "적정",
+    "issues": [],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 98,
+    "status": "적정",
+    "issues": [],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 99,
+    "status": "적정",
+    "issues": [],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 100,
+    "status": "확인",
+    "issues": [
+      "세금계산서 또는 보조금전용카드 증빙 미확인"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 101,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 102,
+    "status": "확인",
+    "issues": [
+      "첨부파일 없음(files=0)",
+      "자문료 건과의 증빙 연계 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 103,
+    "status": "확인",
+    "issues": [
+      "첨부파일 없음(files=0)",
+      "자문확인서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 104,
+    "status": "확인",
+    "issues": [
+      "첨부파일 없음(files=0)",
+      "자문료 건과의 증빙 연계 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 105,
+    "status": "확인",
+    "issues": [
+      "첨부파일 없음(files=0)",
+      "자문확인서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 106,
+    "status": "확인",
+    "issues": [
+      "첨부파일 없음(files=0)",
+      "자문료 건과의 증빙 연계 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 107,
+    "status": "확인",
+    "issues": [
+      "첨부파일 없음(files=0)",
+      "자문확인서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 108,
+    "status": "확인",
+    "issues": [
+      "첨부파일 없음(files=0)",
+      "자문료 건과의 증빙 연계 확인 필요"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 109,
+    "status": "확인",
+    "issues": [
+      "첨부파일 없음(files=0)",
+      "자문확인서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 110,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 111,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 112,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 113,
+    "status": "SKIP",
+    "issues": [
+      "0원 취소전표"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 114,
+    "status": "SKIP",
+    "issues": [
+      "0원 취소전표"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 115,
+    "status": "SKIP",
+    "issues": [
+      "0원 취소전표"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 116,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 117,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 118,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 119,
+    "status": "SKIP",
+    "issues": [
+      "0원 취소전표"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 120,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 121,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 122,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 123,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 124,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 125,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 초과 여부 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 126,
+    "status": "확인",
+    "issues": [
+      "1인당 5만원 한도 초과 여부 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 127,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 128,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 129,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 130,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 131,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 132,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 133,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 134,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 135,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 136,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 137,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 138,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 139,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 140,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 141,
+    "status": "확인",
+    "issues": [
+      "자문료/원천세 증빙파일 미첨부(files=0)"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 142,
+    "status": "확인",
+    "issues": [
+      "자문료/원천세 증빙파일 미첨부(files=0)"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 143,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 144,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 145,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 146,
+    "status": "확인",
+    "issues": [
+      "관내출장 정산금액(30,000원) 산정근거 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 147,
+    "status": "적정",
+    "issues": [],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 148,
+    "status": "적정",
+    "issues": [],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 149,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 150,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 151,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 152,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 153,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 154,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 155,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 156,
+    "status": "확인",
+    "issues": [
+      "회의록/방명록 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 157,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 158,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 159,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 160,
+    "status": "확인",
+    "issues": [
+      "지출결의서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 161,
+    "status": "확인",
+    "issues": [
+      "출장자 이름 불일치(서수원/성주연)",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 162,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 163,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 164,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 165,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 166,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 167,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 168,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 169,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 170,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 171,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 172,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 173,
+    "status": "확인",
+    "issues": [
+      "자문료 쌍 항목(174번)이 0원 취소전표로 원천세 단독 집행 여부 확인 필요"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 174,
+    "status": "SKIP",
+    "issues": [
+      "0원 취소전표"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 175,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 176,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 177,
+    "status": "확인",
+    "issues": [
+      "지출결의서 미첨부",
+      "출장신청서 미첨부",
+      "출장복명서 미첨부"
+    ],
+    "confidence": "high"
+  },
+  {
+    "rowNum": 178,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 179,
+    "status": "확인",
+    "issues": [
+      "출장복명서 미첨부"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "rowNum": 180,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high"
+  }
+]

@@ -1,0 +1,4014 @@
+{
+  "unanimous": [
+    {
+      "rowNum": 1,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 2,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 3,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 12,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 13,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 14,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 15,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 16,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 17,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 18,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 20,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 21,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 22,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 23,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 33,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 34,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 35,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 36,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 37,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 38,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 50,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 51,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 52,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 53,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 54,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 55,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 56,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 72,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 73,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 74,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 91,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 92,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 95,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 96,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 97,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 98,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 99,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 100,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 102,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 103,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 104,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 105,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 106,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 107,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 108,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 109,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 110,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 111,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 113,
+      "status": "SKIP",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 114,
+      "status": "SKIP",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 115,
+      "status": "SKIP",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 118,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 119,
+      "status": "SKIP",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 121,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 127,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 129,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 133,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 134,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 136,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 137,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 139,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 140,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 141,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 142,
+      "status": "확인",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 143,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 145,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 149,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 150,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 151,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 153,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 158,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 159,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 161,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 162,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 163,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 164,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 165,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 166,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 167,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 168,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 169,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 170,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 171,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 172,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 175,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "rowNum": 176,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    },
+    {
+      "rowNum": 179,
+      "status": "적정",
+      "models": [
+        "sonnet",
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "confidence": [
+        "high",
+        "high",
+        "high",
+        "high"
+      ]
+    }
+  ],
+  "majority": [
+    {
+      "rowNum": 4,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 5,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 6,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 7,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)",
+            "C-4 집행금액(1,500,000원)과 첨부 주 결의/세금계산서(2,500,000원) 불일치로 증빙 정합성 추가 확인 필요"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 8,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 9,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 10,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 11,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "범용성 장비(PC 주변기기: 고가 키보드 2건) 포함 (O-3)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "O-3 범용성 장비/사무용기기(키보드 등 PC 주변기기·사무집기 포함) 구매 건 포함으로 관리기관 인정사항 준수 여부 확인 필요"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 19,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-4 집행금액(5,299,500원) 대비 첨부된 주 결의 내 해당 과제 인건비 금액 정합성 추가 확인 필요"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 24,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 25,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 26,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 27,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)",
+            "C-4 집행금액(1,500,000원)과 첨부 주 결의/세금계산서(2,500,000원) 불일치로 증빙 정합성 추가 확인 필요"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 28,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 29,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "집행취소 요청 문서 첨부됨 (재원 착오 오집행, C-9)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "C-7 재원 착오 오집행 건으로 집행취소/재원변경 요청 문서 존재(전담기관 승인사항 준수 여부 확인 필요)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 30,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 31,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "범용성 장비(고가 키보드 등) 구입 가능성 (O-3)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "범용성 장비(키보드 등 PC 주변기기) 구입 포함 가능성 (O-3)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 32,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "방명록 기준 참석인원 확인이 불충분하여 인당 5만원 한도 검증 곤란 (O-10, C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 39,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 40,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 41,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 42,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 43,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 44,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 45,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 46,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 47,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 48,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 49,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "위촉직 인건비 필수 확인서류(근로계약/참여율 확인 등) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 57,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "수의계약 요건 증빙(사유서·2개 이상 견적·내부평가문서) 확인 불충분 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 58,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 건의 참여율/급여명세 등 필수 확인서류 미흡 (C-4)",
+            "개인별 계좌이체 증빙이 아닌 내부계좌 흡수 처리 (L-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 59,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 건의 참여율/급여명세 등 필수 확인서류 미흡 (C-4)",
+            "개인별 계좌이체 증빙이 아닌 내부계좌 흡수 처리 (L-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 60,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 건의 참여율/급여명세 등 필수 확인서류 미흡 (C-4)",
+            "개인별 계좌이체 증빙이 아닌 내부계좌 흡수 처리 (L-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 61,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 62,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 63,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 64,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 65,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 66,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 67,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 68,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 69,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 70,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "임차료 집행 건의 임대차계약서 미첨부 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 71,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "임차료 집행 건의 임대차계약서 미첨부 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 75,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 76,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 77,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 78,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 79,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 80,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "세금계산서/전자계산서 등 결제증빙 미흡(거래명세서로 대체) (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 81,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 82,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 83,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 84,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 85,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 86,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 87,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 88,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 89,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "내부인건비 흡수 - 참여율 확인서류 존재 여부 확인 필요 (L-3)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "급여내역/급여명세서 미첨부로 인건비 산정근거 확인 불가 (C-4)",
+            "개인별 계좌이체가 아닌 기관 계좌로 집행되어 개인지급 확인 불가 (L-4)"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 90,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "임차료 집행 건의 임대차계약서 미첨부 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 93,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 판독 불가로 회의내용 확인 어려움 (O-6)",
+            "회의비 인당 50,000원 한도 준수 여부 확인 필요 - 참석자 4명, 총 132,100원(스타벅스 22,100+식당 110,000), 인당 33,025원으로 한도 이내이나 회의록/방명록 판독 불가 (O-6)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 94,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 판독 불가로 회의내용 확인 어려움 (O-6)",
+            "회의비 인당 50,000원 한도 준수 여부 확인 필요 - 참석자 4명, 총 132,100원(스타벅스 22,100+식당 110,000), 인당 33,025원으로 한도 이내이나 회의록/방명록 판독 불가 (O-6)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 101,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "임차 관련 계약서 미첨부로 필수증빙 확인 필요 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 112,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 판독 불가로 회의내용/참석자 확인 어려움 (O-6)",
+            "회의비 인당 50,000원 한도 - 참석자 8명, 총 368,000원, 인당 46,000원으로 한도 이내이나 방명록 판독 어려움 (O-6)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 116,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        },
+        {
+          "model": "opus",
+          "status": "SKIP",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "SKIP",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 117,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        },
+        {
+          "model": "gemini",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 120,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 일부 판독 가능하나 방명록 서명 판독 불가로 참석자 확인 어려움 (O-6)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 122,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "적정",
+          "issues": [],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 123,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 124,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 판독 불가로 회의내용/참석자 확인 어려움 (O-6)",
+            "회의비 인당 50,000원 한도 - 참석자 4명, 총 141,700원(마고플레인 32,700+스시유가 109,000), 인당 35,425원으로 한도 이내이나 회의록/방명록 판독 불가 (O-6)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 125,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 판독 불가로 회의내용/참석자 확인 어려움 (O-6)",
+            "회의비 인당 50,000원 한도 - 참석자 4명, 총 141,700원(마고플레인 32,700+스시유가 109,000), 인당 35,425원으로 한도 이내이나 회의록/방명록 판독 불가 (O-6)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 126,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 판독 불가로 회의내용/참석자 확인 어려움 (O-6)",
+            "회의비 인당 50,000원 한도 - 참석자 10명, 총 188,800원, 인당 18,880원으로 한도 이내이나 회의록/방명록 판독 불가 (O-6)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 128,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "출장 목적 증빙 미비 (C-4): 학회 참석을 목적으로 하였으나, 참석 사실을 입증할 등록확인서 등 증빙이 누락되었습니다."
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 130,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "교통비 영수증의 귀환일(2025-09-27)이 출장기간(2025-09-26)과 불일치하여 출장기간 초과 가능성 (T-6)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 131,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 132,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 135,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 138,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 144,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "출장복명서 미첨부 (T-5): 지출결의서에 복명서가 포함되어 있지 않고, 별도 파일도 없습니다."
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "지출결의서(HWP) 본문 확인 불가로 필수 증빙 확인 불충분 (C-4)",
+            "출장복명서 첨부 여부 확인 불가 (T-5)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 146,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 147,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 148,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 152,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 154,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "범용성 장비(마우스, 키보드, 데스크매트) 구입에 대한 승인서류 미첨부 (O-3)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "범용성 장비(마우스/키보드 등 사무용기기) 포함 가능성 (O-3)",
+            "사업수행 직접 관련성 불명확 품목 포함 가능성 (O-11)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 155,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 판독 불가로 회의내용/참석자 확인 어려움 (O-6)",
+            "회의비 인당 50,000원 한도 - 참석자 10명, 총 312,800원(비앤디파트너스 104,800+진1926 208,000), 인당 31,280원으로 한도 이내이나 회의록/방명록 판독 불가 (O-6)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "적정"
+      }
+    },
+    {
+      "rowNum": 156,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 판독 불가로 회의내용/참석자 확인 어려움 (O-6)",
+            "회의비 인당 50,000원 한도 - 참석자 10명, 총 312,800원(비앤디파트너스 104,800+진1926 208,000), 인당 31,280원으로 한도 이내이나 회의록/방명록 판독 불가 (O-6)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "회의록/방명록 미첨부 (O-9)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 157,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "sonnet",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "확인",
+        "opus": "적정",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 160,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "지출결의서 등 필수 증빙 미첨부 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 173,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus"
+      ],
+      "minority": [
+        {
+          "model": "gemini",
+          "status": "SKIP",
+          "issues": [],
+          "confidence": "high"
+        },
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "원천세 금액(집행/취소) 정합성 추가 확인 필요 (C-4)"
+          ],
+          "confidence": "low"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "SKIP",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 174,
+      "majorityStatus": "SKIP",
+      "majorityModels": [
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "high"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "SKIP",
+        "gemini": "SKIP",
+        "codex": "SKIP"
+      }
+    },
+    {
+      "rowNum": 177,
+      "majorityStatus": "확인",
+      "majorityModels": [
+        "opus",
+        "gemini",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "sonnet",
+          "status": "적정",
+          "issues": [],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "확인",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 178,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "opus",
+        "gemini"
+      ],
+      "minority": [
+        {
+          "model": "codex",
+          "status": "확인",
+          "issues": [
+            "왕복 교통비 증빙 정합성 확인 필요 (C-4)"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "적정",
+        "gemini": "적정",
+        "codex": "확인"
+      }
+    },
+    {
+      "rowNum": 180,
+      "majorityStatus": "적정",
+      "majorityModels": [
+        "sonnet",
+        "codex"
+      ],
+      "minority": [
+        {
+          "model": "opus",
+          "status": "확인",
+          "issues": [
+            "회의록 OCR 판독 불가로 회의내용/참석자 확인 어려움 (O-6)",
+            "회의비 인당 50,000원 한도 - 참석자 6명, 총 162,000원, 인당 27,000원으로 한도 이내이나 회의록/방명록 판독 불가 (O-6)"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "model": "gemini",
+          "status": "확인",
+          "issues": [
+            "회의록상 참석인원과 실제 결제인원 불일치(회의록: 15명, 지출발의: 6명, 1인당 금액 27,000원으로 한도(50,000원)는 초과하지 않음)",
+            "주말/공휴일 회의비 집행 시 근무 또는 사업수행 확인 서류 미첨부"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "allVerdicts": {
+        "sonnet": "적정",
+        "opus": "확인",
+        "gemini": "확인",
+        "codex": "적정"
+      }
+    }
+  ],
+  "disputed": [],
+  "missing": []
+}

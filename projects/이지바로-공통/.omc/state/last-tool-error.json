@@ -1,0 +1,7 @@
+{
+  "tool_name": "Read",
+  "tool_input_preview": "{\"file_path\":\"/home/john/e-naradomum-rpa/projects/이지바로-공통/criteria-v1-review-codex.md\"}",
+  "error": "File content (88444 tokens) exceeds maximum allowed tokens (25000). Please use offset and limit parameters to read specific portions of the file, or use the GrepTool to search for specific content.",
+  "timestamp": "2026-02-18T06:31:15.652Z",
+  "retry_count": 1
+}

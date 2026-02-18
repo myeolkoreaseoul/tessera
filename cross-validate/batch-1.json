@@ -1,0 +1,584 @@
+[
+  {
+    "rowNum": 1,
+    "purpose": "안재용 출장비(연차평가)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 130100,
+    "vendorName": "안재용",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 3,
+    "fileNames": [
+      "[근무지외출장[안재용, 서울]].pdf",
+      "[안재용]_12월23일.pdf",
+      "[지출결의] 0027722 디지털헬스케어 실증지원사업 연차평가.pdf"
+    ]
+  },
+  {
+    "rowNum": 2,
+    "purpose": "우영재 출장비(연차평가)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 137000,
+    "vendorName": "우영재",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 3,
+    "fileNames": [
+      "[근무지외출장[우영재, 서울]].pdf",
+      "[우영재] 기차표 영수증_12월 23일.pdf",
+      "[지출결의] 0027722 디지털헬스케어 실증지원사업 연차평가.pdf"
+    ]
+  },
+  {
+    "rowNum": 3,
+    "purpose": "12월 위촉직 급여",
+    "budgetCategory": "인건비",
+    "subCategory": "일용임금",
+    "totalAmount": 3634580,
+    "vendorName": "재단법인 대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 6,
+    "fileNames": [
+      "[지출결의] 0027268 위촉연구원 급여 지급신청(기기).pdf",
+      "급여내역조회_기기.xls",
+      "급여이체확인증_12월_신서화.pdf",
+      "송금의뢰내역_기기.xls",
+      "신서화 12월 급여명세서.pdf",
+      "위촉직급여정보_기기.xls"
+    ]
+  },
+  {
+    "rowNum": 4,
+    "purpose": "신서화 출장비(1121)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 509143,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 6,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[근무지외출장[신서화, 인천]].pdf",
+      "[지출결의] 0023774 디지털헬스케어 의료기기 실증지원 사업 2025 대한의료정보학회 추계 학술대회 부스 운영.pdf",
+      "ktx운임.JPG",
+      "숙박비 영수증.pdf",
+      "영수증 _ 하이패스 홈페이지.pdf"
+    ]
+  },
+  {
+    "rowNum": 5,
+    "purpose": "안재용 출장비(1122)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 324983,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 5,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "Receipt.pdf",
+      "[근무지외출장[안재용, 인천]].pdf",
+      "[지출결의] 0023282 디지털헬스케어 실증지원사업 관련 정보학회 부스지원.pdf",
+      "동대구_광명.jpeg"
+    ]
+  },
+  {
+    "rowNum": 6,
+    "purpose": "맹수훈 출장비(1122)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 245014,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 5,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[근무지외출장[맹수훈, 인천]].pdf",
+      "[지출결의] 0023230 2525년 대한의료정보학회 추계학술대회 부스 운영.pdf",
+      "명찰.pdf",
+      "숙박영수증.pdf"
+    ]
+  },
+  {
+    "rowNum": 7,
+    "purpose": "사업 리플렛 인쇄(대한의료정보학회)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 1500000,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 12,
+    "fileNames": [
+      "(주)레이아웃_통장사본_기업은행.pdf",
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[구매검사] 디지털헬스케어 의료기기 실증지원 사업 리플렛 인쇄.pdf",
+      "[구매신청] 디지털헬스케어 의료기기 실증지원 사업 리플렛 인쇄.pdf",
+      "[지출결의] 0022483 디지털헬스케어 의료기기 실증지원 사업 리플렛 인쇄.pdf",
+      "견적서1.PDF",
+      "견적서2.pdf",
+      "경영지원부-16829_IMG_0273.JPG",
+      "경영지원부-16829_IMG_0274.JPG",
+      "경영지원부-16829_IMG_0275.JPG",
+      "경영지원부-16829_거래명세서.JPG",
+      "사업자등록증_주식회사 레이아웃(22.10.08.).pdf"
+    ]
+  },
+  {
+    "rowNum": 8,
+    "purpose": "안재용 출장비(보산진)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 99600,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 5,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "IMG_1702.JPG",
+      "IMG_1703.JPG",
+      "[지출결의] 0022152 디지털헬스케어실증지원사업 26년 사업수행 관련 회의 진행.pdf",
+      "근무지외출장[안재용, 오송].pdf"
+    ]
+  },
+  {
+    "rowNum": 9,
+    "purpose": "원천세(김용진)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 45050,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 9,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[지출결의] 0011401 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 전문가활용비 지출.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 전문가활용비 지출.pdf",
+      "교통비영수증_김용진.pdf",
+      "디지털헬스케어사업단-1824_2025년 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 계획(안).pdf",
+      "선정평가표_김용진.pdf",
+      "자문확인서_김용진.pdf",
+      "코레일(동대구)_운임표.JPG",
+      "코레일(서대구)_운임표.JPG"
+    ]
+  },
+  {
+    "rowNum": 10,
+    "purpose": "자문료(김용진)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 626550,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 9,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[지출결의] 0011401 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 전문가활용비 지출.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 전문가활용비 지출.pdf",
+      "교통비영수증_김용진.pdf",
+      "디지털헬스케어사업단-1824_2025년 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 계획(안).pdf",
+      "선정평가표_김용진.pdf",
+      "자문확인서_김용진.pdf",
+      "코레일(동대구)_운임표.JPG",
+      "코레일(서대구)_운임표.JPG"
+    ]
+  },
+  {
+    "rowNum": 11,
+    "purpose": "사무용품비(포스트잇외)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 2022933,
+    "vendorName": "엠엠피아이 주식회사",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "reviewStatus": "미처리",
+    "fileCount": 2,
+    "fileNames": [
+      "[구매신청] 디지털헬스케어 의료기기 실증지원 사업 사무용품 구매.pdf",
+      "[지출결의] 디지털헬스케어 의료기기 실증지원 사업 운영을 위한 사무용품 구매.pdf"
+    ]
+  },
+  {
+    "rowNum": 12,
+    "purpose": "회의비(온디바이스AI동향 회의)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 280000,
+    "vendorName": "부자집",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "reviewStatus": "미처리",
+    "fileCount": 3,
+    "fileNames": [
+      "[일반발의] 디지털헬스케어 의료기기 실증지원 사업 AI 동향 관련 회의비 지출.pdf",
+      "[지출결의] 0027319 디지털헬스케어 의료기기 실증지원 사업 온디바이스 AI 동향 관련 회의비 지출.pdf",
+      "회의록, 방명록.pdf"
+    ]
+  },
+  {
+    "rowNum": 13,
+    "purpose": "회의비(디지털의료제품 인공지능 회의)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 36100,
+    "vendorName": "스타벅스 코리아",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "reviewStatus": "미처리",
+    "fileCount": 3,
+    "fileNames": [
+      "[지출결의] 0027192 디지털헬스케어 의료기기 실증지원 사업 디지털의료제품 인공지능 및 뇌파 연동 관련 회의비 지출.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 디지털의료제품 인공지능 및 뇌파 연동 관련 회의비 지출.pdf",
+      "회의록, 방명록.pdf"
+    ]
+  },
+  {
+    "rowNum": 14,
+    "purpose": "회의비(디지털의료제품 인공지능 회의)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 166900,
+    "vendorName": "소담오리 대구혁신점",
+    "evidenceType": "보조금전용카드",
+    "evidenceSub": "",
+    "reviewStatus": "미처리",
+    "fileCount": 3,
+    "fileNames": [
+      "[지출결의] 0027192 디지털헬스케어 의료기기 실증지원 사업 디지털의료제품 인공지능 및 뇌파 연동 관련 회의비 지출.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 디지털의료제품 인공지능 및 뇌파 연동 관련 회의비 지출.pdf",
+      "회의록, 방명록.pdf"
+    ]
+  },
+  {
+    "rowNum": 15,
+    "purpose": "원천세(고동범)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 52800,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 4,
+    "fileNames": [
+      "[지출결의] 0027251 디지털헬스케어 의료기기 실증지원 사업 온디바이스 AI 동향 및 디지털의료제품 자문료 지출.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 온디바이스 AI 동향 및 디지털의료제품 자문료 지출.pdf",
+      "온디바이스AI 기술동향_자문자료.pdf",
+      "자문확인서_고동범.pdf"
+    ]
+  },
+  {
+    "rowNum": 16,
+    "purpose": "자문료(고동범)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 547200,
+    "vendorName": "고동범",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 4,
+    "fileNames": [
+      "[지출결의] 0027251 디지털헬스케어 의료기기 실증지원 사업 온디바이스 AI 동향 및 디지털의료제품 자문료 지출.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 온디바이스 AI 동향 및 디지털의료제품 자문료 지출.pdf",
+      "온디바이스AI 기술동향_자문자료.pdf",
+      "자문확인서_고동범.pdf"
+    ]
+  },
+  {
+    "rowNum": 17,
+    "purpose": "원천세(정성택)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 52800,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 4,
+    "fileNames": [
+      "[지출결의] 0026909 디지털헬스케어 의료기기 실증지원 사업 인공지능 의료분야 연계 관련 자문.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 인공지능 의료분야 연계 관련 자문.pdf",
+      "자문자료_정석택교수.pdf",
+      "자문확인서.pdf"
+    ]
+  },
+  {
+    "rowNum": 18,
+    "purpose": "자문료(정성택)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 547200,
+    "vendorName": "정성택",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 4,
+    "fileNames": [
+      "[지출결의] 0026909 디지털헬스케어 의료기기 실증지원 사업 인공지능 의료분야 연계 관련 자문.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 인공지능 의료분야 연계 관련 자문.pdf",
+      "자문자료_정석택교수.pdf",
+      "자문확인서.pdf"
+    ]
+  },
+  {
+    "rowNum": 19,
+    "purpose": "11월 위촉직 급여",
+    "budgetCategory": "인건비",
+    "subCategory": "일용임금",
+    "totalAmount": 5299500,
+    "vendorName": "재단법인 대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 3,
+    "fileNames": [
+      "[지출결의] 0022444 위촉연구원 급여 지급신청_기기.pdf",
+      "급여내역조회_기기.xls",
+      "위촉직급여정보_기기.xls"
+    ]
+  },
+  {
+    "rowNum": 20,
+    "purpose": "10월 위촉직 급여",
+    "budgetCategory": "인건비",
+    "subCategory": "일용임금",
+    "totalAmount": 3720470,
+    "vendorName": "재단법인 대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 6,
+    "fileNames": [
+      "[일반발의] 10월 퇴사에 따른 퇴직연금 지출(성주연).pdf",
+      "[지출결의] 0019243 위촉연구원 급여 지급신청(기기).pdf",
+      "[지출결의] 0020512 10월 퇴사에 따른 퇴직연금 지출 (성_연).pdf",
+      "급여내역조회_기기.xls",
+      "위촉직급여정보_기기.xls",
+      "전략기획실-3259_퇴직연금부담금 납부세역서_10월_성주연.xlsx"
+    ]
+  },
+  {
+    "rowNum": 21,
+    "purpose": "안재용 출장비(연차평가)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 130100,
+    "vendorName": "안재용",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 3,
+    "fileNames": [
+      "[근무지외출장[안재용, 서울]].pdf",
+      "[안재용]_12월23일.pdf",
+      "[지출결의] 0027722 디지털헬스케어 실증지원사업 연차평가.pdf"
+    ]
+  },
+  {
+    "rowNum": 22,
+    "purpose": "우영재 출장비(연차평가)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 137000,
+    "vendorName": "우영재",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 3,
+    "fileNames": [
+      "[근무지외출장[우영재, 서울]].pdf",
+      "[우영재] 기차표 영수증_12월 23일.pdf",
+      "[지출결의] 0027722 디지털헬스케어 실증지원사업 연차평가.pdf"
+    ]
+  },
+  {
+    "rowNum": 23,
+    "purpose": "12월 위촉직 급여",
+    "budgetCategory": "인건비",
+    "subCategory": "일용임금",
+    "totalAmount": 3634580,
+    "vendorName": "재단법인 대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 6,
+    "fileNames": [
+      "[지출결의] 0027268 위촉연구원 급여 지급신청(기기).pdf",
+      "급여내역조회_기기.xls",
+      "급여이체확인증_12월_신서화.pdf",
+      "송금의뢰내역_기기.xls",
+      "신서화 12월 급여명세서.pdf",
+      "위촉직급여정보_기기.xls"
+    ]
+  },
+  {
+    "rowNum": 24,
+    "purpose": "신서화 출장비(1121)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 509143,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 6,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[근무지외출장[신서화, 인천]].pdf",
+      "[지출결의] 0023774 디지털헬스케어 의료기기 실증지원 사업 2025 대한의료정보학회 추계 학술대회 부스 운영.pdf",
+      "ktx운임.JPG",
+      "숙박비 영수증.pdf",
+      "영수증 _ 하이패스 홈페이지.pdf"
+    ]
+  },
+  {
+    "rowNum": 25,
+    "purpose": "안재용 출장비(1122)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 324983,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 5,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "Receipt.pdf",
+      "[근무지외출장[안재용, 인천]].pdf",
+      "[지출결의] 0023282 디지털헬스케어 실증지원사업 관련 정보학회 부스지원.pdf",
+      "동대구_광명.jpeg"
+    ]
+  },
+  {
+    "rowNum": 26,
+    "purpose": "맹수훈 출장비(1122)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 245014,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 5,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[근무지외출장[맹수훈, 인천]].pdf",
+      "[지출결의] 0023230 2525년 대한의료정보학회 추계학술대회 부스 운영.pdf",
+      "명찰.pdf",
+      "숙박영수증.pdf"
+    ]
+  },
+  {
+    "rowNum": 27,
+    "purpose": "사업 리플렛 인쇄(대한의료정보학회)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 1500000,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 12,
+    "fileNames": [
+      "(주)레이아웃_통장사본_기업은행.pdf",
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[구매검사] 디지털헬스케어 의료기기 실증지원 사업 리플렛 인쇄.pdf",
+      "[구매신청] 디지털헬스케어 의료기기 실증지원 사업 리플렛 인쇄.pdf",
+      "[지출결의] 0022483 디지털헬스케어 의료기기 실증지원 사업 리플렛 인쇄.pdf",
+      "견적서1.PDF",
+      "견적서2.pdf",
+      "경영지원부-16829_IMG_0273.JPG",
+      "경영지원부-16829_IMG_0274.JPG",
+      "경영지원부-16829_IMG_0275.JPG",
+      "경영지원부-16829_거래명세서.JPG",
+      "사업자등록증_주식회사 레이아웃(22.10.08.).pdf"
+    ]
+  },
+  {
+    "rowNum": 28,
+    "purpose": "안재용 출장비(보산진)",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "totalAmount": 99600,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 5,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "IMG_1702.JPG",
+      "IMG_1703.JPG",
+      "[지출결의] 0022152 디지털헬스케어실증지원사업 26년 사업수행 관련 회의 진행.pdf",
+      "근무지외출장[안재용, 오송].pdf"
+    ]
+  },
+  {
+    "rowNum": 29,
+    "purpose": "원천세(김용진)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 45050,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 9,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[지출결의] 0011401 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 전문가활용비 지출.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 전문가활용비 지출.pdf",
+      "교통비영수증_김용진.pdf",
+      "디지털헬스케어사업단-1824_2025년 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 계획(안).pdf",
+      "선정평가표_김용진.pdf",
+      "자문확인서_김용진.pdf",
+      "코레일(동대구)_운임표.JPG",
+      "코레일(서대구)_운임표.JPG"
+    ]
+  },
+  {
+    "rowNum": 30,
+    "purpose": "자문료(김용진)",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "totalAmount": 626550,
+    "vendorName": "대구경북첨단의료산업진흥재단",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "reviewStatus": "미처리",
+    "fileCount": 9,
+    "fileNames": [
+      "2025년 디지털헬스케어 의료기기 실증지원 사업 집행취소 협조 요청(e나라도움).pdf",
+      "[지출결의] 0011401 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 전문가활용비 지출.pdf",
+      "[지출발의] 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 전문가활용비 지출.pdf",
+      "교통비영수증_김용진.pdf",
+      "디지털헬스케어사업단-1824_2025년 디지털헬스케어 의료기기 실증지원 사업 신규 컨소시엄 모집 시범보급 분야 선정 평가 계획(안).pdf",
+      "선정평가표_김용진.pdf",
+      "자문확인서_김용진.pdf",
+      "코레일(동대구)_운임표.JPG",
+      "코레일(서대구)_운임표.JPG"
+    ]
+  }
+]

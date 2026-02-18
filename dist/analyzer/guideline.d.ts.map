@@ -1,0 +1,1 @@
+{"version":3,"file":"guideline.d.ts","sourceRoot":"","sources":["../../src/analyzer/guideline.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,MAAM,EAAE,SAAS,EAAE,MAAM,UAAU,CAAC;AAE7C;;;GAGG;AACH,qBAAa,iBAAiB;IAC5B,OAAO,CAAC,MAAM,CAAS;gBAEX,MAAM,EAAE,MAAM;IAIpB,OAAO,CAAC,QAAQ,CAAC,EAAE,MAAM,GAAG,OAAO,CAAC,SAAS,CAAC;IAmGpD,OAAO,CAAC,UAAU;CAOnB"}
