@@ -17,6 +17,7 @@ const { RobotManager } = require('./robot-manager');
 const { setupWebSocket } = require('./ws-handler');
 const { createRobotRoutes } = require('./routes/api-robots');
 const { createProjectRoutes } = require('./routes/api-projects');
+const { createEzbaroRoutes } = require('./routes/api-ezbaro');
 
 const PORT = parseInt(process.env.PORT) || 3500;
 
@@ -36,6 +37,7 @@ setupWebSocket(server, robotManager);
 // REST API
 app.use('/api/robots', createRobotRoutes(robotManager));
 app.use('/api/projects', createProjectRoutes());
+app.use('/api/ezbaro', createEzbaroRoutes());
 
 // 헬스체크
 app.get('/api/health', (req, res) => {

@@ -33,6 +33,10 @@
 - `web/` — Next.js 15 지휘통제실 (대시보드/출격/결과)
 - `run-all.js` — reporter 통합 (IPC 가용 시 자동 보고)
 - 보류: RCMS(섹션6), 보탬e(섹션7) — 첫 기관 때 개발 예정
+- Codex 코드 리뷰 16개 이슈 전수 수정 완료
+- 배포: Express 단일 서버(:3500) + Next.js 정적 빌드 + Cloudflare 터널
+- pm2 상시 구동: tessera-server + tessera-tunnel
+- 공개 URL: trycloudflare.com (임시, 터널 재시작 시 변경)
 
 ### 아직 안 된 것
 - 보완요청 문구 자동 삽입 (플래그→문구 매핑 미구현, criteria-v3에 문구 템플릿은 있음)
