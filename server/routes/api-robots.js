@@ -12,6 +12,8 @@ const { Router } = require('express');
 function createRobotRoutes(robotManager) {
   const router = Router();
 
+  const VALID_SYSTEMS = ['enaradomum', 'ezbaro', 'botame', 'rcms'];
+
   // 로봇 시작
   router.post('/start', (req, res) => {
     try {
@@ -20,14 +22,18 @@ function createRobotRoutes(robotManager) {
       if (!system) {
         return res.status(400).json({ error: 'system은 필수입니다' });
       }
-      if (!institution) {
-        return res.status(400).json({ error: 'institution은 필수입니다' });
+      if (!VALID_SYSTEMS.includes(system)) {
+        return res.status(400).json({ error: `잘못된 system: ${system}. 허용: ${VALID_SYSTEMS.join(', ')}` });
+      }
+      if (!institution || typeof institution !== 'string') {
+        return res.status(400).json({ error: 'institution은 필수입니다 (문자열)' });
       }
 
       const robotId = robotManager.start({ system, project, institution, options });
       res.json({ ok: true, robotId });
     } catch (err) {
-      res.status(409).json({ error: err.message });
+      const status = err.message.includes('이미 실행 중') ? 409 : 500;
+      res.status(status).json({ error: err.message });
     }
   });
 
@@ -37,7 +43,10 @@ function createRobotRoutes(robotManager) {
       robotManager.stop(req.params.id);
       res.json({ ok: true });
     } catch (err) {
-      res.status(404).json({ error: err.message });
+      const status = err.message.includes('찾을 수 없습니다') ? 404
+        : err.message.includes('실행 중이 아닙니다') ? 409
+        : 500;
+      res.status(status).json({ error: err.message });
     }
   });
 

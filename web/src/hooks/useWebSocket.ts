@@ -32,8 +32,10 @@ export function useWebSocket() {
   const [isConnected, setIsConnected] = useState(false);
   const ws = useRef<WebSocket | null>(null);
   const reconnectTimeout = useRef<NodeJS.Timeout | null>(null);
+  const unmounted = useRef(false);
 
   const connect = useCallback(() => {
+    if (unmounted.current) return;
     if (ws.current?.readyState === WebSocket.OPEN) return;
 
     ws.current = new WebSocket(WS_URL);
@@ -41,13 +43,18 @@ export function useWebSocket() {
     ws.current.onopen = () => {
       console.log("WS Connected");
       setIsConnected(true);
-      if (reconnectTimeout.current) clearTimeout(reconnectTimeout.current);
+      if (reconnectTimeout.current) {
+        clearTimeout(reconnectTimeout.current);
+        reconnectTimeout.current = null;
+      }
     };
 
     ws.current.onclose = () => {
       console.log("WS Disconnected");
       setIsConnected(false);
-      reconnectTimeout.current = setTimeout(connect, 3000);
+      if (!unmounted.current) {
+        reconnectTimeout.current = setTimeout(connect, 3000);
+      }
     };
 
     ws.current.onerror = (err) => {
@@ -70,7 +77,8 @@ export function useWebSocket() {
       setRobots(data.robots || []);
     } else if (data.type === "robot-update") {
       setRobots((prev) => {
-        const index = prev.findIndex((r) => r.id === data.robot.id);
+        const index = prev.findIndex((r) => r.id === data.robot?.id);
+        if (!data.robot) return prev;
         if (index > -1) {
           const next = [...prev];
           next[index] = { ...next[index], ...data.robot };
@@ -78,13 +86,24 @@ export function useWebSocket() {
         }
         return [...prev, data.robot];
       });
-    } else {
-      // It's a log message
+    } else if (data.type === "exit") {
+      // 로봇 종료 시 상태 갱신
+      if (data.robotId) {
+        setRobots((prev) =>
+          prev.map((r) =>
+            r.id === data.robotId ? { ...r, status: data.status || "crashed" } : r
+          )
+        );
+      }
+    }
+
+    // 로그 메시지 (모든 타입)
+    if (data.type !== "initial-state" && data.type !== "robot-update") {
       const newLog: LogEntry = {
         id: Math.random().toString(36).substring(7),
         robotId: data.robotId,
         type: data.type || "info",
-        message: data.message || JSON.stringify(data),
+        message: data.message || data.label || JSON.stringify(data),
         timestamp: new Date(),
       };
       setLogs((prev) => [newLog, ...prev].slice(0, 100));
@@ -92,10 +111,15 @@ export function useWebSocket() {
   };
 
   useEffect(() => {
+    unmounted.current = false;
     connect();
     return () => {
+      unmounted.current = true;
+      if (reconnectTimeout.current) {
+        clearTimeout(reconnectTimeout.current);
+        reconnectTimeout.current = null;
+      }
       ws.current?.close();
-      if (reconnectTimeout.current) clearTimeout(reconnectTimeout.current);
     };
   }, [connect]);
 

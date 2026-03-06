@@ -14,11 +14,16 @@ function setupWebSocket(server, robotManager) {
     console.log(`[WS] 클라이언트 연결 (총 ${clients.size}명)`);
 
     // 연결 즉시 현재 로봇 상태 전송
-    ws.send(JSON.stringify({
-      type: 'initial-state',
-      robots: robotManager.list(),
-      timestamp: Date.now(),
-    }));
+    try {
+      ws.send(JSON.stringify({
+        type: 'initial-state',
+        robots: robotManager.list(),
+        timestamp: Date.now(),
+      }));
+    } catch (err) {
+      console.error('[WS] initial-state send 에러:', err.message);
+      clients.delete(ws);
+    }
 
     ws.on('close', () => {
       clients.delete(ws);
@@ -33,14 +38,37 @@ function setupWebSocket(server, robotManager) {
 
   // 로봇 메시지 → 전체 클라이언트 브로드캐스트
   robotManager.on('robot-message', (robotId, msg) => {
-    const payload = JSON.stringify({
-      robotId,
-      ...msg,
-    });
+    // robot-update 메시지도 함께 전송 (UI가 로봇 상태를 갱신할 수 있도록)
+    const robot = robotManager.get(robotId);
+    const messages = [
+      JSON.stringify({ robotId, ...msg }),
+    ];
+    if (robot) {
+      messages.push(JSON.stringify({
+        type: 'robot-update',
+        robot: {
+          id: robot.id,
+          system: robot.system,
+          project: robot.project,
+          institution: robot.institution,
+          status: robot.status,
+          startedAt: robot.startedAt,
+          endedAt: robot.endedAt,
+          progress: robot.progress,
+        },
+      }));
+    }
 
     for (const client of clients) {
       if (client.readyState === WebSocket.OPEN) {
-        client.send(payload);
+        for (const payload of messages) {
+          try {
+            client.send(payload);
+          } catch (err) {
+            console.error('[WS] send 에러:', err.message);
+            clients.delete(client);
+          }
+        }
       }
     }
   });

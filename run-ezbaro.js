@@ -22,11 +22,13 @@
 process.on('unhandledRejection', (err) => {
   if (err && err.message && err.message.includes('No dialog is showing')) return;
   console.error('UnhandledRejection:', err);
+  // 복구 불가능한 오류 시 cleanup 후 종료
+  try { require('./lib/adapters/ezbaro/navigate').stopKeepAliveEzbaro(); } catch {}
+  process.exitCode = 1;
 });
 
 const fs = require('fs');
 const path = require('path');
-const pdfParse = require('pdf-parse');
 const { Reporter } = require('./lib/reporter');
 const ezNav = require('./lib/adapters/ezbaro/navigate');
 const ezCollect = require('./lib/adapters/ezbaro/collect');
@@ -65,7 +67,7 @@ const PROJECT_NAME = args.project || '이지바로-공통';
 const DIR_NAME = args.dir || (INST_NAME || 'ezbaro').replace(/[^가-힣a-zA-Z0-9]/g, '').substring(0, 20);
 const DRY_RUN = !!args['dry-run'];
 const SKIP_JUDGE = !!args['skip-judge'];
-const START_ROW = parseInt(args.start) || 1;
+const START_ROW = Math.max(1, Math.floor(parseInt(args.start) || 1));
 const STAFF = args.staff ? args.staff.split(',') : [];
 const HOST = args.host || process.env.CDP_HOST || '100.87.3.123';
 const PORT = parseInt(args.port) || parseInt(process.env.CDP_PORT_EZBARO || '9446');
@@ -142,75 +144,6 @@ async function getTotalRowCount(page) {
     }
     return 0;
   }).catch(() => 0);
-}
-
-/**
- * 특정 행의 첨부파일 다운로드 (메모리 내 fetch → PDF 텍스트 추출)
- */
-async function downloadAndExtractFiles(page, rowIndex) {
-  const files = [];
-
-  // 해당 행 선택
-  const selected = await page.evaluate((idx) => {
-    const app = window._application;
-    const frames = app?.gvWorkFrame?.frames;
-    if (!frames) return false;
-    for (let i = 0; i < frames.length; i++) {
-      const form = frames[i]?.form?.divWork?.form;
-      if (form?.name === 'cal00202') {
-        const grid = form.grdList;
-        if (grid) {
-          grid.setCellPos(idx, 0);
-          grid.selectRow(idx);
-        }
-        return true;
-      }
-    }
-    return false;
-  }, rowIndex).catch(() => false);
-
-  if (!selected) return files;
-
-  // 첨부파일 링크 클릭으로 다이얼로그 열기 시도
-  const dialogOpened = await ezCollect.openAttachmentDialog(page, '기본서류');
-  if (!dialogOpened.ok) return files;
-
-  // 다이얼로그에서 파일 목록 추출 + 메모리 내 다운로드
-  const fileList = await page.evaluate(() => {
-    const dlg = [...document.querySelectorAll('.cl-dialog')].find(el => el.getBoundingClientRect().width > 100);
-    if (!dlg) return [];
-    const rows = [...dlg.querySelectorAll('[class*="cl-grid-row"]')].filter(el => {
-      const r = el.getBoundingClientRect();
-      return r.width > 50 && r.height > 5;
-    });
-    return rows.map(row => {
-      const texts = [...row.querySelectorAll('.cl-text')].map(el => (el.innerText || '').trim()).filter(Boolean);
-      return { name: texts[0] || 'unknown', cells: texts };
-    });
-  }).catch(() => []);
-
-  // 다운로드 파라미터 캡처 시도
-  const params = await ezCollect.captureDownloadParams(page);
-  if (params) {
-    const result = await ezCollect.fetchFileByParams(page, params);
-    if (result.ok && result.buffer) {
-      let text = '';
-      try {
-        const parsed = await pdfParse(result.buffer);
-        text = (parsed.text || '').substring(0, 12000);
-      } catch {
-        text = '[PDF 파싱 실패]';
-      }
-      files.push({
-        name: fileList[0]?.name || 'document.pdf',
-        text,
-        size: result.size,
-      });
-    }
-  }
-
-  await ezCollect.closeAttachmentDialog(page);
-  return files;
 }
 
 // ══════════════════════════════════════
@@ -574,5 +507,7 @@ if (require.main === module) {
     console.error('\n!! 파이프라인 오류 !!');
     console.error(err);
     process.exitCode = 1;
+  }).finally(() => {
+    ezNav.stopKeepAliveEzbaro();
   });
 }

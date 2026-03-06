@@ -120,12 +120,13 @@ class RobotManager extends EventEmitter {
 
     // 프로세스 종료
     child.on('exit', (code, signal) => {
-      if (robot.status === 'running') {
+      if (robot.status === 'running' || robot.status === 'stopping') {
         robot.status = code === 0 ? 'completed' : 'crashed';
       }
       robot.exitCode = code;
       robot.exitSignal = signal;
       robot.endedAt = Date.now();
+      if (robot._killTimer) { clearTimeout(robot._killTimer); robot._killTimer = null; }
 
       this.emit('robot-message', robotId, {
         type: 'exit',
@@ -134,6 +135,13 @@ class RobotManager extends EventEmitter {
         status: robot.status,
         timestamp: Date.now(),
       });
+
+      // 1시간 후 완료된 로봇 레코드 정리 (메모리 누수 방지)
+      setTimeout(() => {
+        if (robot.status !== 'running' && robot.status !== 'stopping') {
+          this.robots.delete(robotId);
+        }
+      }, 60 * 60 * 1000);
     });
 
     child.on('error', (err) => {
@@ -160,9 +168,9 @@ class RobotManager extends EventEmitter {
     robot.process.kill('SIGTERM');
 
     // 30초 후에도 종료 안 되면 SIGKILL
-    setTimeout(() => {
+    robot._killTimer = setTimeout(() => {
       if (robot.status === 'stopping') {
-        robot.process.kill('SIGKILL');
+        try { robot.process.kill('SIGKILL'); } catch {}
         robot.status = 'killed';
       }
     }, 30000);
