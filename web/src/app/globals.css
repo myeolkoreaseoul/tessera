@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0b;
+  --color-foreground: #e1e7ef;
+  --color-primary: #10b981;
+  --color-secondary: #334155;
+  --color-accent: #22c55e;
+  --color-muted: #64748b;
+  --color-border: #1e293b;
+  --color-card: #0f172a;
+}
+
+:root {
+  --background: #0a0a0b;
+  --foreground: #e1e7ef;
+  --card: #0f172a;
+  --card-foreground: #e1e7ef;
+  --popover: #0a0a0b;
+  --popover-foreground: #e1e7ef;
+  --primary: #10b981;
+  --primary-foreground: #000;
+  --secondary: #1e293b;
+  --secondary-foreground: #e1e7ef;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #22c55e;
+  --accent-foreground: #000;
+  --destructive: #ef4444;
+  --destructive-foreground: #fff;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #10b981;
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-noto-sans-kr), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glow-green {
+  box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.2);
+}
+
+.glow-card {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 10px rgba(16, 185, 129, 0.05);
+}
+
+.command-panel {
+  border: 1px solid var(--border);
+  background: var(--card);
+}

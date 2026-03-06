@@ -21,10 +21,25 @@
 - 0원 SKIP 5건: 정확 일치
 - 추가 발견: 부가세 포함 31건, 경쟁입찰 2건, 출장복명서 21건
 
+### 지휘통제실 구현 완료 (2026-03-06)
+- `lib/reporter.js` — IPC/stdout 겸용 리포터 모듈
+- `run-pipeline.js` — 통합 파이프라인 진입점 (--system 분기)
+- `run-ezbaro.js` — 이지바로 통합 파이프라인 (nexacro API 기반)
+- `server/index.js` — Express + WebSocket 서버 (:3500)
+- `server/robot-manager.js` — child_process.fork 기반 로봇 프로세스 관리
+- `server/routes/api-robots.js` — REST: 로봇 시작/중지/목록
+- `server/routes/api-projects.js` — REST: 사업 설정/결과 조회
+- `server/ws-handler.js` — WebSocket 실시간 브로드캐스트
+- `web/` — Next.js 15 지휘통제실 (대시보드/출격/결과)
+- `run-all.js` — reporter 통합 (IPC 가용 시 자동 보고)
+- 보류: RCMS(섹션6), 보탬e(섹션7) — 첫 기관 때 개발 예정
+
 ### 아직 안 된 것
 - 보완요청 문구 자동 삽입 (플래그→문구 매핑 미구현, criteria-v3에 문구 템플릿은 있음)
-- 보탬e/이지바로/RCMS 수집 adapter (시스템별 navigate+collect+review)
+- RCMS 수집 adapter (백지, 첫 기관 때 개발)
+- 보탬e adapter 정식화 (레거시→adapter 구조, 나중에)
 - 혁신법 전용 규칙 (lib/rules/혁신법/)
+- 검증 환경 (섹션8: regression 테스트)
 
 ---
 

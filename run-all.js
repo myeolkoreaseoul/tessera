@@ -43,6 +43,7 @@ const {
   MAX_FILE_TEXT_LENGTH,
   DOWNLOAD_WAIT_MAX_SECONDS,
 } = require('./lib/constants');
+const { Reporter } = require('./lib/reporter');
 
 // ── CLI 파싱 ──
 const args = Object.fromEntries(
@@ -624,6 +625,7 @@ async function extractAllGridData(page) {
 //  메인 파이프라인 (v2: 건별 순차 처리)
 // ══════════════════════════════════════
 async function main() {
+  const reporter = new Reporter({ system: 'enaradomum', silent: true });
   const t0 = Date.now();
   const settleLabel = SETTLEMENT === 'interim' ? '중간정산' : '최종정산';
   console.log('╔══════════════════════════════════════════════════╗');
@@ -655,6 +657,7 @@ async function main() {
   }
 
   // ════════ Phase 0: 네비게이션 ════════
+  reporter.phaseChange(0, '네비게이션');
   console.log('\n[Phase 0] 네비게이션...');
   const { page, context, selected } = await nav.goToInstitution({
     institutionName: INST_NAME,
@@ -693,6 +696,7 @@ async function main() {
   console.log(`  총 ${totalCount}건\n`);
 
   // ════════ Phase 1: 세부내역검토(DD001003S) 진입 ════════
+  reporter.phaseChange(1, '세부내역검토 진입');
   console.log('[Phase 1] 세부내역검토 진입...');
 
   // 그리드 로드 대기
@@ -799,6 +803,7 @@ async function main() {
   });
 
   // ════════ Phase 2: 건별 루프 ════════
+  reporter.phaseChange(2, '건별 처리');
   console.log('[Phase 2] 건별 처리 시작...');
   let processed = 0, skipped = 0, reviewed = 0;
 
@@ -871,6 +876,7 @@ async function main() {
     };
 
     console.log(`  [R${itemIdx}/${totalCount}] ${rec.itemName || rec.purpose || '-'} | ${rec.vendorName || '-'} | ${rec.totalAmount}원`);
+    reporter.progress(itemIdx, totalCount, `${rec.itemName || rec.purpose || '-'}`);
 
     // ── 2b: 첨부파일 다운로드 ──
     const dlDir = path.join(BASE_DIR, `r${itemIdx}`);
@@ -941,6 +947,7 @@ async function main() {
         }
       }
       console.log(`    판정: ${resultItem.status} ${resultItem.comment !== '적정' ? '— ' + resultItem.comment.substring(0, 50) : ''}`);
+      reporter.itemComplete(`R${itemIdx} ${rec.itemName || ''}`, resultItem.status, Date.now() - itemT0);
     }
 
     // ── 2f: 입력 (검토완료/보완요청) ──
@@ -1017,10 +1024,16 @@ async function main() {
   console.log(`║  data: ${DATA_FILE}`);
   console.log(`║  results: ${RESULTS_FILE}`);
   console.log('╚══════════════════════════════════════════════════╝');
+
+  reporter.done({ institution: INST_NAME, processed, skipped, ok, ng, elapsed: `${elapsed}분` });
 }
 
-main().catch(err => {
-  console.error('\n!! 파이프라인 오류 !!');
-  console.error(err);
-  process.exitCode = 1;
-});
+module.exports = { main };
+
+if (require.main === module) {
+  main().catch(err => {
+    console.error('\n!! 파이프라인 오류 !!');
+    console.error(err);
+    process.exitCode = 1;
+  });
+}

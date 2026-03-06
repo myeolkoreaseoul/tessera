@@ -6,3 +6,6 @@ logs/
 archive/one-off/
 archive/cross-validate-history/
 .omc/
+
+# web build output
+web/.next/
