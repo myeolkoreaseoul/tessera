@@ -36,7 +36,14 @@
 - Codex 코드 리뷰 16개 이슈 전수 수정 완료
 - 배포: Express 단일 서버(:3500) + Next.js 정적 빌드 + Cloudflare 터널
 - pm2 상시 구동: tessera-server + tessera-tunnel
-- 공개 URL: trycloudflare.com (임시, 터널 재시작 시 변경)
+- 공개 URL: Tailscale Funnel (https://desktop-pvk1djc.tail6edbaa.ts.net)
+- Cloudflare 터널 제거 → Tailscale Funnel로 교체 (무료, 고정 URL)
+
+### 이지바로 엑셀 업로드 + 과제관리 페이지 (2026-03-06)
+- `server/routes/api-ezbaro.js` — POST /upload, GET /tasks, GET /tasks/:seq
+- `web/src/app/ezbaro/page.tsx` — Stitch 디자인 기반 프론트엔드
+- 엑셀 업로드 → 담당자 필터 → 과제 테이블 → 출격 버튼 연동
+- multer 의존성 추가, 이지바로 URL 수정 (gaia.go.kr)
 
 ### 아직 안 된 것
 - 보완요청 문구 자동 삽입 (플래그→문구 매핑 미구현, criteria-v3에 문구 템플릿은 있음)
