@@ -1,0 +1,119 @@
+당신은 정부 보조금 정산검토 전문가입니다.
+테스트기관의 "테스트사업" 집행내역을 검토합니다.
+
+## 판정 기준
+# 판정 기준
+1. 금액 일치 여부 확인
+2. 증빙 유무 확인
+3. 0원은 SKIP
+
+## 페이퍼정산 특이사항
+- 이 데이터는 웹 시스템이 아닌 기관이 직접 제출한 엑셀 + PDF 기반 자료입니다.
+- evidenceType이 없습니다. 증빙 유형은 PDF 내용으로 판단하세요.
+- 각 항목의 pdfTexts에 증빙 PDF 텍스트가 포함되어 있습니다.
+- flags는 자동분석 엔진의 사전 검토 결과입니다. 참고하되, 최종 판단은 직접 하세요.
+
+## 판정 원칙
+1. **적정**: 증빙서류가 충분하고, 금액이 확인되며, 기준에 부합
+2. **확인**: 증빙 불충분, 금액 불일치, 기준 초과, 서류 미비 등
+3. **SKIP**: 0원(취소전표) 등 검토 불필요
+
+## 데이터 (5건)
+[
+  {
+    "rowNum": 1,
+    "date": "2024-01-01",
+    "purpose": "사무용품 구입",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 100000,
+    "vendorName": "알파문구",
+    "memo": "",
+    "evidenceFiles": 1,
+    "pdfTexts": [
+      {
+        "name": "evidence.xlsx",
+        "text": "금액: 100,000원 영수증"
+      }
+    ]
+  },
+  {
+    "rowNum": 2,
+    "date": "2024-01-02",
+    "purpose": "취소전표",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 0,
+    "vendorName": "알파문구",
+    "memo": "취소",
+    "evidenceFiles": 1,
+    "pdfTexts": [
+      {
+        "name": "evidence.xlsx",
+        "text": "취소전표 0원"
+      }
+    ],
+    "flags": [
+      "SKIP_0원"
+    ]
+  },
+  {
+    "rowNum": 3,
+    "date": "2024-01-03",
+    "purpose": "식대",
+    "budgetCategory": "운영비",
+    "subCategory": "회의비",
+    "amount": 100000,
+    "vendorName": "김밥천국",
+    "memo": "",
+    "evidenceFiles": 0,
+    "pdfTexts": [],
+    "flags": [
+      "증빙_완전부재"
+    ]
+  },
+  {
+    "rowNum": 4,
+    "date": "2024-01-04",
+    "purpose": "도서 구입",
+    "budgetCategory": "운영비",
+    "subCategory": "도서구입비",
+    "amount": 50000,
+    "vendorName": "교보문고",
+    "memo": "",
+    "evidenceFiles": 1,
+    "pdfTexts": [
+      {
+        "name": "evidence.xlsx",
+        "text": "금액: 10,000원 영수증"
+      }
+    ]
+  },
+  {
+    "rowNum": 5,
+    "date": "2024-01-05",
+    "purpose": "스캔본 테스트",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 30000,
+    "vendorName": "스캔업체",
+    "memo": "",
+    "evidenceFiles": 1,
+    "pdfTexts": [
+      {
+        "name": "scan.xlsx",
+        "text": "이미지 스캔 파일입니다. 텍스트 없음."
+      }
+    ]
+  }
+]
+
+## 출력 형식
+순수 JSON 배열만 출력하세요. 마크다운 코드블록이나 설명 없이 순수 JSON만.
+[
+  {"rowNum":1, "status":"적정", "issues":[], "confidence":"high", "reasoning":"세금계산서 금액 확인"},
+  {"rowNum":2, "status":"확인", "issues":["회의록 미첨부"], "confidence":"medium", "reasoning":"회의비 지출이나 회의록 없음"}
+]
+
+status는 반드시 "적정", "확인", "SKIP" 중 하나.
+모든 5건에 대해 빠짐없이 판정하세요.

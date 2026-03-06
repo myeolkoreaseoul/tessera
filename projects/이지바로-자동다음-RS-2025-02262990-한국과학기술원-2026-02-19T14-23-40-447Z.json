@@ -1,0 +1,343 @@
+{
+  "target": {
+    "idx": 88,
+    "agency": "한국보건산업진흥원",
+    "year": "2025",
+    "taskNo": "RS-2025-02262990",
+    "ieNmRaw": "한국과학기술원 (051711)",
+    "ieNmCore": "한국과학기술원",
+    "unconfirmedHint": 18,
+    "state": ""
+  },
+  "resolved": {
+    "taskNo": "RS-2025-02262990",
+    "ieNm": "한국과학기술원(3148201980)"
+  },
+  "before": {
+    "total": 94,
+    "unconfirmed": 18,
+    "normal": 5,
+    "weak": 71,
+    "reviewing": 19,
+    "done": 4
+  },
+  "plan": {
+    "normal": 3,
+    "weak": 15
+  },
+  "applyNormal": {
+    "ok": true,
+    "selected": 3,
+    "label": "정상"
+  },
+  "applyWeak": {
+    "ok": true,
+    "selected": 15,
+    "label": "미흡"
+  },
+  "confirm": {
+    "ok": true,
+    "selected": 19
+  },
+  "after": {
+    "total": 94,
+    "unconfirmed": 0,
+    "normal": 23,
+    "weak": 71,
+    "reviewing": 0,
+    "done": 23
+  },
+  "logs": [
+    {
+      "idx": 16,
+      "rn": "22",
+      "decsnSn": "52677158",
+      "title": "2025년-12월 보험료 김화진",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "426540",
+      "exeSplAt": "426540",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 17,
+      "rn": "60",
+      "decsnSn": "52673260",
+      "title": "2025년-12월 보험료 결의 김하일",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "86791",
+      "exeSplAt": "86791",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 18,
+      "rn": "42",
+      "decsnSn": "52673324",
+      "title": "2025년-12월 내부인건비 결의 김하일",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "1491650",
+      "exeSplAt": "1491650",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 19,
+      "rn": "1",
+      "decsnSn": "52677161",
+      "title": "2025년-12월 퇴직충당금 오춘자",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "191666",
+      "exeSplAt": "191666",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 20,
+      "rn": "85",
+      "decsnSn": "52677213",
+      "title": "2025년-12월 퇴직충당금 김화진",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "250000",
+      "exeSplAt": "250000",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 21,
+      "rn": "87",
+      "decsnSn": "52677214",
+      "title": "2025년-12월 퇴직충당금 박정선",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "291666",
+      "exeSplAt": "291666",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 22,
+      "rn": "59",
+      "decsnSn": "52677157",
+      "title": "2025년-12월 월급여 박정선",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "3500000",
+      "exeSplAt": "3500000",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 23,
+      "rn": "74",
+      "decsnSn": "52677212",
+      "title": "2025년-12월 월급여 김화진",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "3000000",
+      "exeSplAt": "3000000",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 24,
+      "rn": "11",
+      "decsnSn": "52677159",
+      "title": "2025년-12월 보험료 오춘자",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "152770",
+      "exeSplAt": "152770",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 25,
+      "rn": "17",
+      "decsnSn": "52677160",
+      "title": "2025년-12월 보험료 박정선",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "311500",
+      "exeSplAt": "311500",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 26,
+      "rn": "58",
+      "decsnSn": "52677156",
+      "title": "2025년-12월 월급여 오춘자",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "2300000",
+      "exeSplAt": "2300000",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 27,
+      "rn": "90",
+      "decsnSn": "50422395",
+      "title": "위탁정산수수료/RS-2025-02262990/보건산업진흥원/정동회계법인",
+      "titNm": "연구활동비",
+      "sePpoNm": "종합사업관리비/지식재산 창출활동비/그밖의 비용",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "1166200",
+      "exeSplAt": "1282820",
+      "fileNames": [
+        "ccf3fd090ebd4121b8660d8465a411e4.pdf",
+        "6e4c581bd0e943f5b6ea6716a0ebea7f.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 28,
+      "rn": "37",
+      "decsnSn": "52717351",
+      "title": "사무용소모품비/네임펜 외 2종",
+      "titNm": "연구활동비",
+      "sePpoNm": "사무용품비,연구환경유지비",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "21457",
+      "exeSplAt": "23602",
+      "fileNames": [
+        "ccf3fd090ebd4121b8660d8465a411e4.pdf",
+        "6e4c581bd0e943f5b6ea6716a0ebea7f.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 31,
+      "rn": "10",
+      "decsnSn": "50975158",
+      "title": "시약및재료비/FAST SYBR MASTER MIX",
+      "titNm": "연구재료비",
+      "sePpoNm": "연구재료 구입비/연구개발과제 관리비/연구재료 제작비",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "4210000",
+      "exeSplAt": "4631000",
+      "fileNames": [
+        "ccf3fd090ebd4121b8660d8465a411e4.pdf",
+        "6e4c581bd0e943f5b6ea6716a0ebea7f.pdf"
+      ],
+      "decision": "미흡",
+      "reason": "연구재료비 필수서류 일부 누락"
+    },
+    {
+      "idx": 35,
+      "rn": "93",
+      "decsnSn": "50147839",
+      "title": "시약및재료비/LN2",
+      "titNm": "연구재료비",
+      "sePpoNm": "연구재료 구입비/연구개발과제 관리비/연구재료 제작비",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "400000",
+      "exeSplAt": "440000",
+      "fileNames": [
+        "ccf3fd090ebd4121b8660d8465a411e4.pdf",
+        "6e4c581bd0e943f5b6ea6716a0ebea7f.pdf"
+      ],
+      "decision": "미흡",
+      "reason": "연구재료비 필수서류 일부 누락"
+    },
+    {
+      "idx": 36,
+      "rn": "83",
+      "decsnSn": "50298679",
+      "title": "시약및재료비/Artisan Masson's Trichrome Stain Kit",
+      "titNm": "연구재료비",
+      "sePpoNm": "연구재료 구입비/연구개발과제 관리비/연구재료 제작비",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "3960000",
+      "exeSplAt": "4356000",
+      "fileNames": [
+        "ccf3fd090ebd4121b8660d8465a411e4.pdf",
+        "6e4c581bd0e943f5b6ea6716a0ebea7f.pdf"
+      ],
+      "decision": "미흡",
+      "reason": "연구재료비 필수서류 일부 누락"
+    },
+    {
+      "idx": 51,
+      "rn": "81",
+      "decsnSn": "52647992",
+      "title": "김하일_slide scanner 외 2 시험분석",
+      "titNm": "연구활동비",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "740200",
+      "exeSplAt": "740200",
+      "fileNames": [
+        "ccf3fd090ebd4121b8660d8465a411e4.pdf",
+        "6e4c581bd0e943f5b6ea6716a0ebea7f.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 54,
+      "rn": "8",
+      "decsnSn": "52916525",
+      "title": "RS-2025-02262990 / N04250192 : 간접비",
+      "titNm": "간접비",
+      "sePpoNm": "간접비(비영리)",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "35678000",
+      "exeSplAt": "35678000",
+      "fileNames": [
+        "ccf3fd090ebd4121b8660d8465a411e4.pdf",
+        "6e4c581bd0e943f5b6ea6716a0ebea7f.pdf"
+      ],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    }
+  ]
+}

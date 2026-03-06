@@ -1,0 +1,35 @@
+{
+  "startedAt": "2026-02-19T15:08:42.280Z",
+  "excel": "/home/john/company-pc/cdrive/Users/정동회계법인/Documents/이지바로_과제리스트_이정승_20260218_v2.xlsx",
+  "sheet": "상시",
+  "totalTargets": 51,
+  "done": 1,
+  "success": 0,
+  "skipped": 0,
+  "failed": 1,
+  "items": [
+    {
+      "row": 4,
+      "no": 216,
+      "taskNo": "RS-2025-02220993",
+      "ieNm": "부산대학교한방병원 (036420)",
+      "unconfirmedHint": 25,
+      "started": "2026-02-19T15:08:42.280Z",
+      "ended": "2026-02-19T15:11:42.410Z",
+      "status": "failed",
+      "output": {
+        "ok": false,
+        "timeout": true,
+        "msg": "target timeout after 180000ms"
+      },
+      "exitCode": null,
+      "stderr": ""
+    }
+  ],
+  "current": {
+    "started": "2026-02-19T15:11:43.412Z",
+    "row": 5,
+    "taskNo": "RS-2025-02263117",
+    "ieNm": "진메디신 주식회사 (048142)"
+  }
+}

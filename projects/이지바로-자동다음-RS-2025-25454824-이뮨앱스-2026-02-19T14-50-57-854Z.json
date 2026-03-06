@@ -1,0 +1,392 @@
+{
+  "target": {
+    "idx": 78,
+    "agency": "국가신약개발재단",
+    "year": "2025",
+    "taskNo": "RS-2025-25454824",
+    "ieNmRaw": "이뮨앱스 (058786)",
+    "ieNmCore": "이뮨앱스",
+    "unconfirmedHint": 17,
+    "state": ""
+  },
+  "resolved": {
+    "taskNo": "RS-2025-25454824",
+    "ieNm": "이뮨앱스(3198100918)"
+  },
+  "before": {
+    "total": 17,
+    "unconfirmed": 17,
+    "normal": 0,
+    "weak": 0,
+    "reviewing": 17,
+    "done": 0
+  },
+  "plan": {
+    "normal": 16,
+    "weak": 1
+  },
+  "applyNormal": {
+    "ok": true,
+    "selected": 16,
+    "label": "정상"
+  },
+  "applyWeak": {
+    "ok": true,
+    "selected": 1,
+    "label": "미흡"
+  },
+  "confirm": {
+    "ok": true,
+    "selected": 17
+  },
+  "after": {
+    "total": 17,
+    "unconfirmed": 0,
+    "normal": 17,
+    "weak": 0,
+    "reviewing": 0,
+    "done": 17
+  },
+  "logs": [
+    {
+      "idx": 0,
+      "rn": "4",
+      "decsnSn": "52794997",
+      "title": "[IQVIA] 임상시험 연구 용역 $232,569.46 @1,433.98",
+      "titNm": "연구활동비",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "exeMt": "TR",
+      "fileCount": "8",
+      "splAt": "333499954",
+      "exeSplAt": "333499954",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 1,
+      "rn": "1",
+      "decsnSn": "52793903",
+      "title": "[내부인건비] 12월 임직원 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "4050000",
+      "exeSplAt": "4050000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 2,
+      "rn": "2",
+      "decsnSn": "52793902",
+      "title": "[내부인건비] 12월 임직원 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "2700000",
+      "exeSplAt": "2700000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 3,
+      "rn": "8",
+      "decsnSn": "52793904",
+      "title": "[내부인건비] 12월 임직원 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "2790000",
+      "exeSplAt": "2790000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 4,
+      "rn": "6",
+      "decsnSn": "52793905",
+      "title": "[내부인건비] 12월 임직원 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "6300000",
+      "exeSplAt": "6300000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 5,
+      "rn": "7",
+      "decsnSn": "52793907",
+      "title": "[내부인건비] 12월 임직원 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "3118334",
+      "exeSplAt": "3118334",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 6,
+      "rn": "17",
+      "decsnSn": "52698543",
+      "title": "[정동회계법인] 회계정산수수료",
+      "titNm": "연구활동비",
+      "sePpoNm": "종합사업관리비/지식재산 창출활동비/그밖의 비용",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "991409",
+      "exeSplAt": "991409",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 7,
+      "rn": "16",
+      "decsnSn": "51971956",
+      "title": "11월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "3118333",
+      "exeSplAt": "3118333",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 8,
+      "rn": "13",
+      "decsnSn": "51971952",
+      "title": "11월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "2700000",
+      "exeSplAt": "2700000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 9,
+      "rn": "12",
+      "decsnSn": "51971954",
+      "title": "11월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "2790000",
+      "exeSplAt": "2790000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 10,
+      "rn": "11",
+      "decsnSn": "51971955",
+      "title": "11월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "6300000",
+      "exeSplAt": "6300000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 11,
+      "rn": "10",
+      "decsnSn": "51971953",
+      "title": "11월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "4050000",
+      "exeSplAt": "4050000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 12,
+      "rn": "15",
+      "decsnSn": "51971860",
+      "title": "10월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "2790000",
+      "exeSplAt": "2790000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 13,
+      "rn": "14",
+      "decsnSn": "51971858",
+      "title": "10월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "2700000",
+      "exeSplAt": "2700000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 14,
+      "rn": "3",
+      "decsnSn": "51971859",
+      "title": "10월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "4050000",
+      "exeSplAt": "4050000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 15,
+      "rn": "9",
+      "decsnSn": "51971861",
+      "title": "10월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "6300000",
+      "exeSplAt": "6300000",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 16,
+      "rn": "5",
+      "decsnSn": "51971862",
+      "title": "10월 내부인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "3118333",
+      "exeSplAt": "3118333",
+      "fileNames": [
+        "IQVIA Asia_계약서.pdf",
+        "IQVIA Asia_invoice_20251208_$14,018.89.pdf",
+        "IQVIA Asia_invoice_20251205_$28,042.63.pdf",
+        "IQVIA Asia_invoice_20251204_$95,253.97.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    }
+  ]
+}

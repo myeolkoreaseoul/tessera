@@ -1,0 +1,376 @@
+{
+  "target": {
+    "idx": 112,
+    "agency": "한국보건산업진흥원",
+    "year": "2025",
+    "taskNo": "RS-2023-KH141565",
+    "ieNmRaw": "주식회사 세라트젠 (061872)",
+    "ieNmCore": "주식회사 세라트젠",
+    "unconfirmedHint": 18,
+    "state": ""
+  },
+  "resolved": {
+    "taskNo": "RS-2023-KH141565",
+    "ieNm": "주식회사 세라트젠(5768801483)"
+  },
+  "before": {
+    "total": 100,
+    "unconfirmed": 18,
+    "normal": 49,
+    "weak": 33,
+    "reviewing": 62,
+    "done": 5
+  },
+  "plan": {
+    "normal": 18,
+    "weak": 0
+  },
+  "applyNormal": {
+    "ok": true,
+    "selected": 18,
+    "label": "정상"
+  },
+  "applyWeak": {
+    "ok": true,
+    "selected": 0,
+    "label": "미흡"
+  },
+  "confirm": {
+    "ok": true,
+    "selected": 62
+  },
+  "after": {
+    "total": 100,
+    "unconfirmed": 0,
+    "normal": 67,
+    "weak": 33,
+    "reviewing": 0,
+    "done": 67
+  },
+  "logs": [
+    {
+      "idx": 0,
+      "rn": "56",
+      "decsnSn": "53946944",
+      "title": "연구수당",
+      "titNm": "연구수당",
+      "sePpoNm": "연구책임자 및 참여연구원의 보상금•장려금",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "1500000",
+      "exeSplAt": "1500000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 1,
+      "rn": "81",
+      "decsnSn": "53946946",
+      "title": "연구수당",
+      "titNm": "연구수당",
+      "sePpoNm": "연구책임자 및 참여연구원의 보상금•장려금",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "1000000",
+      "exeSplAt": "1000000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 2,
+      "rn": "75",
+      "decsnSn": "53946945",
+      "title": "연구수당",
+      "titNm": "연구수당",
+      "sePpoNm": "연구책임자 및 참여연구원의 보상금•장려금",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "1500000",
+      "exeSplAt": "1500000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 3,
+      "rn": "130",
+      "decsnSn": "53946947",
+      "title": "연구수당",
+      "titNm": "연구수당",
+      "sePpoNm": "연구책임자 및 참여연구원의 보상금•장려금",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "2000000",
+      "exeSplAt": "2000000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 4,
+      "rn": "82",
+      "decsnSn": "53151620",
+      "title": "12월 인건비 추가금(김수인)",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "196000",
+      "exeSplAt": "196000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 5,
+      "rn": "34",
+      "decsnSn": "53150805",
+      "title": "12월 인건비 (최지혜)",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "2300425",
+      "exeSplAt": "2300425",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 6,
+      "rn": "153",
+      "decsnSn": "53150767",
+      "title": "11월 인건비 (최지혜)",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "2300425",
+      "exeSplAt": "2300425",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 7,
+      "rn": "115",
+      "decsnSn": "53150678",
+      "title": "10월 인건비 (최지혜)",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "2300425",
+      "exeSplAt": "2300425",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 8,
+      "rn": "117",
+      "decsnSn": "53150740",
+      "title": "9월 인건비 (최지혜)",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "2300425",
+      "exeSplAt": "2300425",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 11,
+      "rn": "3",
+      "decsnSn": "53134751",
+      "title": "12월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "0",
+      "exeSplAt": "0",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 13,
+      "rn": "12",
+      "decsnSn": "53149934",
+      "title": "9월 인건비 추가(최지혜)",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "0",
+      "exeSplAt": "0",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 14,
+      "rn": "163",
+      "decsnSn": "53149697",
+      "title": "12월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "875000",
+      "exeSplAt": "875000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 15,
+      "rn": "147",
+      "decsnSn": "53149155",
+      "title": "11월 인건비 추가(박영섭)",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "125000",
+      "exeSplAt": "125000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 16,
+      "rn": "171",
+      "decsnSn": "53148855",
+      "title": "9월 인건비 추가(박영섭)",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "125000",
+      "exeSplAt": "125000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 17,
+      "rn": "97",
+      "decsnSn": "53149043",
+      "title": "10월 인건비 추가(박영섭)",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "125000",
+      "exeSplAt": "125000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 18,
+      "rn": "121",
+      "decsnSn": "53135543",
+      "title": "12월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "415000",
+      "exeSplAt": "415000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 19,
+      "rn": "29",
+      "decsnSn": "53134753",
+      "title": "12월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "735000",
+      "exeSplAt": "735000",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 20,
+      "rn": "92",
+      "decsnSn": "53134752",
+      "title": "12월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "3",
+      "splAt": "1668750",
+      "exeSplAt": "1668750",
+      "fileNames": [
+        "연구수당 기여도 평가표_보복부.pdf",
+        "연구수당 지급 신청서_보복부.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    }
+  ]
+}

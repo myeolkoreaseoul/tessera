@@ -1,0 +1,186 @@
+[
+  {
+    "type": "init",
+    "rowCount": 750
+  },
+  {
+    "seq": 108,
+    "before": {
+      "ok": true,
+      "idx": 107,
+      "rn": "9",
+      "title": "[지출결의서] 『2025년 국가신약개발사업 글로벌 기술이전 및 공동개발 지원사업』잔금 지급의 건((주)이크레더블)",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "9"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": true,
+      "idx": 107,
+      "rn": "9",
+      "status": "정상",
+      "cpl": "검토중",
+      "each": "검토중 35 건 / 보완요청 71 건 / 보완중 0 건 / 보완완료 0 건 / 점검완료 644 건",
+      "tot": "750 건 / 750 건"
+    }
+  },
+  {
+    "seq": 109,
+    "before": {
+      "ok": true,
+      "idx": 108,
+      "rn": "334",
+      "title": "[지출결의서] 『2025년 국가신약개발사업 글로벌 기술이전 및 공동개발 지원사업』잔금 지급의 건(미리어드파트너스(주))",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "13"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": true,
+      "idx": 108,
+      "rn": "334",
+      "status": "정상",
+      "cpl": "검토중",
+      "each": "검토중 35 건 / 보완요청 71 건 / 보완중 0 건 / 보완완료 0 건 / 점검완료 644 건",
+      "tot": "750 건 / 750 건"
+    }
+  },
+  {
+    "seq": 110,
+    "before": {
+      "ok": true,
+      "idx": 109,
+      "rn": "281",
+      "title": "[지출결의서]2025년 국가신약개발사업 우수 과제 글로벌 진출 촉진 프로그램 용역 잔금 지급의 건",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "7"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": true,
+      "idx": 109,
+      "rn": "281",
+      "status": "정상",
+      "cpl": "검토중",
+      "each": "검토중 35 건 / 보완요청 71 건 / 보완중 0 건 / 보완완료 0 건 / 점검완료 644 건",
+      "tot": "750 건 / 750 건"
+    }
+  },
+  {
+    "seq": 111,
+    "before": {
+      "ok": true,
+      "idx": 110,
+      "rn": "417",
+      "title": "[지출결의서] 2025년도 RA 교육 프로그램 지원사업 용역계약 잔금 지급",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "10"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": true,
+      "idx": 110,
+      "rn": "417",
+      "status": "정상",
+      "cpl": "검토중",
+      "each": "검토중 35 건 / 보완요청 71 건 / 보완중 0 건 / 보완완료 0 건 / 점검완료 644 건",
+      "tot": "750 건 / 750 건"
+    }
+  },
+  {
+    "seq": 112,
+    "before": {
+      "ok": true,
+      "idx": 111,
+      "rn": "699",
+      "title": "2025 글로벌 RA 지원사업 사업수행기관 잔금 지급의 건",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "14"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": true,
+      "idx": 111,
+      "rn": "699",
+      "status": "정상",
+      "cpl": "검토중",
+      "each": "검토중 35 건 / 보완요청 71 건 / 보완중 0 건 / 보완완료 0 건 / 점검완료 644 건",
+      "tot": "750 건 / 750 건"
+    }
+  },
+  {
+    "seq": 113,
+    "before": {
+      "ok": true,
+      "idx": 112,
+      "rn": "183",
+      "title": "[지출결의서] 2025년도 신약 임상개발 컨설팅 프로그램 (ACT Program) 지원사업 사업수행기관 용역계약 잔금 지급의 건",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "12"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": true,
+      "idx": 112,
+      "rn": "183",
+      "status": "정상",
+      "cpl": "검토중",
+      "each": "검토중 35 건 / 보완요청 71 건 / 보완중 0 건 / 보완완료 0 건 / 점검완료 644 건",
+      "tot": "750 건 / 750 건"
+    }
+  }
+]

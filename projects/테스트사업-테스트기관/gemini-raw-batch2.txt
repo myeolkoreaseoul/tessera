@@ -1,0 +1,46 @@
+Loaded cached credentials.
+[
+  {
+    "rowNum": 6,
+    "status": "적정",
+    "issues": [],
+    "confidence": "high",
+    "reasoning": "증빙자료(evidence.xlsx) 확인 및 금액(60,000원) 일치 확인됨"
+  },
+  {
+    "rowNum": 7,
+    "status": "확인",
+    "issues": [
+      "증빙서류 미첨부"
+    ],
+    "confidence": "high",
+    "reasoning": "지출 증빙자료가 첨부되지 않음 (증빙_완전부재)"
+  },
+  {
+    "rowNum": 8,
+    "status": "확인",
+    "issues": [
+      "증빙서류 미첨부"
+    ],
+    "confidence": "high",
+    "reasoning": "지출 증빙자료가 첨부되지 않음 (증빙_완전부재)"
+  },
+  {
+    "rowNum": 9,
+    "status": "확인",
+    "issues": [
+      "증빙서류 미첨부"
+    ],
+    "confidence": "high",
+    "reasoning": "지출 증빙자료가 첨부되지 않음 (증빙_완전부재)"
+  },
+  {
+    "rowNum": 10,
+    "status": "확인",
+    "issues": [
+      "증빙서류 미첨부"
+    ],
+    "confidence": "high",
+    "reasoning": "지출 증빙자료가 첨부되지 않음 (증빙_완전부재)"
+  }
+]

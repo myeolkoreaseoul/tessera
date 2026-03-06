@@ -1,0 +1,168 @@
+[
+  {
+    "excelRowNum": 2,
+    "rowNum": 1,
+    "date": "2025-06-25",
+    "purpose": "6월분 급여 (진정화)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "amount": 3200000,
+    "totalAmount": 3200000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "진정화",
+    "memo": "",
+    "files": [
+      {
+        "name": "2025년 06월 급여대장_전체.txt",
+        "path": "/tmp/clinical-test/(최종검증)제출서류/태웅보산진 본 정산(2)-20260116/인건비/2025년 06월 급여대장_전체.txt",
+        "text": "6월 급여대장\n성명: 진정화\n지급총액: 3,200,000원\n공제계: 300,000원\n차인지급액: 2,900,000원",
+        "score": 330
+      },
+      {
+        "name": "7월급여_홍길동.txt",
+        "path": "/tmp/clinical-test/(최종검증)제출서류/인건비_7월/7월급여_홍길동.txt",
+        "text": "성명: 홍길동\n지급총액: 3,000,000원\n실수령액: 3,500,000원 (오지급??)",
+        "score": 100
+      },
+      {
+        "name": "이체증_모음.txt",
+        "path": "/tmp/clinical-test/(최종검증)제출서류/태웅보산진 본 정산(2)-20260116/인건비/이체증_모음.txt",
+        "text": "보낸분: 강남세브란스\n받는분: 진정화\n금액: 2,900,000원\n일시: 2025.06.25",
+        "score": 100
+      }
+    ],
+    "vendor": "진정화",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "사용자임상평가",
+    "institution": "강남세브란스",
+    "analysis": {
+      "flags": [],
+      "fields": {}
+    }
+  },
+  {
+    "excelRowNum": 3,
+    "rowNum": 2,
+    "date": "2025-06-15",
+    "purpose": "연구회의 식대",
+    "budgetCategory": "운영비",
+    "subCategory": "회의비",
+    "amount": 45000,
+    "totalAmount": 45000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "강남식당",
+    "memo": "3인",
+    "files": [
+      {
+        "name": "영수증_강남식당.txt",
+        "path": "/tmp/clinical-test/(최종검증)제출서류/회의비/6월/영수증_강남식당.txt",
+        "text": "강남식당\n2025-06-15 12:30\n금액: 45,000원\n메뉴: 김치찌개 3인분",
+        "score": 280
+      },
+      {
+        "name": "6월15일_회의록.txt",
+        "path": "/tmp/clinical-test/(최종검증)제출서류/회의비/6월/6월15일_회의록.txt",
+        "text": "일시: 2025.06.15\n장소: 강남식당\n참석자: 3명\n내용: 임상 프로토콜 논의",
+        "score": 120
+      }
+    ],
+    "vendor": "강남식당",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "사용자임상평가",
+    "institution": "강남세브란스",
+    "analysis": {
+      "flags": [],
+      "fields": {}
+    }
+  },
+  {
+    "excelRowNum": 4,
+    "rowNum": 3,
+    "date": "2025-07-25",
+    "purpose": "7월분 급여 (홍길동)",
+    "budgetCategory": "인건비",
+    "subCategory": "상용임금",
+    "amount": 3000000,
+    "totalAmount": 3000000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "홍길동",
+    "memo": "",
+    "files": [
+      {
+        "name": "7월급여_홍길동.txt",
+        "path": "/tmp/clinical-test/(최종검증)제출서류/인건비_7월/7월급여_홍길동.txt",
+        "text": "성명: 홍길동\n지급총액: 3,000,000원\n실수령액: 3,500,000원 (오지급??)",
+        "score": 340
+      },
+      {
+        "name": "2025년 06월 급여대장_전체.txt",
+        "path": "/tmp/clinical-test/(최종검증)제출서류/태웅보산진 본 정산(2)-20260116/인건비/2025년 06월 급여대장_전체.txt",
+        "text": "6월 급여대장\n성명: 진정화\n지급총액: 3,200,000원\n공제계: 300,000원\n차인지급액: 2,900,000원",
+        "score": 150
+      }
+    ],
+    "vendor": "홍길동",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "사용자임상평가",
+    "institution": "강남세브란스",
+    "analysis": {
+      "flags": [
+        "과다지급의심(증빙:3,500,000)",
+        "이체증_미발견"
+      ],
+      "fields": {
+        "overPaid": 3500000
+      }
+    }
+  },
+  {
+    "excelRowNum": 5,
+    "rowNum": 4,
+    "date": "2025-08-10",
+    "purpose": "시약 구매",
+    "budgetCategory": "재료비",
+    "subCategory": "시약재료비",
+    "amount": 500000,
+    "totalAmount": 500000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "시약나라",
+    "memo": "",
+    "files": [],
+    "vendor": "시약나라",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "사용자임상평가",
+    "institution": "강남세브란스",
+    "analysis": {
+      "flags": [
+        "증빙_완전부재"
+      ],
+      "fields": {
+        "noEvidence": true
+      }
+    }
+  }
+]

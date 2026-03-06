@@ -1,0 +1,327 @@
+[
+  {
+    "rowNum": 1,
+    "date": "2024-01-01",
+    "purpose": "사무용품 구입",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 100000,
+    "totalAmount": 100000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "알파문구",
+    "memo": "",
+    "files": [
+      {
+        "name": "evidence.xlsx",
+        "text": "금액: 100,000원 영수증",
+        "path": "/tmp/paper-test/evidence/1/evidence.xlsx"
+      }
+    ],
+    "vendor": "알파문구",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [],
+      "fields": {}
+    }
+  },
+  {
+    "rowNum": 2,
+    "date": "2024-01-02",
+    "purpose": "취소전표",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 0,
+    "totalAmount": 0,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "알파문구",
+    "memo": "취소",
+    "files": [
+      {
+        "name": "evidence.xlsx",
+        "text": "취소전표 0원",
+        "path": "/tmp/paper-test/evidence/2/evidence.xlsx"
+      }
+    ],
+    "vendor": "알파문구",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [
+        "SKIP_0원"
+      ],
+      "fields": {
+        "type": "취소전표",
+        "skipReason": "0원 항목"
+      }
+    }
+  },
+  {
+    "rowNum": 3,
+    "date": "2024-01-03",
+    "purpose": "식대",
+    "budgetCategory": "운영비",
+    "subCategory": "회의비",
+    "amount": 100000,
+    "totalAmount": 100000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "김밥천국",
+    "memo": "",
+    "files": [],
+    "vendor": "김밥천국",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [
+        "증빙_완전부재"
+      ],
+      "fields": {
+        "noEvidence": true
+      }
+    }
+  },
+  {
+    "rowNum": 4,
+    "date": "2024-01-04",
+    "purpose": "도서 구입",
+    "budgetCategory": "운영비",
+    "subCategory": "도서구입비",
+    "amount": 50000,
+    "totalAmount": 50000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "교보문고",
+    "memo": "",
+    "files": [
+      {
+        "name": "evidence.xlsx",
+        "text": "금액: 10,000원 영수증",
+        "path": "/tmp/paper-test/evidence/4/evidence.xlsx"
+      }
+    ],
+    "vendor": "교보문고",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [],
+      "fields": {}
+    }
+  },
+  {
+    "rowNum": 5,
+    "date": "2024-01-05",
+    "purpose": "스캔본 테스트",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 30000,
+    "totalAmount": 30000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "스캔업체",
+    "memo": "",
+    "files": [
+      {
+        "name": "scan.xlsx",
+        "text": "이미지 스캔 파일입니다. 텍스트 없음.",
+        "path": "/tmp/paper-test/evidence/5/scan.xlsx"
+      }
+    ],
+    "vendor": "스캔업체",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [],
+      "fields": {}
+    }
+  },
+  {
+    "rowNum": 6,
+    "date": "2024-01-06",
+    "purpose": "테스트 항목 6",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 60000,
+    "totalAmount": 60000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "업체6",
+    "memo": "",
+    "files": [
+      {
+        "name": "evidence.xlsx",
+        "text": "금액: 60,000원 확인",
+        "path": "/tmp/paper-test/evidence/6/evidence.xlsx"
+      }
+    ],
+    "vendor": "업체6",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [],
+      "fields": {}
+    }
+  },
+  {
+    "rowNum": 7,
+    "date": "2024-01-07",
+    "purpose": "테스트 항목 7",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 70000,
+    "totalAmount": 70000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "업체7",
+    "memo": "",
+    "files": [],
+    "vendor": "업체7",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [
+        "증빙_완전부재"
+      ],
+      "fields": {
+        "noEvidence": true
+      }
+    }
+  },
+  {
+    "rowNum": 8,
+    "date": "2024-01-08",
+    "purpose": "테스트 항목 8",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 80000,
+    "totalAmount": 80000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "업체8",
+    "memo": "",
+    "files": [],
+    "vendor": "업체8",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [
+        "증빙_완전부재"
+      ],
+      "fields": {
+        "noEvidence": true
+      }
+    }
+  },
+  {
+    "rowNum": 9,
+    "date": "2024-01-09",
+    "purpose": "테스트 항목 9",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 90000,
+    "totalAmount": 90000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "업체9",
+    "memo": "",
+    "files": [],
+    "vendor": "업체9",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [
+        "증빙_완전부재"
+      ],
+      "fields": {
+        "noEvidence": true
+      }
+    }
+  },
+  {
+    "rowNum": 10,
+    "date": "2024-01-010",
+    "purpose": "테스트 항목 10",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "amount": 100000,
+    "totalAmount": 100000,
+    "supplyAmount": 0,
+    "vat": 0,
+    "vendorName": "업체10",
+    "memo": "",
+    "files": [],
+    "vendor": "업체10",
+    "depositor": "",
+    "depositorName": "",
+    "evidenceType": "페이퍼",
+    "evidenceSub": "",
+    "source": "paper",
+    "legalBasis": "보조금",
+    "project": "테스트사업",
+    "institution": "테스트기관",
+    "analysis": {
+      "flags": [
+        "증빙_완전부재"
+      ],
+      "fields": {
+        "noEvidence": true
+      }
+    }
+  }
+]

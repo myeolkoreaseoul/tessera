@@ -1,0 +1,44 @@
+{
+  "startedAt": "2026-02-19T15:02:17.931Z",
+  "excel": "/home/john/company-pc/cdrive/Users/정동회계법인/Documents/이지바로_과제리스트_이정승_20260218_v2.xlsx",
+  "sheet": "상시",
+  "totalTargets": 51,
+  "done": 2,
+  "success": 0,
+  "skipped": 0,
+  "failed": 2,
+  "items": [
+    {
+      "row": 4,
+      "no": 216,
+      "taskNo": "RS-2025-02220993",
+      "ieNm": "부산대학교한방병원 (036420)",
+      "unconfirmedHint": 25,
+      "started": "2026-02-19T15:02:17.931Z",
+      "ended": "2026-02-19T15:05:08.321Z",
+      "status": "failed",
+      "output": {},
+      "exitCode": 1,
+      "stderr": "node:internal/process/promises:394\n    triggerUncaughtException(err, true /* fromPromise */);\n    ^\n\nbrowserType.connectOverCDP: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - <ws preparing> retrieving websocket url from http://100.87.3.123:9446\u001b[22m\n\u001b[2m  - <ws connecting> ws://100.87.3.123:9446/devtools/browser/d1c1e3f1-93af-45c5-ac8d-8df697673374\u001b[22m\n\u001b[2m  - <ws connected> ws://100.87.3.123:9446/devtools/browser/d1c1e3f1-93af-45c5-ac8d-8df697673374\u001b[22m\n\n    at connectBrowser (/home/john/e-naradomum-rpa/lib/utils.js:122:34)\n    at /home/john/e-naradomum-rpa/scripts-ezbaro-auto-next-from-excel.js:336:26 {\n  name: 'TimeoutError'\n}\n\nNode.js v22.22.0"
+    },
+    {
+      "row": 5,
+      "no": 154,
+      "taskNo": "RS-2025-02263117",
+      "ieNm": "진메디신 주식회사 (048142)",
+      "unconfirmedHint": 23,
+      "started": "2026-02-19T15:05:09.322Z",
+      "ended": "2026-02-19T15:07:59.145Z",
+      "status": "failed",
+      "output": {},
+      "exitCode": 1,
+      "stderr": "node:internal/process/promises:394\n    triggerUncaughtException(err, true /* fromPromise */);\n    ^\n\nbrowserType.connectOverCDP: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - <ws preparing> retrieving websocket url from http://100.87.3.123:9446\u001b[22m\n\u001b[2m  - <ws connecting> ws://100.87.3.123:9446/devtools/browser/d1c1e3f1-93af-45c5-ac8d-8df697673374\u001b[22m\n\u001b[2m  - <ws connected> ws://100.87.3.123:9446/devtools/browser/d1c1e3f1-93af-45c5-ac8d-8df697673374\u001b[22m\n\n    at connectBrowser (/home/john/e-naradomum-rpa/lib/utils.js:122:34)\n    at /home/john/e-naradomum-rpa/scripts-ezbaro-auto-next-from-excel.js:336:26 {\n  name: 'TimeoutError'\n}\n\nNode.js v22.22.0"
+    }
+  ],
+  "current": {
+    "started": "2026-02-19T15:08:00.146Z",
+    "row": 6,
+    "taskNo": "RS-2025-02263117",
+    "ieNm": "한국과학기술원 (051711)"
+  }
+}

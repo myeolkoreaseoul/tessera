@@ -1,0 +1,58 @@
+[
+  {
+    "rowNum": 1,
+    "executionDate": "20260109",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서",
+    "purpose": "수용비및수수료",
+    "budgetCategory": "운영비",
+    "subCategory": "일반수용비",
+    "itemName": "수용비및수수료_여행자보험(박준식)",
+    "vendorName": "연세대학교 산학협력단",
+    "supplyAmount": 20110,
+    "vat": 0,
+    "totalAmount": 20110,
+    "reviewStatus": "미처리",
+    "atchmnflId": "6985c4a4-ae9d-4f2f-9915-183d2191ffdd",
+    "cmnuseAtchmnflId": "",
+    "excutId": "EXE20260107068810766",
+    "files": [
+      {
+        "fileName": "",
+        "fileSize": ""
+      }
+    ],
+    "ocrTexts": [],
+    "judgment": "적정",
+    "reason": "증빙 확인됨",
+    "opinion": "적정"
+  },
+  {
+    "rowNum": 2,
+    "executionDate": "20260109",
+    "evidenceType": "기타",
+    "evidenceSub": "지출결의서 외 1개",
+    "purpose": "국내여비",
+    "budgetCategory": "여비",
+    "subCategory": "국내여비",
+    "itemName": "국내여비(일비_박준식)",
+    "vendorName": "연세대학교 산학협력단",
+    "supplyAmount": 20000,
+    "vat": 0,
+    "totalAmount": 20000,
+    "reviewStatus": "미처리",
+    "atchmnflId": "fad06932-e29f-4bfd-acd3-8e94164b933a",
+    "cmnuseAtchmnflId": "",
+    "excutId": "EXE20260107068808780",
+    "files": [
+      {
+        "fileName": "",
+        "fileSize": ""
+      }
+    ],
+    "ocrTexts": [],
+    "judgment": "적정",
+    "reason": "증빙 확인됨",
+    "opinion": "적정"
+  }
+]

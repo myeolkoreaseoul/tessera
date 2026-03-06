@@ -1,0 +1,152 @@
+{
+  "target": {
+    "taskNo": "RS-2025-02263117",
+    "ieNm": "한양대학교산학협력단(2068207306)"
+  },
+  "before": {
+    "total": 100,
+    "unconfirmed": 6,
+    "normal": 0,
+    "weak": 94,
+    "reviewing": 6,
+    "done": 0
+  },
+  "plan": {
+    "normal": 1,
+    "weak": 5
+  },
+  "applyNormal": {
+    "ok": true,
+    "selected": 1,
+    "label": "정상"
+  },
+  "applyWeak": {
+    "ok": true,
+    "selected": 5,
+    "label": "미흡"
+  },
+  "confirm": {
+    "ok": true,
+    "selected": 6
+  },
+  "after": {
+    "total": 100,
+    "unconfirmed": 0,
+    "normal": 6,
+    "weak": 94,
+    "reviewing": 0,
+    "done": 6
+  },
+  "logs": [
+    {
+      "idx": 0,
+      "rn": "149",
+      "decsnSn": "53352679",
+      "title": "학생연구원 인건비 실행예산 편성금액",
+      "titNm": "(특례)학생인건비",
+      "sePpoNm": "학생인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "2000000",
+      "exeSplAt": "2000000",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 1,
+      "rn": "79",
+      "decsnSn": "53352564",
+      "title": "간접비 자동 지출",
+      "titNm": "간접비",
+      "sePpoNm": "간접비(비영리)",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "23292000",
+      "exeSplAt": "23292000",
+      "fileNames": [],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 2,
+      "rn": "133",
+      "decsnSn": "53039179",
+      "title": "[회의비] 초고효율 유전체편집-항암바이러스 기술 융합 개인 맞춤형 암 치료제 개발 및 임상 최적화 연구, 2025.12.18",
+      "titNm": "연구활동비",
+      "sePpoNm": "회의비",
+      "exeMt": "CD",
+      "fileCount": "4",
+      "splAt": "174000",
+      "exeSplAt": "174000",
+      "fileNames": [
+        "202512222952_1_10.pdf",
+        "202512222952_1_04.pdf",
+        "202512222952_1_카드명세서-02157705.pdf",
+        "202512222952_1_05.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 3,
+      "rn": "118",
+      "decsnSn": "53352585",
+      "title": "학생연구원 인건비 실행예산 편성금액",
+      "titNm": "(특례)학생인건비",
+      "sePpoNm": "학생인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "1000000",
+      "exeSplAt": "1000000",
+      "fileNames": [
+        "202512222952_1_10.pdf",
+        "202512222952_1_04.pdf",
+        "202512222952_1_카드명세서-02157705.pdf",
+        "202512222952_1_05.pdf"
+      ],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 4,
+      "rn": "45",
+      "decsnSn": "53352712",
+      "title": "학생연구원 인건비 실행예산 편성금액",
+      "titNm": "(특례)학생인건비",
+      "sePpoNm": "학생인건비",
+      "exeMt": "TR",
+      "fileCount": "0",
+      "splAt": "2490000",
+      "exeSplAt": "2490000",
+      "fileNames": [
+        "202512222952_1_10.pdf",
+        "202512222952_1_04.pdf",
+        "202512222952_1_카드명세서-02157705.pdf",
+        "202512222952_1_05.pdf"
+      ],
+      "decision": "미흡",
+      "reason": "증빙서류 미등록(fileCount=0)"
+    },
+    {
+      "idx": 5,
+      "rn": "128",
+      "decsnSn": "53196177",
+      "title": "LN2, Co2",
+      "titNm": "연구재료비",
+      "sePpoNm": "연구재료 구입비/연구개발과제 관리비/연구재료 제작비",
+      "exeMt": "TR",
+      "fileCount": "8",
+      "splAt": "363000",
+      "exeSplAt": "363000",
+      "fileNames": [
+        "202512222952_1_10.pdf",
+        "202512222952_1_04.pdf",
+        "202512222952_1_카드명세서-02157705.pdf",
+        "202512222952_1_05.pdf"
+      ],
+      "decision": "미흡",
+      "reason": "연구재료비 필수서류 일부 누락"
+    }
+  ]
+}

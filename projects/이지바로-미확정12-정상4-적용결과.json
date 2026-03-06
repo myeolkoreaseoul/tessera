@@ -1,0 +1,61 @@
+{
+  "apply": {
+    "ok": true,
+    "selected": 4,
+    "found": [
+      {
+        "rn": "628",
+        "decsnSn": "53010309",
+        "before": "미확정"
+      },
+      {
+        "rn": "402",
+        "decsnSn": "53019590",
+        "before": "미확정"
+      },
+      {
+        "rn": "224",
+        "decsnSn": "53019592",
+        "before": "정상"
+      },
+      {
+        "rn": "593",
+        "decsnSn": "53019591",
+        "before": "미확정"
+      }
+    ]
+  },
+  "confirm": {
+    "ok": true,
+    "selected": 0
+  },
+  "snap": {
+    "ok": true,
+    "rows": [
+      {
+        "rn": "32",
+        "decsnSn": "53010309",
+        "status": "정상",
+        "cpl": "검토중"
+      },
+      {
+        "rn": "19",
+        "decsnSn": "53019590",
+        "status": "정상",
+        "cpl": "검토중"
+      },
+      {
+        "rn": "26",
+        "decsnSn": "53019591",
+        "status": "정상",
+        "cpl": "검토중"
+      },
+      {
+        "rn": "12",
+        "decsnSn": "53019592",
+        "status": "정상",
+        "cpl": "검토중"
+      }
+    ]
+  }
+}

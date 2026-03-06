@@ -1,0 +1,394 @@
+{
+  "target": {
+    "idx": 104,
+    "agency": "한국보건산업진흥원",
+    "year": "2025",
+    "taskNo": "RS-2023-KH141704",
+    "ieNmRaw": "(주)씨엔알리서치 (059774)",
+    "ieNmCore": "씨엔알리서치",
+    "unconfirmedHint": 18,
+    "state": ""
+  },
+  "resolved": {
+    "taskNo": "RS-2023-KH141704",
+    "ieNm": "(주)씨엔알리서치(8298701755)"
+  },
+  "before": {
+    "total": 100,
+    "unconfirmed": 18,
+    "normal": 76,
+    "weak": 6,
+    "reviewing": 18,
+    "done": 76
+  },
+  "plan": {
+    "normal": 18,
+    "weak": 0
+  },
+  "applyNormal": {
+    "ok": true,
+    "selected": 18,
+    "label": "정상"
+  },
+  "applyWeak": {
+    "ok": true,
+    "selected": 0,
+    "label": "미흡"
+  },
+  "confirm": {
+    "ok": true,
+    "selected": 18
+  },
+  "after": {
+    "total": 100,
+    "unconfirmed": 0,
+    "normal": 94,
+    "weak": 6,
+    "reviewing": 0,
+    "done": 94
+  },
+  "logs": [
+    {
+      "idx": 4,
+      "rn": "107",
+      "decsnSn": "53460093",
+      "title": "16차청구_11월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "2741025",
+      "exeSplAt": "2741025",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 5,
+      "rn": "47",
+      "decsnSn": "53460092",
+      "title": "16차청구_11월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "1728038",
+      "exeSplAt": "1728038",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 6,
+      "rn": "76",
+      "decsnSn": "53460091",
+      "title": "16차청구_11월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "1489687",
+      "exeSplAt": "1489687",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 7,
+      "rn": "49",
+      "decsnSn": "53460145",
+      "title": "16차청구_10월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "2741025",
+      "exeSplAt": "2741025",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 8,
+      "rn": "84",
+      "decsnSn": "53460144",
+      "title": "16차청구_10월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "1728038",
+      "exeSplAt": "1728038",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 9,
+      "rn": "75",
+      "decsnSn": "53460143",
+      "title": "16차청구_10월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "1489687",
+      "exeSplAt": "1489687",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 10,
+      "rn": "7",
+      "decsnSn": "53442600",
+      "title": "16차청구_10월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "0",
+      "exeSplAt": "0",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 11,
+      "rn": "4",
+      "decsnSn": "53442928",
+      "title": "16차청구_11월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "0",
+      "exeSplAt": "0",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 12,
+      "rn": "6",
+      "decsnSn": "53442397",
+      "title": "16차청구_10월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "0",
+      "exeSplAt": "0",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 13,
+      "rn": "2",
+      "decsnSn": "53442399",
+      "title": "16차청구_10월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "0",
+      "exeSplAt": "0",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 14,
+      "rn": "1",
+      "decsnSn": "53442924",
+      "title": "16차청구_11월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "0",
+      "exeSplAt": "0",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 15,
+      "rn": "5",
+      "decsnSn": "53442926",
+      "title": "16차청구_11월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "0",
+      "exeSplAt": "0",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 16,
+      "rn": "113",
+      "decsnSn": "53444621",
+      "title": "16차청구_12월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "2741025",
+      "exeSplAt": "2741025",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 17,
+      "rn": "112",
+      "decsnSn": "53444620",
+      "title": "16차청구_12월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "1728038",
+      "exeSplAt": "1728038",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 18,
+      "rn": "70",
+      "decsnSn": "53444619",
+      "title": "16차청구_12월 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "3",
+      "splAt": "1489687",
+      "exeSplAt": "1489687",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 19,
+      "rn": "117",
+      "decsnSn": "53440250",
+      "title": "12월 현물 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "2",
+      "splAt": "626250",
+      "exeSplAt": "626250",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 20,
+      "rn": "81",
+      "decsnSn": "52829205",
+      "title": "11월 현물 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "626250",
+      "exeSplAt": "626250",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    },
+    {
+      "idx": 21,
+      "rn": "25",
+      "decsnSn": "52828942",
+      "title": "10월 현물 인건비",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TH",
+      "fileCount": "1",
+      "splAt": "626250",
+      "exeSplAt": "626250",
+      "fileNames": [
+        "11월 급여명세서.pdf",
+        "2025.11_이체확인증_손정연,권재훈,장유정.png",
+        "16차 지급청구서.pdf"
+      ],
+      "decision": "정상",
+      "reason": "증빙 존재 및 명시 위반사항 미발견"
+    }
+  ]
+}

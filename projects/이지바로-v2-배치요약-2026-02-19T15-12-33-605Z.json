@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-02-19T15:12:33.923Z",
+  "excel": "/home/john/company-pc/cdrive/Users/정동회계법인/Documents/이지바로_과제리스트_이정승_20260218_v2.xlsx",
+  "sheet": "상시",
+  "totalTargets": 51,
+  "done": 0,
+  "success": 0,
+  "skipped": 0,
+  "failed": 0,
+  "items": [],
+  "current": {
+    "started": "2026-02-19T15:12:33.923Z",
+    "row": 4,
+    "taskNo": "RS-2025-02220993",
+    "ieNm": "부산대학교한방병원 (036420)"
+  }
+}

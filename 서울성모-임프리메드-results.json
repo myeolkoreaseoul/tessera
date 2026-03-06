@@ -1,8 +1,0 @@
-[
-  {"rowNum":1,"type":"재료비","amount":7000000,"vendor":"에이치케이바이오（HKbio）","status":"적정","issues":[]},
-  {"rowNum":2,"type":"회의비","amount":342000,"vendor":"고메 정식당 교대본점","status":"적정","issues":[]},
-  {"rowNum":3,"type":"회의비","amount":329000,"vendor":"VANGUNDY/(주)제이에이치지에프앤비","status":"적정","issues":[]},
-  {"rowNum":4,"type":"회의비","amount":64200,"vendor":"오커쇼어","status":"적정","issues":[]},
-  {"rowNum":5,"type":"회의비","amount":247000,"vendor":"사직로","status":"적정","issues":[]},
-  {"rowNum":6,"type":"재료비","amount":6000000,"vendor":"에이치케이바이오（HKbio）","status":"적정","issues":[]}
-]

@@ -1,0 +1,48 @@
+{
+  "target": {
+    "taskNo": "RS-2025-02263117",
+    "ieNm": "진메디신",
+    "year": "2025",
+    "agency": "한국보건산업진흥원"
+  },
+  "resolved": {
+    "taskNo": "RS-2025-02263117",
+    "ieNm": "진메디신 주식회사(1148722129)"
+  },
+  "before": {
+    "total": 0,
+    "unconfirmed": 0,
+    "normal": 0,
+    "weak": 0,
+    "reviewing": 0,
+    "done": 0
+  },
+  "plan": {
+    "normal": 0,
+    "weak": 0,
+    "keep": 0
+  },
+  "applyNormal": {
+    "ok": true,
+    "selected": 0,
+    "label": "정상"
+  },
+  "applyWeak": {
+    "ok": true,
+    "selected": 0,
+    "label": "미흡"
+  },
+  "confirm": {
+    "ok": true,
+    "selected": 0
+  },
+  "after": {
+    "total": 78,
+    "unconfirmed": 29,
+    "normal": 49,
+    "weak": 0,
+    "reviewing": 29,
+    "done": 49
+  },
+  "logs": []
+}

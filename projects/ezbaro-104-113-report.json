@@ -1,0 +1,191 @@
+[
+  {
+    "type": "check-103",
+    "ok": true,
+    "seq": 103,
+    "rn": "553",
+    "title": "[지출결의서] 2025년 CMC 역량강화 교육 프로그램 사업수행기관 잔금 지급",
+    "status": "정상",
+    "cpl": "검토중"
+  },
+  {
+    "seq": 104,
+    "before": {
+      "ok": true,
+      "seq": 104,
+      "idx": 103,
+      "rn": "466",
+      "title": "[지출결의서] 2025년 약물가치평가 지원사업 수행기관(이크레더블) 잔금 지급의 건",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "9"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": true,
+      "idx": 103,
+      "rn": "466",
+      "status": "정상",
+      "statusCd": "0001",
+      "cpl": "검토중",
+      "cplCd": "0001",
+      "each": "검토중 35 건 / 보완요청 71 건 / 보완중 0 건 / 보완완료 0 건 / 점검완료 644 건",
+      "tot": "750 건 / 750 건"
+    }
+  },
+  {
+    "seq": 105,
+    "before": {
+      "ok": true,
+      "seq": 105,
+      "idx": 104,
+      "rn": "623",
+      "title": "[지출결의서] 2025년 약물가치평가 지원사업 수행기관(나이스평가정보) 잔금 지급의 건",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "11"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": true,
+      "idx": 104,
+      "rn": "623",
+      "status": "정상",
+      "statusCd": "0001",
+      "cpl": "검토중",
+      "cplCd": "0001",
+      "each": "검토중 35 건 / 보완요청 71 건 / 보완중 0 건 / 보완완료 0 건 / 점검완료 644 건",
+      "tot": "750 건 / 750 건"
+    }
+  },
+  {
+    "seq": 106,
+    "before": {
+      "ok": true,
+      "seq": 106,
+      "idx": 105,
+      "rn": "350",
+      "title": "[지출결의서] 「2025년 국가신약개발사업 BD 포럼」잔금 지급의 건 ((주)탑플래너스))",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "17"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": true,
+      "idx": 105,
+      "rn": "350",
+      "status": "정상",
+      "statusCd": "0001",
+      "cpl": "검토중",
+      "cplCd": "0001",
+      "each": "검토중 35 건 / 보완요청 71 건 / 보완중 0 건 / 보완완료 0 건 / 점검완료 644 건",
+      "tot": "750 건 / 750 건"
+    }
+  },
+  {
+    "seq": 107,
+    "before": {
+      "ok": true,
+      "seq": 107,
+      "idx": 106,
+      "rn": "91",
+      "title": "[지출결의서]『2025년 국가신약개발사업 글로벌 기술이전 및 공동개발 지원사업』잔금 지급의 건((주)아이피온)",
+      "sePpoNm": "기술도입비/연구개발서비스활용비",
+      "status": "미확정",
+      "cpl": "검토중",
+      "fileCount": "9"
+    },
+    "popupOpen": {
+      "ok": true
+    },
+    "bulkClicked": true,
+    "popupClosed": true,
+    "apply": {
+      "ok": true
+    },
+    "after": {
+      "ok": false,
+      "reason": "rn not found",
+      "rn": "91"
+    }
+  },
+  {
+    "seq": 108,
+    "before": {
+      "ok": false,
+      "seq": 108,
+      "reason": "idx out of range",
+      "rowCount": 0
+    }
+  },
+  {
+    "seq": 109,
+    "before": {
+      "ok": false,
+      "seq": 109,
+      "reason": "idx out of range",
+      "rowCount": 0
+    }
+  },
+  {
+    "seq": 110,
+    "before": {
+      "ok": false,
+      "seq": 110,
+      "reason": "idx out of range",
+      "rowCount": 0
+    }
+  },
+  {
+    "seq": 111,
+    "before": {
+      "ok": false,
+      "seq": 111,
+      "reason": "idx out of range",
+      "rowCount": 0
+    }
+  },
+  {
+    "seq": 112,
+    "before": {
+      "ok": false,
+      "seq": 112,
+      "reason": "idx out of range",
+      "rowCount": 0
+    }
+  },
+  {
+    "seq": 113,
+    "before": {
+      "ok": false,
+      "seq": 113,
+      "reason": "idx out of range",
+      "rowCount": 0
+    }
+  }
+]

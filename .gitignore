@@ -1,0 +1,8 @@
+node_modules/
+dist/
+downloads/
+logs/
+*.log
+archive/one-off/
+archive/cross-validate-history/
+.omc/

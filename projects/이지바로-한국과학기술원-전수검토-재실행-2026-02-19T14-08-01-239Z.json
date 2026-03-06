@@ -1,0 +1,394 @@
+{
+  "taskNo": "RS-2025-02263117",
+  "ieNm": "한국과학기술원(3148201980)",
+  "before": {
+    "total": 21,
+    "unconfirmed": 21
+  },
+  "plan": {
+    "normal": 0,
+    "weak": 0,
+    "keep": 21
+  },
+  "applyNormal": {
+    "ok": true,
+    "selected": 0,
+    "label": "정상"
+  },
+  "applyWeak": {
+    "ok": true,
+    "selected": 0,
+    "label": "미흡"
+  },
+  "confirm": {
+    "ok": true,
+    "selected": 0
+  },
+  "after": {
+    "total": 21,
+    "unconfirmed": 21,
+    "normal": 0,
+    "weak": 0,
+    "reviewing": 21,
+    "done": 0
+  },
+  "logs": [
+    {
+      "idx": 0,
+      "rn": "16",
+      "decsnSn": "52916526",
+      "title": "RS-2025-02263117 / N04250201 : 간접비",
+      "titNm": "간접비",
+      "sePpoNm": "간접비(비영리)",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "28542000",
+      "exeSplAt": "28542000",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 1,
+      "rn": "20",
+      "decsnSn": "52673261",
+      "title": "2025년-12월 내부인건비 결의 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "518340",
+      "exeSplAt": "518340",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 2,
+      "rn": "6",
+      "decsnSn": "52673325",
+      "title": "2025년-12월 보험료 결의 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "39105",
+      "exeSplAt": "39105",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 3,
+      "rn": "5",
+      "decsnSn": "51307322",
+      "title": "2025년-11월 내부인건비 결의 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "518340",
+      "exeSplAt": "518340",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 4,
+      "rn": "2",
+      "decsnSn": "51307220",
+      "title": "2025년-11월 보험료 결의 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "39105",
+      "exeSplAt": "39105",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 5,
+      "rn": "19",
+      "decsnSn": "53422531",
+      "title": "2025년-10월 내부인건비 내자 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "518340",
+      "exeSplAt": "518340",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 6,
+      "rn": "21",
+      "decsnSn": "53422434",
+      "title": "2025년-10월 내부인건비 법정부담금 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "39105",
+      "exeSplAt": "39105",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 7,
+      "rn": "9",
+      "decsnSn": "53422435",
+      "title": "2025년-07월 내부인건비 법정부담금 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "39104",
+      "exeSplAt": "39104",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 8,
+      "rn": "14",
+      "decsnSn": "53422535",
+      "title": "2025년-08월 내부인건비 내자 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "518340",
+      "exeSplAt": "518340",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 9,
+      "rn": "11",
+      "decsnSn": "53422437",
+      "title": "2025년-06월 내부인건비 내자 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "518340",
+      "exeSplAt": "518340",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 10,
+      "rn": "12",
+      "decsnSn": "53422436",
+      "title": "2025년-07월 내부인건비 내자 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "518340",
+      "exeSplAt": "518340",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 11,
+      "rn": "8",
+      "decsnSn": "53422536",
+      "title": "2025년-06월 내부인건비 법정부담금 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "39104",
+      "exeSplAt": "39104",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 12,
+      "rn": "15",
+      "decsnSn": "53422534",
+      "title": "2025년-08월 내부인건비 법정부담금 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "39104",
+      "exeSplAt": "39104",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 13,
+      "rn": "7",
+      "decsnSn": "53422532",
+      "title": "2025년-09월 내부인건비 법정부담금 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "39105",
+      "exeSplAt": "39105",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 14,
+      "rn": "4",
+      "decsnSn": "53422533",
+      "title": "2025년-09월 내부인건비 내자 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "518340",
+      "exeSplAt": "518340",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 15,
+      "rn": "10",
+      "decsnSn": "53422438",
+      "title": "2025년-04월 내부인건비 법정부담금 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "39104",
+      "exeSplAt": "39104",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 16,
+      "rn": "1",
+      "decsnSn": "53422538",
+      "title": "2025년-05월 내부인건비 내자 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "518340",
+      "exeSplAt": "518340",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 17,
+      "rn": "13",
+      "decsnSn": "53422439",
+      "title": "2025년-04월 내부인건비 내자 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "518340",
+      "exeSplAt": "518340",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 18,
+      "rn": "18",
+      "decsnSn": "53422537",
+      "title": "2025년-05월 내부인건비 법정부담금 조성익",
+      "titNm": "인건비",
+      "sePpoNm": "내부인건비",
+      "exeMt": "TR",
+      "fileCount": "1",
+      "splAt": "39104",
+      "exeSplAt": "39104",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 19,
+      "rn": "3",
+      "decsnSn": "52137918",
+      "title": "위탁정산수수료/한국보건산업진흥원 연구비 위탁정산수수료/정동회계법인(1,341,130원)",
+      "titNm": "연구활동비",
+      "sePpoNm": "종합사업관리비/지식재산 창출활동비/그밖의 비용",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "1341130",
+      "exeSplAt": "1341130",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    },
+    {
+      "idx": 20,
+      "rn": "17",
+      "decsnSn": "52088594",
+      "title": "[연구수당]-[N01250732][조성익]연구수당신청-(통합EZ)초고효율 유전체편집-항암바이러스 기술 융합 개인 맞춤형 암 치료제 개발 및 임상 최적화 연구-조성익",
+      "titNm": "연구수당",
+      "sePpoNm": "연구책임자 및 참여연구원의 보상금•장려금",
+      "exeMt": "TR",
+      "fileCount": "2",
+      "splAt": "3233000",
+      "exeSplAt": "3233000",
+      "fileNames": [
+        "간접비 흡수 집행결의서.pdf"
+      ],
+      "decision": "미확정유지",
+      "reason": "증빙 본문 확인 필요"
+    }
+  ]
+}
