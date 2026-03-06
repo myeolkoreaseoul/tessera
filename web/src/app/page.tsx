@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Progress } from "@/components/ui/Progress";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3500";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 interface System {
   id: string;

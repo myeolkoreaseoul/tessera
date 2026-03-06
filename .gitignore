@@ -9,3 +9,6 @@ archive/cross-validate-history/
 
 # web build output
 web/.next/
+
+web/out/
+web/tsconfig.tsbuildinfo

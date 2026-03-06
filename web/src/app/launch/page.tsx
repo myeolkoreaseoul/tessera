@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
 import { Select } from "@/components/ui/Select";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3500";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 interface Project {
   name: string;

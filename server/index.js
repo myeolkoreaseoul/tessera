@@ -10,6 +10,7 @@
  */
 
 const http = require('http');
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const { RobotManager } = require('./robot-manager');
@@ -46,6 +47,10 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// 정적 파일 서빙 (Next.js 빌드 결과)
+const webOut = path.join(__dirname, '..', 'web', 'out');
+app.use(express.static(webOut));
+
 // 시스템 정보
 app.get('/api/systems', (req, res) => {
   res.json([
@@ -56,7 +61,18 @@ app.get('/api/systems', (req, res) => {
   ]);
 });
 
-server.listen(PORT, () => {
+// SPA fallback (API가 아닌 모든 경로 → index.html)
+app.use((req, res, next) => {
+  if (req.path.startsWith('/api/')) return next();
+  const fs = require('fs');
+  const filePath = path.join(webOut, req.path, 'index.html');
+  if (fs.existsSync(filePath)) return res.sendFile(filePath);
+  const rootIndex = path.join(webOut, 'index.html');
+  if (fs.existsSync(rootIndex)) return res.sendFile(rootIndex);
+  next();
+});
+
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`\n╔══════════════════════════════════════════╗`);
   console.log(`║  tessera 지휘관 서버                     ║`);
   console.log(`║  REST API: http://localhost:${PORT}        ║`);
