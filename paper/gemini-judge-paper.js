@@ -11,13 +11,14 @@
  *   CLI:
  *   node paper/gemini-judge-paper.js --data=data-enriched.json --criteria=criteria.md --out=projects/사업명-기관명/
  */
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+// ai-runner: settlement-qna 프로젝트의 통합 AI 러너
+const AI_RUNNER_PATH = path.join(require('os').homedir(), 'projects', 'settlement-qna', 'server', 'engine', 'ai-runner');
+const { runAI } = require(AI_RUNNER_PATH);
+
 const DEFAULT_BATCH_SIZE = 150;
-const GEMINI_TIMEOUT = 600000; // 10분
-const GEMINI_MODEL = 'gemini-3-pro-preview';
 
 // ── 프롬프트 생성 ──
 
@@ -142,19 +143,11 @@ function normalizeResult(item) {
   };
 }
 
-// ── Gemini CLI 호출 ──
+// ── Codex (GPT 5.4) API 호출 ──
 
-function callGemini(promptFile, rawFile) {
-  try {
-    execSync(
-      `cat "${promptFile}" | gemini -p "" -m ${GEMINI_MODEL} > "${rawFile}" 2>&1`,
-      { timeout: GEMINI_TIMEOUT, maxBuffer: 100 * 1024 * 1024, shell: '/bin/bash' }
-    );
-    return true;
-  } catch (e) {
-    console.error(`  [Gemini 오류] ${e.message}`);
-    return false;
-  }
+async function callAI(prompt) {
+  const { promise } = runAI(prompt, { provider: 'codex' });
+  return promise;
 }
 
 // ── 메인 판정 함수 ──
@@ -185,7 +178,7 @@ async function judgePaper(enrichedData, options = {}) {
     batches.push(enrichedData.slice(i, i + batchSize));
   }
 
-  console.log(`  [Gemini 판정] ${enrichedData.length}건, ${batches.length}배치 (배치당 최대 ${batchSize}건)`);
+  console.log(`  [Codex 판정] ${enrichedData.length}건, ${batches.length}배치 (배치당 최대 ${batchSize}건)`);
 
   const allResults = [];
 
@@ -202,22 +195,22 @@ async function judgePaper(enrichedData, options = {}) {
     const promptSize = (Buffer.byteLength(prompt) / 1024).toFixed(0);
     console.log(`  [배치 ${b + 1}/${batches.length}] ${batch.length}건, 프롬프트 ${promptSize}KB`);
 
-    // Gemini 호출
+    // Codex (GPT 5.4) API 호출
     const t0 = Date.now();
-    const ok = callGemini(promptFile, rawFile);
-    const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
-
-    if (!ok || !fs.existsSync(rawFile)) {
-      console.error(`  [배치 ${b + 1}] Gemini 호출 실패 (${elapsed}s)`);
-      // 실패한 건은 모두 '확인'으로 처리
+    let rawText;
+    try {
+      rawText = await callAI(prompt);
+      // raw 파일에도 저장 (디버깅용)
+      fs.writeFileSync(rawFile, rawText, 'utf-8');
+    } catch (e) {
+      console.error(`  [배치 ${b + 1}] AI 호출 실패: ${e.message}`);
       for (const item of batch) {
-        allResults.push({ rowNum: item.rowNum, status: '확인', issues: ['Gemini 호출 실패'], confidence: 'low', reasoning: '' });
+        allResults.push({ rowNum: item.rowNum, status: '확인', issues: ['AI 호출 실패'], confidence: 'low', reasoning: '' });
       }
       continue;
     }
-
-    const rawText = fs.readFileSync(rawFile, 'utf-8');
-    console.log(`  [배치 ${b + 1}] Gemini 응답 ${(rawText.length / 1024).toFixed(0)}KB (${elapsed}s)`);
+    const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
+    console.log(`  [배치 ${b + 1}] Codex 응답 ${(rawText.length / 1024).toFixed(0)}KB (${elapsed}s)`);
 
     // 파싱
     const parsed = extractJSON(rawText);
