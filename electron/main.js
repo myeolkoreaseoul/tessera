@@ -58,7 +58,7 @@ app.whenReady().then(async () => {
     height: 900,
     minWidth: 1000,
     minHeight: 700,
-    title: 'Tessera — 통합 정산검토',
+    title: `Tessera v${app.getVersion()} — 통합 정산검토`,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,

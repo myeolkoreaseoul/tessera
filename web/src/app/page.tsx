@@ -34,6 +34,7 @@ export default function Dashboard() {
   const { robots, logs, isConnected } = useWebSocket();
   const [systems, setSystems] = useState<System[]>([]);
   const [health, setHealth] = useState<boolean>(false);
+  const [version, setVersion] = useState<string>("");
   const [browserStatus, setBrowserStatus] = useState<Record<string, string>>({});
   const [browserLoading, setBrowserLoading] = useState<Record<number, boolean>>({});
 
@@ -46,7 +47,8 @@ export default function Dashboard() {
 
   useEffect(() => {
     fetch(`${API_URL}/api/health`)
-      .then(res => res.ok ? setHealth(true) : setHealth(false))
+      .then(res => res.json())
+      .then(data => { setHealth(data.status === 'ok'); if (data.version) setVersion(data.version); })
       .catch(() => setHealth(false));
 
     fetch(`${API_URL}/api/systems`)
@@ -115,6 +117,7 @@ export default function Dashboard() {
           <h1 className="text-3xl font-bold tracking-tighter text-foreground">
             tessera <span className="text-primary">지휘통제실</span>
           </h1>
+          {version && <span className="text-xs text-muted-foreground font-mono ml-2">v{version}</span>}
         </div>
         <div className="flex items-center gap-4">
           <Badge variant={health ? "success" : "destructive"} className="gap-1.5 px-3 py-1">

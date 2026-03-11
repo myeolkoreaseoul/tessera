@@ -45,8 +45,10 @@ app.use('/api/browser', createBrowserRoutes());
 
 // 헬스체크
 app.get('/api/health', (req, res) => {
+  const pkg = require('../package.json');
   res.json({
     status: 'ok',
+    version: pkg.version,
     uptime: process.uptime(),
     robots: robotManager.list().length,
     running: robotManager.list().filter(r => r.status === 'running').length,
