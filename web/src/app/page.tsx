@@ -198,6 +198,13 @@ export default function Dashboard() {
                         <span className="text-xs text-muted-foreground">대기 중...</span>
                       </div>
                     )}
+                    {system.id === "ezbaro" && (
+                      <Link href="/ezbaro" passHref>
+                        <Button variant="outline" className="w-full gap-2 font-bold mb-2" size="sm">
+                          <Settings2 className="w-4 h-4" /> 과제 관리
+                        </Button>
+                      </Link>
+                    )}
                     <Link href={`/launch?system=${system.id}`} passHref>
                       <Button variant="default" className="w-full gap-2 font-bold" disabled={system.status !== "ready"}>
                         <Play className="w-4 h-4" /> 출격
