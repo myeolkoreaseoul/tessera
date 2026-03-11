@@ -2,15 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { 
-  Activity, 
-  Play, 
-  Square, 
-  AlertCircle, 
-  Terminal, 
+import {
+  Activity,
+  Play,
+  Square,
+  AlertCircle,
+  Terminal,
   ShieldAlert,
   Settings2,
-  Clock
+  Clock,
+  Globe,
+  X
 } from "lucide-react";
 import { format } from "date-fns";
 import { useWebSocket, Robot, LogEntry } from "@/hooks/useWebSocket";
@@ -32,6 +34,15 @@ export default function Dashboard() {
   const { robots, logs, isConnected } = useWebSocket();
   const [systems, setSystems] = useState<System[]>([]);
   const [health, setHealth] = useState<boolean>(false);
+  const [browserStatus, setBrowserStatus] = useState<Record<string, string>>({});
+  const [browserLoading, setBrowserLoading] = useState<Record<number, boolean>>({});
+
+  const fetchBrowserStatus = () => {
+    fetch(`${API_URL}/api/browser/status`)
+      .then(res => res.json())
+      .then(data => { if (data.status) setBrowserStatus(data.status); })
+      .catch(() => {});
+  };
 
   useEffect(() => {
     fetch(`${API_URL}/api/health`)
@@ -42,7 +53,6 @@ export default function Dashboard() {
       .then(res => res.json())
       .then(data => setSystems(data))
       .catch(() => {
-        // 서버 미연결 시 기본값
         setSystems([
           { id: "enaradomum", name: "e나라도움", port: 9444, status: "ready" },
           { id: "ezbaro", name: "이지바로", port: 9446, status: "ready" },
@@ -50,7 +60,40 @@ export default function Dashboard() {
           { id: "rcms", name: "RCMS", port: 0, status: "planned" },
         ]);
       });
+
+    fetchBrowserStatus();
+    const interval = setInterval(fetchBrowserStatus, 5000);
+    return () => clearInterval(interval);
   }, []);
+
+  const launchBrowser = async (port: number) => {
+    setBrowserLoading(prev => ({ ...prev, [port]: true }));
+    try {
+      await fetch(`${API_URL}/api/browser/launch`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ port }),
+      });
+      fetchBrowserStatus();
+    } catch (err) {
+      console.error("Failed to launch browser", err);
+    } finally {
+      setBrowserLoading(prev => ({ ...prev, [port]: false }));
+    }
+  };
+
+  const closeBrowser = async (port: number) => {
+    try {
+      await fetch(`${API_URL}/api/browser/close`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ port }),
+      });
+      fetchBrowserStatus();
+    } catch (err) {
+      console.error("Failed to close browser", err);
+    }
+  };
 
   const stopRobot = async (id: string) => {
     try {
@@ -97,8 +140,15 @@ export default function Dashboard() {
                 </Badge>
               </CardHeader>
               <CardContent>
-                <div className="text-xs text-muted-foreground mb-4">PORT: {system.port}</div>
-                
+                <div className="flex items-center justify-between text-xs text-muted-foreground mb-4">
+                  <span>PORT: {system.port}</span>
+                  {system.port > 0 && (
+                    <Badge variant={browserStatus[String(system.port)] === "open" ? "success" : "secondary"} className="text-[10px] px-1.5 py-0">
+                      {browserStatus[String(system.port)] === "open" ? "BROWSER ON" : "BROWSER OFF"}
+                    </Badge>
+                  )}
+                </div>
+
                 {activeRobot ? (
                   <div className="space-y-4">
                     <div className="flex justify-between items-end text-sm">
@@ -120,10 +170,34 @@ export default function Dashboard() {
                     </Button>
                   </div>
                 ) : (
-                  <div className="space-y-4">
-                    <div className="h-[68px] flex items-center justify-center border border-dashed border-slate-800 rounded-md">
-                      <span className="text-xs text-muted-foreground">대기 중...</span>
-                    </div>
+                  <div className="space-y-3">
+                    {system.port > 0 && browserStatus[String(system.port)] !== "open" ? (
+                      <Button
+                        variant="outline"
+                        className="w-full gap-2"
+                        size="sm"
+                        disabled={browserLoading[system.port] || system.status !== "ready"}
+                        onClick={() => launchBrowser(system.port)}
+                      >
+                        <Globe className="w-4 h-4" />
+                        {browserLoading[system.port] ? "실행 중..." : "브라우저 열기"}
+                      </Button>
+                    ) : system.port > 0 && browserStatus[String(system.port)] === "open" ? (
+                      <div className="flex gap-2">
+                        <Button
+                          variant="outline"
+                          className="flex-1 gap-1 text-xs"
+                          size="sm"
+                          onClick={() => closeBrowser(system.port)}
+                        >
+                          <X className="w-3 h-3" /> 브라우저 닫기
+                        </Button>
+                      </div>
+                    ) : (
+                      <div className="h-[36px] flex items-center justify-center border border-dashed border-slate-800 rounded-md">
+                        <span className="text-xs text-muted-foreground">대기 중...</span>
+                      </div>
+                    )}
                     <Link href={`/launch?system=${system.id}`} passHref>
                       <Button variant="default" className="w-full gap-2 font-bold" disabled={system.status !== "ready"}>
                         <Play className="w-4 h-4" /> 출격

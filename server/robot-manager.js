@@ -51,6 +51,7 @@ class RobotManager extends EventEmitter {
     const child = fork(PIPELINE_SCRIPT, args, {
       cwd: path.join(__dirname, '..'),
       stdio: ['pipe', 'pipe', 'pipe', 'ipc'],
+      env: { ...process.env },
     });
 
     const robot = {

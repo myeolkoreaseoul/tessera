@@ -2,11 +2,14 @@
   "name": "tessera",
   "version": "1.0.0",
   "description": "Tessera - 통합 정산검토 플랫폼 (e나라도움, 이지바로, RCMS, 보탬e, 페이퍼)",
-  "main": "run-all.js",
+  "main": "electron/main.js",
   "scripts": {
     "start": "node run-all.js",
     "server": "node server/index.js",
-    "test": "vitest run"
+    "test": "vitest run",
+    "electron:dev": "electron .",
+    "electron:prebuild": "node scripts/copy-chromium.js",
+    "electron:build": "cd web && npm run build && cd .. && npm run electron:prebuild && electron-builder"
   },
   "keywords": [
     "rpa",
@@ -35,6 +38,8 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^26.0.0",
     "vitest": "^4.0.18"
   }
 }

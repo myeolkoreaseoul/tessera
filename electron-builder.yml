@@ -1,0 +1,54 @@
+appId: com.tessera.desktop
+productName: Tessera
+copyright: Copyright © 2026 정동회계법인
+
+directories:
+  output: dist
+  buildResources: build
+
+files:
+  - "electron/**/*"
+  - "server/**/*"
+  - "lib/**/*"
+  - "run-all.js"
+  - "run-pipeline.js"
+  - "run-ezbaro.js"
+  - "web/out/**/*"
+  - "guidelines/**/*"
+  - "package.json"
+  - "node_modules/**/*"
+  - "!node_modules/playwright/node_modules/**/*"
+  - "!**/*.map"
+  - "!**/test/**"
+  - "!**/tests/**"
+  - "!dev/**"
+  - "!archive/**"
+  - "!logs/**"
+  - "!projects/**"
+  - "!downloads/**"
+  - "!cross-validate/**"
+
+asar: false
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  installerHeaderIcon: build/icon.ico
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Tessera
+
+extraResources:
+  - from: "playwright-chromium/"
+    to: "playwright-chromium"
+    filter:
+      - "**/*"

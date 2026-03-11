@@ -18,6 +18,7 @@ const { setupWebSocket } = require('./ws-handler');
 const { createRobotRoutes } = require('./routes/api-robots');
 const { createProjectRoutes } = require('./routes/api-projects');
 const { createEzbaroRoutes } = require('./routes/api-ezbaro');
+const { createBrowserRoutes } = require('./routes/api-browser');
 
 const PORT = parseInt(process.env.PORT) || 3500;
 
@@ -38,6 +39,7 @@ setupWebSocket(server, robotManager);
 app.use('/api/robots', createRobotRoutes(robotManager));
 app.use('/api/projects', createProjectRoutes());
 app.use('/api/ezbaro', createEzbaroRoutes());
+app.use('/api/browser', createBrowserRoutes());
 
 // 헬스체크
 app.get('/api/health', (req, res) => {
@@ -74,10 +76,13 @@ app.use((req, res, next) => {
   next();
 });
 
-server.listen(PORT, '0.0.0.0', () => {
+const BIND_HOST = process.env.TESSERA_MODE === 'electron' ? '127.0.0.1' : '0.0.0.0';
+server.listen(PORT, BIND_HOST, () => {
   console.log(`\n╔══════════════════════════════════════════╗`);
   console.log(`║  tessera 지휘관 서버                     ║`);
   console.log(`║  REST API: http://localhost:${PORT}        ║`);
   console.log(`║  WebSocket: ws://localhost:${PORT}          ║`);
   console.log(`╚══════════════════════════════════════════╝\n`);
 });
+
+module.exports = { server, app, robotManager };

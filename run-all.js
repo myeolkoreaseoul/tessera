@@ -39,10 +39,13 @@ const { getAdapter } = require('./lib/adapters/interface');
 const {
   SESSION_EXTEND_INTERVAL_MS,
   REMOTE_DL_WIN,
+  LOCAL_DL_DIR,
   SUPPORTED_FILE_EXTENSIONS,
   MAX_FILE_TEXT_LENGTH,
   DOWNLOAD_WAIT_MAX_SECONDS,
 } = require('./lib/constants');
+
+const IS_ELECTRON = process.env.TESSERA_MODE === 'electron';
 const { Reporter } = require('./lib/reporter');
 
 // ── CLI 파싱 ──
@@ -82,9 +85,16 @@ const STAFF = args.staff ? args.staff.split(',') : [];
 const SETTLEMENT = args.settlement || 'final';
 const CDP_PORT = parseInt(args.port) || 9444;
 
-// 다운로드: 회사 PC Chrome → Windows 경로, sshfs로 로컬 접근
-const REMOTE_DL_LOCAL = path.join(os.homedir(), 'company-pc', 'downloads');  // sshfs 마운트 포인트
-const BASE_DIR = path.join(REMOTE_DL_LOCAL, DIR_NAME);  // sshfs 경유 다운로드 디렉토리
+// 다운로드 경로: Electron 모드는 로컬, CDP 모드는 sshfs 마운트
+const REMOTE_DL_LOCAL = IS_ELECTRON
+  ? LOCAL_DL_DIR
+  : path.join(os.homedir(), 'company-pc', 'downloads');
+const BASE_DIR = path.join(REMOTE_DL_LOCAL, DIR_NAME);
+// 다운로드 경로 탈출 방지
+if (!path.resolve(BASE_DIR).startsWith(path.resolve(REMOTE_DL_LOCAL))) {
+  console.error(`[보안] 다운로드 경로가 허용 범위를 벗어남: ${BASE_DIR}`);
+  process.exit(1);
+}
 const DATA_FILE = path.join(__dirname, `${DIR_NAME}-data.json`);
 const RESULTS_FILE = path.join(__dirname, `${DIR_NAME}-results.json`);
 
@@ -151,12 +161,17 @@ async function downloadFromPopup(page, context, atchmnflId, dlDir) {
     return files;
   }
 
-  // sshfs 마운트 포인트 기준으로 Windows 경로 구성
-  const relPath = path.relative(REMOTE_DL_LOCAL, dlDir);
-  const winPath = REMOTE_DL_WIN + '\\' + relPath.replace(/\//g, '\\');
+  // Electron: 로컬 절대 경로 직접 사용 / CDP: Windows 경로 변환
+  let downloadPath;
+  if (IS_ELECTRON) {
+    downloadPath = path.resolve(dlDir);
+  } else {
+    const relPath = path.relative(REMOTE_DL_LOCAL, dlDir);
+    downloadPath = REMOTE_DL_WIN + '\\' + relPath.replace(/\//g, '\\');
+  }
 
   fs.mkdirSync(dlDir, { recursive: true });
-  console.log(`    [DL] ${atchmnflId} → ${winPath}`);
+  console.log(`    [DL] ${atchmnflId} → ${downloadPath}`);
 
   for (const p of context.pages()) {
     if (p.url().includes('getDB003002SView')) await p.close().catch(() => {});
@@ -190,7 +205,7 @@ async function downloadFromPopup(page, context, atchmnflId, dlDir) {
     }
 
     const cdp = await popup.context().newCDPSession(popup);
-    await cdp.send('Page.setDownloadBehavior', { behavior: 'allow', downloadPath: winPath });
+    await cdp.send('Page.setDownloadBehavior', { behavior: 'allow', downloadPath: downloadPath });
     await popup.evaluate(() => {
       document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = true);
     });
