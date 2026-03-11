@@ -8,6 +8,7 @@
  */
 
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { autoUpdater } = require('electron-updater');
 const path = require('path');
 
 // Electron 모드 설정 (다른 모듈이 require되기 전에)
@@ -18,6 +19,7 @@ const ALLOWED_PORTS = [9444, 9445, 9446];
 
 let mainWindow = null;
 let serverModule = null;
+let isQuitting = false;
 
 app.whenReady().then(async () => {
   // Express 서버 시작 (require하면 자동으로 listen 실행)
@@ -78,6 +80,47 @@ app.whenReady().then(async () => {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
+  // 자동 업데이트 체크 (패키지된 앱에서만)
+  if (app.isPackaged) {
+    autoUpdater.autoDownload = true;
+    autoUpdater.autoInstallOnAppQuit = false; // 사용자가 "지금 재시작"을 선택할 때만 설치
+
+    autoUpdater.on('update-available', (info) => {
+      console.log('[updater] 새 버전 발견:', info.version);
+    });
+
+    autoUpdater.on('update-downloaded', (info) => {
+      if (isQuitting || !mainWindow) return;
+      dialog.showMessageBox(mainWindow, {
+        type: 'info',
+        title: 'Tessera 업데이트',
+        message: `새 버전 (v${info.version})이 다운로드되었습니다.`,
+        detail: '지금 재시작하면 업데이트가 적용됩니다.\n배치 작업 중이라면 완료 후 재시작하세요.',
+        buttons: ['지금 재시작', '나중에'],
+        defaultId: 1,
+      }).then(async ({ response }) => {
+        if (response === 0 && !isQuitting) {
+          // cleanup 후 설치
+          isQuitting = true;
+          try {
+            const browserProvider = require('../lib/browser-provider');
+            await browserProvider.closeAll();
+          } catch { /* 무시 */ }
+          try {
+            if (serverModule && serverModule.server) serverModule.server.close();
+          } catch { /* 무시 */ }
+          autoUpdater.quitAndInstall(false, true);
+        }
+      });
+    });
+
+    autoUpdater.on('error', (err) => {
+      console.error('[updater] 업데이트 오류:', err.message);
+    });
+
+    autoUpdater.checkForUpdates();
+  }
 });
 
 /** port allowlist 검증 */
@@ -124,6 +167,9 @@ ipcMain.handle('browser:close', async (_event, port) => {
 
 // 앱 종료 시 정리 (브라우저 + HTTP 서버)
 app.on('before-quit', async () => {
+  if (isQuitting) return; // quitAndInstall에서 이미 cleanup 완료
+  isQuitting = true;
+
   try {
     const browserProvider = require('../lib/browser-provider');
     await browserProvider.closeAll();

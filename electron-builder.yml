@@ -37,10 +37,17 @@ win:
         - x64
 nsis:
   oneClick: false
+  perMachine: false
   allowToChangeInstallationDirectory: true
   createDesktopShortcut: true
   createStartMenuShortcut: true
   shortcutName: Tessera
+
+publish:
+  provider: github
+  owner: myeolkoreaseoul
+  repo: tessera
+  releaseType: release
 
 extraResources:
   - from: "playwright-chromium/"

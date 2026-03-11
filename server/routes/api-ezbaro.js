@@ -1,9 +1,12 @@
 /**
  * REST API: 이지바로 전용
  *
- * POST /api/ezbaro/upload        — 과제리스트 엑셀 업로드 + 파싱
+ * POST /api/ezbaro/upload        — 과제리스트 엑셀 업로드 + 파싱 (파일 저장)
  * GET  /api/ezbaro/tasks         — 업로드된 기관 목록 (담당자 필터)
  * GET  /api/ezbaro/tasks/:seq    — 기관 상세
+ * POST /api/ezbaro/batch-start   — 배치 실행 시작
+ * POST /api/ezbaro/batch-stop    — 배치 실행 중단
+ * GET  /api/ezbaro/batch-status  — 배치 진행 상태
  */
 
 const { Router } = require('express');
@@ -16,7 +19,7 @@ const upload = multer({
   dest: path.join(__dirname, '..', '..', 'uploads'),
   limits: { fileSize: 50 * 1024 * 1024 }, // 50MB
   fileFilter(req, file, cb) {
-    if (/\.(xlsx|xlsb|xls|csv)$/i.test(file.originalname)) {
+    if (/\.(xlsx|xlsb|xls)$/i.test(file.originalname)) {
       cb(null, true);
     } else {
       cb(new Error('엑셀 파일만 업로드 가능합니다'));
@@ -24,9 +27,43 @@ const upload = multer({
   },
 });
 
-// 메모리에 파싱된 데이터 보관 (서버 재시작 시 초기화)
+// 파싱 데이터 저장 경로
+const BATCH_DATA_PATH = path.join(__dirname, '..', '..', 'projects', 'ezbaro-batch.json');
+
+// 메모리 캐시 + 파일 영속성
 let parsedData = null;
 let uploadedFileName = null;
+
+// 서버 시작 시 기존 파일에서 복원
+function loadSavedData() {
+  try {
+    if (fs.existsSync(BATCH_DATA_PATH)) {
+      const saved = JSON.parse(fs.readFileSync(BATCH_DATA_PATH, 'utf8'));
+      parsedData = saved.tasks;
+      uploadedFileName = saved.fileName;
+      console.log(`[ezbaro] 저장된 데이터 복원: ${uploadedFileName} (${parsedData.length}건)`);
+    }
+  } catch (err) {
+    console.error('[ezbaro] 저장 데이터 복원 실패:', err.message);
+  }
+}
+
+function saveData() {
+  try {
+    const dir = path.dirname(BATCH_DATA_PATH);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(BATCH_DATA_PATH, JSON.stringify({
+      fileName: uploadedFileName,
+      tasks: parsedData,
+      savedAt: new Date().toISOString(),
+    }, null, 2));
+  } catch (err) {
+    console.error('[ezbaro] 데이터 저장 실패:', err.message);
+  }
+}
+
+// 즉시 복원
+loadSavedData();
 
 // 상시 시트 컬럼 인덱스 (0-based)
 const COL = {
@@ -81,7 +118,7 @@ function parseRow(row) {
   };
 }
 
-function createEzbaroRoutes() {
+function createEzbaroRoutes(robotManager, batchRunner) {
   const router = Router();
 
   // 엑셀 업로드
@@ -106,6 +143,9 @@ function createEzbaroRoutes() {
 
       parsedData = rows;
       uploadedFileName = req.file.originalname;
+
+      // 파일 저장 (재시작 후에도 유지)
+      saveData();
 
       // 담당자 목록 추출
       const 담당자Map = {};
@@ -191,6 +231,55 @@ function createEzbaroRoutes() {
       return res.status(404).json({ error: '해당 기관을 찾을 수 없습니다' });
     }
     res.json(task);
+  });
+
+  // 배치 시작
+  router.post('/batch-start', (req, res) => {
+    if (!parsedData) {
+      return res.status(404).json({ error: '엑셀이 업로드되지 않았습니다' });
+    }
+
+    const { 담당자, status, project, host, staff } = req.body || {};
+
+    // 필터 적용
+    let targets = parsedData;
+    if (담당자) {
+      targets = targets.filter(r => r.담당자 === 담당자);
+    }
+    if (status) {
+      targets = targets.filter(r => r.정산진행상태 === status);
+    }
+
+    if (targets.length === 0) {
+      return res.status(400).json({ error: '필터 조건에 맞는 과제가 없습니다' });
+    }
+
+    try {
+      batchRunner.startBatch(robotManager, targets, {
+        project,
+        host,
+        staff,
+        port: 9446,
+      });
+      res.json({
+        ok: true,
+        message: `배치 시작: ${targets.length}개 과제`,
+        total: targets.length,
+      });
+    } catch (err) {
+      res.status(400).json({ error: err.message });
+    }
+  });
+
+  // 배치 중단
+  router.post('/batch-stop', (req, res) => {
+    batchRunner.stopBatch();
+    res.json({ ok: true, message: '배치 중단됨' });
+  });
+
+  // 배치 상태
+  router.get('/batch-status', (req, res) => {
+    res.json(batchRunner.getStatus());
   });
 
   return router;

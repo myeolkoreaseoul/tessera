@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
@@ -50,6 +50,19 @@ interface TasksResponse {
   tasks: Task[];
 }
 
+interface BatchStatus {
+  running: boolean;
+  stopping: boolean;
+  total: number;
+  done: number;
+  errors: number;
+  skipped: number;
+  pending: number;
+  currentIdx: number;
+  currentTask: { institution: string; 과제번호: string; robotId: string } | null;
+  tasks: { idx: number; institution: string; 과제번호: string; status: string; error?: string }[];
+}
+
 const STATUS_COLORS: Record<string, { bg: string; text: string; border: string; dot: string }> = {
   점검완료: { bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/20", dot: "bg-emerald-500" },
   보완요청: { bg: "bg-red-500/10", text: "text-red-400", border: "border-red-500/20", dot: "bg-red-500" },
@@ -70,6 +83,14 @@ function StatusBadge({ status }: { status: string }) {
 export default function EzbaroPage() {
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const isMounted = useRef(true);
+
+  useEffect(() => {
+    isMounted.current = true;
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
 
   // Upload state
   const [uploading, setUploading] = useState(false);
@@ -81,9 +102,41 @@ export default function EzbaroPage() {
   const [tasksData, setTasksData] = useState<TasksResponse | null>(null);
   const [loading, setLoading] = useState(false);
 
+  // Batch state
+  const [batchStatus, setBatchStatus] = useState<BatchStatus | null>(null);
+
   // Sort state
   const [sortCol, setSortCol] = useState<string | null>(null);
   const [sortAsc, setSortAsc] = useState(true);
+
+  const fetchBatchStatus = useCallback(async () => {
+    try {
+      const res = await fetch(`${API_URL}/api/ezbaro/batch-status`);
+      if (res.ok) {
+        const data: BatchStatus = await res.json();
+        if (isMounted.current) {
+          setBatchStatus(data);
+        }
+      }
+    } catch (e) {
+      console.error("Batch status fetch error:", e);
+    }
+  }, []);
+
+  // Poll batch status
+  useEffect(() => {
+    fetchBatchStatus();
+  }, [fetchBatchStatus]);
+
+  useEffect(() => {
+    const isActive = !batchStatus || batchStatus.running || batchStatus.stopping || (batchStatus.tasks && batchStatus.tasks.length > 0);
+    if (!isActive) return;
+
+    const timer = setInterval(() => {
+      fetchBatchStatus();
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [fetchBatchStatus, batchStatus]);
 
   const handleUpload = useCallback(async (file: File) => {
     setUploading(true);
@@ -133,6 +186,34 @@ export default function EzbaroPage() {
     }
   }, [담당자, statusFilter]);
 
+  const handleBatchStart = async () => {
+    if (!confirm("현재 필터링된 조건으로 전체 출격하시겠습니까?")) return;
+    try {
+      const res = await fetch(`${API_URL}/api/ezbaro/batch-start`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 담당자, status: statusFilter }),
+      });
+      const data = await res.json();
+      if (!res.ok) alert(data.message || "배치 시작 실패");
+      else fetchBatchStatus();
+    } catch (e: any) {
+      alert("배치 시작 오류: " + e.message);
+    }
+  };
+
+  const handleBatchStop = async () => {
+    if (!confirm("진행 중인 모든 작업을 중지하시겠습니까?")) return;
+    try {
+      const res = await fetch(`${API_URL}/api/ezbaro/batch-stop`, { method: "POST" });
+      const data = await res.json();
+      if (!res.ok) alert(data.message || "배치 중지 실패");
+      else fetchBatchStatus();
+    } catch (e: any) {
+      alert("배치 중지 오류: " + e.message);
+    }
+  };
+
   const handleSort = (col: string) => {
     if (sortCol === col) {
       setSortAsc(!sortAsc);
@@ -165,6 +246,10 @@ export default function EzbaroPage() {
   };
 
   const fmt = (n: number) => n.toLocaleString("ko-KR");
+
+  const progressPercent = batchStatus && batchStatus.total > 0
+    ? Math.round((batchStatus.done / batchStatus.total) * 100)
+    : 0;
 
   return (
     <div className="bg-slate-950 text-slate-100 min-h-screen">
@@ -202,7 +287,7 @@ export default function EzbaroPage() {
             <input
               ref={fileInputRef}
               type="file"
-              accept=".xlsx,.xlsb,.xls,.csv"
+              accept=".xlsx,.xlsb,.xls"
               className="hidden"
               onChange={(e) => {
                 const file = e.target.files?.[0];
@@ -278,13 +363,31 @@ export default function EzbaroPage() {
                   <option>점검전</option>
                 </select>
               </div>
-              <button
-                onClick={handleSearch}
-                disabled={loading}
-                className="bg-blue-500 text-white px-8 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-600 transition-colors shadow-sm flex items-center gap-2 h-[42px] disabled:opacity-50"
-              >
-                {loading ? "조회 중..." : "조회"}
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handleSearch}
+                  disabled={loading}
+                  className="bg-blue-500 text-white px-8 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-600 transition-colors shadow-sm flex items-center gap-2 h-[42px] disabled:opacity-50"
+                >
+                  {loading ? "조회 중..." : "조회"}
+                </button>
+                <button
+                  onClick={handleBatchStart}
+                  disabled={batchStatus?.running || batchStatus?.stopping || !tasksData}
+                  className="bg-amber-500 text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-amber-600 transition-colors shadow-sm h-[42px] disabled:opacity-50"
+                >
+                  전체 출격
+                </button>
+                {(batchStatus?.running || batchStatus?.stopping) && (
+                  <button
+                    onClick={handleBatchStop}
+                    disabled={batchStatus?.stopping}
+                    className="bg-red-500 text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-red-600 transition-colors shadow-sm h-[42px] disabled:opacity-50"
+                  >
+                    {batchStatus?.stopping ? "중지 중..." : "긴급 정지"}
+                  </button>
+                )}
+              </div>
             </div>
 
             {/* Summary */}
@@ -303,6 +406,86 @@ export default function EzbaroPage() {
                 </p>
               </div>
             )}
+          </section>
+        )}
+
+        {/* Batch Progress Panel */}
+        {batchStatus && (batchStatus.running || batchStatus.tasks.length > 0) && (
+          <section className="bg-slate-900 rounded-xl border border-slate-800 p-6 flex flex-col gap-4">
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-lg font-bold flex items-center gap-2">
+                배치 진행 현황
+                {batchStatus.running && <span className="w-2 h-2 rounded-full bg-blue-500 animate-ping" />}
+              </h2>
+              <div className="text-sm text-slate-400">
+                {batchStatus.done} / {batchStatus.total} ({progressPercent}%)
+              </div>
+            </div>
+
+            {/* Progress Bar */}
+            <div className="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-blue-500 transition-all duration-500"
+                style={{ width: `${progressPercent}%` }}
+              />
+            </div>
+
+            {/* Current Task */}
+            {batchStatus.currentTask && (
+              <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800 flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">현재 진행 중</p>
+                  <p className="text-sm font-bold text-blue-400">
+                    {batchStatus.currentTask.institution}
+                    <span className="text-slate-500 mx-2 text-xs font-normal">|</span>
+                    {batchStatus.currentTask.과제번호}
+                  </p>
+                </div>
+                <div className="text-xs text-slate-500 font-mono">
+                  ROBOT ID: {batchStatus.currentTask.robotId}
+                </div>
+              </div>
+            )}
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="bg-slate-800/50 p-3 rounded-lg text-center border border-slate-700/50">
+                <p className="text-xs text-slate-500 mb-1">완료</p>
+                <p className="text-lg font-bold text-emerald-400">{batchStatus.done}</p>
+              </div>
+              <div className="bg-slate-800/50 p-3 rounded-lg text-center border border-slate-700/50">
+                <p className="text-xs text-slate-500 mb-1">오류</p>
+                <p className="text-lg font-bold text-red-400">{batchStatus.errors}</p>
+              </div>
+              <div className="bg-slate-800/50 p-3 rounded-lg text-center border border-slate-700/50">
+                <p className="text-xs text-slate-500 mb-1">제외</p>
+                <p className="text-lg font-bold text-yellow-500">{batchStatus.skipped}</p>
+              </div>
+              <div className="bg-slate-800/50 p-3 rounded-lg text-center border border-slate-700/50">
+                <p className="text-xs text-slate-500 mb-1">대기</p>
+                <p className="text-lg font-bold text-slate-400">{batchStatus.pending}</p>
+              </div>
+            </div>
+
+            {/* Task Mini List */}
+            <div className="mt-2 max-h-40 overflow-y-auto pr-2 custom-scrollbar">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {batchStatus.tasks.slice().reverse().slice(0, 20).map((t) => (
+                  <div key={`${t.과제번호}-${t.idx}`} className="flex items-center gap-3 p-2 rounded bg-slate-950/30 border border-slate-800/50 text-xs">
+                    <span className={`w-2 h-2 rounded-full shrink-0 ${
+                      t.status === "pending" ? "bg-slate-600" :
+                      t.status === "running" ? "bg-blue-500 animate-pulse" :
+                      t.status === "done" ? "bg-emerald-500" :
+                      t.status === "error" ? "bg-red-500" :
+                      t.status === "skipped" ? "bg-yellow-500" : "bg-slate-400"
+                    }`} />
+                    <span className="truncate flex-1 text-slate-300">{t.institution}</span>
+                    <span className="font-mono text-slate-500 shrink-0">{t.과제번호}</span>
+                    {t.error && <span className="text-red-500 truncate max-w-[100px]" title={t.error}>{t.error}</span>}
+                  </div>
+                ))}
+              </div>
+            </div>
           </section>
         )}
 

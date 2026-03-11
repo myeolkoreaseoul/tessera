@@ -14,6 +14,7 @@ const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const { RobotManager } = require('./robot-manager');
+const { BatchRunner } = require('./batch-runner');
 const { setupWebSocket } = require('./ws-handler');
 const { createRobotRoutes } = require('./routes/api-robots');
 const { createProjectRoutes } = require('./routes/api-projects');
@@ -29,8 +30,9 @@ const server = http.createServer(app);
 app.use(cors());
 app.use(express.json());
 
-// 로봇 매니저
+// 로봇 매니저 + 배치 러너
 const robotManager = new RobotManager();
+const batchRunner = new BatchRunner();
 
 // WebSocket 설정
 setupWebSocket(server, robotManager);
@@ -38,7 +40,7 @@ setupWebSocket(server, robotManager);
 // REST API
 app.use('/api/robots', createRobotRoutes(robotManager));
 app.use('/api/projects', createProjectRoutes());
-app.use('/api/ezbaro', createEzbaroRoutes());
+app.use('/api/ezbaro', createEzbaroRoutes(robotManager, batchRunner));
 app.use('/api/browser', createBrowserRoutes());
 
 // 헬스체크
