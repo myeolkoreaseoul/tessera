@@ -2,7 +2,7 @@
 
 import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { ChevronLeft, Rocket, Settings, ShieldCheck } from "lucide-react";
+import { ChevronLeft, Rocket, ShieldCheck } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
@@ -22,12 +22,14 @@ function LaunchForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialSystem = searchParams.get("system") || "enaradomum";
+  const initialInstitution = searchParams.get("institution") || "";
+  const initialTask = searchParams.get("task") || "";
 
   const [formData, setFormData] = useState({
     system: initialSystem,
     project: "",
-    institution: "",
-    task: "",
+    institution: initialInstitution,
+    task: initialTask,
     start: 1,
     settlement: "final",
     dryRun: false,
@@ -36,6 +38,14 @@ function LaunchForm() {
 
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(false);
+
+  // URL param 변경 시 formData 동기화 (client navigation 대응)
+  useEffect(() => {
+    const sys = searchParams.get("system") || "enaradomum";
+    const inst = searchParams.get("institution") || "";
+    const task = searchParams.get("task") || "";
+    setFormData(prev => ({ ...prev, system: sys, institution: inst, task: task, project: "" }));
+  }, [searchParams]);
 
   useEffect(() => {
     fetch(`${API_URL}/api/projects`)
@@ -81,7 +91,7 @@ function LaunchForm() {
 
   return (
     <div className="max-w-2xl mx-auto py-12 px-6">
-      <Button variant="ghost" className="mb-6 gap-2" onClick={() => router.back()}>
+      <Button variant="ghost" className="mb-6 gap-2" onClick={() => router.push("/")}>
         <ChevronLeft className="w-4 h-4" /> 뒤로가기
       </Button>
 
@@ -97,10 +107,10 @@ function LaunchForm() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="system">대상 시스템</Label>
-                <Select 
-                  id="system" 
-                  value={formData.system} 
-                  onChange={(e) => setFormData({...formData, system: e.target.value})}
+                <Select
+                  id="system"
+                  value={formData.system}
+                  onChange={(e) => setFormData({...formData, system: e.target.value, project: ""})}
                 >
                   <option value="enaradomum">e나라도움</option>
                   <option value="ezbaro">이지바로</option>

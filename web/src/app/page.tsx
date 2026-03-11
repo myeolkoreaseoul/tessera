@@ -3,15 +3,14 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
-  Activity,
   Play,
   Square,
-  AlertCircle,
   Terminal,
   ShieldAlert,
   Settings2,
   Clock,
   Globe,
+  FileText,
   X
 } from "lucide-react";
 import { format } from "date-fns";
@@ -208,11 +207,17 @@ export default function Dashboard() {
                         </Button>
                       </Link>
                     )}
-                    <Link href={`/launch?system=${system.id}`} passHref>
-                      <Button variant="default" className="w-full gap-2 font-bold" disabled={system.status !== "ready"}>
+                    {system.status === "ready" ? (
+                      <Link href={`/launch?system=${system.id}`} passHref>
+                        <Button variant="default" className="w-full gap-2 font-bold">
+                          <Play className="w-4 h-4" /> 출격
+                        </Button>
+                      </Link>
+                    ) : (
+                      <Button variant="default" className="w-full gap-2 font-bold" disabled>
                         <Play className="w-4 h-4" /> 출격
                       </Button>
-                    </Link>
+                    )}
                   </div>
                 )}
               </CardContent>
@@ -227,6 +232,14 @@ export default function Dashboard() {
             </Card>
           );
         })}
+      </div>
+
+      <div className="flex justify-end">
+        <Link href="/results" passHref>
+          <Button variant="outline" className="gap-2" size="sm">
+            <FileText className="w-4 h-4" /> 분석 결과 조회
+          </Button>
+        </Link>
       </div>
 
       <Card className="command-panel flex-1 min-h-[400px]">
