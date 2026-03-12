@@ -1,4 +1,4 @@
-state=section_5_running
+state=executing
 mode=normal
 task=batch-autoupdate
 current_section=5

@@ -71,6 +71,18 @@
 - **연관 파일 영향?**: before-quit에 isQuitting guard 추가. quitAndInstall 경로에서 먼저 cleanup → before-quit는 skip
 - **빌드/테스트**: electron-updater 모듈 로드 성공
 
+### 섹션 5 Codex 리뷰 — 해당 없음 (검증/배포 단계, 신규 코드 없음)
+
+### 섹션 5 검증 결과
+- **git push**: 성공 (c298d70). workflow 파일은 PAT workflow scope 부재로 별도 push 필요
+- **서버 스모크 테스트**: health OK, batch-status OK (빈 상태 정상 반환)
+- **남은 작업**: gh auth에 workflow scope 추가 → build.yml push → tag → Actions 빌드 → 회사 PC E2E
+
+### 섹션 5 셀프체크
+- **빠진 것?**: workflow push가 블로킹 — PAT scope 해결 필요. 나머지 코드는 모두 push 완료
+- **연관 파일 영향?**: 없음 (push 단계)
+- **빌드/테스트**: API 스모크 테스트 통과
+
 ### 섹션 1 셀프체크
 - **빠진 것?**: 엣지 케이스 (첫 task 실패, 수동 stop, 전체 실패) 모두 처리됨
 - **연관 파일 영향?**: createEzbaroRoutes 시그니처 변경 — 호출처 2곳 (api-ezbaro.js, index.js) 모두 수정됨
