@@ -10,6 +10,15 @@
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const { autoUpdater } = require('electron-updater');
 const path = require('path');
+const fs = require('fs');
+
+// 업데이트 디버그 로그 (파일)
+const LOG_PATH = path.join(app.getPath('userData'), 'updater-debug.log');
+function ulog(msg) {
+  const line = `[${new Date().toISOString()}] ${msg}\n`;
+  try { fs.appendFileSync(LOG_PATH, line); } catch {}
+  console.log('[updater]', msg);
+}
 
 // Electron 모드 설정 (다른 모듈이 require되기 전에)
 process.env.TESSERA_MODE = 'electron';
@@ -43,23 +52,25 @@ if (app.isPackaged) {
   autoUpdater.autoInstallOnAppQuit = false;
 
   autoUpdater.on('checking-for-update', () => {
+    ulog('EVENT: checking-for-update');
     updateState = { ...updateState, checking: true, error: null };
     sendUpdateState();
   });
 
   autoUpdater.on('update-available', (info) => {
-    console.log('[updater] 새 버전 발견:', info.version);
+    ulog(`EVENT: update-available version=${info.version}`);
     updateState = { ...updateState, available: true, checking: false, version: info.version };
     sendUpdateState();
   });
 
-  autoUpdater.on('update-not-available', () => {
+  autoUpdater.on('update-not-available', (info) => {
+    ulog(`EVENT: update-not-available version=${info?.version}`);
     updateState = { ...updateState, available: false, checking: false };
     sendUpdateState();
   });
 
   autoUpdater.on('update-downloaded', (info) => {
-    console.log('[updater] 다운로드 완료:', info.version);
+    ulog(`EVENT: update-downloaded version=${info.version}`);
     updateState = { ...updateState, downloaded: true, version: info.version };
     sendUpdateState();
 
@@ -81,7 +92,7 @@ if (app.isPackaged) {
   });
 
   autoUpdater.on('error', (err) => {
-    console.error('[updater] 업데이트 오류:', err.message);
+    ulog(`EVENT: error message=${err.message}`);
     updateState = { ...updateState, checking: false, error: err.message };
     sendUpdateState();
   });
@@ -102,14 +113,16 @@ async function cleanupAndInstall() {
 // ─── IPC 핸들러 (항상 등록 — 개발 모드에서도 에러 없이 응답) ───
 
 ipcMain.handle('updater:check', async () => {
+  ulog(`IPC updater:check called. isPackaged=${app.isPackaged}`);
   if (!app.isPackaged) {
     return { ok: false, error: '개발 모드에서는 업데이트 불가', state: updateState };
   }
   try {
-    await autoUpdater.checkForUpdates();
-    // 이벤트 리스너가 updateState를 업데이트함 — 즉시 현재 상태 반환
+    const result = await autoUpdater.checkForUpdates();
+    ulog(`IPC updater:check result=${JSON.stringify(result?.updateInfo?.version)} state=${JSON.stringify(updateState)}`);
     return { ok: true, state: updateState };
   } catch (err) {
+    ulog(`IPC updater:check error=${err.message}`);
     return { ok: false, error: err.message, state: updateState };
   }
 });
@@ -190,7 +203,12 @@ app.whenReady().then(async () => {
 
   // 앱 시작 시 자동 업데이트 체크 (이벤트 리스너는 이미 위에서 등록됨)
   if (app.isPackaged) {
-    autoUpdater.checkForUpdates();
+    ulog(`APP START: version=${app.getVersion()} isPackaged=${app.isPackaged} logPath=${LOG_PATH}`);
+    autoUpdater.checkForUpdates().then(r => {
+      ulog(`AUTO CHECK result: version=${r?.updateInfo?.version}`);
+    }).catch(e => {
+      ulog(`AUTO CHECK error: ${e.message}`);
+    });
   }
 });
 
