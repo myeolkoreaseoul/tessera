@@ -14,4 +14,10 @@ contextBridge.exposeInMainWorld('tessera', {
 
   /** 시스템별 브라우저 닫기 @param {number} port */
   closeBrowser: (port) => ipcRenderer.invoke('browser:close', port),
+
+  /** 업데이트 확인 */
+  checkForUpdate: () => ipcRenderer.invoke('updater:check'),
+
+  /** 다운로드된 업데이트 설치 + 재시작 */
+  installUpdate: () => ipcRenderer.invoke('updater:install'),
 });

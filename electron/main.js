@@ -121,7 +121,34 @@ app.whenReady().then(async () => {
 
     autoUpdater.checkForUpdates();
   }
+
+  // IPC: 업데이트 상태를 서버 API로도 노출 (프론트엔드에서 fetch로 접근)
+  setupUpdateApi();
 });
+
+// 업데이트 상태 추적
+let updateState = { available: false, downloaded: false, version: null, error: null, checking: false };
+
+function setupUpdateApi() {
+  if (!app.isPackaged) return;
+
+  autoUpdater.on('checking-for-update', () => {
+    updateState.checking = true;
+    updateState.error = null;
+  });
+  autoUpdater.on('update-available', (info) => {
+    updateState = { ...updateState, available: true, checking: false, version: info.version };
+  });
+  autoUpdater.on('update-not-available', () => {
+    updateState = { ...updateState, available: false, checking: false };
+  });
+  autoUpdater.on('update-downloaded', (info) => {
+    updateState = { ...updateState, downloaded: true, version: info.version };
+  });
+  autoUpdater.on('error', (err) => {
+    updateState = { ...updateState, checking: false, error: err.message };
+  });
+}
 
 /** port allowlist 검증 */
 function validatePort(port) {
@@ -130,6 +157,38 @@ function validatePort(port) {
   }
   return Number(port);
 }
+
+// IPC 핸들러: 업데이트 확인
+ipcMain.handle('updater:check', async () => {
+  if (!app.isPackaged) return { ok: false, error: '개발 모드에서는 업데이트 불가' };
+  try {
+    updateState.checking = true;
+    await autoUpdater.checkForUpdates();
+    return { ok: true, state: updateState };
+  } catch (err) {
+    return { ok: false, error: err.message };
+  }
+});
+
+// IPC 핸들러: 업데이트 설치 + 재시작
+ipcMain.handle('updater:install', async () => {
+  if (!updateState.downloaded) return { ok: false, error: '다운로드된 업데이트 없음' };
+  isQuitting = true;
+  try {
+    const browserProvider = require('../lib/browser-provider');
+    await browserProvider.closeAll();
+  } catch { /* 무시 */ }
+  try {
+    if (serverModule && serverModule.server) serverModule.server.close();
+  } catch { /* 무시 */ }
+  autoUpdater.quitAndInstall(false, true);
+  return { ok: true };
+});
+
+// IPC 핸들러: 업데이트 상태 조회
+ipcMain.handle('updater:status', async () => {
+  return { ok: true, state: updateState };
+});
 
 // IPC 핸들러: 브라우저 열기
 ipcMain.handle('browser:launch', async (_event, port) => {

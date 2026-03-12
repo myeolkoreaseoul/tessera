@@ -1,6 +1,6 @@
 {
   "name": "tessera",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Tessera - 통합 정산검토 플랫폼 (e나라도움, 이지바로, RCMS, 보탬e, 페이퍼)",
   "main": "electron/main.js",
   "scripts": {

@@ -36,6 +36,10 @@ export default function Dashboard() {
   const [version, setVersion] = useState<string>("");
   const [browserStatus, setBrowserStatus] = useState<Record<string, string>>({});
   const [browserLoading, setBrowserLoading] = useState<Record<number, boolean>>({});
+  const [updateState, setUpdateState] = useState<{
+    checking: boolean; available: boolean; downloaded: boolean; version: string | null; error: string | null;
+  }>({ checking: false, available: false, downloaded: false, version: null, error: null });
+  const [updateChecking, setUpdateChecking] = useState(false);
 
   const fetchBrowserStatus = () => {
     fetch(`${API_URL}/api/browser/status`)
@@ -104,6 +108,33 @@ export default function Dashboard() {
     }
   };
 
+  const checkForUpdate = async () => {
+    const w = window as any;
+    if (!w.tessera?.checkForUpdate) {
+      alert("업데이트 확인은 Tessera 데스크탑 앱에서만 가능합니다.");
+      return;
+    }
+    setUpdateChecking(true);
+    try {
+      const result = await w.tessera.checkForUpdate();
+      if (result?.state) setUpdateState(result.state);
+      // 상태가 바로 안 올 수 있으므로 2초 후 다시 확인
+      setTimeout(async () => {
+        const status = await (window as any).tessera?.checkForUpdate?.();
+        if (status?.state) setUpdateState(status.state);
+        setUpdateChecking(false);
+      }, 3000);
+    } catch {
+      setUpdateChecking(false);
+    }
+  };
+
+  const installUpdate = async () => {
+    const w = window as any;
+    if (!w.tessera?.installUpdate) return;
+    await w.tessera.installUpdate();
+  };
+
   const getRobotForSystem = (systemId: string) => {
     return robots.find(r => r.system === systemId && r.status === "running");
   };
@@ -117,6 +148,17 @@ export default function Dashboard() {
             tessera <span className="text-primary">지휘통제실</span>
           </h1>
           {version && <span className="text-xs text-muted-foreground font-mono ml-2">v{version}</span>}
+          {updateState.downloaded ? (
+            <Button variant="default" size="sm" className="ml-4 gap-1.5 bg-emerald-600 hover:bg-emerald-700" onClick={installUpdate}>
+              v{updateState.version} 설치 + 재시작
+            </Button>
+          ) : updateState.available ? (
+            <span className="ml-4 text-xs text-blue-400 animate-pulse">v{updateState.version} 다운로드 중...</span>
+          ) : (
+            <Button variant="outline" size="sm" className="ml-4 gap-1.5 text-xs" onClick={checkForUpdate} disabled={updateChecking}>
+              {updateChecking ? "확인 중..." : "업데이트 확인"}
+            </Button>
+          )}
         </div>
         <div className="flex items-center gap-4">
           <Badge variant={health ? "success" : "destructive"} className="gap-1.5 px-3 py-1">
