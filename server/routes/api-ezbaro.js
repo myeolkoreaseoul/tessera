@@ -112,12 +112,12 @@ function parseRow(row) {
     미확정: getNum(COL.미확정),
     보완완료: getNum(COL.보완완료),
     보완요청: getNum(COL.보완요청),
-    이행률: row[COL.이행률],
+    이행률: getVal(COL.이행률) || null,
     총예산: getNum(COL.총예산),
     집행금액: getNum(COL.집행금액),
     회계사: getVal(COL.회계사),
     담당자: getVal(COL.담당자),
-    점검날짜: row[COL.점검날짜] || null,
+    점검날짜: getVal(COL.점검날짜) || null,
     특이사항: getVal(COL.특이사항),
   };
 }
