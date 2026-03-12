@@ -10,6 +10,13 @@ const { Router } = require('express');
 
 const VALID_PORTS = [9444, 9445, 9446];
 
+/** 시스템별 초기 URL — 브라우저 열릴 때 자동 이동 */
+const START_URLS = {
+  9444: 'https://www.e-narahelp.kr/',
+  9445: 'https://www.losims.go.kr/',
+  9446: 'https://www.gaia.go.kr/main.do',
+};
+
 /** localhost 전용 미들웨어 (브라우저 제어는 로컬에서만 허용) */
 function localhostOnly(req, res, next) {
   const ip = req.ip || req.connection.remoteAddress;
@@ -47,7 +54,23 @@ function createBrowserRoutes() {
   router.post('/launch', validatePort, async (req, res) => {
     try {
       const browserProvider = require('../../lib/browser-provider');
-      await browserProvider.launchLocal(req.validPort);
+      const { context } = await browserProvider.launchLocal(req.validPort);
+
+      // 초기 URL로 자동 이동
+      const startUrl = START_URLS[req.validPort];
+      if (startUrl) {
+        try {
+          const pages = context.pages();
+          const page = pages[0] || await context.newPage();
+          const currentUrl = page.url();
+          if (currentUrl === 'about:blank' || currentUrl === '') {
+            await page.goto(startUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
+          }
+        } catch (navErr) {
+          console.error(`[api-browser] navigate(${startUrl}) error:`, navErr.message);
+        }
+      }
+
       res.json({ ok: true, port: req.validPort });
     } catch (err) {
       console.error(`[api-browser] launch(${req.validPort}) error:`, err.message);
