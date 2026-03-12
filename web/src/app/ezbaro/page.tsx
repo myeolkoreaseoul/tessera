@@ -104,6 +104,9 @@ export default function EzbaroPage() {
 
   // Batch state
   const [batchStatus, setBatchStatus] = useState<BatchStatus | null>(null);
+  const [batchStarting, setBatchStarting] = useState(false);
+  const [batchStopping, setBatchStopping] = useState(false);
+  const prevRunning = useRef(false);
 
   const fetchBatchStatus = useCallback(async () => {
     try {
@@ -120,6 +123,12 @@ export default function EzbaroPage() {
   useEffect(() => { fetchBatchStatus(); }, [fetchBatchStatus]);
 
   useEffect(() => {
+    // running→false 전환 시 마지막 상태를 한 번 더 fetch
+    if (prevRunning.current && batchStatus && !batchStatus.running && !batchStatus.stopping) {
+      fetchBatchStatus();
+    }
+    prevRunning.current = batchStatus?.running ?? false;
+
     const isActive = !batchStatus || batchStatus.running || batchStatus.stopping;
     if (!isActive) return;
     const timer = setInterval(fetchBatchStatus, 3000);
@@ -186,6 +195,7 @@ export default function EzbaroPage() {
   const handleBatchStart = async () => {
     if (!tasksData || tasksData.tasks.length === 0) return;
     if (!confirm(`${tasksData.tasks.length}개 과제를 순서대로 실행하시겠습니까?`)) return;
+    setBatchStarting(true);
     try {
       const res = await fetch(`${API_URL}/api/ezbaro/batch-start`, {
         method: "POST",
@@ -197,11 +207,14 @@ export default function EzbaroPage() {
       else fetchBatchStatus();
     } catch (e: any) {
       alert("배치 시작 오류: " + e.message);
+    } finally {
+      if (isMounted.current) setBatchStarting(false);
     }
   };
 
   const handleBatchStop = async () => {
     if (!confirm("진행 중인 모든 작업을 중지하시겠습니까?")) return;
+    setBatchStopping(true);
     try {
       const res = await fetch(`${API_URL}/api/ezbaro/batch-stop`, { method: "POST" });
       const data = await res.json();
@@ -209,6 +222,8 @@ export default function EzbaroPage() {
       else fetchBatchStatus();
     } catch (e: any) {
       alert("배치 중지 오류: " + e.message);
+    } finally {
+      if (isMounted.current) setBatchStopping(false);
     }
   };
 
@@ -308,7 +323,7 @@ export default function EzbaroPage() {
                 <input
                   type="text"
                   value={담당자}
-                  onChange={(e) => { set담당자(e.target.value); setTasksData(null); }}
+                  onChange={(e) => set담당자(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                   className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-2.5 text-sm focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder-slate-500 transition-colors"
                   placeholder="담당자 이름 입력 (필수)"
@@ -319,7 +334,7 @@ export default function EzbaroPage() {
                     {uploadResult.담당자목록.filter((d) => d.name.trim()).slice(0, 10).map((d) => (
                       <button
                         key={d.name}
-                        onClick={() => { set담당자(d.name); setTasksData(null); }}
+                        onClick={() => set담당자(d.name)}
                         className={`text-[10px] px-2 py-0.5 rounded border transition-colors ${
                           담당자 === d.name
                             ? "bg-blue-500/20 border-blue-500 text-blue-400"
@@ -338,7 +353,7 @@ export default function EzbaroPage() {
                 <label className="block text-sm font-semibold text-slate-300">정산진행상태</label>
                 <select
                   value={status}
-                  onChange={(e) => { setStatus(e.target.value); setTasksData(null); }}
+                  onChange={(e) => setStatus(e.target.value)}
                   className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-2.5 text-sm focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors appearance-none"
                 >
                   <option value="">전체 상태</option>
@@ -353,7 +368,7 @@ export default function EzbaroPage() {
                 <label className="block text-sm font-semibold text-slate-300">작업 순서</label>
                 <div className="grid grid-cols-2 gap-2">
                   <button
-                    onClick={() => { setSortMode("unchecked"); setTasksData(null); }}
+                    onClick={() => setSortMode("unchecked")}
                     className={`px-3 py-2.5 rounded-lg border text-xs font-semibold transition-all ${
                       sortMode === "unchecked"
                         ? "bg-blue-500/10 border-blue-500 text-blue-400"
@@ -363,7 +378,7 @@ export default function EzbaroPage() {
                     미확정 순
                   </button>
                   <button
-                    onClick={() => { setSortMode("supplement"); setTasksData(null); }}
+                    onClick={() => setSortMode("supplement")}
                     className={`px-3 py-2.5 rounded-lg border text-xs font-semibold transition-all ${
                       sortMode === "supplement"
                         ? "bg-blue-500/10 border-blue-500 text-blue-400"
@@ -414,18 +429,18 @@ export default function EzbaroPage() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={handleBatchStart}
-                  disabled={batchStatus?.running || batchStatus?.stopping}
+                  disabled={batchStarting || batchStatus?.running || batchStatus?.stopping}
                   className="bg-amber-500 text-white px-8 py-2.5 rounded-lg font-bold text-sm hover:bg-amber-600 transition-colors shadow-sm disabled:opacity-50"
                 >
-                  전체 출격 ({tasksData.summary.total}건)
+                  {batchStarting ? "시작 중..." : `전체 출격 (${tasksData.summary.total}건)`}
                 </button>
                 {(batchStatus?.running || batchStatus?.stopping) && (
                   <button
                     onClick={handleBatchStop}
-                    disabled={batchStatus?.stopping}
+                    disabled={batchStopping || batchStatus?.stopping}
                     className="bg-red-500 text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-red-600 transition-colors shadow-sm disabled:opacity-50"
                   >
-                    {batchStatus?.stopping ? "중지 중..." : "긴급 정지"}
+                    {(batchStopping || batchStatus?.stopping) ? "중지 중..." : "긴급 정지"}
                   </button>
                 )}
               </div>
