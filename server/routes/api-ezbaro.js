@@ -2,11 +2,14 @@
  * REST API: 이지바로 전용
  *
  * POST /api/ezbaro/upload        — 과제리스트 엑셀 업로드 + 파싱 (파일 저장)
+ * GET  /api/ezbaro/state         — 저장된 상태 복원 (페이지 진입 시)
  * GET  /api/ezbaro/tasks         — 업로드된 기관 목록 (담당자 필터)
  * GET  /api/ezbaro/tasks/:seq    — 기관 상세
  * POST /api/ezbaro/batch-start   — 배치 실행 시작
  * POST /api/ezbaro/batch-stop    — 배치 실행 중단
  * GET  /api/ezbaro/batch-status  — 배치 진행 상태
+ * POST /api/ezbaro/save-filter   — 필터 상태 저장
+ * POST /api/ezbaro/reset         — 데이터 초기화
  */
 
 const { Router } = require('express');
@@ -33,6 +36,7 @@ const BATCH_DATA_PATH = path.join(__dirname, '..', '..', 'projects', 'ezbaro-bat
 // 메모리 캐시 + 파일 영속성
 let parsedData = null;
 let uploadedFileName = null;
+let savedFilter = { 담당자: '', status: '', sortMode: 'unchecked' };
 
 // 서버 시작 시 기존 파일에서 복원
 function loadSavedData() {
@@ -41,6 +45,7 @@ function loadSavedData() {
       const saved = JSON.parse(fs.readFileSync(BATCH_DATA_PATH, 'utf8'));
       parsedData = saved.tasks;
       uploadedFileName = saved.fileName;
+      if (saved.filter) savedFilter = saved.filter;
       console.log(`[ezbaro] 저장된 데이터 복원: ${uploadedFileName} (${parsedData.length}건)`);
     }
   } catch (err) {
@@ -55,6 +60,7 @@ function saveData() {
     fs.writeFileSync(BATCH_DATA_PATH, JSON.stringify({
       fileName: uploadedFileName,
       tasks: parsedData,
+      filter: savedFilter,
       savedAt: new Date().toISOString(),
     }, null, 2));
   } catch (err) {
@@ -172,7 +178,7 @@ function createEzbaroRoutes(robotManager, batchRunner) {
       }
 
       parsedData = rows;
-      uploadedFileName = req.file.originalname;
+      uploadedFileName = Buffer.from(req.file.originalname, 'latin1').toString('utf8');
 
       // 파일 저장 (재시작 후에도 유지)
       saveData();
@@ -207,6 +213,58 @@ function createEzbaroRoutes(robotManager, batchRunner) {
       // 업로드 임시파일 삭제
       try { fs.unlinkSync(req.file.path); } catch {}
     }
+  });
+
+  // 저장 상태 복원 (페이지 진입 시)
+  router.get('/state', (req, res) => {
+    if (!parsedData) {
+      return res.json({ hasData: false });
+    }
+
+    const 담당자Map = {};
+    for (const r of parsedData) {
+      if (!담당자Map[r.담당자]) 담당자Map[r.담당자] = 0;
+      담당자Map[r.담당자]++;
+    }
+    const 담당자목록 = Object.entries(담당자Map)
+      .filter(([name]) => name.trim())
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+
+    const 상태Map = {};
+    for (const r of parsedData) {
+      상태Map[r.정산진행상태] = (상태Map[r.정산진행상태] || 0) + 1;
+    }
+
+    res.json({
+      hasData: true,
+      fileName: uploadedFileName,
+      totalRows: parsedData.length,
+      담당자목록,
+      상태요약: 상태Map,
+      filter: savedFilter,
+    });
+  });
+
+  // 필터 상태 저장
+  router.post('/save-filter', (req, res) => {
+    const { 담당자, status, sortMode } = req.body || {};
+    savedFilter = { 담당자: 담당자 || '', status: status || '', sortMode: sortMode || 'unchecked' };
+    saveData();
+    res.json({ ok: true });
+  });
+
+  // 데이터 초기화
+  router.post('/reset', (req, res) => {
+    parsedData = null;
+    uploadedFileName = null;
+    savedFilter = { 담당자: '', status: '', sortMode: 'unchecked' };
+    try {
+      if (fs.existsSync(BATCH_DATA_PATH)) fs.unlinkSync(BATCH_DATA_PATH);
+    } catch (err) {
+      console.error('[ezbaro] 초기화 파일 삭제 실패:', err.message);
+    }
+    res.json({ ok: true, message: '데이터 초기화됨' });
   });
 
   // 기관 목록 (담당자 필터)

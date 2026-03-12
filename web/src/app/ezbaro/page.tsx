@@ -108,6 +108,54 @@ export default function EzbaroPage() {
   const [batchStopping, setBatchStopping] = useState(false);
   const prevRunning = useRef(false);
 
+  // 출격 모달
+  const [launchModal, setLaunchModal] = useState<{ type: "batch" | "single"; task?: Task } | null>(null);
+  const [browserLaunching, setBrowserLaunching] = useState(false);
+  const [browserReady, setBrowserReady] = useState(false);
+
+  // 상태 복원 (페이지 진입 시)
+  const [restoring, setRestoring] = useState(true);
+
+  // 페이지 진입 시 서버에서 상태 복원
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/ezbaro/state`);
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data.hasData) return;
+
+        setUploadResult({
+          fileName: data.fileName,
+          totalRows: data.totalRows,
+          담당자목록: data.담당자목록,
+          상태요약: data.상태요약,
+        });
+
+        if (data.filter?.담당자) {
+          set담당자(data.filter.담당자);
+          setStatus(data.filter.status || "");
+          setSortMode(data.filter.sortMode || "unchecked");
+
+          // 자동 조회
+          const params = new URLSearchParams();
+          params.set("담당자", data.filter.담당자);
+          if (data.filter.status) params.set("status", data.filter.status);
+          params.set("sort", data.filter.sortMode || "unchecked");
+          const tasksRes = await fetch(`${API_URL}/api/ezbaro/tasks?${params}`);
+          if (tasksRes.ok) {
+            const tasksJson: TasksResponse = await tasksRes.json();
+            if (isMounted.current) setTasksData(tasksJson);
+          }
+        }
+      } catch (e) {
+        console.error("State restore error:", e);
+      } finally {
+        if (isMounted.current) setRestoring(false);
+      }
+    })();
+  }, []);
+
   const fetchBatchStatus = useCallback(async () => {
     try {
       const res = await fetch(`${API_URL}/api/ezbaro/batch-status`);
@@ -185,6 +233,13 @@ export default function EzbaroPage() {
       }
       const data: TasksResponse = await res.json();
       setTasksData(data);
+
+      // 필터 상태 서버에 저장 (복원용)
+      fetch(`${API_URL}/api/ezbaro/save-filter`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 담당자: 담당자.trim(), status, sortMode }),
+      }).catch(() => {});
     } catch (e: any) {
       alert("조회 오류: " + e.message);
     } finally {
@@ -192,9 +247,59 @@ export default function EzbaroPage() {
     }
   }, [담당자, status, sortMode]);
 
+  // Chrome 상태 확인 + 자동 실행
+  const ensureBrowser = useCallback(async (): Promise<boolean> => {
+    setBrowserLaunching(true);
+    setBrowserReady(false);
+    try {
+      // 1. 현재 상태 확인
+      const statusRes = await fetch(`${API_URL}/api/browser/status`);
+      const statusData = await statusRes.json();
+      if (statusData.status?.["9446"] === "open") {
+        setBrowserReady(true);
+        return true;
+      }
+
+      // 2. Chrome 자동 실행
+      await fetch(`${API_URL}/api/browser/launch`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ port: 9446 }),
+      });
+
+      // 3. 3초 대기 후 재확인
+      await new Promise(r => setTimeout(r, 3000));
+      const recheck = await fetch(`${API_URL}/api/browser/status`);
+      const recheckData = await recheck.json();
+      if (recheckData.status?.["9446"] === "open") {
+        setBrowserReady(true);
+        return true;
+      }
+
+      // 4. 한번 더 대기 (5초)
+      await new Promise(r => setTimeout(r, 5000));
+      const finalCheck = await fetch(`${API_URL}/api/browser/status`);
+      const finalData = await finalCheck.json();
+      setBrowserReady(finalData.status?.["9446"] === "open");
+      return finalData.status?.["9446"] === "open";
+    } catch (e) {
+      console.error("Browser launch error:", e);
+      return false;
+    } finally {
+      setBrowserLaunching(false);
+    }
+  }, []);
+
+  // 전체 출격 → Chrome 확인 + 로그인 모달
   const handleBatchStart = async () => {
     if (!tasksData || tasksData.tasks.length === 0) return;
-    if (!confirm(`${tasksData.tasks.length}개 과제를 순서대로 실행하시겠습니까?`)) return;
+    setLaunchModal({ type: "batch" });
+    await ensureBrowser();
+  };
+
+  // 모달에서 "로그인 완료, 시작" 클릭
+  const confirmBatchStart = async () => {
+    setLaunchModal(null);
     setBatchStarting(true);
     try {
       const res = await fetch(`${API_URL}/api/ezbaro/batch-start`, {
@@ -227,13 +332,46 @@ export default function EzbaroPage() {
     }
   };
 
-  const handleLaunch = (task: Task) => {
-    const params = new URLSearchParams({
-      system: "ezbaro",
-      institution: task.연구수행기관,
-      task: task.과제번호,
-    });
-    router.push(`/launch?${params}`);
+  // 개별 출격 → Chrome 확인 + 로그인 모달
+  const handleLaunch = async (task: Task) => {
+    setLaunchModal({ type: "single", task });
+    await ensureBrowser();
+  };
+
+  // 개별 출격 확정
+  const confirmSingleLaunch = async (task: Task) => {
+    setLaunchModal(null);
+    try {
+      const res = await fetch(`${API_URL}/api/robots/start`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          system: "ezbaro",
+          institution: task.연구수행기관,
+          task: task.과제번호,
+          options: { port: 9446 },
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) alert(data.error || "출격 실패");
+    } catch (e: any) {
+      alert("출격 오류: " + e.message);
+    }
+  };
+
+  // 초기화
+  const handleReset = async () => {
+    if (!confirm("업로드된 데이터를 초기화하시겠습니까?\n(새 엑셀을 올릴 때 사용)")) return;
+    try {
+      await fetch(`${API_URL}/api/ezbaro/reset`, { method: "POST" });
+      setUploadResult(null);
+      setTasksData(null);
+      set담당자("");
+      setStatus("");
+      setSortMode("unchecked");
+    } catch (e: any) {
+      alert("초기화 오류: " + e.message);
+    }
   };
 
   const fmt = (n: number) => n.toLocaleString("ko-KR");
@@ -259,8 +397,30 @@ export default function EzbaroPage() {
           <h1 className="text-2xl font-bold tracking-tight">이지바로 과제 관리</h1>
         </header>
 
+        {/* Loading */}
+        {restoring && (
+          <div className="flex items-center justify-center py-12 text-slate-400 gap-3">
+            <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+            </svg>
+            상태 복원 중...
+          </div>
+        )}
+
         {/* Step 1: Upload */}
-        <section className="bg-slate-900 rounded-xl border border-slate-800 p-6 flex flex-col gap-6">
+        {!restoring && <section className="bg-slate-900 rounded-xl border border-slate-800 p-6 flex flex-col gap-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-bold">엑셀 업로드</h2>
+            {uploadResult && (
+              <button
+                onClick={handleReset}
+                className="text-xs text-red-400 hover:text-red-300 border border-red-500/30 hover:border-red-500/50 px-3 py-1.5 rounded-lg transition-colors"
+              >
+                데이터 초기화
+              </button>
+            )}
+          </div>
           <div
             onDragOver={(e) => e.preventDefault()}
             onDrop={handleDrop}
@@ -308,7 +468,7 @@ export default function EzbaroPage() {
               </div>
             </div>
           )}
-        </section>
+        </section>}
 
         {/* Step 2: 담당자 + 정렬 기준 → 조회 */}
         {uploadResult && (
@@ -331,7 +491,7 @@ export default function EzbaroPage() {
                 {/* 담당자 바로선택 칩 */}
                 {uploadResult.담당자목록.length > 0 && (
                   <div className="flex flex-wrap gap-1.5 mt-1">
-                    {uploadResult.담당자목록.filter((d) => d.name.trim()).slice(0, 10).map((d) => (
+                    {uploadResult.담당자목록.filter((d) => d.name.trim()).map((d) => (
                       <button
                         key={d.name}
                         onClick={() => set담당자(d.name)}
@@ -508,6 +668,78 @@ export default function EzbaroPage() {
         {tasksData && tasksData.tasks.length === 0 && (
           <div className="h-40 flex items-center justify-center border-2 border-dashed border-slate-800 rounded-xl">
             <p className="text-slate-500">해당 담당자의 과제가 없습니다.</p>
+          </div>
+        )}
+
+        {/* 로그인 확인 모달 */}
+        {launchModal && (
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-md w-full shadow-2xl flex flex-col gap-6">
+              <h3 className="text-xl font-bold text-center">
+                {launchModal.type === "batch" ? "전체 출격 준비" : "출격 준비"}
+              </h3>
+
+              {browserLaunching ? (
+                <div className="flex flex-col items-center gap-3 py-4">
+                  <svg className="w-8 h-8 animate-spin text-blue-500" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                  </svg>
+                  <p className="text-sm text-slate-300">Chrome 브라우저를 실행하고 있습니다...</p>
+                </div>
+              ) : browserReady ? (
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-3 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg">
+                    <span className="w-3 h-3 rounded-full bg-emerald-500" />
+                    <span className="text-sm text-emerald-400 font-semibold">Chrome 브라우저 준비 완료</span>
+                  </div>
+                  <div className="p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
+                    <p className="text-sm text-yellow-300 font-bold mb-1">이지바로에 로그인되어 있는지 확인하세요</p>
+                    <p className="text-xs text-slate-400">
+                      Chrome에서 이지바로 사이트에 접속하여 로그인한 뒤 아래 버튼을 눌러주세요.
+                    </p>
+                  </div>
+                  {launchModal.type === "single" && launchModal.task && (
+                    <div className="text-sm text-slate-400">
+                      대상: <span className="font-bold text-white">{launchModal.task.연구수행기관}</span>
+                      <span className="text-slate-600 mx-1">|</span>
+                      <span className="font-mono">{launchModal.task.과제번호}</span>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="flex flex-col items-center gap-3 py-4">
+                  <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center">
+                    <span className="text-red-400 text-xl">!</span>
+                  </div>
+                  <p className="text-sm text-red-400">Chrome 브라우저를 실행할 수 없습니다.</p>
+                  <p className="text-xs text-slate-500">회사 PC의 Chrome이 실행 중인지 확인해주세요.</p>
+                </div>
+              )}
+
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setLaunchModal(null)}
+                  className="flex-1 px-4 py-2.5 rounded-lg border border-slate-700 text-sm font-semibold text-slate-300 hover:bg-slate-800 transition-colors"
+                >
+                  취소
+                </button>
+                {browserReady && (
+                  <button
+                    onClick={() => {
+                      if (launchModal.type === "batch") {
+                        confirmBatchStart();
+                      } else if (launchModal.task) {
+                        confirmSingleLaunch(launchModal.task);
+                      }
+                    }}
+                    className="flex-1 px-4 py-2.5 rounded-lg bg-amber-500 text-white text-sm font-bold hover:bg-amber-600 transition-colors shadow-sm"
+                  >
+                    로그인 완료, 시작
+                  </button>
+                )}
+              </div>
+            </div>
           </div>
         )}
 
