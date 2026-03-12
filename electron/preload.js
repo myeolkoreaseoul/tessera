@@ -15,11 +15,19 @@ contextBridge.exposeInMainWorld('tessera', {
   /** 시스템별 브라우저 닫기 @param {number} port */
   closeBrowser: (port) => ipcRenderer.invoke('browser:close', port),
 
-  /** 업데이트 확인 */
+  /** 업데이트 확인 (트리거) */
   checkForUpdate: () => ipcRenderer.invoke('updater:check'),
 
-  /** 업데이트 상태 조회 (폴링용) */
+  /** 업데이트 상태 조회 */
   getUpdateStatus: () => ipcRenderer.invoke('updater:status'),
+
+  /** 업데이트 상태 변경 이벤트 수신 (실시간 push) */
+  onUpdateState: (callback) => {
+    const handler = (_event, state) => callback(state);
+    ipcRenderer.on('updater:state', handler);
+    // cleanup 함수 반환
+    return () => ipcRenderer.removeListener('updater:state', handler);
+  },
 
   /** 다운로드된 업데이트 설치 + 재시작 */
   installUpdate: () => ipcRenderer.invoke('updater:install'),

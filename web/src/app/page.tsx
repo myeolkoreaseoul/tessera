@@ -41,6 +41,17 @@ export default function Dashboard() {
   }>({ checking: false, available: false, downloaded: false, version: null, error: null });
   const [updateChecking, setUpdateChecking] = useState(false);
 
+  // Electron에서 실시간 업데이트 상태 수신
+  useEffect(() => {
+    const w = window as any;
+    if (w.tessera?.onUpdateState) {
+      const cleanup = w.tessera.onUpdateState((state: any) => {
+        if (state) setUpdateState(state);
+      });
+      return cleanup;
+    }
+  }, []);
+
   const fetchBrowserStatus = () => {
     fetch(`${API_URL}/api/browser/status`)
       .then(res => res.json())
@@ -116,24 +127,10 @@ export default function Dashboard() {
     }
     setUpdateChecking(true);
     try {
-      // checkForUpdate는 내부에서 3초 대기 후 응답
+      // checkForUpdates() 트리거 — 상태는 onUpdateState 이벤트로 실시간 수신
       const result = await w.tessera.checkForUpdate();
       if (result?.state) setUpdateState(result.state);
-
-      // 다운로드 진행 중일 수 있으므로 5초 간격으로 상태 폴링
-      if (result?.state?.available && !result?.state?.downloaded) {
-        const poll = setInterval(async () => {
-          const status = await w.tessera?.getUpdateStatus?.();
-          if (status?.state) {
-            setUpdateState(status.state);
-            if (status.state.downloaded || status.state.error) {
-              clearInterval(poll);
-            }
-          }
-        }, 5000);
-        // 최대 5분 폴링
-        setTimeout(() => clearInterval(poll), 300000);
-      }
+      if (result?.error) alert("업데이트 확인 실패: " + result.error);
     } catch {
       alert("업데이트 확인 실패");
     } finally {

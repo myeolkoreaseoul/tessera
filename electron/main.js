@@ -21,8 +21,115 @@ let mainWindow = null;
 let serverModule = null;
 let isQuitting = false;
 
+// ─── 업데이트 상태 (전역) ───
+let updateState = {
+  available: false,
+  downloaded: false,
+  version: null,
+  error: null,
+  checking: false,
+};
+
+/** renderer로 업데이트 상태 push */
+function sendUpdateState() {
+  if (mainWindow && !mainWindow.isDestroyed()) {
+    mainWindow.webContents.send('updater:state', updateState);
+  }
+}
+
+// ─── autoUpdater 이벤트 리스너 (앱 시작 시 1회 등록, checkForUpdates 호출 전에) ───
+if (app.isPackaged) {
+  autoUpdater.autoDownload = true;
+  autoUpdater.autoInstallOnAppQuit = false;
+
+  autoUpdater.on('checking-for-update', () => {
+    updateState = { ...updateState, checking: true, error: null };
+    sendUpdateState();
+  });
+
+  autoUpdater.on('update-available', (info) => {
+    console.log('[updater] 새 버전 발견:', info.version);
+    updateState = { ...updateState, available: true, checking: false, version: info.version };
+    sendUpdateState();
+  });
+
+  autoUpdater.on('update-not-available', () => {
+    updateState = { ...updateState, available: false, checking: false };
+    sendUpdateState();
+  });
+
+  autoUpdater.on('update-downloaded', (info) => {
+    console.log('[updater] 다운로드 완료:', info.version);
+    updateState = { ...updateState, downloaded: true, version: info.version };
+    sendUpdateState();
+
+    // 다이얼로그도 표시 (앱 시작 시 자동 체크에 의한 다운로드)
+    if (!isQuitting && mainWindow) {
+      dialog.showMessageBox(mainWindow, {
+        type: 'info',
+        title: 'Tessera 업데이트',
+        message: `새 버전 (v${info.version})이 다운로드되었습니다.`,
+        detail: '지금 재시작하면 업데이트가 적용됩니다.\n배치 작업 중이라면 완료 후 재시작하세요.',
+        buttons: ['지금 재시작', '나중에'],
+        defaultId: 1,
+      }).then(async ({ response }) => {
+        if (response === 0 && !isQuitting) {
+          await cleanupAndInstall();
+        }
+      });
+    }
+  });
+
+  autoUpdater.on('error', (err) => {
+    console.error('[updater] 업데이트 오류:', err.message);
+    updateState = { ...updateState, checking: false, error: err.message };
+    sendUpdateState();
+  });
+}
+
+async function cleanupAndInstall() {
+  isQuitting = true;
+  try {
+    const browserProvider = require('../lib/browser-provider');
+    await browserProvider.closeAll();
+  } catch { /* 무시 */ }
+  try {
+    if (serverModule && serverModule.server) serverModule.server.close();
+  } catch { /* 무시 */ }
+  autoUpdater.quitAndInstall(false, true);
+}
+
+// ─── IPC 핸들러 (항상 등록 — 개발 모드에서도 에러 없이 응답) ───
+
+ipcMain.handle('updater:check', async () => {
+  if (!app.isPackaged) {
+    return { ok: false, error: '개발 모드에서는 업데이트 불가', state: updateState };
+  }
+  try {
+    await autoUpdater.checkForUpdates();
+    // 이벤트 리스너가 updateState를 업데이트함 — 즉시 현재 상태 반환
+    return { ok: true, state: updateState };
+  } catch (err) {
+    return { ok: false, error: err.message, state: updateState };
+  }
+});
+
+ipcMain.handle('updater:status', async () => {
+  return { ok: true, state: updateState };
+});
+
+ipcMain.handle('updater:install', async () => {
+  if (!updateState.downloaded) {
+    return { ok: false, error: '다운로드된 업데이트 없음' };
+  }
+  await cleanupAndInstall();
+  return { ok: true };
+});
+
+// ─── 앱 시작 ───
+
 app.whenReady().then(async () => {
-  // Express 서버 시작 (require하면 자동으로 listen 실행)
+  // Express 서버 시작
   try {
     serverModule = require('../server/index.js');
   } catch (err) {
@@ -34,7 +141,7 @@ app.whenReady().then(async () => {
     return;
   }
 
-  // 서버가 실제로 listen할 때까지 대기 (포트 충돌 감지 포함)
+  // 서버가 실제로 listen할 때까지 대기
   try {
     await new Promise((resolve, reject) => {
       const { server } = serverModule;
@@ -67,7 +174,7 @@ app.whenReady().then(async () => {
     },
   });
 
-  // 외부 페이지 탐색 차단 (preload API 보안)
+  // 외부 페이지 탐색 차단
   mainWindow.webContents.on('will-navigate', (event, url) => {
     if (!url.startsWith(`http://localhost:${PORT}`)) {
       event.preventDefault();
@@ -81,74 +188,11 @@ app.whenReady().then(async () => {
     mainWindow = null;
   });
 
-  // 자동 업데이트 체크 (패키지된 앱에서만)
+  // 앱 시작 시 자동 업데이트 체크 (이벤트 리스너는 이미 위에서 등록됨)
   if (app.isPackaged) {
-    autoUpdater.autoDownload = true;
-    autoUpdater.autoInstallOnAppQuit = false; // 사용자가 "지금 재시작"을 선택할 때만 설치
-
-    autoUpdater.on('update-available', (info) => {
-      console.log('[updater] 새 버전 발견:', info.version);
-    });
-
-    autoUpdater.on('update-downloaded', (info) => {
-      if (isQuitting || !mainWindow) return;
-      dialog.showMessageBox(mainWindow, {
-        type: 'info',
-        title: 'Tessera 업데이트',
-        message: `새 버전 (v${info.version})이 다운로드되었습니다.`,
-        detail: '지금 재시작하면 업데이트가 적용됩니다.\n배치 작업 중이라면 완료 후 재시작하세요.',
-        buttons: ['지금 재시작', '나중에'],
-        defaultId: 1,
-      }).then(async ({ response }) => {
-        if (response === 0 && !isQuitting) {
-          // cleanup 후 설치
-          isQuitting = true;
-          try {
-            const browserProvider = require('../lib/browser-provider');
-            await browserProvider.closeAll();
-          } catch { /* 무시 */ }
-          try {
-            if (serverModule && serverModule.server) serverModule.server.close();
-          } catch { /* 무시 */ }
-          autoUpdater.quitAndInstall(false, true);
-        }
-      });
-    });
-
-    autoUpdater.on('error', (err) => {
-      console.error('[updater] 업데이트 오류:', err.message);
-    });
-
     autoUpdater.checkForUpdates();
   }
-
-  // IPC: 업데이트 상태를 서버 API로도 노출 (프론트엔드에서 fetch로 접근)
-  setupUpdateApi();
 });
-
-// 업데이트 상태 추적
-let updateState = { available: false, downloaded: false, version: null, error: null, checking: false };
-
-function setupUpdateApi() {
-  if (!app.isPackaged) return;
-
-  autoUpdater.on('checking-for-update', () => {
-    updateState.checking = true;
-    updateState.error = null;
-  });
-  autoUpdater.on('update-available', (info) => {
-    updateState = { ...updateState, available: true, checking: false, version: info.version };
-  });
-  autoUpdater.on('update-not-available', () => {
-    updateState = { ...updateState, available: false, checking: false };
-  });
-  autoUpdater.on('update-downloaded', (info) => {
-    updateState = { ...updateState, downloaded: true, version: info.version };
-  });
-  autoUpdater.on('error', (err) => {
-    updateState = { ...updateState, checking: false, error: err.message };
-  });
-}
 
 /** port allowlist 검증 */
 function validatePort(port) {
@@ -157,53 +201,6 @@ function validatePort(port) {
   }
   return Number(port);
 }
-
-// IPC 핸들러: 업데이트 확인
-ipcMain.handle('updater:check', async () => {
-  if (!app.isPackaged) return { ok: false, error: '개발 모드에서는 업데이트 불가' };
-  try {
-    updateState.checking = true;
-    updateState.error = null;
-    const result = await autoUpdater.checkForUpdates();
-    // checkForUpdates()의 반환값에서 직접 버전 확인
-    if (result && result.updateInfo) {
-      const currentVersion = app.getVersion();
-      const newVersion = result.updateInfo.version;
-      if (newVersion !== currentVersion) {
-        updateState.available = true;
-        updateState.version = newVersion;
-      }
-    }
-    // 이벤트 처리 시간 확보
-    await new Promise(r => setTimeout(r, 3000));
-    updateState.checking = false;
-    return { ok: true, state: updateState };
-  } catch (err) {
-    updateState.checking = false;
-    updateState.error = err.message;
-    return { ok: false, error: err.message, state: updateState };
-  }
-});
-
-// IPC 핸들러: 업데이트 설치 + 재시작
-ipcMain.handle('updater:install', async () => {
-  if (!updateState.downloaded) return { ok: false, error: '다운로드된 업데이트 없음' };
-  isQuitting = true;
-  try {
-    const browserProvider = require('../lib/browser-provider');
-    await browserProvider.closeAll();
-  } catch { /* 무시 */ }
-  try {
-    if (serverModule && serverModule.server) serverModule.server.close();
-  } catch { /* 무시 */ }
-  autoUpdater.quitAndInstall(false, true);
-  return { ok: true };
-});
-
-// IPC 핸들러: 업데이트 상태 조회
-ipcMain.handle('updater:status', async () => {
-  return { ok: true, state: updateState };
-});
 
 // IPC 핸들러: 브라우저 열기
 ipcMain.handle('browser:launch', async (_event, port) => {
@@ -241,7 +238,7 @@ ipcMain.handle('browser:close', async (_event, port) => {
 
 // 앱 종료 시 정리 (브라우저 + HTTP 서버)
 app.on('before-quit', async () => {
-  if (isQuitting) return; // quitAndInstall에서 이미 cleanup 완료
+  if (isQuitting) return;
   isQuitting = true;
 
   try {
