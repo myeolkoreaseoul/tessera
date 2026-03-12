@@ -94,28 +94,57 @@ const COL = {
 };
 
 function parseRow(row) {
+  if (!row || row.length === 0) return null;
+  const getVal = (idx) => (row[idx] === undefined || row[idx] === null ? '' : row[idx]).toString().trim();
+  const getNum = (idx) => Number(row[idx]) || 0;
+
   return {
     순번: row[COL.순번],
-    전문기관: (row[COL.전문기관] || '').toString().trim(),
+    전문기관: getVal(COL.전문기관),
     사업년도: row[COL.사업년도],
-    과제번호: (row[COL.과제번호] || '').toString().trim(),
-    과제명: (row[COL.과제명] || '').toString().trim().replace(/\r?\n/g, ' '),
-    연구수행기관: (row[COL.연구수행기관] || '').toString().trim(),
-    기관고유번호: (row[COL.기관고유번호] || '').toString().trim(),
-    기관형태: (row[COL.기관형태] || '').toString().trim(),
-    정산진행상태: (row[COL.정산진행상태] || '').toString().trim(),
-    집행건수: Number(row[COL.집행건수]) || 0,
-    미확정: Number(row[COL.미확정]) || 0,
-    보완완료: Number(row[COL.보완완료]) || 0,
-    보완요청: Number(row[COL.보완요청]) || 0,
+    과제번호: getVal(COL.과제번호),
+    과제명: getVal(COL.과제명).replace(/\r?\n/g, ' '),
+    연구수행기관: getVal(COL.연구수행기관),
+    기관고유번호: getVal(COL.기관고유번호),
+    기관형태: getVal(COL.기관형태),
+    정산진행상태: getVal(COL.정산진행상태),
+    집행건수: getNum(COL.집행건수),
+    미확정: getNum(COL.미확정),
+    보완완료: getNum(COL.보완완료),
+    보완요청: getNum(COL.보완요청),
     이행률: row[COL.이행률],
-    총예산: Number(row[COL.총예산]) || 0,
-    집행금액: Number(row[COL.집행금액]) || 0,
-    회계사: (row[COL.회계사] || '').toString().trim(),
-    담당자: (row[COL.담당자] || '').toString().trim(),
+    총예산: getNum(COL.총예산),
+    집행금액: getNum(COL.집행금액),
+    회계사: getVal(COL.회계사),
+    담당자: getVal(COL.담당자),
     점검날짜: row[COL.점검날짜] || null,
-    특이사항: (row[COL.특이사항] || '').toString().trim(),
+    특이사항: getVal(COL.특이사항),
   };
+}
+
+/**
+ * 필터 및 정렬 로직 (일관성 유지)
+ */
+function getFilteredTasks(data, { 담당자, status, sort }) {
+  let filtered = data;
+
+  if (담당자) {
+    filtered = filtered.filter(r => r.담당자 === 담당자);
+  }
+  if (status) {
+    filtered = filtered.filter(r => r.정산진행상태 === status);
+  }
+
+  // 정렬: 미확정 많은 순(기본) / 보완완료 많은 순
+  if (sort === 'supplement') {
+    filtered = [...filtered].sort((a, b) => b.보완완료 - a.보완완료 || b.미확정 - a.미확정);
+  } else {
+    // 기본: 미확정 많은 순
+    filtered = [...filtered].sort((a, b) => b.미확정 - a.미확정 || b.집행건수 - a.집행건수);
+  }
+
+  // 작업 순번 부여 (1부터)
+  return filtered.map((task, i) => ({ ...task, 작업순번: i + 1 }));
 }
 
 function createEzbaroRoutes(robotManager, batchRunner) {
@@ -138,7 +167,8 @@ function createEzbaroRoutes(robotManager, batchRunner) {
       const rows = [];
       for (let i = 1; i < raw.length; i++) {
         if (!raw[i][0]) continue; // 빈 행 스킵
-        rows.push(parseRow(raw[i]));
+        const parsed = parseRow(raw[i]);
+        if (parsed) rows.push(parsed);
       }
 
       parsedData = rows;
@@ -154,6 +184,7 @@ function createEzbaroRoutes(robotManager, batchRunner) {
         담당자Map[r.담당자]++;
       }
       const 담당자목록 = Object.entries(담당자Map)
+        .filter(([name]) => name.trim())
         .map(([name, count]) => ({ name, count }))
         .sort((a, b) => b.count - a.count);
 
@@ -170,6 +201,7 @@ function createEzbaroRoutes(robotManager, batchRunner) {
         상태요약: 상태Map,
       });
     } catch (err) {
+      console.error('[ezbaro] 업로드 파싱 에러:', err);
       res.status(500).json({ error: '엑셀 파싱 실패: ' + err.message });
     } finally {
       // 업로드 임시파일 삭제
@@ -184,21 +216,7 @@ function createEzbaroRoutes(robotManager, batchRunner) {
     }
 
     const { 담당자, status, sort } = req.query;
-    let filtered = parsedData;
-
-    if (담당자) {
-      filtered = filtered.filter(r => r.담당자 === 담당자);
-    }
-    if (status) {
-      filtered = filtered.filter(r => r.정산진행상태 === status);
-    }
-
-    // 기본 정렬: 순번
-    if (sort === 'unchecked') {
-      filtered = [...filtered].sort((a, b) => b.미확정 - a.미확정);
-    } else {
-      filtered = [...filtered].sort((a, b) => a.순번 - b.순번);
-    }
+    const filtered = getFilteredTasks(parsedData, { 담당자, status, sort });
 
     // 요약 통계
     const summary = {
@@ -239,16 +257,10 @@ function createEzbaroRoutes(robotManager, batchRunner) {
       return res.status(404).json({ error: '엑셀이 업로드되지 않았습니다' });
     }
 
-    const { 담당자, status, project, host, staff } = req.body || {};
+    const { 담당자, status, sort, project, host, staff } = req.body || {};
 
-    // 필터 적용
-    let targets = parsedData;
-    if (담당자) {
-      targets = targets.filter(r => r.담당자 === 담당자);
-    }
-    if (status) {
-      targets = targets.filter(r => r.정산진행상태 === status);
-    }
+    // 동일한 필터/정렬 기준 적용
+    const targets = getFilteredTasks(parsedData, { 담당자, status, sort });
 
     if (targets.length === 0) {
       return res.status(400).json({ error: '필터 조건에 맞는 과제가 없습니다' });
@@ -256,7 +268,7 @@ function createEzbaroRoutes(robotManager, batchRunner) {
 
     try {
       batchRunner.startBatch(robotManager, targets, {
-        project,
+        project: project || 'ezbaro', // 기본값 부여
         host,
         staff,
         port: 9446,

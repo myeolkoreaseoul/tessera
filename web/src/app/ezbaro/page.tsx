@@ -13,6 +13,7 @@ interface UploadResult {
 }
 
 interface Task {
+  작업순번: number;
   순번: number;
   전문기관: string;
   과제번호: string;
@@ -87,54 +88,41 @@ export default function EzbaroPage() {
 
   useEffect(() => {
     isMounted.current = true;
-    return () => {
-      isMounted.current = false;
-    };
+    return () => { isMounted.current = false; };
   }, []);
 
   // Upload state
   const [uploading, setUploading] = useState(false);
   const [uploadResult, setUploadResult] = useState<UploadResult | null>(null);
 
-  // Filter state
+  // Filter state — 담당자 필수
   const [담당자, set담당자] = useState("");
-  const [statusFilter, setStatusFilter] = useState("");
+  const [status, setStatus] = useState("");
+  const [sortMode, setSortMode] = useState<"unchecked" | "supplement">("unchecked");
   const [tasksData, setTasksData] = useState<TasksResponse | null>(null);
   const [loading, setLoading] = useState(false);
 
   // Batch state
   const [batchStatus, setBatchStatus] = useState<BatchStatus | null>(null);
 
-  // Sort state
-  const [sortCol, setSortCol] = useState<string | null>(null);
-  const [sortAsc, setSortAsc] = useState(true);
-
   const fetchBatchStatus = useCallback(async () => {
     try {
       const res = await fetch(`${API_URL}/api/ezbaro/batch-status`);
       if (res.ok) {
         const data: BatchStatus = await res.json();
-        if (isMounted.current) {
-          setBatchStatus(data);
-        }
+        if (isMounted.current) setBatchStatus(data);
       }
     } catch (e) {
       console.error("Batch status fetch error:", e);
     }
   }, []);
 
-  // Poll batch status
-  useEffect(() => {
-    fetchBatchStatus();
-  }, [fetchBatchStatus]);
+  useEffect(() => { fetchBatchStatus(); }, [fetchBatchStatus]);
 
   useEffect(() => {
-    const isActive = !batchStatus || batchStatus.running || batchStatus.stopping || (batchStatus.tasks && batchStatus.tasks.length > 0);
+    const isActive = !batchStatus || batchStatus.running || batchStatus.stopping;
     if (!isActive) return;
-
-    const timer = setInterval(() => {
-      fetchBatchStatus();
-    }, 3000);
+    const timer = setInterval(fetchBatchStatus, 3000);
     return () => clearInterval(timer);
   }, [fetchBatchStatus, batchStatus]);
 
@@ -152,6 +140,9 @@ export default function EzbaroPage() {
       const data: UploadResult = await res.json();
       setUploadResult(data);
       setTasksData(null);
+      set담당자("");
+      setStatus("");
+      setSortMode("unchecked");
     } catch (e: any) {
       alert("업로드 오류: " + e.message);
     } finally {
@@ -165,12 +156,18 @@ export default function EzbaroPage() {
     if (file) handleUpload(file);
   }, [handleUpload]);
 
+  // 담당자 + 정렬 기준으로 조회 → 순번 확정
   const handleSearch = useCallback(async () => {
+    if (!담당자.trim()) {
+      alert("담당자를 입력해주세요.");
+      return;
+    }
     setLoading(true);
     try {
       const params = new URLSearchParams();
-      if (담당자.trim()) params.set("담당자", 담당자.trim());
-      if (statusFilter) params.set("status", statusFilter);
+      params.set("담당자", 담당자.trim());
+      if (status) params.set("status", status);
+      params.set("sort", sortMode);
       const res = await fetch(`${API_URL}/api/ezbaro/tasks?${params}`);
       if (!res.ok) {
         const err = await res.json().catch(() => ({ error: "조회 실패" }));
@@ -184,18 +181,19 @@ export default function EzbaroPage() {
     } finally {
       setLoading(false);
     }
-  }, [담당자, statusFilter]);
+  }, [담당자, status, sortMode]);
 
   const handleBatchStart = async () => {
-    if (!confirm("현재 필터링된 조건으로 전체 출격하시겠습니까?")) return;
+    if (!tasksData || tasksData.tasks.length === 0) return;
+    if (!confirm(`${tasksData.tasks.length}개 과제를 순서대로 실행하시겠습니까?`)) return;
     try {
       const res = await fetch(`${API_URL}/api/ezbaro/batch-start`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 담당자, status: statusFilter }),
+        body: JSON.stringify({ 담당자: 담당자.trim(), status, sort: sortMode }),
       });
       const data = await res.json();
-      if (!res.ok) alert(data.message || "배치 시작 실패");
+      if (!res.ok) alert(data.error || "배치 시작 실패");
       else fetchBatchStatus();
     } catch (e: any) {
       alert("배치 시작 오류: " + e.message);
@@ -207,34 +205,12 @@ export default function EzbaroPage() {
     try {
       const res = await fetch(`${API_URL}/api/ezbaro/batch-stop`, { method: "POST" });
       const data = await res.json();
-      if (!res.ok) alert(data.message || "배치 중지 실패");
+      if (!res.ok) alert(data.error || "배치 중지 실패");
       else fetchBatchStatus();
     } catch (e: any) {
       alert("배치 중지 오류: " + e.message);
     }
   };
-
-  const handleSort = (col: string) => {
-    if (sortCol === col) {
-      setSortAsc(!sortAsc);
-    } else {
-      setSortCol(col);
-      setSortAsc(true);
-    }
-  };
-
-  const sortedTasks = (() => {
-    if (!tasksData?.tasks) return [];
-    if (!sortCol) return tasksData.tasks;
-    const list = [...tasksData.tasks];
-    list.sort((a: any, b: any) => {
-      const va = a[sortCol] ?? "";
-      const vb = b[sortCol] ?? "";
-      if (typeof va === "number" && typeof vb === "number") return sortAsc ? va - vb : vb - va;
-      return sortAsc ? String(va).localeCompare(String(vb)) : String(vb).localeCompare(String(va));
-    });
-    return list;
-  })();
 
   const handleLaunch = (task: Task) => {
     const params = new URLSearchParams({
@@ -248,7 +224,7 @@ export default function EzbaroPage() {
   const fmt = (n: number) => n.toLocaleString("ko-KR");
 
   const progressPercent = batchStatus && batchStatus.total > 0
-    ? Math.round((batchStatus.done / batchStatus.total) * 100)
+    ? Math.round(((batchStatus.done + batchStatus.errors + batchStatus.skipped) / batchStatus.total) * 100)
     : 0;
 
   return (
@@ -268,7 +244,7 @@ export default function EzbaroPage() {
           <h1 className="text-2xl font-bold tracking-tight">이지바로 과제 관리</h1>
         </header>
 
-        {/* Section 1: Upload */}
+        {/* Step 1: Upload */}
         <section className="bg-slate-900 rounded-xl border border-slate-800 p-6 flex flex-col gap-6">
           <div
             onDragOver={(e) => e.preventDefault()}
@@ -280,8 +256,8 @@ export default function EzbaroPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
             </svg>
             <div className="text-center">
-              <p className="font-bold text-lg mb-1">파일 업로드</p>
-              <p className="text-sm text-slate-400">엑셀 파일을 드래그하거나 클릭하여 업로드하세요 (.xlsx, .xlsb)</p>
+              <p className="font-bold text-lg mb-1">엑셀 업로드</p>
+              <p className="text-sm text-slate-400">상시점검 엑셀 파일을 드래그하거나 클릭 (.xlsx, .xlsb)</p>
             </div>
             {uploading && <p className="text-blue-400 text-sm animate-pulse">업로드 중...</p>}
             <input
@@ -297,7 +273,7 @@ export default function EzbaroPage() {
             />
           </div>
 
-          {/* Upload Result */}
+          {/* Upload Result Summary */}
           {uploadResult && (
             <div className="flex flex-col gap-3">
               <p className="text-sm text-slate-300">
@@ -315,74 +291,139 @@ export default function EzbaroPage() {
                   );
                 })}
               </div>
-              {uploadResult.담당자목록.length > 0 && (
-                <div className="flex flex-wrap gap-1.5 mt-1">
-                  <span className="text-xs text-slate-500 mr-1">담당자:</span>
-                  {uploadResult.담당자목록.map((d) => (
-                    <button
-                      key={d.name}
-                      onClick={() => { set담당자(d.name); }}
-                      className="text-xs px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:border-blue-500 hover:text-blue-400 transition-colors"
-                    >
-                      {d.name} ({d.count})
-                    </button>
-                  ))}
-                </div>
-              )}
             </div>
           )}
         </section>
 
-        {/* Section 2: Filters */}
+        {/* Step 2: 담당자 + 정렬 기준 → 조회 */}
         {uploadResult && (
           <section className="bg-slate-900 rounded-xl border border-slate-800 p-6 flex flex-col gap-5">
-            <div className="flex flex-wrap items-end gap-4">
-              <div className="flex-1 min-w-[240px] max-w-sm">
-                <label className="block text-sm font-semibold mb-2 text-slate-300">담당자</label>
+            <h2 className="text-lg font-bold">작업 설정</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+              {/* 담당자 입력 (필수) */}
+              <div className="flex flex-col gap-2">
+                <label className="block text-sm font-semibold text-slate-300">
+                  담당자 <span className="text-red-400">*</span>
+                </label>
                 <input
                   type="text"
                   value={담당자}
-                  onChange={(e) => set담당자(e.target.value)}
+                  onChange={(e) => { set담당자(e.target.value); setTasksData(null); }}
                   onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                   className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-2.5 text-sm focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder-slate-500 transition-colors"
-                  placeholder="이름 입력..."
+                  placeholder="담당자 이름 입력 (필수)"
                 />
+                {/* 담당자 바로선택 칩 */}
+                {uploadResult.담당자목록.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mt-1">
+                    {uploadResult.담당자목록.filter((d) => d.name.trim()).slice(0, 10).map((d) => (
+                      <button
+                        key={d.name}
+                        onClick={() => { set담당자(d.name); setTasksData(null); }}
+                        className={`text-[10px] px-2 py-0.5 rounded border transition-colors ${
+                          담당자 === d.name
+                            ? "bg-blue-500/20 border-blue-500 text-blue-400"
+                            : "bg-slate-800 border-slate-700 hover:border-blue-500 hover:text-blue-400"
+                        }`}
+                      >
+                        {d.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
-              <div className="flex-1 min-w-[240px] max-w-sm">
-                <label className="block text-sm font-semibold mb-2 text-slate-300">상태</label>
+
+              {/* 정산진행상태 필터 */}
+              <div className="flex flex-col gap-2">
+                <label className="block text-sm font-semibold text-slate-300">정산진행상태</label>
                 <select
-                  value={statusFilter}
-                  onChange={(e) => setStatusFilter(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-2.5 text-sm focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  value={status}
+                  onChange={(e) => { setStatus(e.target.value); setTasksData(null); }}
+                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-2.5 text-sm focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors appearance-none"
                 >
-                  <option value="">전체</option>
-                  <option>점검완료</option>
-                  <option>보완요청</option>
-                  <option>보완완료</option>
-                  <option>점검중</option>
-                  <option>점검전</option>
+                  <option value="">전체 상태</option>
+                  {Object.keys(uploadResult.상태요약).map(s => (
+                    <option key={s} value={s}>{s} ({uploadResult.상태요약[s]})</option>
+                  ))}
                 </select>
+              </div>
+
+              {/* 정렬 기준 */}
+              <div className="flex flex-col gap-2">
+                <label className="block text-sm font-semibold text-slate-300">작업 순서</label>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => { setSortMode("unchecked"); setTasksData(null); }}
+                    className={`px-3 py-2.5 rounded-lg border text-xs font-semibold transition-all ${
+                      sortMode === "unchecked"
+                        ? "bg-blue-500/10 border-blue-500 text-blue-400"
+                        : "bg-slate-950 border-slate-700 text-slate-400 hover:border-slate-500"
+                    }`}
+                  >
+                    미확정 순
+                  </button>
+                  <button
+                    onClick={() => { setSortMode("supplement"); setTasksData(null); }}
+                    className={`px-3 py-2.5 rounded-lg border text-xs font-semibold transition-all ${
+                      sortMode === "supplement"
+                        ? "bg-blue-500/10 border-blue-500 text-blue-400"
+                        : "bg-slate-950 border-slate-700 text-slate-400 hover:border-slate-500"
+                    }`}
+                  >
+                    보완완료 순
+                  </button>
+                </div>
+              </div>
+
+              {/* 조회 버튼 */}
+              <button
+                onClick={handleSearch}
+                disabled={loading || !담당자.trim()}
+                className="bg-blue-500 text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-blue-600 transition-colors shadow-sm disabled:opacity-50 h-[42px]"
+              >
+                {loading ? "조회 중..." : "작업 리스트 확정"}
+              </button>
+            </div>
+          </section>
+        )}
+
+        {/* Step 3: 확정된 작업 리스트 + 배치 실행 */}
+        {tasksData && tasksData.tasks.length > 0 && (
+          <section className="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col">
+            {/* Summary + Actions */}
+            <div className="p-6 border-b border-slate-800 flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <h2 className="text-lg font-bold mb-1">
+                  작업 순서 확정 — {담당자}
+                  <span className="text-sm font-normal text-slate-400 ml-3">
+                    ({sortMode === "unchecked" ? "미확정 많은 순" : "보완완료 많은 순"})
+                  </span>
+                </h2>
+                <p className="text-sm text-slate-400">
+                  총 <span className="font-bold text-white">{fmt(tasksData.summary.total)}건</span>
+                  <span className="mx-2">|</span>
+                  미확정 합계: <span className="font-bold text-red-400">{fmt(tasksData.summary.총미확정)}건</span>
+                  <span className="mx-2">|</span>
+                  점검완료: {tasksData.summary.점검완료}
+                  <span className="mx-2">|</span>
+                  보완요청: <span className="text-red-400">{tasksData.summary.보완요청}</span>
+                  <span className="mx-2">|</span>
+                  미완료: <span className="text-yellow-400">{tasksData.summary.미완료}</span>
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <button
-                  onClick={handleSearch}
-                  disabled={loading}
-                  className="bg-blue-500 text-white px-8 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-600 transition-colors shadow-sm flex items-center gap-2 h-[42px] disabled:opacity-50"
-                >
-                  {loading ? "조회 중..." : "조회"}
-                </button>
-                <button
                   onClick={handleBatchStart}
-                  disabled={batchStatus?.running || batchStatus?.stopping || !tasksData}
-                  className="bg-amber-500 text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-amber-600 transition-colors shadow-sm h-[42px] disabled:opacity-50"
+                  disabled={batchStatus?.running || batchStatus?.stopping}
+                  className="bg-amber-500 text-white px-8 py-2.5 rounded-lg font-bold text-sm hover:bg-amber-600 transition-colors shadow-sm disabled:opacity-50"
                 >
-                  전체 출격
+                  전체 출격 ({tasksData.summary.total}건)
                 </button>
                 {(batchStatus?.running || batchStatus?.stopping) && (
                   <button
                     onClick={handleBatchStop}
                     disabled={batchStatus?.stopping}
-                    className="bg-red-500 text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-red-600 transition-colors shadow-sm h-[42px] disabled:opacity-50"
+                    className="bg-red-500 text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-red-600 transition-colors shadow-sm disabled:opacity-50"
                   >
                     {batchStatus?.stopping ? "중지 중..." : "긴급 정지"}
                   </button>
@@ -390,23 +431,69 @@ export default function EzbaroPage() {
               </div>
             </div>
 
-            {/* Summary */}
-            {tasksData && (
-              <div className="pt-4 border-t border-slate-800 flex items-center gap-2">
-                <p className="text-sm font-medium text-slate-300">
-                  <span className="font-bold text-white">총 {fmt(tasksData.summary.total)}건</span>
-                  <span className="text-slate-600 mx-2">|</span>
-                  점검완료: {tasksData.summary.점검완료}
-                  <span className="text-slate-600 mx-2">|</span>
-                  보완요청: <span className="text-red-400 font-bold">{tasksData.summary.보완요청}</span>
-                  <span className="text-slate-600 mx-2">|</span>
-                  미완료: <span className="text-yellow-400 font-bold">{tasksData.summary.미완료}</span>
-                  <span className="text-slate-600 mx-2">|</span>
-                  미확정 합계: <span className="text-blue-400 font-bold">{fmt(tasksData.summary.총미확정)}건</span>
-                </p>
-              </div>
-            )}
+            {/* Table */}
+            <div className="overflow-x-auto max-h-[700px] overflow-y-auto">
+              <table className="w-full text-left border-collapse whitespace-nowrap">
+                <thead className="sticky top-0 z-10">
+                  <tr className="bg-slate-800/80 border-b border-slate-700 text-sm font-semibold text-slate-300">
+                    <th className="px-4 py-3 text-center w-20">작업순서</th>
+                    <th className="px-4 py-3">전문기관</th>
+                    <th className="px-4 py-3">과제번호</th>
+                    <th className="px-4 py-3">연구수행기관</th>
+                    <th className="px-4 py-3">상태</th>
+                    <th className="px-4 py-3 text-right">집행건수</th>
+                    <th className="px-4 py-3 text-right">미확정</th>
+                    <th className="px-4 py-3 text-right">보완완료</th>
+                    <th className="px-4 py-3 text-center w-20">액션</th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm divide-y divide-slate-800/60">
+                  {tasksData.tasks.map((task, i) => (
+                    <tr
+                      key={`${task.과제번호}-${i}`}
+                      className={`hover:bg-slate-800/40 transition-colors ${i % 2 === 1 ? "bg-slate-800/20" : ""}`}
+                    >
+                      <td className="px-4 py-3 text-center">
+                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 font-bold text-sm">
+                          {task.작업순번}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3 text-slate-300 max-w-[180px] truncate">{task.전문기관}</td>
+                      <td className="px-4 py-3 font-mono text-slate-400">{task.과제번호}</td>
+                      <td className="px-4 py-3 font-bold">{task.연구수행기관}</td>
+                      <td className="px-4 py-3"><StatusBadge status={task.정산진행상태} /></td>
+                      <td className="px-4 py-3 text-right font-mono text-slate-300">{fmt(task.집행건수)}</td>
+                      <td className={`px-4 py-3 text-right font-mono ${task.미확정 > 0 ? "font-bold text-red-400" : "text-slate-500"}`}>
+                        {fmt(task.미확정)}
+                      </td>
+                      <td className={`px-4 py-3 text-right font-mono ${task.보완완료 > 0 ? "font-bold text-yellow-400" : "text-slate-500"}`}>
+                        {fmt(task.보완완료)}
+                      </td>
+                      <td className="px-4 py-3 text-center">
+                        <button
+                          onClick={() => handleLaunch(task)}
+                          className="bg-amber-500 hover:bg-amber-600 text-white px-3 py-1.5 rounded text-xs font-bold transition-colors shadow-sm"
+                        >
+                          출격
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="px-4 py-3 border-t border-slate-800 bg-slate-900/50">
+              <span className="text-sm text-slate-400">
+                총 {fmt(tasksData.tasks.length)}건 — 위 순서대로 배치 실행됩니다
+              </span>
+            </div>
           </section>
+        )}
+
+        {tasksData && tasksData.tasks.length === 0 && (
+          <div className="h-40 flex items-center justify-center border-2 border-dashed border-slate-800 rounded-xl">
+            <p className="text-slate-500">해당 담당자의 과제가 없습니다.</p>
+          </div>
         )}
 
         {/* Batch Progress Panel */}
@@ -422,15 +509,10 @@ export default function EzbaroPage() {
               </div>
             </div>
 
-            {/* Progress Bar */}
             <div className="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-blue-500 transition-all duration-500"
-                style={{ width: `${progressPercent}%` }}
-              />
+              <div className="h-full bg-blue-500 transition-all duration-500" style={{ width: `${progressPercent}%` }} />
             </div>
 
-            {/* Current Task */}
             {batchStatus.currentTask && (
               <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800 flex items-center justify-between">
                 <div>
@@ -447,7 +529,6 @@ export default function EzbaroPage() {
               </div>
             )}
 
-            {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div className="bg-slate-800/50 p-3 rounded-lg text-center border border-slate-700/50">
                 <p className="text-xs text-slate-500 mb-1">완료</p>
@@ -467,8 +548,7 @@ export default function EzbaroPage() {
               </div>
             </div>
 
-            {/* Task Mini List */}
-            <div className="mt-2 max-h-40 overflow-y-auto pr-2 custom-scrollbar">
+            <div className="mt-2 max-h-40 overflow-y-auto pr-2">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {batchStatus.tasks.slice().reverse().slice(0, 20).map((t) => (
                   <div key={`${t.과제번호}-${t.idx}`} className="flex items-center gap-3 p-2 rounded bg-slate-950/30 border border-slate-800/50 text-xs">
@@ -487,78 +567,6 @@ export default function EzbaroPage() {
               </div>
             </div>
           </section>
-        )}
-
-        {/* Section 3: Table */}
-        {tasksData && tasksData.tasks.length > 0 && (
-          <section className="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col">
-            <div className="overflow-x-auto max-h-[700px] overflow-y-auto">
-              <table className="w-full text-left border-collapse whitespace-nowrap">
-                <thead className="sticky top-0 z-10">
-                  <tr className="bg-slate-800/80 border-b border-slate-700 text-sm font-semibold text-slate-300">
-                    {[
-                      { key: "순번", label: "순번", center: true },
-                      { key: "전문기관", label: "전문기관" },
-                      { key: "과제번호", label: "과제번호" },
-                      { key: "연구수행기관", label: "연구수행기관" },
-                      { key: "정산진행상태", label: "상태" },
-                      { key: "집행건수", label: "집행건수", right: true },
-                      { key: "미확정", label: "미확정", right: true },
-                      { key: "담당자", label: "담당자" },
-                    ].map((col) => (
-                      <th
-                        key={col.key}
-                        onClick={() => handleSort(col.key)}
-                        className={`px-4 py-3 cursor-pointer hover:text-white select-none ${col.center ? "text-center w-16" : ""} ${col.right ? "text-right" : ""}`}
-                      >
-                        {col.label}
-                        {sortCol === col.key && (sortAsc ? " ▲" : " ▼")}
-                      </th>
-                    ))}
-                    <th className="px-4 py-3 text-center w-24">액션</th>
-                  </tr>
-                </thead>
-                <tbody className="text-sm divide-y divide-slate-800/60">
-                  {sortedTasks.map((task, i) => (
-                    <tr
-                      key={`${task.순번}-${i}`}
-                      className={`hover:bg-slate-800/40 transition-colors ${i % 2 === 1 ? "bg-slate-800/20" : ""}`}
-                    >
-                      <td className="px-4 py-3 text-center font-mono text-slate-400">{String(task.순번).padStart(3, "0")}</td>
-                      <td className="px-4 py-3 text-slate-300 max-w-[180px] truncate">{task.전문기관}</td>
-                      <td className="px-4 py-3 font-mono text-slate-400">{task.과제번호}</td>
-                      <td className="px-4 py-3 font-bold">{task.연구수행기관}</td>
-                      <td className="px-4 py-3"><StatusBadge status={task.정산진행상태} /></td>
-                      <td className="px-4 py-3 text-right font-mono text-slate-300">{fmt(task.집행건수)}</td>
-                      <td className={`px-4 py-3 text-right font-mono ${task.미확정 > 0 ? "font-bold text-red-400" : "text-slate-500"}`}>
-                        {fmt(task.미확정)}
-                      </td>
-                      <td className="px-4 py-3 text-slate-300">{task.담당자}</td>
-                      <td className="px-4 py-3 text-center">
-                        <button
-                          onClick={() => handleLaunch(task)}
-                          className="bg-amber-500 hover:bg-amber-600 text-white px-3 py-1.5 rounded text-xs font-bold transition-colors shadow-sm w-full"
-                        >
-                          출격
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="px-4 py-3 border-t border-slate-800 bg-slate-900/50">
-              <span className="text-sm text-slate-400">
-                총 {fmt(sortedTasks.length)}건 표시
-              </span>
-            </div>
-          </section>
-        )}
-
-        {tasksData && tasksData.tasks.length === 0 && (
-          <div className="h-40 flex items-center justify-center border-2 border-dashed border-slate-800 rounded-xl">
-            <p className="text-muted-foreground text-slate-500">조건에 맞는 과제가 없습니다.</p>
-          </div>
         )}
       </div>
     </div>
