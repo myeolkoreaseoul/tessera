@@ -116,15 +116,27 @@ export default function Dashboard() {
     }
     setUpdateChecking(true);
     try {
+      // checkForUpdate는 내부에서 3초 대기 후 응답
       const result = await w.tessera.checkForUpdate();
       if (result?.state) setUpdateState(result.state);
-      // 상태가 바로 안 올 수 있으므로 2초 후 다시 확인
-      setTimeout(async () => {
-        const status = await (window as any).tessera?.checkForUpdate?.();
-        if (status?.state) setUpdateState(status.state);
-        setUpdateChecking(false);
-      }, 3000);
+
+      // 다운로드 진행 중일 수 있으므로 5초 간격으로 상태 폴링
+      if (result?.state?.available && !result?.state?.downloaded) {
+        const poll = setInterval(async () => {
+          const status = await w.tessera?.getUpdateStatus?.();
+          if (status?.state) {
+            setUpdateState(status.state);
+            if (status.state.downloaded || status.state.error) {
+              clearInterval(poll);
+            }
+          }
+        }, 5000);
+        // 최대 5분 폴링
+        setTimeout(() => clearInterval(poll), 300000);
+      }
     } catch {
+      alert("업데이트 확인 실패");
+    } finally {
       setUpdateChecking(false);
     }
   };

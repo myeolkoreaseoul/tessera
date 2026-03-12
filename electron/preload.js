@@ -18,6 +18,9 @@ contextBridge.exposeInMainWorld('tessera', {
   /** 업데이트 확인 */
   checkForUpdate: () => ipcRenderer.invoke('updater:check'),
 
+  /** 업데이트 상태 조회 (폴링용) */
+  getUpdateStatus: () => ipcRenderer.invoke('updater:status'),
+
   /** 다운로드된 업데이트 설치 + 재시작 */
   installUpdate: () => ipcRenderer.invoke('updater:install'),
 });

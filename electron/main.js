@@ -163,10 +163,25 @@ ipcMain.handle('updater:check', async () => {
   if (!app.isPackaged) return { ok: false, error: '개발 모드에서는 업데이트 불가' };
   try {
     updateState.checking = true;
-    await autoUpdater.checkForUpdates();
+    updateState.error = null;
+    const result = await autoUpdater.checkForUpdates();
+    // checkForUpdates()의 반환값에서 직접 버전 확인
+    if (result && result.updateInfo) {
+      const currentVersion = app.getVersion();
+      const newVersion = result.updateInfo.version;
+      if (newVersion !== currentVersion) {
+        updateState.available = true;
+        updateState.version = newVersion;
+      }
+    }
+    // 이벤트 처리 시간 확보
+    await new Promise(r => setTimeout(r, 3000));
+    updateState.checking = false;
     return { ok: true, state: updateState };
   } catch (err) {
-    return { ok: false, error: err.message };
+    updateState.checking = false;
+    updateState.error = err.message;
+    return { ok: false, error: err.message, state: updateState };
   }
 });
 
