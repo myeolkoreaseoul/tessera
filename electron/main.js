@@ -49,7 +49,7 @@ function sendUpdateState() {
 // ─── autoUpdater 이벤트 리스너 (앱 시작 시 1회 등록, checkForUpdates 호출 전에) ───
 if (app.isPackaged) {
   autoUpdater.autoDownload = true;
-  autoUpdater.autoInstallOnAppQuit = false;
+  autoUpdater.autoInstallOnAppQuit = true;
 
   autoUpdater.on('checking-for-update', () => {
     ulog('EVENT: checking-for-update');
@@ -82,7 +82,7 @@ if (app.isPackaged) {
         message: `새 버전 (v${info.version})이 다운로드되었습니다.`,
         detail: '지금 재시작하면 업데이트가 적용됩니다.\n배치 작업 중이라면 완료 후 재시작하세요.',
         buttons: ['지금 재시작', '나중에'],
-        defaultId: 1,
+        defaultId: 0,
       }).then(async ({ response }) => {
         if (response === 0 && !isQuitting) {
           await cleanupAndInstall();
